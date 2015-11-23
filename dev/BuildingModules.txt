@@ -1,0 +1,20 @@
+.. include:: /../common/stub-topic.txt
+
+============================
+|stub-icon| Building Modules
+============================
+
+(Insert intro about building modules here.) 
+
+.. toctree::
+	:maxdepth: 2
+
+	Module Templates
+	Web Forms Modules
+	MVC Modules
+	SPA Modules
+
+.. include:: /../common/stub-notice.txt
+
+.. include:: /../common/contribute.txt
+
