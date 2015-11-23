@@ -9,10 +9,8 @@
 .. toctree::
 	:maxdepth: 2
 
-	Module Templates
-	Web Forms Modules
-	MVC Modules
-	SPA Modules
+	Packaging Extensions/Package Format
+	Packaging Extensions/DNN Manifest
 
 .. include:: /../common/stub-notice.txt
 

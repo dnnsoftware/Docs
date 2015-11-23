@@ -9,9 +9,9 @@
 .. toctree::
    :maxdepth: 2
 
-   BuildingModules
-   PackagingExtensions
-   APIReference
+   Building Modules
+   Packaging Extensions
+   API Reference
    Tutorials
    /../common/Glossary
 
