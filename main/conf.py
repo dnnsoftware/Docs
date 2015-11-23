@@ -332,7 +332,7 @@ intersphinx_mapping = {
 html_theme_options = {
   'navbar_links': [
     ("Documentation", "http://example.com", True),
-    ("Demo Link", "http://example.com", True),
+    ("Link", "http://example.com", True),
   ],
   'navbar_sidebarrel': True,
   'navbar_pagenav': False,
