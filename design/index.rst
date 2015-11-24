@@ -14,7 +14,7 @@
    Packaging Themes
    UX Guide
    Tutorials
-   /../common/Glossary
+   /../main/Glossary
    
 
 .. ## Best Practices (future)

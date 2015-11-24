@@ -9,10 +9,11 @@
 .. toctree::
    :maxdepth: 2
 
+   Building Themes/Creating Skins
    Building Themes/HTML Themes
    Building Themes/ASCX Themes
 
 
 .. include:: /../common/stub-notice.txt
 
-.. include:: ../common/contribute.txt
+.. include:: /../common/contribute.txt
