@@ -1,0 +1,12 @@
+.navbar-default {
+	background-image: none;
+	background-color: #f2f2f2;	
+}
+
+a.navbar-brand {
+	padding: 13px;
+}
+
+a.navbar-brand img {
+	height: 24px;
+}
