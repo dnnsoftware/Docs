@@ -97,7 +97,25 @@ html_theme = 'bootstrap'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+  'navbar_links': [
+    ("Documentation", "http://example.com", True, [
+      ("Admin", "http://example.com", True),
+      ("Developer", "http://example.com", True),
+      ("Designer", "http://example.com", True)
+    ]),
+    ("Blogs", "http://example.com", True),
+    ("Download", "http://example.com", True),
+    ("Support", "http://example.com", True, [
+      ("DNN Platform", "http://example.com", True),
+      ("Evoq", "http://example.com", True),
+    ])
+  ],
+  'navbar_pagenav': False,
+  'source_link_position': "footer",
+  'navbar_title': 'Documentation Center',
+  'navbar_version': False 
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ["../common/themes"]
@@ -160,7 +178,7 @@ html_use_smartypants = True
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True
@@ -329,13 +347,3 @@ epub_exclude_files = ['search.html']
 intersphinx_mapping = {
 }
 
-html_theme_options = {
-  'navbar_links': [
-    ("Documentation", "http://example.com", True),
-    ("Demo Link", "http://example.com", True),
-  ],
-  'navbar_sidebarrel': True,
-  'navbar_pagenav': False,
-  'source_link_position': "footer",
-  'navbar_title': ' '
-}
