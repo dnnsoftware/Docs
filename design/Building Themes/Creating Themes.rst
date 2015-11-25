@@ -2,47 +2,54 @@
 Creating Themes
 ===============
 
-Overview
---------
+Introduction
+------------
 
-A :term: theme is comprised of skins and containers. 
-* one or more layout templates
-* a style sheet for each of the layout templates (optional)
-* a master CSS style sheet (optional)
+A DNN :term:`skin` or :term:`theme` defines the look and feel of the webpage or site. It is comprised of:
+	* one or more layout templates
+	* a style sheet for each of the layout templates (optional)
+	* a master CSS style sheet (optional)
+
+.. image:: /../common/img/Skin-Theme.png
+
+A :term:`pane` is a section of a web page that displays static content, module-generated dynamic content, or a standard skin element.
+
+A layout defines where panes are located on the web page and what each pane contains.
+
+The layout templates included in the skin are variations on a theme that the web designer can choose from for each page in the site. For example, a template can be designed specifically for the home page, another template to display a gallery of photos, and yet another template to list products for sale.
+
+When a template is assigned to a page, any associated style sheet is automatically added to the page.
+
+Skins and :term:`containers` can be combined in a single :term:`package` or split into two packages.
+
+
+
+Theme types
+-----------
 
 DNN supports two different types of themes: HTML and ASCX.
 
-
-
-The DotNetNuke skinning engine supports two different types of themes: HTML themes and ASCX themes. ASCX skins can only be created using ..., whereas designers can use any HTML editor to create HTML skins, which are more basic. When HTML skins are installed in DNN, they are automatically converted to ASCX skins. During conversion, the entire HTML header is discarded, and only the `<innerHtml>` portion of the `<body>` tag is retained.
++----------------------------------------+----------------------------------------+
+| HTML                                   | ASCX                                   |
++========================================+========================================+
+| Basic theme.                           | Advanced theme.                        |
++----------------------------------------+----------------------------------------+
+| To create/edit, use any HTML editor.   | To create/edit, use `Microsoft Visual  |
+|                                        | Studio                                 |
+|                                        | <http://www.visualstudio.com/>`_.      |
++----------------------------------------+----------------------------------------+
+|| Automatically converted to ASCX       | Used as is.                            |
+|| when installed.                       |                                        |
+|| Only the `<innerHtml>` portion of the |                                        |
+|| `<body>` tag is retained; everything  |                                        |
+|| else is discarded, including the      |                                        |
+|| entire `<header>`.                    |                                        |
++----------------------------------------+----------------------------------------+
 
 ..
-   # Insert diagram of HTML vs ASCX themes/skins here.
-
-Skins and containers can be combined in a single package or split into two packages. This tutorial focuses on creating skins, but the associated containers can be created the same way with only a few minor differences.
-
-..
-   # What are these minor differences between creating skins and creating their associated containers?
+   # How do I make the text wrap within a cell?
+   # If I use the second |, it indents all text within that cell. How do I avoid that?
+   # How do I make the "Used as is" to be flush against the top of the cell, not centered?
 
 
-   
-A skin is comprised of:
 
-The style sheets, if present, are automatically added by the DotNetNuke skinning engine to the page whenever the associated template is assigned.
-
-..
-   # How is the template associated with the style sheet(s)? 
-
-Example: Suppose you associate a template called index.html (which is converted to index.ascx during installation) with style sheets called skin.css and index.css. Whenever you assign the Index skin template to a page, the skinning engine will automatically include the skin.css and index.css style sheets on the page as well.
-
-A pane in a layout template is an area where you want to place user-generated content or a standard skin element.
-   
-.. image::
-   
-   
-   
-.. rst-class:: html-toggle
-
-   This tutorial is based on the `Dreamy design template <http://www.oswd.org/files/designs/3459/dreamy/>` from the `Open Source Web Design <http://www.oswd.org/>` site.
-
-(There should be a hidden toggleable section just above this.)
