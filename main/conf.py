@@ -23,7 +23,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates', '../common/_templates']
+templates_path = ['../common/_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -97,7 +97,25 @@ html_theme = 'bootstrap'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+  'navbar_links': [
+    ("Documentation", "http://example.com", True, [
+      ("Admin", "http://example.com", True),
+      ("Developer", "http://example.com", True),
+      ("Designer", "http://example.com", True)
+    ]),
+    ("Blogs", "http://example.com", True),
+    ("Download", "http://example.com", True),
+    ("Support", "http://example.com", True, [
+      ("DNN Platform", "http://example.com", True),
+      ("Evoq", "http://example.com", True),
+    ])
+  ],
+  'navbar_pagenav': False,
+  'source_link_position': "footer",
+  'navbar_title': 'Documentation Center',
+  'navbar_version': False 
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ["../common/themes"]
@@ -111,7 +129,7 @@ html_theme_path = ["../common/themes"]
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = '../common/img/DNN_logo.png'
+html_logo = '../common/img/DNN_logo_28px.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -160,7 +178,7 @@ html_use_smartypants = True
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True
@@ -329,13 +347,3 @@ epub_exclude_files = ['search.html']
 intersphinx_mapping = {
 }
 
-html_theme_options = {
-  'navbar_links': [
-    ("Documentation", "http://example.com", True),
-    ("Demo Link", "http://example.com", True),
-  ],
-  'navbar_sidebarrel': True,
-  'navbar_pagenav': False,
-  'source_link_position': "footer",
-  'navbar_title': ' '
-}

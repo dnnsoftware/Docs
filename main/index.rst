@@ -3,11 +3,15 @@
 |stub-icon| DNN Documentation
 =============================
 
-:ref: What's New in DNN 8.0 (WhatsNewDNN80)
-:ref: Admin Center (/admin/index.html)
-:ref: Developer Center (/dev/index.html)
-:ref: Design Center (/design/index.html)
-:ref: Glossary (Glossary)
+`What's New in DNN 8.0 <WhatsNewDNN80.html>`_
+
+`Admin Center </admin/index.html>`_
+
+`Developer Center </dev/index.html>`_
+
+`Design Center </design/index.html>`_
+
+`Glossary <Glossary.html>`_
 
 
 .. include:: /../common/stub-notice.txt
