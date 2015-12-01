@@ -44,8 +44,15 @@ theme
    In contrast, a :term:`container` defines the look and feel of a module in the page.
 
 skin object
-   A standard element that is common among websites. Examples: menu bar, copyright notice, login/registration links, privacy link, terms of service link, and search box.
-
+   A standard element that is common among websites. Examples: menu bar, copyright notice, login/registration links, privacy link, terms of service link, and search box. The default DNN installation includes the following skin objects:
+   BANNER      BREADCRUMB	COPYRIGHT
+   CURRENTDATE DOTNETNUKE  HELP
+   HOSTNAME    LANGUAGE    LEFTMENU
+   LINKS       LOGIN       LOGO
+   MENU        NAV         PRIVACY
+   SEARCH      SOLPARTMENU STYLES
+   TAGS        TERMS       TEXT
+   TREEVIEW    USER
 
 super user
    (See :term: `host`.)

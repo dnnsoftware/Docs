@@ -10,8 +10,8 @@
    :maxdepth: 2
 
    Getting Started
-   Building Themes
-   Packaging Themes
+   Building Skins
+   Packaging Skins
    UX Guide
    Tutorials
    /../main/Glossary

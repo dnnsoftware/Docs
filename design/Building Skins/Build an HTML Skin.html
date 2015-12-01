@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+</head>
+<body>
+
+<!-- .. include:: /../common/stub-topic.txt -->
+
+<h1> Build an HTML Skin </hi>
+
+<h2> Overview </h2>
+The most basic DNN skin configuration is comprised of one layout template. However, you can also create a master CSS file for all layout templates or one CSS file for each layout template.
+
+<h2> Prerequisites </h2>
+
+<ul>
+<li> A super user (host) account. Super user privileges are required to upload skins, because skins can include executables. The super user also converts the skin from HTML to ASCX. (An administrator account is sufficient to apply skins and containers to a site.)</li>
+</ul>
+
+
+<h2> Steps </h2>
+<!-- TODO: How do I collapse the substeps and the examples, so that only the high-level steps are displayed initially? -->
+
+<ol>
+<li> Create a layout template for the skin as an HTML file.
+<!-- DECIDE: Do I want this in a table with images on one side and text on another? -->
+   <ol type=a>
+   <li> In your DNN installation, create a new folder for your skin under <b>Portals\_default\Skins</b>. The new folder name becomes the name of the DNN skin.</li>
+   <!-- TODO: Add screenshot here. -->
+
+   <li> In the new folder, create a new layout template file called <b>index.html</b>.
+      <p><b>Rules:</b>
+         <ul>
+            <li>The layout template must contain at least one pane.</li>
+            <li>Exactly one of the panes must be called <b>ContentPane</b>.</li>
+            <li>All panes must be defined as a server control by adding <b>runat=”server”</b> to the element.</li>
+            <li>DNN recognizes only the folowing HTML elements as valid panes: &lt;td&gt; (table cells), &lt;div&gt;, &lt;span&gt;, and &lt;p&gt;.
+         </ul>
+      </p>
+      <p><b>Example:</b> A very basic layout template.
+         <xmp>
+            <div id="wrapper">
+                <div id="ContentPane" runat="server"  ></div>
+            </div>
+         </xmp>
+      </p>
+      <p><b>Example:</b> A layout template with several panes, a header, and a footer.
+         <xmp>
+            <div id="wrapper">
+                <div id="header"></div>
+                <div id="sidebar">
+                    <div id="feed">
+                        <a class="feed-button" href="#">&nbsp;</a>
+                    </div>
+                    <div id="SidebarPane" class="SidebarPane" runat="server"></div>
+                    <div id="sidebar-bottom">&nbsp;</div>
+                </div>
+                <div id="content">
+                    <div id="BannerPane" class="BannerPane" runat="server"></div>
+                    <div id="ContentPane" runat="server" ></div>
+                </div>
+                <div id="footer"></div>
+            </div>
+         </xmp>
+      </p>
+      <p><b>Tip:</b> Add a class attribute to each of the pane controls, because ASP.NET will modify the control names when the page is rendered.</p> <!-- Not sure what this means. -->
+   </li>
+
+   <li> (Optional) Add skin objects to your layout template for a more dynamic page. A default DotNetNuke installation includes the following skin objects:
+      <!-- TODO: Do we have an in-house reference for these skin objects? -->
+      <table>
+      <tr>
+         <td valign=top>
+            BANNER<br>
+            BREADCRUMB<br>
+            COPYRIGHT<br>
+            CURRENTDATE<br>
+            DOTNETNUKE<br>
+            HELP<br>
+            HOSTNAME<br>
+            LANGUAGE<br>
+         </td>
+         <td valign=top>
+            LEFTMENU<br>
+            LINKS<br>
+            LOGIN<br>
+            LOGO<br>
+            MENU<br>
+            NAV<br>
+            PRIVACY<br>
+            SEARCH<br>
+         </td>
+         <td valign=top>
+            SOLPARTMENU<br>
+            STYLES<br>
+            TAGS<br>
+            TERMS<br>
+            TEXT<br>
+            TREEVIEW<br>
+            USER<br>
+         </td>
+      </tr>
+      </table>
+      <p>You can add these skin objects using the HTML <b>object</b> and <b>param</b> tags. In the <b>object</b> tag:
+      <ul>
+      <li>The <b>codebase</b> attribute specifies the skin object to be rendered.</li>
+      <li>The <b>codetype</b> attribute must be <b>dotnetnuke/server</b> for all skin objects.</li>
+      </ul>
+      </p>
+      <p><b>Example:</b> Adding the <b>LOGIN</b> skin object.
+         <xmp>
+         <div id="login_style" class="user">
+            <object id="dnnLOGIN" codebase="LOGIN" codetype="dotnetnuke/server">
+               <param name="CssClass" value="user" />
+            </object>
+         </div>
+         </xmp>
+      </p>
+   </li>
+   </ol>
+</li>
+
+<li> Convert the layout template from HTML to ASCX.
+   <ol type=a>
+   <li>In the DNN administration page<!-- Needs confirmation -->, go to <b>Admin</b> &gt; <b>Skins</b>.<br>
+      <img src="..\..\common\img\scr-WLW-DotNetNukeSkinning_6702-SkinsPageMenu_2.png">
+   </li>
+
+   <li>Choose your new skin in the <b>Skins</b> dropdown, then click <b>Parse Skin Package</b>.<br>
+      <img src="..\..\common\img\scr-WLW-DotNetNukeSkinning_6702-SkinsPage_2.png">
+   </li>
+   </ol>
+
+   <p><b>RESULT:</b> DNN converts the very basic layout template (index.html) to a new file (index.ascx) similar to this:
+      <xmp>
+         <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" >
+         <div id="ContentPane" runat="server" ></div>
+      </xmp>
+   </p>
+   <p><b>NOTE:</b> The conversion only goes in one direction (from HTML to ASCX).</p>
+</li>
+
+<li> Create a CSS file for each layout template, or create a single master CSS file to be used for all layout templates.
+   <ol type=a>
+   <li>Create a CSS file in the same folder as the layout template.</li>
+    <!-- How are the layout templates and the CSS files associated with each other? -->
+   <li>For every section (<div>) that contains a skin object in the layout template, add a style definition in the CSS file. The style definition must start with <b>#</b> followed by the <b>div</b> <b>id</b>. Example:
+   <table border=1>
+   <tr align=center>
+      <td> layout template </td>
+      <td> CSS </td>
+   </tr>
+   <tr>
+      <td><xmp>
+   <div id="login_style" class="user">
+      <object id="dnnLOGIN" codebase="LOGIN" codetype="dotnetnuke/server">
+         <param name="CssClass" value="user" />
+      </object>
+   </div>
+         </xmp></td>
+      <td><xmp>
+   #login_style .linkseparator{
+       color: white;
+       font-weight: bold;
+   }
+         </xmp></td>
+   </tr>
+   </li>
+   </ol>
+
+</li>
+
+<!-- TODO: Move this to a separate file to be included. -->
+<li> Test the skin on a webpage.
+   <ol type=a>
+   <li>Create a new web page.</li>
+   <li>Edit the page settings and go to <b>Advanced Settings</b>.</li>
+   <li>In the <b>Page Skin</b> section, select <b>Host</b> and choose one of the layout templates from your new skin.<br>
+      <b>Note:</b> When a layout template is added to the page, the associated CSS file is automatically added.
+   </li>
+   <li>Click <b>Update</b>.</li>
+   <li>View your page in different browsers to verify that the new skin was applied correctly.
+   </ol>
+</li>
+
+<li> If the page is not rendering properly in some browsers, you can force the skin to be rendered in <b>XHTML 1.0 Transitional</b>.
+   <ol type=a>
+   <li>Create a doctype XML file with the same name as your layout template file.<br>
+       <b>Example:</b> If your layout template file is called <b>MyLayout.html</b>, give your doctype file the name <b>MyLayout.doctype.xml</b>.</li>
+   <li>Enter the following in your doctype file:
+      <xmp>
+         <SkinDocType>
+            <![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">]]>
+         </SkinDocType>
+      </xmp>
+   </li>
+   </ol>
+</li>
+
+<li><a href="..\Packaging%20Skins.html">Package your DNN skin.</a></li>
+
+</ol>
+
+
+
+<h2> Example </h2>
+
+<!-- Full example here. -->
+
+
+<!--
+.. include:: /../common/stub-notice.txt
+
+.. include:: /../common/contribute.txt
+-->
+
+</body>
