@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+</head>
+<body>
+
+<!-- .. include:: /../common/stub-topic.txt -->
+
+<h1> Convert the Layout Template from HTML to ASCX </hi>
+
+
+<h2> Prerequisites </h2>
+
+<ul>
+<li> A super user (host) account. Super user privileges are required to upload skins, because skins can include executables. The super user also converts the skin from HTML to ASCX. (An administrator account is sufficient to apply skins and containers to a site.)</li>
+
+</ul>
+
+
+<h2> Steps </h2>
+<ol>
+
+<li>In the DNN administration page<!-- Needs confirmation -->, go to <b>Admin</b> &gt; (double-gear tab) &gt; <b>Themes</b>.<br>
+   <img src="..\..\common\img\scr-AdminThemes.png">
+</li>
+
+<li>Choose your new skin in the <b>Skins</b> dropdown, then click <b>Parse Skin Package</b>. <!-- Update this screenshot. --><br>
+   <img src="..\..\common\img\scr-WLW-DotNetNukeSkinning_6702-SkinsPage_2.png">
+</li>
+
+</ol>
+
+<p><b>RESULT:</b> DNN converts the very basic layout template (index.html) to a new file (index.ascx) similar to this:
+   <xmp>
+   <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" >
+   <div id="ContentPane" runat="server" ></div>
+   </xmp>
+</p>
+
+<p><b>NOTE:</b> The conversion only goes in one direction (from HTML to ASCX).</p>
+
+
+
+
+
+<!--
+.. include:: /../common/stub-notice.txt
+
+.. include:: /../common/contribute.txt
+-->
+
+</body>

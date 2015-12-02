@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+</head>
+<body>
+
+<!-- .. include:: /../common/stub-topic.txt -->
+
+<h1> Create a Layout Template in HTML Format </hi>
+
+
+<h2> Prerequisites </h2>
+
+<ul>
+<li> A super user (host) account. Super user privileges are required to upload skins, because skins can include executables. The super user also converts the skin from HTML to ASCX. (An administrator account is sufficient to apply skins and containers to a site.)</li>
+</ul>
+
+
+<h2> Steps </h2>
+<ol>
+
+<li> In your DNN installation, go to <b>Host</b> &gt; <b>File Management</b>.<br>
+   <image src="../../common/img/scr-Host-FileMgmt.png" width=75%>
+</li>
+
+<li> In your DNN installation, create a new folder for your skin under <b>Skins\_default</b>. The new folder name becomes the name of the DNN skin.</li>
+   <image src="../../common/img/scr-SkinsDefaultCreateFolder.png" width=75%>
+
+<li> In the new folder, create a new layout template file called <b>index.html</b>.
+   <p><b>Note:</b>
+      <ul>
+         <li>The layout template must contain at least one pane.</li>
+         <li>Exactly one of the panes must be called <b>ContentPane</b>.</li>
+         <li>All panes must be defined as a server control by adding <b>runat="server"</b> to the element.</li>
+         <li>DNN recognizes only the folowing HTML elements as valid panes: &lt;td&gt; (table cells), &lt;div&gt;, &lt;span&gt;, and &lt;p&gt;.
+      </ul>
+   </p>
+   <p><b>Example:</b> A very basic layout template.
+      <xmp>
+         <div id="wrapper">
+             <div id="ContentPane" runat="server"></div>
+         </div>
+      </xmp>
+   </p>
+   <p><b>Example:</b> A layout template with several panes, a header, and a footer.
+      <xmp>
+         <div id="wrapper">
+             <div id="header"></div>
+             <div id="sidebar">
+                 <div id="feed">
+                     <a class="feed-button" href="#">&nbsp;</a>
+                 </div>
+                 <div id="SidebarPane" class="SidebarPane" runat="server"></div>
+                 <div id="sidebar-bottom">&nbsp;</div>
+             </div>
+             <div id="content">
+                 <div id="BannerPane" class="BannerPane" runat="server"></div>
+                 <div id="ContentPane" runat="server"></div>
+             </div>
+             <div id="footer"></div>
+         </div>
+      </xmp>
+   </p>
+   <p><b>Tip:</b> Add a class attribute to each of the pane controls, because ASP.NET will modify the control names when the page is rendered.</p> <!-- Not sure what this means. -->
+   </li>
+
+<li> (Optional) Add skin objects to your layout template for a more dynamic page. A default DotNetNuke installation includes the following skin objects:
+   <!-- TODO: Do we have an in-house reference for these skin objects? The link in the blog is broken. -->
+   <table width=100%>
+   <tr>
+      <td valign=top>
+         dnnBANNER<br>
+         dnnBREADCRUMB<br>
+         dnnCOPYRIGHT<br>
+         dnnCURRENTDATE<br>
+         dnnDOTNETNUKE<br>
+         dnnHELP<br>
+         dnnHOSTNAME<br>
+         dnnLANGUAGE<br>
+      </td>
+      <td valign=top>
+         dnnLEFTMENU<br>
+         dnnLINKS<br>
+         dnnLOGIN<br>
+         dnnLOGO<br>
+         dnnMENU<br>
+         dnnNAV<br>
+         dnnPRIVACY<br>
+         dnnSEARCH<br>
+      </td>
+      <td valign=top>
+         dnnSOLPARTMENU<br>
+         dnnSTYLES<br>
+         dnnTAGS<br>
+         dnnTERMS<br>
+         dnnTEXT<br>
+         dnnTREEVIEW<br>
+         dnnUSER<br>
+      </td>
+   </tr>
+   </table>
+   <p>You can add these skin objects using the HTML <b>object</b> and <b>param</b> tags. In the <b>object</b> tag,
+   <ul>
+   <li>The <b>codebase</b> attribute specifies the skin object to be rendered.</li>
+   <li>The <b>codetype</b> attribute must be <code>dotnetnuke/server</code> for all skin objects.</li>
+   </ul>
+   </p>
+   <p><b>Example:</b> To add the <b>dnnLOGIN</b> skin object,
+      <xmp>
+      <div id="login_style" class="user">
+         <object id="dnnLOGIN" codebase="LOGIN" codetype="dotnetnuke/server">
+            <param name="CssClass" value="user"/>
+         </object>
+      </div>
+      </xmp>
+   </p>
+</li>
+</ol>
+
+
+
+<!--
+.. include:: /../common/stub-notice.txt
+
+.. include:: /../common/contribute.txt
+-->
+
+</body>
