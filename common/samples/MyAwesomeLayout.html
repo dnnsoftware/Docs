@@ -1,0 +1,56 @@
+<div id="wrapper">
+    <div id="header">
+        <div id="logo">
+            <object id="dnnLOGO" codebase="LOGO" codetype="dotnetnuke/server"></object>
+        </div>
+        <div id="login_style" class="user">
+            <object id="dnnUSER" codebase="USER" codetype="dotnetnuke/server">
+                <param name="CssClass" value="user" />
+            </object>
+            <span class="linkseparator">|</span>
+            <object id="dnnLOGIN" codebase="LOGIN" codetype="dotnetnuke/server">
+                <param name="CssClass" value="user" />
+            </object>
+        </div>
+    </div>
+    <div id="menu">
+        <object id="dnnNAV" codebase="NAV" codetype="dotnetnuke/server">
+            <param name="ProviderName" value="DDRMenuNavigationProvider" />
+            <param name="IndicateChildren" value="false" />
+            <param name="ControlOrientation" value="Horizontal" />
+            <param name="CSSControl" value="mainMenu" />
+        </object>
+    </div>
+    <div id="sidebar">
+        <div id="feed"><a class="feed-button" href="#">&nbsp;</a> </div>
+        <div id="SidebarPane" runat="server" class="SidebarPane"></div>
+        <div id="sidebar-bottom">&nbsp;</div>
+    </div>
+    <div id="content">
+        <div id="BannerPane" runat="server" class="BannerPane"></div>
+        <div id="ContentPane" runat="server"></div>
+    </div>
+    <div id="footer">
+        <div class="linkscontainer">
+            <object id="dnnLINKS" codebase="LINKS" codetype="dotnetnuke/server">
+                <param name="CssClass" value="links" />
+                <param name="Level" value="Root" />
+                <param name="Separator" value="&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;" />
+            </object>
+        </div>
+        <div id="terms_style" class="footer">
+            <object id="dnnPRIVACY" codetype="dotnetnuke/server" codebase="PRIVACY">
+                <param name="CssClass" value="footer" />
+            </object>
+            <span class="linkseparator">|</span>
+            <object id="dnnTERMS" codetype="dotnetnuke/server" codebase="TERMS">
+                <param name="CssClass" value="footer" />
+            </object>
+        </div>
+        <div id="copy_style" class="footer">
+            <object id="dnnCOPYRIGHT" codetype="dotnetnuke/server" codebase="COPYRIGHT">
+                <param name="CssClass" value="footer" />
+            </object>
+        </div>
+    </div>
+</div>

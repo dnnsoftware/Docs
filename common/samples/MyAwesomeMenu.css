@@ -1,0 +1,87 @@
+/*--------- dnn menu style ----------*/
+/* main menu td */
+.mainMenu {
+    cursor: pointer;
+    font-size: 11px;
+    background-color: transparent;
+    width: 700px;
+}
+/* Main Menu Normal */
+.mainMenu .root {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 12px;
+    text-transform: uppercase;
+    margin-right: 1px;
+    white-space: nowrap;
+    margin-right: 1px;
+    float: left;
+}
+/* Main menu hover */
+.mainMenu .hov {
+    color: #fff;
+    background: url("images/bg-menu-hover.png") repeat-x top left;
+}
+/* Main menu selected */
+.mainMenu .sel, .mainMenu .bc {
+    color: #bce5eb;
+}
+.mainMenu table {
+    border: 1px solid #C0D6E5;
+    z-index: 5000;
+}
+/* SUB Menu Normal */
+.mainMenu tr.mi {
+    background-color: #F8FAFF;
+    z-index: 1000;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: left;
+    color: #375162;
+    line-height: 2em;
+    text-transform: none;
+}
+.mainMenu tr.mi td {
+    padding: 0 2px;
+    text-transform: none;
+}
+/* SUB Menu hover & selected */
+.mainMenu tr.hov {
+    background: #CE0D0D url("images/submenu_hover.png") repeat-x top left;
+}
+.mainMenu tr.hov td {
+    color: #fff;
+}
+.mainMenu tr.sel, .mainMenu tr.bc {
+    background: #CE0D0D url("/images/submenu_active.png") repeat-x top left;
+}
+.mainMenu tr.sel td, .mainMenu tr.bc td {
+    color: #fff;
+}
+.main_dnnmenu_break {
+    height: 2px;
+    background-color: #D5E0FF;
+}
+/* Module Action Menus */
+.ModuleTitle_SubMenu {
+    border: 1px solid #C0D6E5;
+}
+.ModuleTitle_SubMenu td {
+    background-color: #F8FAFF;
+    white-space: nowrap;
+}
+.ModuleTitle_MenuIcon {
+    background-color: #F8FAFF;
+    border: none;
+    padding: 0px 2px;
+}
+.ModuleTitle_MenuItemSel td, .ModuleTitle_MenuItemSel .ModuleTitle_MenuIcon {
+    background: #CE0D0D url("images/submenu_hover.png") repeat-x top left;
+    color: #fff;
+}
+.ModuleTitle_MenuBreak td, .ModuleTitle_MenuBreak .ModuleTitle_MenuIcon {
+    height: 2px;
+    background-color: #D5E0FF;
+}

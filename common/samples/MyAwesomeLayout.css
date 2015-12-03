@@ -1,0 +1,54 @@
+/* Header Skin Objects */
+#logo {
+    display: inline-block;
+    margin: 20px 0 0 20px;
+}
+#login_style {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.linkseparator {
+    padding: 0 5px;
+}
+#login_style .linkseparator{
+    color: white;
+    font-weight: bold;
+}
+.user, a.user:link, a.user:active, a.user:visited {
+    color: white;
+    font-size: 1.1em;
+    font-weight:bold;
+    text-shadow: 1px 1px 1px #000;
+}
+a.user:hover {
+    color: #C00;
+    text-shadow: 2px 2px 2px #fff;
+}
+
+/* Footer Skin Objects */
+.linkscontainer {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+.links, a.links:link, a.links:active, a.links:visited {
+    font-weight: bold;
+    color: #28879B;
+}
+a.links:hover {
+    color: #C00;
+}
+#terms_style{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display:inline-block;
+}
+#copy_style{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display:inline-block;
+}
