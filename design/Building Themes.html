@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+</head>
+<body>
+
+<!-- .. include:: /../common/stub-topic.txt -->
+
+<h1> Building Theme </hi>
+
+
+<h2> Overview </h2>
+
+<p> A DNN <b>theme</b> (formerly called a <b>skin</b>) defines the look and feel of the webpage or site. It is comprised of:
+<ul>
+   <li> one or more layout templates (HTML or ASCX)</li>
+   <li> (optional) a style sheet (CSS) for each of the layout templates</li>
+   <li> (optional) a master style sheet (CSS) for all the layout templates</li>
+</ul>
+</p>
+
+<image src="..\common\img\SkinTheme.png" alt="Three variations of a theme" width="75%" align=center>
+
+<p>A layout defines where panes are located on the web page and what each pane contains.</p>
+
+<image src="..\common\img\PaneLayout.png" alt="Pane in a layout" align=left>
+
+<p>A <b>pane</b> is a section of a web page that displays static content, dynamic content, or a standard theme object. DNN requires exactly one content pane called `ContentPane` (case-insensitive). Additional panes are optional.</p>
+
+<p>A <b>theme object</b> can be a typical component of a webpage, such as the menu bar, the copyright notice, the login/registration links, the privacy link, the terms of service link, and the search box.</p>
+
+<p>Dynamic content can be generated using a <b>module</b> and then displayed according to the definition of the module's <b>container</b>.</p>
+
+<p>The layout templates included in the skin are variations on a theme that the web designer can choose from for each page in the site, such as the home page, a gallery of photos, or a listing of products for sale.</p>
+
+<p>When a layout template is applied to a page, any associated stylesheet is automatically added to the page.</p>
+
+<p>Themes and containers can be combined in a single <b>package</b> or split into two packages.</p>
+
+
+<h3>Theme Types</h3>
+
+<p>DNN supports two different types of themes: HTML and ASCX.</p>
+
+<table border=1 width=75%>
+    <tr><th>HTML</th><th>ASCX</th></tr>
+    <tr>
+        <td>Basic theme.</td>
+        <td>Advanced theme.</td>
+    </tr>
+    <tr>
+        <td>Can be created using any HTML editor.</td>
+        <td>Requires <a href="http://www.visualstudio.com/">Microsoft Visual Studio</a>.</td>
+    </tr>
+    <tr>
+        <td>Automatically converted to ASCX when installed. Only the <code>&lt;innerHtml&gt;</code> portion of the <code>&lt;body&gt;</code> tag is retained; everything else is discarded, including the entire <code>&lt;header&gt;</code>.</td>
+        <td>Used as is.</td>
+    </tr>
+ </table>
+
+
+<h2> Steps </h2>
+
+<table border=1 width=75%>
+    <tr align=center><th></th><th>HTML</th><th>ASCX</th></tr>
+    <tr align=center>
+        <td rowspan=2>1</td>
+        <td>
+            <a href="Building%20Themes/Create%20Layout%20Template%20-%20HTML.html">Create a layout template for the theme in HTML format.</a><br>
+        </td>
+        <td rowspan=2>
+            Create a layout template in ASCX format. <!-- How? -->
+        </td>
+    </tr>
+    <tr align=center>
+        <td>
+            <a href="Building%20Themes/Convert%20Layout%20Template.html">Convert the layout template from HTML to ASCX.</a>
+        </td>
+    </tr>
+    <tr align=center>
+        <td>2</td>
+        <td colspan=2>(Optional) <a href="Building%20Themes/Create%20CSS.html">Create a CSS file for each layout template, or create a single master CSS file to be used for all layout templates.</a></td>
+    </tr align=center>
+    <tr align=center>
+        <td>3</td>
+        <td colspan=2><a href="Building%20Themes/Test%20Theme.html">Test the theme on a webpage.</a></td>
+    </tr>
+    <tr align=center>
+        <td>4</td>
+        <td colspan=2>(Optional) <a href="Building%20Themes/Create%20DocType%20XML.html">Create a doctype XML file.</a></td>
+    </tr>
+    <tr align=center>
+        <td>5</td>
+        <td colspan=2><a href="Packaging%20Themes.html">Package your DNN theme.</a></td>
+    </tr>
+ </table>
+
+
+<!--
+.. include:: /../common/stub-notice.txt
+
+.. include:: /../common/contribute.txt
+-->
+
+</body>
