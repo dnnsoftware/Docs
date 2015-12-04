@@ -25,11 +25,13 @@
 
 <image src="..\common\img\PaneLayout.png" alt="Pane in a layout" width="50%" align=left>
 
-<p>A <b>pane</b> is a section of a web page that displays static content, dynamic content, or a standard theme object. DNN requires exactly one content pane called `ContentPane` (case-insensitive). Additional panes are optional.</p>
+<p>A <b>pane</b> is a section of a web page that displays static content, dynamic content, or a standard theme object.</p>
+
+<p>Dynamic content can be generated using a <b>module</b>, and the module's associated <b>container</b> can display the dynamic content in a way that is consistent with the overall design of the page.</p>
+
+<p>For both layouts and containers, DNN requires exactly one content pane called <b>ContentPane</b> (case-insensitive). Additional panes are optional.
 
 <p>A <b>theme object</b> can be a typical component of a webpage, such as the menu bar, the copyright notice, the login/registration links, the privacy link, the terms of service link, and the search box.</p>
-
-<p>Dynamic content can be generated using a <b>module</b> and then formatted according to the definition of the module's <b>container</b>.</p>
 
 <p>The layout templates included in the skin are variations on a theme that the web designer can choose from for each page in the site, such as the home page, a gallery of photos, or a listing of products for sale.</p>
 
@@ -61,6 +63,18 @@
 
 <h2> How to Build a Theme </h2>
 
+
+<h3>Prerequisites</h3>
+
+<ul>
+    <li><object width="100%" data="..\common\bptext\BP-PrereqHost.html"></object></li>
+</ul>
+
+
+<h3>Steps</h3>
+
+DOWNLOAD an example theme. <!-- TODO: Create one and add the link here. -->
+
 <table border=1 width=75%>
     <tr align=center><th></th><th width=45%>HTML</th><th width=45%>ASCX</th></tr>
     <tr align=center>
@@ -79,19 +93,28 @@
     </tr>
     <tr align=center>
         <td>2</td>
-        <td colspan=2>(Optional) <a href="Building%20Themes/Create%20CSS.html">Create a CSS file for each layout template, or create a single master CSS file to be used for all layout templates.</a></td>
-    </tr align=center>
+        <td><a href="Building%20Themes/Create%20Container.html">Create containers for modules.</a></td>
+        <td><!-- Can containers also be created in ASCX format? --></td>
+    </tr>
     <tr align=center>
         <td>3</td>
+        <td colspan=2>(Optional) <a href="Building%20Themes/Create%20CSS.html">Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers.</a></td>
+    </tr align=center>
+    <tr align=center>
+        <td>4</td>
         <td colspan=2><a href="Building%20Themes/Test%20Theme.html">Test the theme on a webpage.</a></td>
     </tr>
     <tr align=center>
-        <td>4</td>
+        <td>5</td>
         <td colspan=2>(Optional) <a href="Building%20Themes/Create%20DocType%20XML.html">Create a doctype XML file.</a></td>
     </tr>
     <tr align=center>
-        <td>5</td>
+        <td>6</td>
         <td colspan=2><a href="Packaging%20Themes.html">Package your DNN theme.</a></td>
+    </tr>
+    <tr align=center>
+        <td>7</td>
+        <td colspan=2><a href="Uploading%20Themes.html">Upload your DNN theme to your DNN website.</a></td>
     </tr>
  </table>
 

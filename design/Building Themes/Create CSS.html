@@ -7,25 +7,22 @@
 <!-- .. include:: /../common/stub-topic.txt -->
 
 <h1> Create a CSS File </hi>
-
+<!-- How are the layout templates and the CSS files associated with each other? -->
 
 <h2> Prerequisites </h2>
 
 <ul>
-    <li><OBJECT data="CONREF-Prereq-Host.html"></OBJECT></li>
+    <li><object width="100%" data="..\..\common\bptext\BP-PrereqHost.html"></object></li>
 </ul>
 
 
 <h2> Steps </h2>
 <ol>
 
-<li>Create a CSS file in the same folder as the layout template.</li>
-<!-- How are the layout templates and the CSS files associated with each other? -->
-
-<li>For every section (&lt;div&gt;) that contains a theme object in the layout template, add a style definition in the CSS file. The style definition must start with <b>#</b> followed by the <b>div</b> <b>id</b>.<br>
+<li>For every pane (&lt;div&gt;) that contains a theme object, add a style definition in the CSS file. The style definition must start with <b>#</b> followed by the <b>div</b> <b>id</b>.<br>
 <b>Example:</b>
-    <table border=1>
-    <tr align=center><th>layout template</th><th>CSS</th></tr>
+    <table border=1 width=100%>
+    <tr align=center bgcolor=silver><th width=50%>layout template</th><th width=50%>CSS</th></tr>
     <tr>
         <td>
         <xmp>
@@ -48,10 +45,8 @@
     </table>
 </li>
 
-<li><b>Special case:</b>
-</li>
-
 </ol>
+
 
 <h2> Example </h2>
 <p>This example illustrates a layout template, its matching CSS file, and a separate <code>menu.css</code>. The layout includes several DNN theme objects:
@@ -67,7 +62,7 @@
 </ul>
 </p>
 
-<table>
+<table width=100%>
     <tr align=center bgcolor=silver>
         <th>MyAwesomeLayout.html<br> (layout template)<br> <a href="../../common/samples/MyAwesomeLayout.html" download>DOWNLOAD</a></th>
         <th>MyAwesomeLayout.css<br> (based on the "Dreamy" design template from <a href="http://www.oswd.org/">OSWD</a> <!-- QUESTION: Is this true? -->)<br> <a href="../../common/samples/MyAwesomeLayout.css" download>DOWNLOAD</a></th>
@@ -171,7 +166,7 @@
         <td>
             <xmp>
     /* See the separate MyAwesomeMenu.css, which you can also import as follows:
-     @import url("mneu.css");
+     @import url("menu.css");
     */
              </xmp>
          </td>
