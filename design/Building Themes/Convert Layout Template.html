@@ -29,15 +29,32 @@
 
 </ol>
 
-<p><b>RESULT:</b> DNN converts the very basic layout template (index.html) to a new file (index.ascx) similar to this <!-- Is this still accurate? -->:
-    <xmp>
-    <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" >
-    <div id="ContentPane" runat="server" ></div>
-    </xmp>
+<p><b>Example:</b></p> <!-- Is this still accurate? -->
+<table width=100% border=1>
+    <tr align=center><th width=50%>This HTML layout template is converted </th><th width=50%>to this ASCX layout template</th></tr>
+    <tr valign=top>
+        <td>
+            <xmp>
+    <div id="wrapper">
+         <div id="ContentPane" runat="server"></div>
+    </div>
+            </xmp>
+        </td>
+        <td>
+            <xmp>
+    <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin">
+    <div id="ContentPane" runat="server"></div>
+            </xmp>
+        </td>
+    </tr>
+</table>
+
+<p><b>NOTE:</b> The conversion only goes in one direction (from HTML to ASCX). To make changes to the layout template, you can:
+<ul>
+    <li>make changes directly to the ASPX file, or</li>
+    <li>make the changes in your original HTML file and reconvert it to ASPX, overriding any changes made directly to the ASPX file.</li>
+</ul>
 </p>
-
-<p><b>NOTE:</b> The conversion only goes in one direction (from HTML to ASCX).</p>
-
 
 
 

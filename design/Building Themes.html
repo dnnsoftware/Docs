@@ -21,23 +21,43 @@
 
 <image src="..\common\img\SkinTheme.png" alt="Three variations of a theme" width="75%" align=center>
 
-<p>A layout defines where panes are located on the web page and what each pane contains.</p>
+
+<h3> Components of a Theme </h3>
 
 <image src="..\common\img\PaneLayout.png" alt="Pane in a layout" width="50%" align=left>
 
-<p>A <b>pane</b> is a section of a web page that displays static content, dynamic content, or a standard theme object.</p>
+<h4> Layouts and Containers </h4>
 
-<p>Dynamic content can be generated using a <b>module</b>, and the module's associated <b>container</b> can display the dynamic content in a way that is consistent with the overall design of the page.</p>
+<p>A <b>pane</b> is a section of a webpage that displays static content, dynamic content, or a standard theme object.</p>
 
-<p>For both layouts and containers, DNN requires exactly one content pane called <b>ContentPane</b> (case-insensitive). Additional panes are optional.
+<p>A <b>layout template</b> defines where panes are located on the webpage and what each pane contains. The layout templates included in a theme are variations that the web designer can choose from for each page in the site, such as the home page, a gallery of photos, or a listing of products for sale.</p>
 
-<p>A <b>theme object</b> can be a typical component of a webpage, such as the menu bar, the copyright notice, the login/registration links, the privacy link, the terms of service link, and the search box.</p>
+<p>A <b>container</b> is similar to a layout template, except a container's scope is a single pane, whereas a layout template's scope is the entire page. A container is associated with a <b>module</b>, which generates dynamic content.</p>
 
-<p>The layout templates included in the skin are variations on a theme that the web designer can choose from for each page in the site, such as the home page, a gallery of photos, or a listing of products for sale.</p>
+<p>For both layouts and containers, DNN requires exactly one content pane called <b>ContentPane</b> (case-insensitive). In a layout, additional panes are optional. In a container, additional panes are ignored. <!-- Is this last sentence true? -->
 
-<p>When a layout template is applied to a page, any associated stylesheet is automatically added to the page.</p>
+<p>Layouts and containers can contain a <b>theme object</b>, which can be a typical component of a webpage, such as the menu bar, the copyright notice, the login/registration links, the privacy link, the terms of service link, and the search box.</p>
 
-<p>Themes and containers can be combined in a single <b>package</b> or split into two packages.</p>
+
+<h4> CSS Files </h4>
+
+<p>CSS files can be associated with layouts and containers.
+    <ul>
+        <li>Any CSS file associated with a layout template defines how elements of the entire page are displayed.</li>
+        <li>Any CSS file associated with a container defines how the dynamic content is displayed within the pane. This ensures a unified design throughout the entire page, even if the various modules in the same page come from different creators.</li>
+    </ul>
+</p>
+
+<p>Layouts and containers can share several CSS files or a single master CSS file.</p>
+
+<p>If CSS files are not explicitly associated with the layouts and containers, the website's master CSS file is used. If no CSS files are associated with the website, the host's master CSS file is used.</p>
+
+<p>When a layout template is applied to a webpage, any associated CSS is automatically added to the webpage. Likewise, when a container is applied to a pane, any associated CSS is automatically added to the pane.</p>
+
+
+<h4> Packaging </h4>
+
+<p>The components of a theme can be packaged for easier distribution and installation. Layouts with their associated CSS files can be combined into one <b>package</b>, and containers with their associated CSS files can be combined into another package. Or you can combine them all into a single package.</p>
 
 
 <h3>Theme Types</h3>
@@ -58,7 +78,13 @@
         <td>Automatically converted to ASCX when installed. Only the <code>&lt;innerHtml&gt;</code> portion of the <code>&lt;body&gt;</code> tag is retained; everything else is discarded, including the entire <code>&lt;header&gt;</code>.</td>
         <td>Used as is.</td>
     </tr>
- </table>
+    <tr align=center>
+        <td>Easier to create.<br> Uses DNN tokens, which represent code that call DNN APIs. The tokens are replaced with code during conversion to ASCX.</td>
+        <td>More powerful.<br> Allows customization of code that call DNN APIs.</td>
+    </tr>
+</table>
+
+<!-- <p>For more information about DNN tokens and APIs, see ... </p> -->
 
 
 <h2> How to Build a Theme </h2>
@@ -79,22 +105,20 @@ DOWNLOAD an example theme. <!-- TODO: Create one and add the link here. -->
     <tr align=center><th></th><th width=45%>HTML</th><th width=45%>ASCX</th></tr>
     <tr align=center>
         <td rowspan=2>1</td>
-        <td>
-            a. <a href="Building%20Themes/Create%20Layout%20Template%20-%20HTML.html">Create a layout template for the theme in HTML format.</a><br>
-        </td>
-        <td rowspan=2>
-            Create a layout template in ASCX format. <!-- How? -->
+        <td colspan=2>
+            <a href="Building%20Themes/Create%20Layout%20Template.html">Create a layout template for the theme.</a><br>
         </td>
     </tr>
     <tr align=center>
         <td>
-            b. <a href="Building%20Themes/Convert%20Layout%20Template.html">Convert the layout template from HTML to ASCX.</a>
+            <a href="Building%20Themes/Convert%20Layout%20Template.html">Convert the layout template from HTML to ASCX.</a>
+        </td>
+        <td>
         </td>
     </tr>
     <tr align=center>
         <td>2</td>
-        <td><a href="Building%20Themes/Create%20Container.html">Create containers for modules.</a></td>
-        <td><!-- Can containers also be created in ASCX format? --></td>
+        <td colspan=2><a href="Building%20Themes/Create%20Container.html">Create containers for modules.</a></td>
     </tr>
     <tr align=center>
         <td>3</td>
