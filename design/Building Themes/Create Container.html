@@ -14,18 +14,16 @@
 <p>Containers allow designers to seamlessly integrate modules from many different developers into a cohesive site design. Containers can also include visual elements that allow site users to interact with the module.</p>
 
 <ul>
-    <li>You can have a default container, which would be overridden by individual pages or modules if they provide their own style definitions.</li>
-    <li>You can mix and match any container with any skin or use different containers in a single page.</li>
+    <li>You can have a default container, which would be overridden by individual panes or modules if they provide their own style definitions.</li>
+    <li>You can use different containers in a single page.</li>
+    <li>You can mix and match any container with any CSS.</li>
 </ul>
-
-<p>Every container includes the Module Action Menu which administrators and editors use for configuring the module.
-    <!-- How is this added? Automatically? --></p>
 
 
 <h2> Steps </h2>
 <ol>
 
-<li> Create a new HTML file for the container.
+<li> Create a new file for the container.
     <p><b>Note:</b>
         <ul>
             <li>The container must contain at least one pane. </li>
@@ -34,19 +32,27 @@
             <li>DNN recognizes only the folowing HTML elements as valid panes: &lt;td&gt; (table cells), &lt;div&gt;, &lt;p&gt;, and &lt;span&gt;.
         </ul>
     </p>
-    <p><b>Example:</b> A very basic container. <!-- Exactly the same as a layout template? -->
-        <xmp>
-            <div id="wrapper">
-                 <div id="ContentPane" runat="server"></div>
-            </div>
-        </xmp>
+    <p><b>Example:</b> A very basic container.
+        <ul>
+            <li>HTML
+                <xmp>
+    <div id="ContentPane" runat="server"></div>
+                </xmp>
+            </li>
+            <li>ASCX
+                <xmp>
+    <%@ Control AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Containers.Container" %>
+    <div id="ContentPane" runat="server"></div>
+                </xmp>
+            </li>
+        </ul>
     </p>
 </li>
 
 <li> (Optional) Add theme objects to your container for a more dynamic page.
     <p><object width="100%" data="../../common/bptext/BP-AddThemeObjects.html"></object></p>
 
-    <p>The following theme objects are relevant to containers:</p>
+    <p>The following theme objects are relevant to containers:</p> <!-- Joe will provide the complete list -->
     <table width=100%>
     <tr>
         <td valign=top>
@@ -60,7 +66,6 @@
             PRINTMODULE<br>
         </td>
         <td valign=top>
-            SOLPARTACTIONS<br>
             TITLE<br>
             VISIBILITY
         </td>

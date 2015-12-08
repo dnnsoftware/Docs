@@ -34,7 +34,7 @@
 
 <p>A <b>container</b> is similar to a layout template, except a container's scope is a single pane, whereas a layout template's scope is the entire page. A container is associated with a <b>module</b>, which generates dynamic content.</p>
 
-<p>For both layouts and containers, DNN requires exactly one content pane called <b>ContentPane</b> (case-insensitive). In a layout, additional panes are optional. In a container, additional panes are ignored. <!-- Is this last sentence true? -->
+<p>For both layouts and containers, DNN requires exactly one content pane called <b>ContentPane</b> (case-insensitive). In a layout, additional panes are optional. In a container, additional panes are ignored.
 
 <p>Layouts and containers can contain a <b>theme object</b>, which can be a typical component of a webpage, such as the menu bar, the copyright notice, the login/registration links, the privacy link, the terms of service link, and the search box.</p>
 
@@ -93,54 +93,26 @@
 <h3>Prerequisites</h3>
 
 <ul>
-    <li><object width="100%" data="..\common\bptext\BP-PrereqHost.html"></object></li>
+    <li><object width="100%" data="..\common\bptext\BP-PrereqHost.html"></object></li> <!-- Replace with #include. -->
 </ul>
 
 
-<h3>Steps</h3>
+<h3>Steps</h3> <!-- I want these steps to be more prominent: bigger fonts, colored background boxes, etc. -->
+<ol>
+    <li><a href="Building%20Themes/Create%20Layout%20Template.html">Create layout templates for the webpages.</a></li>
+    <li><a href="Building%20Themes/Create%20Container.html">Create containers for modules.</a></li>
+    <li><b>HTML only:</b> <a href="Building%20Themes/Convert%20HTML%20to%20ASCX.html">Convert the layout templates and containers from HTML to ASCX.</a></li>
+    <li>(Optional) <a href="Building%20Themes/Create%20CSS.html">Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers.</a></li>
+    <li><a href="Building%20Themes/Test%20Theme.html">Test the theme on a webpage.</a></li>
+    <li>(Optional) <a href="Building%20Themes/Create%20DocType%20XML.html">Create a doctype XML file.</a></li>
+    <li><a href="Packaging%20Themes.html">Package your DNN theme.</a></li>
+    <li><a href="Uploading%20Themes.html">Upload your DNN theme to your DNN website.</a></li>
+</ol>
 
-DOWNLOAD an example theme. <!-- TODO: Create one and add the link here. -->
-
-<table border=1 width=75%>
-    <tr align=center><th></th><th width=45%>HTML</th><th width=45%>ASCX</th></tr>
-    <tr align=center>
-        <td rowspan=2>1</td>
-        <td colspan=2>
-            <a href="Building%20Themes/Create%20Layout%20Template.html">Create a layout template for the theme.</a><br>
-        </td>
-    </tr>
-    <tr align=center>
-        <td>
-            <a href="Building%20Themes/Convert%20Layout%20Template.html">Convert the layout template from HTML to ASCX.</a>
-        </td>
-        <td>
-        </td>
-    </tr>
-    <tr align=center>
-        <td>2</td>
-        <td colspan=2><a href="Building%20Themes/Create%20Container.html">Create containers for modules.</a></td>
-    </tr>
-    <tr align=center>
-        <td>3</td>
-        <td colspan=2>(Optional) <a href="Building%20Themes/Create%20CSS.html">Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers.</a></td>
-    </tr align=center>
-    <tr align=center>
-        <td>4</td>
-        <td colspan=2><a href="Building%20Themes/Test%20Theme.html">Test the theme on a webpage.</a></td>
-    </tr>
-    <tr align=center>
-        <td>5</td>
-        <td colspan=2>(Optional) <a href="Building%20Themes/Create%20DocType%20XML.html">Create a doctype XML file.</a></td>
-    </tr>
-    <tr align=center>
-        <td>6</td>
-        <td colspan=2><a href="Packaging%20Themes.html">Package your DNN theme.</a></td>
-    </tr>
-    <tr align=center>
-        <td>7</td>
-        <td colspan=2><a href="Uploading%20Themes.html">Upload your DNN theme to your DNN website.</a></td>
-    </tr>
- </table>
+<!--
+<h3>Example</h3>
+TODO: Create an example theme that readers can download and add the link here.
+-->
 
 
 <!--

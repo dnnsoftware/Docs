@@ -7,7 +7,30 @@
 <!-- .. include:: /../common/stub-topic.txt -->
 
 <h1> Create a CSS File </hi>
-<!-- How are the layout templates and the CSS files associated with each other? -->
+
+<h2> Overview </h2>
+<p>CSS files can be associated with a layout template or container by giving it the same filename and placing it in the same folder. When a layout template (or container) is applied to a webpage (or pane), the associated CSS file is automatically applied. Example: These three files are automatically associated with each other:
+    <ul>
+        <li>MyLayout.ascx</li>
+        <li>MyLayout.css</li>
+        <li>MyLayout.doctype.xml</li>
+    </ul>
+</p>
+
+<p>CSS files are applied hierarchically.
+    <ol>
+        <li>If a layout template or container does not have a specific CSS associated with it, the master CSS for the theme is used. The master CSS for the theme must be called <code>skin.css</code>.</li>
+        <li>If the theme does not have a master CSS, then the default theme for the website is used.</li>
+        <li>If the website does not have a master CSS, then the default theme for the host is used.</li>
+    </ol>
+</p>
+<!--
+<link href="skin.css">
+<link href="Main.css">
+<link href="container.css">
+<link href="/Portals/0/portal.css">
+<link href="/Resources/Shared/stylesheets/dnndefault/8.0.0/default.css">
+-->
 
 
 <h2> Steps </h2>
@@ -40,339 +63,6 @@
 </li>
 
 </ol>
-
-
-<h2> Example </h2>
-<p>This example illustrates a layout template, its matching CSS file, and a separate <code>menu.css</code>. The layout includes several DNN theme objects:
-<ul>
-<li>LOGO</li>
-<li>USER</li>
-<li>LOGIN</li>
-<li>NAV</li>
-<li>LINKS</li>
-<li>PRIVACY</li>
-<li>TERMS</li>
-<li>COPYRIGHT</li>
-</ul>
-</p>
-
-<table width=100%>
-    <tr align=center bgcolor=silver>
-        <th>MyAwesomeLayout.html<br> (layout template)<br> <a href="../../common/samples/MyAwesomeLayout.html" download>DOWNLOAD</a></th>
-        <th>MyAwesomeLayout.css<br> (based on the "Dreamy" design template from <a href="http://www.oswd.org/">OSWD</a> <!-- QUESTION: Is this true? -->)<br> <a href="../../common/samples/MyAwesomeLayout.css" download>DOWNLOAD</a></th>
-    </tr>
-    <tr valign=top>
-        <td>
-            <xmp>
-    <div id="wrapper">
-         <div id="header">
-            </xmp>
-        </td>
-        <td>
-            <xmp>
-    /* Header Theme Objects */</td>
-    .user, a.user:link, a.user:active, a.user:visited {
-         color: white;
-         font-size: 1.1em;
-         font-weight:bold;
-         text-shadow: 1px 1px 1px #000;
-    }
-    a.user:hover {
-         color: #C00;
-         text-shadow: 2px 2px 2px #fff;
-    }
-            </xmp>
-
-    </tr>
-
-    <tr valign=top bgcolor=00CCEE>
-        <td>
-            <xmp>
-              <div id="logo">
-                    <object id="dnnLOGO" codebase="LOGO" codetype="dotnetnuke/server"></object>
-              </div>
-            </xmp>
-        </td>
-        <td>
-            <xmp>
-    #logo {
-         display: inline-block;
-         margin: 20px 0 0 20px;
-    }
-            </xmp>
-        </td>
-    </tr>
-
-    <tr valign=top bgcolor=00CCEE>
-        <td>
-            <xmp>
-              <div id="login_style" class="user">
-                    <object id="dnnUSER" codebase="USER" codetype="dotnetnuke/server">
-                         <param name="CssClass" value="user" />
-                    </object>
-                    <span class="linkseparator">|</span>
-                    <object id="dnnLOGIN" codebase="LOGIN" codetype="dotnetnuke/server">
-                         <param name="CssClass" value="user" />
-                    </object>
-              </div>
-            </xmp>
-        </td>
-        <td>
-            <xmp>
-    #login_style {
-         position: absolute;
-         bottom: 10px;
-         right: 10px;
-    }
-    .linkseparator {
-         padding: 0 5px;
-    }
-    #login_style .linkseparator{
-         color: white;
-         font-weight: bold;
-    }
-            </xmp>
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <xmp>
-         </div>
-            </xmp>
-        </td>
-        <td></td>
-    </tr>
-
-    <tr valign=top bgcolor=00CCEE>
-        <td>
-            <xmp>
-         <div id="menu">
-              <object id="dnnNAV" codebase="NAV" codetype="dotnetnuke/server">
-                    <param name="ProviderName" value="DDRMenuNavigationProvider" />
-                    <param name="IndicateChildren" value="false" />
-                    <param name="ControlOrientation" value="Horizontal" />
-                    <param name="CSSControl" value="mainMenu" />
-              </object>
-         </div>
-            </xmp>
-        </td>
-        <td>
-            <xmp>
-    /* See the separate MyAwesomeMenu.css, which you can also import as follows:
-     @import url("menu.css");
-    */
-             </xmp>
-         </td>
-    </tr>
-
-    <tr>
-        <td>
-            <xmp>
-         <div id="sidebar">
-              <div id="feed"><a class="feed-button" href="#">&nbsp;</a> </div>
-              <div id="SidebarPane" runat="server" class="SidebarPane"></div>
-              <div id="sidebar-bottom">&nbsp;</div>
-         </div>
-         <div id="content">
-              <div id="BannerPane" runat="server" class="BannerPane"></div>
-              <div id="ContentPane" runat="server"></div>
-         </div>
-         <div id="footer">
-            </xmp>
-        </td>
-        <td></td>
-    </tr>
-
-    <tr valign=top bgcolor=00CCEE>
-        <td>
-            <xmp>
-              <div class="linkscontainer">
-                    <object id="dnnLINKS" codebase="LINKS" codetype="dotnetnuke/server">
-                         <param name="CssClass" value="links" />
-                         <param name="Level" value="Root" />
-                         <param name="Separator" value="&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;" />
-                    </object>
-              </div>
-            </xmp>
-        </td>
-        <td>
-            <xmp>
-    /* Footer Theme Objects */
-    .linkscontainer {
-         padding-top: 30px;
-         text-align: center;
-         font-size: 1.2em;
-         text-transform: uppercase;
-    }
-    .links, a.links:link, a.links:active, a.links:visited {
-         font-weight: bold;
-         color: #28879B;
-    }
-    a.links:hover {
-         color: #C00;
-    }
-            </xmp>
-        </td>
-    </tr>
-
-    <tr valign=top bgcolor=00CCEE>
-        <td>
-            <xmp>
-              <div id="terms_style" class="footer">
-                    <object id="dnnPRIVACY" codetype="dotnetnuke/server" codebase="PRIVACY">
-                         <param name="CssClass" value="footer" />
-                    </object>
-                    <span class="linkseparator">|</span>
-                    <object id="dnnTERMS" codetype="dotnetnuke/server" codebase="TERMS">
-                         <param name="CssClass" value="footer" />
-                    </object>
-              </div>
-            </xmp>
-        </td>
-        <td>
-            <xmp>
-    #terms_style{
-         position: absolute;
-         bottom: 10px;
-         left: 10px;
-         display:inline-block;
-    }
-            </xmp>
-        </td>
-    </tr>
-
-    <tr valign=top bgcolor=00CCEE>
-        <td>
-            <xmp>
-              <div id="copy_style" class="footer">
-                    <object id="dnnCOPYRIGHT" codetype="dotnetnuke/server" codebase="COPYRIGHT">
-                         <param name="CssClass" value="footer" />
-                    </object>
-              </div>
-            </xmp>
-        </td>
-        <td>
-            <xmp>
-    #copy_style{
-         position: absolute;
-         bottom: 10px;
-         right: 10px;
-         display:inline-block;
-    }
-            </xmp>
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <xmp>
-         </div>
-    </div>
-            </xmp>
-        </td>
-        <td></td>
-    </tr>
-</table>
-
-<table>
-    <tr bgcolor=silver>
-        <th>MyAwesomeMenu.css<br> (based on DNN's <b>MinimalExtropy</b> theme) <!-- QUESTION: Is this true? --> <br> <a href="../../common/samples/MyAwesomeMenu.css" download>DOWNLOAD</a></th>
-    </tr>
-    <tr bgcolor=00CCEE>
-        <td>
-            <xmp>
-    /*--------- dnn menu style ----------*/
-    /* main menu td */
-    .mainMenu {
-         cursor: pointer;
-         font-size: 11px;
-         background-color: transparent;
-         width: 700px;
-    }
-    /* Main Menu Normal */
-    .mainMenu .root {
-         color: white;
-         font-size: 13px;
-         font-weight: bold;
-         text-align: center;
-         padding: 0px 12px;
-         text-transform: uppercase;
-         margin-right: 1px;
-         white-space: nowrap;
-         margin-right: 1px;
-         float: left;
-    }
-    /* Main menu hover */
-    .mainMenu .hov {
-         color: #fff;
-         background: url("images/bg-menu-hover.png") repeat-x top left;
-    }
-    /* Main menu selected */
-    .mainMenu .sel, .mainMenu .bc {
-         color: #bce5eb;
-    }
-    .mainMenu table {
-         border: 1px solid #C0D6E5;
-         z-index: 5000;
-    }
-    /* SUB Menu Normal */
-    .mainMenu tr.mi {
-         background-color: #F8FAFF;
-         z-index: 1000;
-         font-size: 11px;
-         font-weight: bold;
-         text-align: left;
-         color: #375162;
-         line-height: 2em;
-         text-transform: none;
-    }
-    .mainMenu tr.mi td {
-         padding: 0 2px;
-         text-transform: none;
-    }
-    /* SUB Menu hover & selected */
-    .mainMenu tr.hov {
-         background: #CE0D0D url("images/submenu_hover.png") repeat-x top left;
-    }
-    .mainMenu tr.hov td {
-         color: #fff;
-    }
-    .mainMenu tr.sel, .mainMenu tr.bc {
-         background: #CE0D0D url("/images/submenu_active.png") repeat-x top left;
-    }
-    .mainMenu tr.sel td, .mainMenu tr.bc td {
-         color: #fff;
-    }
-    .main_dnnmenu_break {
-         height: 2px;
-         background-color: #D5E0FF;
-    }
-    /* Module Action Menus */
-    .ModuleTitle_SubMenu {
-         border: 1px solid #C0D6E5;
-    }
-    .ModuleTitle_SubMenu td {
-         background-color: #F8FAFF;
-         white-space: nowrap;
-    }
-    .ModuleTitle_MenuIcon {
-         background-color: #F8FAFF;
-         border: none;
-         padding: 0px 2px;
-    }
-    .ModuleTitle_MenuItemSel td, .ModuleTitle_MenuItemSel .ModuleTitle_MenuIcon {
-         background: #CE0D0D url("images/submenu_hover.png") repeat-x top left;
-         color: #fff;
-    }
-    .ModuleTitle_MenuBreak td, .ModuleTitle_MenuBreak .ModuleTitle_MenuIcon {
-         height: 2px;
-         background-color: #D5E0FF;
-    }
-            </xmp>
-        </td>
-    </tr>
-</table>
 
 
 

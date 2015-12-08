@@ -12,13 +12,14 @@
 <p>To set up a local development environment to create DNN modules:
     <ol>
         <li>Determine what DNN version to install.</li>
-        <li>Install the requirements for the chosen DNN version:
+        <li>Install the following:
             <ul>
-                <li>Visual Studio (run "As Administrator")</li>
                 <li>IIS with ASP.NET extensions</li>
                 <li>.NET Framework</li>
-                <li>SQL (full version, not SQL Express)</li>
+                <li>SQL</li>
+                <li>Visual Studio 2015</li>
             </ul>
+            <p>Check the <a href="..\main\DNN%208%20Requirements.html">DNN 8.0 Requirements</a> for compatible versions.</p>
         </li>
         <li>Install DNN.</li>
         <li>
@@ -30,23 +31,25 @@
 
 <ol>
 
+<!-- Cover older versions in the next iteration of the docs website.
 <li><b>Determine what DNN version to install.</b> Decide on the oldest DNN version that you are willing to support.
     <ul>
         <li>What is the oldest DNN version that you or your clients have in production?</li>
         <li>If there is a specific feature that you want to use, which DNN version introduced that feature?</li>
     </ul>
-    <p><b>Note:</b> DNN versions are mostly backward-compatible, except where noted in the reference materials. <!-- Is this true? If not, how can they tell if a feature is not backward-compatible? --> If you compile your module on an older DNN version, it will likely be compatible with newer versions; however, you should test your module on newer versions to ensure compatibility.
+    <p><b>Note:</b> DNN 8.0 is mostly backward-compatible, except where noted in DNN 8 compatibility page. If you compile your module on an older DNN version, it will likely be compatible with newer versions; however, you should test your module on newer versions to ensure compatibility.
 </li>
+-->
+<!-- Need a link to the What's New > Breaking Changes page. -->
 
-<li><b>Decide between the Community Edition and the Professional Edition of DNN.</b> The Community Edition is the free open-source package; the Professional Edition adds custom functionality over the Community Edition.
-    <!-- What are the add-ons in PE? Is this still valid? -->
+
+<li><b>Decide among the DNN Platform, Evoq Content, and Evoq Engage.</b> The DNN Platform is the free open-source package; the Evoq (both Content and Engage) adds custom functionality over the Community Edition.
 </li>
 
 <li><b>Check the <a href="http://www.dnnsoftware.com/platform/start/install">requirements</a> and install the appropriate versions for the chosen DNN version.</b>
 </li>
 
 <li><b>Download the <a href="http://www.dnnsoftware.com/community/download">DNN Platform</a>.</b>
-    <!-- Where do they install the PE version from? -->
     <p><b>Note:</b> For module development, you won't need the source files.</p>
 </li>
 
@@ -109,12 +112,11 @@
 <li><b>Create a SQL database.</b><br>
     <ol>
         <li>In SQL Server, create a new database.<br>
-            <b>Tip:</b>Give the database the same name as the website. <!-- Why? -->
         </li>
         <li>Create a SQL user to access the database.
             <ul>
                 <li>Use SQL authentication.</li>
-                <li>Turn off the <b>Enforce Password</b> requirement.</li> <!-- Is this the actual name? -->
+                <li>Turn off the <b>Enforce Password</b> requirement.</li> <!-- Is this the actual name of the UI object? -->
                 <li>Give the new SQL user <b>DB Owner<b> and <b>Public</b> access to the new database.</li>
                 <li>Remember the username and password, because they will be required in the DNN Installation Wizard.</li>
             </ul>
@@ -130,30 +132,17 @@
             <ol>
                 <li>Choose <b>SQL 2005/2008</b>.</li>
                 <li>Uncheck integrated authentication</b>.</li>
-                <li>Enter the name of your SQL Server: <!-- Why these multiple options? -->
-                    <ul>
-                        <li>(local)</li>
-                        <li>.</li>
-                        <li>IPADDRESS</li>
-                    </ul>
-                    <p>In the Microsoft SQL Server Management Studio, you can copy the name of the server from the <b>Connect</b> dialog or from the <b>Server Properties</b> context menu.
-                </li>
+                <li>Use <code>(local)</code> as the name of your SQL Server.</li>
                 <li>Enter your database name.</li>
                 <li>Enter the username and password of the SQL user you created previously.</li>
                 <li>If creating modules for your own websites, set <b>objectQualifier</b> to blank.<br>
-                    If creating modules for sale, set <b>objectQualifier</b> to <code>dnn</code> to prepend <code>dnn_</code> to all DNN-generated objects, such as tables and stored procedures. This practice is recommended to avoid naming conflicts in your client's databases.</li>
+                    If creating modules for sale, set <b>objectQualifier</b> to <code>dnn</code> to prepend <code>dnn_</code> to all DNN-generated objects, such as tables and stored procedures. This practice is recommended to avoid naming conflicts in your clients' databases.</li>
             </ol>
         </li>
         <li>Follow the prompts to the end of the wizard.<br>
             <b>Note:</b>Remember the <b>HOST</b> and <b>ADMIN</b> passwords that you provide.
         </li>
     </ol>
-    <p><b>Tip:</b> If you get a "File Not Found" error or a <b>System.Security.SecurityException</b>,
-        <ol>
-            <li>Open the web.config file at the root folder of the DNN installation.</li>
-            <li>Add the tag <b>...</b> after the section <b>...</b>. <!-- Missing text from the source page. -->
-        </ol>
-    </p>
 </li>
 
 <li><b>Modify the web.config file.</b>
@@ -176,6 +165,7 @@
     <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a></li>
 </ul>
 
+<!-- In a footnote, document what environment (with versions) I use for screenshots. -->
 
 
 <!--
