@@ -99,10 +99,10 @@ html_theme = 'bootstrap'
 # documentation.
 html_theme_options = {
   'navbar_links': [
-    ("Documentation", "http://example.com", True, [
-      ("Admin", "http://example.com", True),
-      ("Developer", "http://example.com", True),
-      ("Designer", "http://example.com", True)
+    ("Documentation", "http://docs.dnndev.me/", True, [
+      ("Admin", "http://docs.dnndev.me/admin/index", True),
+      ("Developer", "http://docs.dnndev.me/dev/index", True),
+      ("Designer", "http://docs.dnndev.me/design/index", True)
     ]),
     ("Blogs", "http://example.com", True),
     ("Download", "http://example.com", True),
