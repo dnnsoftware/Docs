@@ -99,10 +99,10 @@ html_theme = 'bootstrap'
 # documentation.
 html_theme_options = {
   'navbar_links': [
-    ("Documentation", "http://example.com", True, [
-      ("Admin", "http://example.com", True),
-      ("Developer", "http://example.com", True),
-      ("Designer", "http://example.com", True)
+    ("Documentation", "http://docs.dnndev.me/", True, [
+      ("Admin", "http://docs.dnndev.me/admin/index", True),
+      ("Developer", "http://docs.dnndev.me/dev/index", True),
+      ("Designer", "http://docs.dnndev.me/design/index", True)
     ]),
     ("Blogs", "http://example.com", True),
     ("Download", "http://example.com", True),
@@ -112,9 +112,9 @@ html_theme_options = {
     ])
   ],
   'navbar_pagenav': False,
-  'source_link_position': "footer",
+  'source_link_position': "none",
   'navbar_title': 'Documentation Center',
-  'navbar_version': False 
+  'navbar_version': False
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -160,6 +160,7 @@ html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
+html_sidebars = {'**': ['searchbox.html', 'localtoc.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

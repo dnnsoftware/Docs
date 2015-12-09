@@ -13,7 +13,6 @@
 
 `Glossary <Glossary.html>`_
 
-
 .. include:: /../common/stub-notice.txt
 
 .. include:: /../common/contribute.txt
