@@ -19,7 +19,7 @@
                 <li>SQL</li>
                 <li>Visual Studio 2015</li>
             </ul>
-            <p>Check the <a href="..\main\DNN%208%20Requirements.html">DNN 8.0 Requirements</a> for compatible versions.</p>
+            <p>Check the <a href="..\main\DNN8Requirements.html">DNN 8.0 Requirements</a> for compatible versions.</p>
         </li>
         <li>Install DNN.</li>
         <li>
@@ -64,7 +64,7 @@
             <b>Note:</b> If you are using Windows XP, go to <b>Tools</b> &gt; <b>Options</b> and uncheck <b>Use Simple File Sharing</b>.
         </li>
         <li>Give Full or Modify permissions to the user account that is used to run your website. The account name differs, depending on your IIS and Windows version:
-            <table>
+            <table border=1>
                 <tr>
                     <th>If your IIS version is</th>
                     <th>and your OS is</th>
@@ -111,7 +111,7 @@
             <ul>
                 <li>Use SQL authentication.</li>
                 <li>Turn off the <b>Enforce Password</b> requirement.</li> <!-- Is this the actual name of the UI object? -->
-                <li>Give the new SQL user <b>DB Owner<b> and <b>Public</b> access to the new database.</li>
+                <li>Give the new SQL user <b>DB Owner</b> and <b>Public</b> access to the new database.</li>
                 <li>Remember the username and password, because they will be required in the DNN Installation Wizard.</li>
             </ul>
         </li>
@@ -129,7 +129,7 @@
 
 <li><b>Run the DNN Installation Wizard.</b> <!-- Verify the actual names of the UI objects. Need screenshots. -->
     <ol>
-        <li>Open your website (http://dnndev.me) in a browser.</li>
+        <li>Open your website (<code>http://dnndev.me</code>) in a browser.</li>
         <li>In the installation wizard, choose <b>Typical</b> and follow the prompts to <b>Database Configuration</b>.</li>
         <li>In <b>Database Configuration</b>,
             <ol>
@@ -151,7 +151,7 @@
 <li><b>Modify the web.config file.</b>
     <ul>
         <li><b>ShowMissingKeys</b> = <b>TRUE</b><br>
-            <p>If set to <b>TRUE</b>,
+            <p>If <b>TRUE</b>,
                 <ul>
                     <li>Any localized text in DNN will be displayed with an "L" in front of it to help with translating text in your module.</li>
                     <li>DNN displays an error if the localized version of a string is missing from the resource files. The resource files are XML files that contain the localized string tables.</li>
@@ -165,7 +165,7 @@
 
 <h2>Sources</h2>
 <ul>
-    <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a></li>
+    <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by Chris Hammond.</li>
     <li><a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
 </ul>
 

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+</head>
+<body>
+
+<!-- .. include:: /../common/stub-topic.txt -->
+
+<h1> Building Modules </hi>
+
+<h2> Overview </h2>
+<p>You can produce a module in different ways:
+    <ul>
+        <li>Build an entire module from scratch.</li>
+        <li><a href="BuildModuleFromTemplate.html">Customize a set of module development templates.</a></li>
+        <li>Use a pre-existing module. Hundreds <!-- How many are there in the market? --> of third-party modules are available from these sources:
+            <ul>
+                <li>For sale: <a href="http://store.dnnsoftware.com">DNN Store</a> - Some developers provide versions that include the source code.</li>
+                <li>Open source and free:
+                    <ul>
+                        <li><a href="http://www.DNNSoftware.com/Forge">DNN Forge</a></li>
+                        <li><a href="http://DotNetNuke.CodePlex.com">DNN at Codeplex</a></li>
+                        <li><a href="https://github.com/dnnsoftware">DNN at GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</p>
+
+
+<h2>Prerequisites</h2>
+
+<ul>
+    <li><object width="100%" data="..\common\bptext\BP-PrereqHost.html"></object></li>
+    <li><a href="Building Modules\Set up Dev Environment.html">A local DNN development environment</a></li>
+</ul>
+
+
+<h2>Steps</h2>
+
+<ol>
+
+<li>Decide what type of module you need:
+    <ul>
+        <li>A <b>Web Forms module</b> ....</li>
+        <li>A <b>MVC module</b> ....</li>
+        <li>A <b>SPA module</b> ....</li>
+    </ul>
+</li>
+
+<li>Modify the module to implement the functionality you need:
+    <ul>
+        <li><a href="BuildWebFormsModule">Web Forms module</a></li>
+        <li><a href="BuildMVCModule.html">MVC</a></li>
+        <li><a href="BuildSPAModule.html">SPA</a></li>
+    </ul>
+</li>
+
+<li><b>Test your module.</b>
+    <p><b>Tip:</b> Before you start your own tests, try the DNN <a href="http://evs.dotnetnuke.com/">Extension Verification Service</a> (EVS) to perform the initial compatibility tests.
+        <img src="..\..\common\img\scr-EVS.png" width=75%>
+        <ul>
+            <li>In the module packaging, verifies that
+                <ul>
+                    <li>That a valid .dnn manifest file exists. Errors are issued, if required sections are missing; warnings, if optional sections are missing.</li>
+                    <li>That all files listed in the manifest exist in the package.</li> <!-- Need confirmation that this has been implemented. -->
+                    <li>That all files included in the package are listed in the manifest.</li> <!-- Need confirmation that this has been implemented. -->
+                </ul>
+            </li>
+
+            <li>In the data layer, verifies:
+                <ul>
+                    <li>That any SQL scripts in the module are compatible with SQL Azure. If Azure-incompatible SQL scripts are found, EVS generates Azure-compatible versions of those scripts and makes them available in a zip file.</li> <!-- Need confirmation that this has been implemented. -->
+                    <li>That the uninstall script completely removes all objects added by the installation script.</li>
+                </ul>
+            </li>
+
+            <li>In the assemblies, verifies:
+                <ul>
+                    <li>That no assembly errors exist.</li>
+                </ul>
+                <p>By examining the assembly references, the EVS also determines the minimum .NET version and minimum DNN version required for the module to work correctly.</p> <!-- Then what does the EVS do with this information? Does it just tell the module developer? Does it compare the info with what's in a setting file somewhere? -->
+            </li>
+        </ul>
+    </p>
+</li>
+
+<li><b>Package your module.</b></li>
+
+
+</ol>
+
+
+<h2> See Also </h2>
+<ul>
+	<li><a href="IntroToModules.html">Introduction to DNN Modules</a></li>
+	<li></li>
+</ul>
+
+
+
+<h2> Sources </h2>
+<ul>
+    <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/module-development">Module Development</a></li>
+    <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro">Module Development</a> series by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/710933">Clinton Patterson</a></li>
+    <li><a href="http://www.dnnsoftware.com/community-blog/cid/147439/extension-verification-service-evs">Extension Verification Service (EVS)</a> by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/169038">Nathan Rover</a></li>
+</ul>
+
+
+<!--
+.. include:: /../common/stub-notice.txt
+
+.. include:: /../common/contribute.txt
+-->
+
+</body>
