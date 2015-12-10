@@ -114,7 +114,8 @@ html_theme_options = {
   'navbar_pagenav': False,
   'source_link_position': "none",
   'navbar_title': 'Documentation Center',
-  'navbar_version': False
+  'navbar_version': False,
+  'globaltoc_depth': 2
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -160,7 +161,7 @@ html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
-html_sidebars = {'**': ['searchbox.html', 'localtoc.html']}
+html_sidebars = {'**': ['searchbox.html', 'sidebartoc.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

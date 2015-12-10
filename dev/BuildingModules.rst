@@ -7,7 +7,7 @@
 (Insert intro about building modules here.) 
 
 .. toctree::
-	:maxdepth: 2
+	:hidden:
 
 	Building Modules/Module Templates
 	Building Modules/Web Forms Modules
@@ -16,5 +16,4 @@
 
 .. include:: /../common/stub-notice.txt
 
-.. include:: /../common/contribute.txt
-
+.. _issue: https://dnntracker.atlassian.net/browse/DOC-27
