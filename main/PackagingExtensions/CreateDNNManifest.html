@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+</head>
+<body>
+
+<!-- .. include:: /../common/stub-topic.txt -->
+
+<h1> Create a DNN Manifest </hi>
+
+
+<h2> Overview </h2>
+
+<p>The <b>DNN manifest</b> is an XML file (e.g., MyDNNExtension.dnn) that specifies how each file in the extension package must be processed during installation.</p>
+
+<p><b>Note:</b> The file extension must be <b>.dnn</b>. You can add the DNN version at the end; e.g., <code>MyDNNExtension.dnn8</code>.</p>
+
+
+<h2> Steps </h2> <!-- These steps are too long. Need to be able to expand/collapse them. -->
+<ol>
+
+<li>Start with a basic manifest.
+    <xmp>
+        <dotnetnuke type="Package" version="8.0">
+            <packages>
+                <package name="MyCompany.SampleWidget" type="Module" version="1.0.0">
+                    <friendlyName>My Sample Widget</friendlyName>
+                    <description>My Sample Widget is a demonstration widget.</description>
+                    <iconFile>"MyIcon.png"</iconFile> <!-- Are the quotes needed, just like license and releaseNotes? -->
+                    <owner>
+                        <name>MyCompany or MyName</name>
+                        <organization>MyCompany Corporation</organization>
+                        <url>www.example.com</url>
+                        <email>support@example.com</email>
+                    </owner>
+                    <license src="MyLicense.txt" />
+                    <releaseNotes src="MyReleaseNotes.txt" />
+                    <azureCompatible>true</azureCompatible>
+                    <dependencies>
+                        <!-- Insert dependencies here. -->
+                    </dependencies>
+                    <components>
+                        <!-- Insert details of components here. -->
+                    </components>
+                </package>
+            </packages>
+    </dotnetnuke>
+    </xmp>
+    <br/>
+    <p>Replace the appropriate values with your information: <br/> <!-- Which of these are optional? -->
+        <ul>
+            <li><b>package</b>
+                <xmp>
+    <package name="MyCompany.SampleWidget" type="Module" version="1.0.0">
+    ...
+    </package>
+                </xmp>
+                <ul>
+                    <li><b>name</b>. Must be unique. To ensure your package's uniqueness, add your company as the prefix.</li>
+                    <li><b>type</b>. Can be one of the following:
+                        <ul>
+                            <li><b>Authentication System</b></li>
+                            <li><b>Container</b></li>
+                            <li><b>Dashboard Control</b></li>
+                            <li>Language Pack: (<b>CoreLanguagePack</b>, <b>ExtensionLanguagePack</b>)</li>
+                            <li><b>Library</b></li>
+                            <li><b>Module</b></li>
+                            <li><b>Provider</b></li>
+                            <li><b>Skin</b></li>
+                            <li><b>Skin Object</b></li>
+                            <li><b>Widget</b></li>
+                            <li>other custom extension types</li>
+                        </ul>
+                        <p></p>
+                    </li>
+                    <li><b>version</b>. The version of your extension.</li>
+                </ul>
+                <p>Each package represents a DNN extension. You can install multiple extensions using a single DNN manifest by creating a <b>package</b> section for each extension inside the <b>packages</b> tag.</p>
+                <p><b>Note:</b> The extensions are installed in the order they appear in the manifest.</p>
+
+                <!-- "Second, the installer user interface is only aware of the first package being installed. What this means is that only the information prior to the components section of the first package will be displayed during the installer screens (the name, description, owner information, license and read me notes)." from https://gyazo.com/3fe50631a735a10edf925b9c0b491ada. Is this still true?  -->
+
+            </li>
+
+            <li><b>friendlyName</b> and <b>description</b>. The <b>friendlyName</b> can contain spaces and up to 250 characters. The <b>description</b> can hold up to 2000 characters.</li>
+                <xmp>
+    <friendlyName>My Sample Widget</friendlyName>
+    <description>My Sample Widget is a demonstration widget.</description>
+                </xmp>
+
+            <li>(Optional) <b>iconFile</b>. The image file (preferably <b>.png</b>) to be associated with the extension. The icon is displayed in the DNN Control Panel's dropdown list and in the Extensions page.
+                <xmp>
+    <iconFile>"MyIcon.png"</iconFile>
+                </xmp>
+             <!-- Are the quotes needed, just like license and releaseNotes? -->
+             <p><b>Note:</b>The <b>iconFile</b> section must be between the <b>description</b> and the <b>owner</b> sections.</p>
+             </li>
+
+            <li>(Optional, but encouraged) <b>owner</b>. Information about the owner or creator of the extension.</li>
+                <xmp>
+    <owner>
+        <name>MyCompany or MyName</name>
+        <organization>MyCompany Corporation</organization>
+        <url>www.example.com</url>
+        <email>support@example.com</email>
+    </owner>
+                </xmp>
+
+            <li>(Optional, but encouraged) <!-- Are these really optional? --><b>license</b> and <b>releaseNotes</b>. These text files are displayed during the installation. The user is prompted to accept or decline the license. <!-- When is the releaseNotes text displayed? --> The text can also be embedded within the tag without the <b>src</b> attribute.
+                <xmp>
+    <license src="MyLicense.txt" />
+    <releaseNotes src="MyReleaseNotes.txt" />
+                </xmp>
+            </li>
+
+            <li>(Optional) <!-- Are this really optional? --><b>azureCompatible</b>. Set to <b>true</b> if the module is compatible with SQL Azure; otherwise, <b>false</b>.
+                <xmp>
+    <azureCompatible>true</azureCompatible>
+                </xmp>
+            </li>
+        </ul>
+    </p>
+</li>
+
+<li>Add dependencies.
+    <xmp>
+    <dependencies>
+        <dependency type="coreVersion">08.00.00</dependency>
+        <!-- Insert additional dependencies here. -->
+    </dependencies>
+    </xmp>
+    <br/>
+    <p>Dependencies can be any of these types (case-insensitive):</p>
+    <ul>
+        <li><b>coreVersion</b>. Minimum DNN version required by the extensions being installed.</li>
+        <li><b>dependency list item</b> <!-- Needs more info. --></li>
+        <li><b>managedPackage</b> <!-- Seen this in an example, but not in the list of dependency types. --></li>
+        <li><b>package</b>. A package required by the extensions being installed. It must already listed in the core Packages table. <!-- Where's the example? --></li>
+        <li><b>permission</b> <!-- ??? --></li>
+        <li><b>type</b> <!-- ??? --></li>
+    </ul>
+
+</li>
+
+<li>Add components.
+    <xmp>
+    <components>
+        <component type="Widget">
+            <widgetFiles>
+                <basePath></basePath>
+                <widgetFile>
+                    <path/>
+                    <name/>
+                </widgetFile>
+            </widgetFiles>
+        </component>
+        <!-- Insert additional components here. -->
+    </components>
+    </xmp>
+    <p>A component type can be one of the following:
+        <table border=1>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-assembly-component">Assembly</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-authenticationsystem-component">AuthenticationSystem</a></b></th>
+                <td>Authentication providers used by the module, such as <b>OpenId</b>, <b>LiveId</b>, and <b>ActiveDirectory</b>.</td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/cleanup-component">Cleanup</a></b></th>
+                <td>List of files that must be deleted when the module is uninstalled.</td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-config-component">Config</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-container-component">Container</a></b></th>
+                <td>DNN container </td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-dashboardcontrol-component">DashboardControl</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-file-component">File</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-corelanguage-component">CoreLanguage</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-extensionlanguage-component">ExtensionLanguage</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/module-component">Module</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-provider-component">Provider</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-resourcefile-component">ResourceFile</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/script-component">Script</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-skinobject-component">SkinObject</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-skin-component">Skin</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-url-provider">URL Provider</a></b></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><b><a href="http://www.dnnsoftware.com/wiki/manifest-widget-component">Widget</a></b></th>
+                <td></td>
+            </tr>
+        </table>
+    </p>
+</li>
+
+</ol>
+
+
+
+<h2>Sources</h2>
+<ul>
+    <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/manifests">Manifests</a></li>
+    <li>DNN Community blog: Posts by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/43261">Charles Nurse</a>:
+    <a href="http://www.dnnsoftware.com/community-blog/cid/135060/the-new-extension-installer-manifest-part-1-introduction">The New Extension Installer Manifest - Part 1, Introduction</a> by </li>
+</ul>
+
+<!--
+.. include:: /../common/stub-notice.txt
+
+.. include:: /../common/contribute.txt
+-->
+
+</body>
