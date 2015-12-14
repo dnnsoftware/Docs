@@ -13,7 +13,7 @@
     <ul>
         <li>Build an entire module from scratch.</li>
         <li><a href="BuildModuleFromTemplate.html">Customize a set of module development templates.</a></li>
-        <li>Use a pre-existing module. Hundreds <!-- How many are there in the market? --> of third-party modules are available from these sources:
+        <li>Use a pre-existing module. Hundreds of third-party modules are available from these sources:
             <ul>
                 <li>For sale: <a href="http://store.dnnsoftware.com">DNN Store</a> - Some developers provide versions that include the source code.</li>
                 <li>Open source and free:
@@ -54,14 +54,15 @@
             <li><b>Module packaging</b>. EVS verifies:
                 <ul>
                     <li>That a valid <b>.dnn</b> manifest file exists. Errors are issued, if required sections are missing; warnings, if optional sections are missing.</li>
-                    <li>That all files listed in the manifest exist in the package.</li> <!-- Need confirmation that this has been implemented. -->
-                    <li>That all files included in the package are listed in the manifest.</li> <!-- Need confirmation that this has been implemented. -->
+                    <li>That all files listed in the manifest exist in the package.</li>
+                    <li>That all files included in the package are listed in the manifest.</li>
                 </ul>
             </li>
 
-            <li><b>Data layer</b>. EVS verifies: <!-- Need confirmation that these have been implemented. -->
+            <li><b>Data layer</b>. EVS verifies:
                 <ul>
-                    <li>That any SQL scripts in the module are compatible with SQL Azure. If Azure-incompatible SQL scripts are found, EVS generates Azure-compatible versions of those scripts and makes them available in a zip file.</li>
+                    <li>That core database objects were not modified.</li>
+                    <li>That any SQL scripts in the module are compatible with SQL Azure and can execute without errors. If Azure-incompatible SQL scripts are found, EVS generates Azure-compatible versions of those scripts and makes them available in a zip file.</li>
                     <li>That SQL's {databaseOwner} and {objectQualifier} are correctly used.</li>
                     <li>That the uninstall script completely removes all objects added by the installation script.</li>
                 </ul>
@@ -95,7 +96,7 @@
 <ul>
     <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/module-development">Module Development</a></li>
     <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro">Module Development</a> series by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/710933">Clinton Patterson</a></li>
-    <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/147439/extension-verification-service-evs">Extension Verification Service (EVS)</a> by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/169038">Nathan Rover</a></li>
+    <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/147439/extension-verification-service-evs">Extension Verification Service (EVS)</a> and <a href="http://www.dnnsoftware.com/community-blog/cid/154576/extension-verification-service-evs-update%20from%20june%202013">Extension Verification Service (EVS) Update</a> by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/169038">Nathan Rover</a></li>
 </ul>
 
 
