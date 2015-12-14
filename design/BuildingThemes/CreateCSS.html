@@ -11,19 +11,30 @@
         </ul>
     </p>
 
-    <p>CSS files are applied hierarchically.
-        <ol>
-            <li>If a layout template or container does not have a specific CSS associated with it, the master CSS for the theme is used. The master CSS for the theme must be called <code>skin.css</code>.</li>
-            <li>If the theme does not have a master CSS, then the default theme for the website is used.</li>
-            <li>If the website does not have a master CSS, then the default theme for the host is used.</li>
-        </ol>
+    <p>CSS files are applied hierarchically. If a style is defined for an element in multiple CSS files, the last CSS which mentions the same element overrides the style definitions in previously loaded CSS files.
+    By default, the CSS files are loaded in this order:
+    <ol>
+        <li><b>Skin.css</b> (~/Portals/PortalID/Skins/SkinPackageName/skin.css) - The master CSS for the theme must be called <code>skin.css</code>.</li>
+        <li><b>MyLayoutTemplate.css</b> or <b>MyModule.css</b></li>
+        <li><b>Container.css</b> (~/Portals/PortalID/Containers/ContainerPackageName/container.css) - The CSS for all containers in your theme.</li>
+        <li><b>Portal.css</b> (~/Portals/PortalID/portal.css) - The CSS that can override elements in the installed themes if the webside admin does not have modify permissions to installed themes.</li>
+        <li><b>Default.css</b> (~/Portals/_default/default.css) - The default CSS for the website.</li>
+    </ol>
     </p>
     <!--
-    <link href="skin.css">
-    <link href="Main.css">
-    <link href="container.css">
-    <link href="/Portals/0/portal.css">
-    <link href="/Resources/Shared/stylesheets/dnndefault/8.0.0/default.css">
+    This is what shows in the sample we looked at:
+        <link href="skin.css">
+        <link href="Main.css">
+        <link href="container.css">
+        <link href="/Portals/0/portal.css">
+        <link href="/Resources/Shared/stylesheets/dnndefault/8.0.0/default.css">
+    The  Professional Training Video (http://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-2-creating-html-skins) shows this:
+        1. Default.css      (~/Portals/_default/default.css)
+        2. Module.css       (~/DesktopModule/ModuleName/module.css)
+        3. Skin.css         (~/Portals/PortalID/Skins/SkinPackageName/skin.css)
+        4. Container.css    (~/Portals/PortalID/Containers/ContainerPackageName/container.css)
+        5. Portal.css       (~/Portals/PortalID/portal.css)
+    Which is correct?
     -->
 
 
@@ -57,3 +68,57 @@
     </li>
 
     </ol>
+
+
+    <h2> Example </h2> <!-- I think I need a simpler and more generic example. -->
+    <xmp>
+    .c_container {
+        padding-bottom: 15px;
+        margin: 5px 10px;
+    }
+    .c_actions, .c_icon, .c_icon > img, h2.c_title {
+        float: left;
+    }
+    .c_actions {
+        height: 2em;
+        line-height: 2em;
+    }
+    .icn img {
+        margin-right: 5px;
+    }
+    h2.c_title {
+        margin: 0;
+        padding: 0;
+    }
+    .c_contentpane{
+        padding-top: 5px;
+    }
+    .c_left_actions {
+        float: left;
+        margin-top: 5px;
+    }
+    .c_right_actions {
+        float: right;
+        margin-top: 5px;
+    }
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    </xmp>
+
+
+    <h2> See Also </h2>
+    <ul>
+        <li><a href="CreateLayoutTemplate.html">Create Layout Template</a></li>
+        <li><a href="CreateContainer.html">Create Container</a></li>
+    </ul>
+
+
+    <h2> Sources </h2>
+    <ul>
+        <li>DNN Professional Training: <a href="http://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-2-creating-html-skins"></a>Creating HTML Skins</li>
+    </ul>
