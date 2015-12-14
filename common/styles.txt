@@ -1,0 +1,7 @@
+.. role:: paneladmin
+
+.. role:: paneldev
+
+.. role:: paneldesign
+
+.. role:: dnnsecondarybuttons

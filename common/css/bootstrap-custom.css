@@ -14,3 +14,26 @@ a.navbar-brand img {
 	margin: -4px .3em 0 0;
 	display: inline-block;
 }
+
+div.panels.container {
+	text-align: center;
+}
+
+p.panel-button {
+	display: inline-block;
+	width:300px;
+	height:300px;
+	margin: 1em;
+}
+
+.panel-button.admin {
+	border: 1px solid #faa;	
+}
+
+.panel-button.dev {
+	border: 1px solid #afa;	
+}
+
+.panel-button.design {
+	border: 1px solid #aaf;	
+}

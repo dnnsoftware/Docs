@@ -1,5 +1,7 @@
 .. include:: /../common/stub-topic.txt
 
+.. _index:
+
 ================================
 |stub-icon| Design Documentation
 ================================

@@ -1,15 +1,20 @@
-.. include:: /../common/stub-topic.txt
+.. include:: /../common/styles.txt
 
 |stub-icon| DNN Documentation
 =============================
 
+.. container:: panels
+
+	.. class:: panel-button dev
+	:ref:`Developer <dev:index>`
+	
+	.. class:: panel-button design
+	:ref:`Designer <design:index>`
+	
+	.. class:: panel-button admin
+	:ref:`Administrator <admin:index>`
+
 `What's New in DNN 8.0 <WhatsNewDNN80.html>`_
-
-`Admin Center </admin/index.html>`_
-
-`Developer Center </dev/index.html>`_
-
-`Design Center </design/index.html>`_
 
 `Glossary <Glossary.html>`_
 

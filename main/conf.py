@@ -62,6 +62,8 @@ release = '8.0.0'
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build','samples/*']
 
+primary_domain = None
+
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
 #default_role = None
@@ -86,7 +88,13 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-rst_epilog = """  """
+rst_epilog = """
+.. |stub-icon| unicode:: U+1F527
+"""
+
+rst_prolog = """
+
+"""
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -345,5 +353,8 @@ epub_exclude_files = ['search.html']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
+  'admin': ('http://docs.dnndev.me/admin', 'admin.inv'),
+  'dev': ('http://docs.dnndev.me/dev', 'dev.inv'),
+  'design': ('http://docs.dnndev.me/design', 'design.inv'),
 }
 
