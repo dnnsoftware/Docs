@@ -17,7 +17,11 @@
 
 <p>The <b>DNN manifest</b> is an XML file (e.g., MyDNNExtension.dnn) that specifies how each file in the extension package must be processed during installation.</p>
 
-<p><b>Note:</b> The file extension must be <b>.dnn</b>. You can add the DNN version at the end; e.g., <code>MyDNNExtension.dnn8</code>.</p>
+<p>Only the files declared in the manifest would be installed. This includes files inside a zip file specified in <code>component type="ResourceFile"</code>.</p>
+
+<p>Files mentioned in the manifest but do not exist in your package will cause an error message.</p>
+
+<p><b>Note:</b> The manifest file extension must be <b>.dnn</b>. You can add the DNN version at the end; e.g., <code>MyDNNExtension.dnn8</code>.</p>
 
 
 <h2> Schema </h2>
@@ -537,6 +541,12 @@
 
     </ul>
 </p>
+
+
+<h2>See Also</h2>
+<ul>
+    <li><a href="http://www.ifinity.com.au/Blog/EntryId/89/Top-5-DotNetNuke-Manifest-file-Module-Packaging-Tips">Top 5 DotNetNuke Manifest file Module Packaging Tips</a>by <a href="http://www.dnnsoftware.com/users/bruce-chapman">Bruce Chapman</a></li>
+</ul>
 
 
 <h2>Sources</h2>
