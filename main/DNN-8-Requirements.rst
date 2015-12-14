@@ -1,1 +1,0 @@
-.. include:: DNN8Requirements.html

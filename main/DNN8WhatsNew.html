@@ -1,0 +1,79 @@
+.. raw:: html
+
+    <h1> What's New in DNN 8.0 </hi>
+
+
+    <h2> Overview </h2>
+
+    <!-- How do I include a table of contents after Overview? -->
+
+
+    <h2>New Features</h2>
+
+    <h3>NEW: MVC and SPA Module Development Support</h3>
+
+    <h3>NEW: OAuth2 Server Support</h3>
+
+    <h3>NEW: New HTML Editor</h3>
+
+    <h3>NEW: Dynamic Content Creator</h3>
+
+    <h3>NEW: New Default Skin and Template</h3>
+
+    <h3>NEW: Custom DNN Distributions</h3>
+
+
+    <h2>Improved Features</h2>
+
+    <h3>IMPROVED: Updated DNN Architecture</h3>
+
+    <h3>IMPROVED: Moved Telerik Wrapper Controls to Standalone Assembly</h3>
+        <p>Although Telerik RadControls are still shipped with DNN 8.0, these controls are moved to a standalone assembly to reduce our reliance on Telerik. If you rely on these wrappers, simply add a reference to the new assembly in your code.</p>
+        <!--
+            * Has this been implemented already?
+            * What is the name of the assembly? -->
+
+
+    <h3>IMPROVED: Converted DNN Platform from WSP to WAP</h3>
+        <p>The DNN platform was converted from a website project (WSP) to a web application project (WAP). WAP code compiles into a single assembly, which generally reduces the initial load time and improves resource utilization on the server.</p>
+
+
+    <h2>Deprecated Features</h2>
+
+    <h3>DEPRECATED: Features Moved to GitHub</h3>
+        <p>To improve performance, these features were removed from the core platform, because they are no longer relevant or are rarely used. If you still rely on these features, you can reenable the functionality by reinstalling the appropriate module or provider from the DNN Community section in GitHub.</p>
+        <ul>
+            <li><a href="https://github.com/DNNCommunity/NavigationProviders">ASP2MenuNavigationProvider</a></li>
+            <li><a href="https://github.com/DNNCommunity/NavigationProviders">DNNDropDownNavigationProvider</a></li>
+            <li><a href="https://github.com/DNNCommunity/NavigationProviders">DNNMenuNavigationProvider</a></li>
+            <li><a href="https://github.com/DNNCommunity/NavigationProviders">DNNTreeNavigationProvider</a></li>
+            <li>Newsletter Module</li>
+            <li>RequestFilter</li>
+            <li><a href="https://github.com/DNNCommunity/Dnn.SiteLog">SiteLog</a></li>
+            <li>UsersOnline</li>
+            <li><a href="https://github.com/DNNCommunity/DNN.Vendors">Vendors/Banners Modules</a></li>
+            <li>Widget Framework</li>
+        </ul>
+
+    <h3>DEPRECATED: web.config &gt; appSettings node &gt; connectionString</h3>
+        <p>ASP.NET 1.x did not have support for a connectionStrings area; therefore, DNN modules used a connectionString setting in the appSettings node in DNN's web.config.</p>
+        <p>In ASP.Net 2.0, Microsoft introduced a new dedicated connectionStrings node inside web.config; therefore, connectionString in appSettings is no longer required.</p>
+        <p>If one of your modules still requires connectionString in appSettings, simply add it back to your web.config.</p>
+
+
+    <h3>DEPRECATED: Features Previously Deprecated</h3>
+        <p>These features were previously deprecated from the core platform, and the code was cleaned up in this release.</p>
+        <ul>
+            <li>SolPartMenuNavigationProvider (and associated skin objects)</li>
+            <li>Feed Browser</li>
+            <li>Webslice Support</li>
+            <li>What's New Module</li>
+            <li>ContentList Module</li>
+        </ul>
+
+
+    <h2>Sources</h2>
+        <ul>
+            <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/dnn-8-breaking-changes">DNN 8 Breaking Changes</a></li>
+            <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155269/a-break-with-the-past">A Break with the Past</a> by Joe Brinkman.</li>
+        </ul>
