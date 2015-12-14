@@ -4,7 +4,7 @@
     "isShellCommand": true,
     "tasks": [
         {
-            "taskName": "build-all",
+            "taskName": "build-main",
             "args": [],
             "isBuildCommand": true,
             "isWatching": false        }

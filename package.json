@@ -9,6 +9,7 @@
   ],
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-shell": "^0.5.1"
+    "gulp-shell": "^0.5.1",
+    "yargs": "^3.31.0"
   }
 }
