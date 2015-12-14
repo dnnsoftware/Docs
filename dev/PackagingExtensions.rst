@@ -14,5 +14,3 @@
 
 .. include:: /../common/stub-notice.txt
 
-.. include:: /../common/contribute.txt
-
