@@ -1,5 +1,5 @@
 ============================
-|InProgress| Glossary
+|InReview| Glossary
 ============================
 
 .. include:: /../common/Glossary.rst
