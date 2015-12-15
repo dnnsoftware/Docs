@@ -1,26 +1,22 @@
-.. include:: /../common/stub-topic.txt
-
 .. _index:
 
 ================================
-|stub-icon| Design Documentation
+|InProgress| Design Documentation
 ================================
 
 (Insert introduction here.)
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
-   Getting Started
-   Building Skins
-   Packaging Skins
-   UX Guide
-   Tutorials
-   /../main/Glossary
+   Getting-Started
+   Building-Themes
+   Packaging-Themes
+   UX-Guide
+   Glossary
    
 
 .. ## Best Practices (future)
 
 .. include:: /../common/stub-notice.txt
-
-.. include:: /../common/contribute.txt

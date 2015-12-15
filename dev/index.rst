@@ -1,25 +1,21 @@
-.. include:: /../common/stub-topic.txt
-
 .. _index:
 
 =============================
-|stub-icon| Dev Documentation
+|InProgress| Dev Documentation
 =============================
 
 (Insert introduction here.)
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
-   Building Modules
-   Packaging Extensions
-   API Reference
-   Tutorials
-   /../common/Glossary
+   Building-Modules
+   Packaging-Extensions
+   API-Reference
+   Glossary
    
 
 .. ## Best Practices (future)
 
 .. include:: /../common/stub-notice.txt
-
-.. include:: /../common/contribute.txt

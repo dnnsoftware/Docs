@@ -1,7 +1,5 @@
-.. include:: /../common/stub-topic.txt
-
 ============================
-|stub-icon| Building Modules
+|InProgress| Building Modules
 ============================
 
 (Insert intro about building modules here.) 
@@ -9,10 +7,10 @@
 .. toctree::
 	:hidden:
 
-	Building Modules/Module Templates
-	Building Modules/Web Forms Modules
-	Building Modules/MVC Modules
-	Building Modules/SPA Modules
+	BuildingModules/Module Templates
+	BuildingModules/Web Forms Modules
+	BuildingModules/MVC Modules
+	BuildingModules/SPA Modules
 
 .. include:: /../common/stub-notice.txt
 

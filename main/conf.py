@@ -89,11 +89,9 @@ pygments_style = 'sphinx'
 #keep_warnings = False
 
 rst_epilog = """
-.. |stub-icon| unicode:: U+1F527
-"""
+.. |InProgress| unicode:: U+1F527
 
-rst_prolog = """
-
+.. |InReview| unicode:: U+1F441
 """
 
 # -- Options for HTML output ----------------------------------------------

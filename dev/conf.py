@@ -86,7 +86,11 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-rst_epilog = """  """
+rst_epilog = """
+.. |InProgress| unicode:: U+1F527
+
+.. |InReview| unicode:: U+1F441
+"""
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -113,7 +117,7 @@ html_theme_options = {
   ],
   'navbar_pagenav': False,
   'source_link_position': "none",
-  'navbar_title': 'Documentation Center',
+  'navbar_title': 'Development Center',
   'navbar_version': False,
   'globaltoc_depth': 2
 }

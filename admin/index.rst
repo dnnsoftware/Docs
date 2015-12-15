@@ -1,9 +1,15 @@
-.. include:: /../common/stub-topic.txt
-
 .. _index:
 
-|stub-icon| Admin Documentation
-=============================
+===============================
+|InProgress| Admin Documentation
+===============================
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   User-Guide
+   Glossary
+   
 .. include:: /../common/stub-notice.txt
 

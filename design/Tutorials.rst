@@ -1,7 +1,5 @@
-.. include:: /../common/stub-topic.txt
-
 =====================
-|stub-icon| Tutorials
+|InProgress| Tutorials
 =====================
 
 (Insert table of tutorials with descriptions and links here.) 

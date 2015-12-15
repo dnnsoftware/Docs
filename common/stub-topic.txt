@@ -1,3 +1,3 @@
-.. |stub-icon| unicode:: U+1F527
+.. |InProgress| unicode:: U+1F527
 
 

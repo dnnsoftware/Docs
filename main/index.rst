@@ -1,6 +1,7 @@
 .. include:: /../common/styles.txt
 
-|stub-icon| DNN Documentation
+=============================
+|InProgress| DNN Documentation
 =============================
 
 .. container:: panels
@@ -15,8 +16,6 @@
 	:ref:`Administrator <admin:index>`
 
 `What's New in DNN 8.0 <WhatsNewDNN80.html>`_
-
-`Glossary <Glossary.html>`_
 
 .. include:: /../common/stub-notice.txt
 
