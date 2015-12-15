@@ -1,5 +1,5 @@
 ===============================================
-|InReview| Uploading Themes to Your DNN Website
+|InReview| Uploading Themes to DNN
 ===============================================
 
 Prerequisites

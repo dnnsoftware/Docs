@@ -1,13 +1,12 @@
 .. _index:
 
-================================
+=================================
 |InProgress| Design Documentation
-================================
+=================================
 
 (Insert introduction here.)
 
 .. toctree::
-   :maxdepth: 2
    :hidden:
 
    Getting-Started

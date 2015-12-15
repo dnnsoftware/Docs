@@ -119,7 +119,8 @@ html_theme_options = {
   'source_link_position': "none",
   'navbar_title': 'Development Center',
   'navbar_version': False,
-  'globaltoc_depth': 2
+  'globaltoc_depth': 3,
+  'site_home': 'http://docs.dnndev.me/'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.

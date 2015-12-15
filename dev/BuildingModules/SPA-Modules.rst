@@ -6,4 +6,3 @@
 
 .. include:: BuildSPAModule.html
 
-.. include:: /../common/stub-notice.txt
