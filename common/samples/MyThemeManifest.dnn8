@@ -1,0 +1,88 @@
+<dotnetnuke type="Package" version="8.0">
+    <packages>
+
+        <package name="MyCompany.SampleTheme" type="Skin" version="1.0.0">
+            <friendlyName>My Sample Theme</friendlyName>
+            <description>My Sample Theme is a demonstration theme.</description>
+            <iconFile>MyIcon.png</iconFile>
+            <owner>
+                <name>MyCompany</name>
+                <organization>MyCompany Corporation</organization>
+                <url>www.example.com</url>
+                <email>support@example.com</email>
+            </owner>
+            <license src="MyLicense.txt" />
+            <releaseNotes src="MyReleaseNotes.txt" />
+            <azureCompatible>true</azureCompatible>
+            <dependencies>
+                <dependency type="coreVersion">08.00.00</dependency>
+            </dependencies>
+            <components>
+                <component type="File">
+                    <files>
+                        <file>
+                            <name>MyPackageLicense.txt</name>
+                        </file>
+                        <file>
+                            <name>MyPackageReleaseNotes.txt</name>
+                        </file>
+                    </files>
+                </component>
+                <component type="Skin">
+                    <skinFiles>
+                        <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
+                        <skinName>MyThemeName</skinName>
+
+                        <!-- Create a skinFile section for every CSS file in your theme. -->
+                        <skinFile>
+                            <path>css</path>
+                            <name>skin.css</name>
+                        </skinFile>
+                        ...
+
+                        <!-- Create a skinFile section for every font used in your theme. -->
+                        <skinFile>
+                            <path>fonts</path>
+                            <name>NameOfFont.ttf</name>
+                        </skinFile>
+                        ...
+
+                        <!-- Create a skinFile section for every other file used in your theme, such as images. -->
+                        <skinFile>
+                            <path>images</path>
+                            <name>MyImage.png</name>
+                        </skinFile>
+                        ...
+                    </skinFiles>
+                </component>
+                ...
+            </components>
+        </package>
+
+    <package name="MyCompany.SampleThemeContainers" type="Container" version="...">
+        ...
+        <license src="MyContainerLicense.txt" />
+        <releaseNotes src="MyContainerReleaseNotes.txt" />
+        ...
+        <components>
+            <component type="Container">
+                <containerFiles>
+                    <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
+                    <containerName>MyContainerName</containername>
+
+                    <!-- Create a containerFile section for every container file in your theme. -->
+                    <containerFile>
+                        <name>MyContainer.ascx</name>
+                    </containerFile>
+                    <containerFile>
+                        <name></name>
+                    </containerfile>
+                    ...
+                </containerFiles>
+            </component>
+            ...
+        </components>
+    </package>
+
+    </packages>
+</dotnetnuke>

@@ -13,48 +13,48 @@
 
     <p>The manifest file extension must be <b>.dnn</b>. You can add the DNN version at the end; e.g., <code>MyDNNExtension.dnn8</code>.</p>
 
-    <p>Save the manifest file in the base folder of your package to include it when zipping your package files.</p>
+    <p>Save the manifest file in the base folder of your package and include it when zipping your package files.</p>
 
 
     <h2> Schema </h2>
 
     <xmp>
-        <dotnetnuke type="Package" version="8.0">
-            <packages>
-                <package name="MyCompany.SampleModule" type="Module" version="1.0.0">
-                    <friendlyName>My Sample Module</friendlyName>
-                    <description>My Sample Module is a demonstration module.</description>
-                    <iconFile>MyIcon.png</iconFile>
-                    <owner>
-                        <name>MyCompany or MyName</name>
-                        <organization>MyCompany Corporation</organization>
-                        <url>www.example.com</url>
-                        <email>support@example.com</email>
-                    </owner>
-                    <license src="MyLicense.txt" />
-                    <releaseNotes src="MyReleaseNotes.txt" />
-                    <azureCompatible>true</azureCompatible>
-                    <dependencies>
-                        <dependency type="coreVersion">08.00.00</dependency>
+    <dotnetnuke type="Package" version="8.0">
+        <packages>
+            <package name="MyCompany.SampleModule" type="Module" version="1.0.0">
+                <friendlyName>My Sample Module</friendlyName>
+                <description>My Sample Module is a demonstration module.</description>
+                <iconFile>MyIcon.png</iconFile>
+                <owner>
+                    <name>MyCompany or MyName</name>
+                    <organization>MyCompany Corporation</organization>
+                    <url>www.example.com</url>
+                    <email>support@example.com</email>
+                </owner>
+                <license src="MyLicense.txt" />
+                <releaseNotes src="MyReleaseNotes.txt" />
+                <azureCompatible>true</azureCompatible>
+                <dependencies>
+                    <dependency type="coreVersion">08.00.00</dependency>
+                    ...
+                </dependencies>
+                <components>
+                    <component type="Module">
                         ...
-                    </dependencies>
-                    <components>
-                        <component type="Module">
-                            ...
-                        </component>
-                        ...
-                    </components>
-                </package>
-            </packages>
-        </dotnetnuke>
+                    </component>
+                    ...
+                </components>
+            </package>
+        </packages>
+    </dotnetnuke>
     </xmp>
 
 
     <h3>package</h3>
     <xmp>
-        <package name="MyCompany.SampleModule" type="Module" version="1.0.0">
-        ...
-        </package>
+    <package name="MyCompany.SampleModule" type="Module" version="1.0.0">
+    ...
+    </package>
     </xmp>
     <ul>
         <li><b>name</b> must be unique. To ensure your package's uniqueness, add your company as the prefix.</li>
@@ -75,21 +75,25 @@
         <li><b>version</b> holds the version of your extension.</li>
     </ul>
     <p>Each package represents a DNN extension. You can install multiple extensions using a single DNN manifest by creating a <b>package</b> section for each extension inside the <b>packages</b> tag.</p>
-    <p><b>Note:</b> The extensions are installed in the order they appear in the manifest.</p>
-    <p><b>Note:</b> Only the information about the <i>first</i> package is displayed during installation. This includes the package name, description, owner, license, and release notes.</p>
+
+    <p>However, when packaging a theme, containers must be defined under a separate <code><package></code> section, even though the containers are installed as part of the theme.</p><!-- Is this still true? -->
+
+    <p>Extensions are installed in the order they appear in the manifest.</p>
+
+    <p>Only the information about the <i>first</i> package is displayed during installation. This includes the package name, description, owner, license, and release notes.</p>
 
 
     <h3>friendlyName and description</h3>
     <xmp>
-        <friendlyName>My Sample Module</friendlyName>
-        <description>My Sample Module is a demonstration module.</description>
+    <friendlyName>My Sample Module</friendlyName>
+    <description>My Sample Module is a demonstration module.</description>
     </xmp>
     <p>The <b>friendlyName</b> can contain spaces and up to 250 characters. The <b>description</b> can hold up to 2000 characters.</p>
 
 
     <h3>iconFile</h3>
     <xmp>
-        <iconFile>MyIcon.png</iconFile>
+    <iconFile>MyIcon.png</iconFile>
     </xmp>
     <p>Optional. The icon is displayed in the DNN Control Panel's dropdown list and in the Extensions page. The <b>.png</b> format is preferred.</p>
     <p><b>Note:</b>The <b>iconFile</b> section must be between the <b>description</b> and the <b>owner</b> sections.</p>
@@ -97,105 +101,105 @@
 
     <h3>owner</h3>
     <xmp>
-        <owner>
-            <name>MyCompany or MyName</name>
-            <organization>MyCompany Corporation</organization>
-            <url>www.example.com</url>
-            <email>support@example.com</email>
-        </owner>
+    <owner>
+        <name>MyCompany or MyName</name>
+        <organization>MyCompany Corporation</organization>
+        <url>www.example.com</url>
+        <email>support@example.com</email>
+    </owner>
     </xmp>
     <p>Optional, but encouraged. Information about the owner or creator of the extension.</p>
 
 
     <h3>license and releaseNotes</h3>
     <xmp>
-        <license src="MyLicense.txt" />
-        <releaseNotes src="MyReleaseNotes.txt" />
+    <license src="MyLicense.txt" />
+    <releaseNotes src="MyReleaseNotes.txt" />
     </xmp>
     <p>Optional, but encouraged. These text files are displayed during the installation. The user is prompted to accept or decline the license. The release notes is displayed during the installation. The actual text can also be embedded within the tag without the <b>src</b> attribute.</p>
 
 
     <h3>azureCompatible</h3>
     <xmp>
-        <azureCompatible>true</azureCompatible>
+    <azureCompatible>true</azureCompatible>
     </xmp>
     <p>Optional. Default is <b>false</b>. Set to <b>true</b> if the module is compatible with SQL Azure. </p>
 
 
     <h3>dependencies</h3>
     <xmp>
-        <dependencies>
-            <dependency type="coreVersion">08.00.00</dependency>
-            ...
-        </dependencies>
+    <dependencies>
+        <dependency type="coreVersion">08.00.00</dependency>
+        ...
+    </dependencies>
     </xmp>
     <p>Dependencies can be any of these types (case-insensitive):</p>
     <ul>
         <li><b>coreVersion</b>. Minimum DNN version required by the extensions being installed. Example:<br />
             <xmp>
-        <dependency type="coreVersion">08.00.00</dependency>
+    <dependency type="coreVersion">08.00.00</dependency>
             </xmp>
         </li>
 
         <li><b>dependency list item</b> <!-- Needs more info. --> Example:<br />
             <xmp>
-        <dependency type="dependency list item">???</dependency>
+    <dependency type="dependency list item">???</dependency>
             </xmp>
         </li>
 
         <li><b>managedPackage</b> <!-- Seen this in an example, but not in the list of dependency types. --> Example:<br />
             <xmp>
-        <dependency type="managedPackage">???</dependency>
+    <dependency type="managedPackage">???</dependency>
             </xmp>
         </li>
 
         <li><b>package</b>. A package required by the extensions being installed. It must already listed in the core Packages table. Example:<br />
             <xmp>
-        <dependency type="package">AnotherPackageRequiredByThisComponent</dependency>
+    <dependency type="package">AnotherPackageRequiredByThisComponent</dependency>
             </xmp>
         </li>
 
         <li><b>permission</b> <!-- ??? --> Example:<br />
             <xmp>
-        <dependency type="permission">???</dependency> <!-- TODO for Joe for DNN permissions and to find out custom permissions.-->
+    <dependency type="permission">???</dependency> <!-- TODO for Joe for DNN permissions and to find out custom permissions.-->
             </xmp>
         </li>
 
         <li><b>type</b> <!-- ??? --> Example:<br />
             <xmp>
-        <dependency type="type">...</dependency> <!-- Name of namespace.class in .NET, in a DNN library, or a third-party library. -->
+    <dependency type="type">...</dependency> <!-- Name of namespace.class in .NET, in a DNN library, or a third-party library. -->
             </xmp>
         </li>
     </ul>
 
     <h3>components</h3>
     <xmp>
-        <components>
-            <component type="..." />
-            <component type="..." />
-            ...
-        </components>
+    <components>
+        <component type="..." />
+        <component type="..." />
+        ...
+    </components>
     </xmp>
     <p>A component type can be one of the following:
         <ul>
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-assembly-component">Assembly</a></b>.
                 Assemblies to be installed in the main <code>\bin</code> folder of the installation.<br />
                 <xmp>
-        <component type="Assembly">
-            <assemblies>
-                <assembly>
-                    <path /> <!-- Path of the assembly to install. Relative to the \bin folder of the DNN installation. -->
-                    <name /> <!-- Name of the assembly to install. -->
-                    <version /> <!-- Version of the assembly to install. -->
-                </assembly>
-                <assembly action="Unregister">
-                    <path /> <!-- Path of the assembly to remove. Relative to the \bin folder of the DNN installation. -->
-                    <name /> <!-- Name of the assembly to remove. -->
-                    <version /> <!-- Version of the assembly to remove. -->
-                </assembly>
-                ...
-            </assemblies>
-        </component>
+    <component type="Assembly">
+        <assemblies>
+            <assembly>
+                <path /> <!-- Path of the assembly to install. Relative to the \bin folder of the DNN installation. -->
+                <name /> <!-- Name of the assembly to install. -->
+                <version /> <!-- Version of the assembly to install. -->
+            </assembly>
+            <assembly action="Unregister">
+                <path /> <!-- Path of the assembly to remove. Relative to the \bin folder of the DNN installation. -->
+                <name /> <!-- Name of the assembly to remove. -->
+                <version /> <!-- Version of the assembly to remove. -->
+            </assembly>
+            ...
+        </assemblies>
+    </component>
                 </xmp>
             </li>
 
@@ -203,16 +207,16 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-authenticationsystem-component">AuthenticationSystem</a></b>.
                 Authentication providers used by the module, such as <b>OpenId</b>, <b>LiveId</b>, and <b>ActiveDirectory</b>.<br />
                 <xmp>
-        <component type="AuthenticationSystem">
-            <authenticationService>
-                <type>OpenID</type>
-                <settingsControlSrc />
-                <loginControlSrc />
-                <logoffControlSrc />
-            </authenticationService>
-            <authenticationService />
-            ...
-        </component>
+    <component type="AuthenticationSystem">
+        <authenticationService>
+            <type>OpenID</type>
+            <settingsControlSrc />
+            <loginControlSrc />
+            <logoffControlSrc />
+        </authenticationService>
+        <authenticationService />
+        ...
+    </component>
                 </xmp>
             </li>
 
@@ -224,20 +228,20 @@
                       <li>Component type <b>Config</b> to update configuration files during uninstall.</li>
                   </ul><br />
                 <xmp>
-        <!-- You can list the files individually in the manifest.  -->
-        <component type="Cleanup" version="07.40.00">
-            <files>
-                <file>
-                    <path>bin</path>
-                    <name>MyFile.dll</name>
-                </file>
-                <file />
-                ...
-            </files>
-        </component>
+    <!-- You can list the files individually in the manifest.  -->
+    <component type="Cleanup" version="07.40.00">
+        <files>
+            <file>
+                <path>bin</path>
+                <name>MyFile.dll</name>
+            </file>
+            <file />
+            ...
+        </files>
+    </component>
 
-        <!-- You can also list the files with their paths in a text file instead.  -->
-        <component type="Cleanup" version="07.40.00" fileName="ListOfFilesToDelete.txt" />
+    <!-- You can also list the files with their paths in a text file instead.  -->
+    <component type="Cleanup" version="07.40.00" fileName="ListOfFilesToDelete.txt" />
                 </xmp>
             </li>
 
@@ -245,30 +249,30 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-config-component">Config</a></b>.
                 Changes to do on the specified config file.</a>.
                 <xmp>
-        <component type="Config">
-            <config>
-                <configFile>web.config</configFile> <!-- Name of config file, including its path relative to the root of the DNN installation. -->
-                <install>
-                    <configuration>
-                        <nodes>
-                            <!-- For information on the "node" attributes and child nodes, see http://www.dnnsoftware.com/wiki/manifest-xml-merge. -->
-                            <node path="/configuration/system.webServer/handlers" action="update" key="path" collision="overwrite">
-                                ...
-                            </node>
-                            <node />
+    <component type="Config">
+        <config>
+            <configFile>web.config</configFile> <!-- Name of config file, including its path relative to the root of the DNN installation. -->
+            <install>
+                <configuration>
+                    <nodes>
+                        <!-- For information on the "node" attributes and child nodes, see http://www.dnnsoftware.com/wiki/manifest-xml-merge. -->
+                        <node path="/configuration/system.webServer/handlers" action="update" key="path" collision="overwrite">
                             ...
-                        </nodes>
-                    </configuration>
-                </install>
-                <uninstall>
-                    <configuration>
-                        <nodes />
-                    </configuration>
-                </uninstall>
-            </config>
-            <config />
-            ...
-        </component>
+                        </node>
+                        <node />
+                        ...
+                    </nodes>
+                </configuration>
+            </install>
+            <uninstall>
+                <configuration>
+                    <nodes />
+                </configuration>
+            </uninstall>
+        </config>
+        <config />
+        ...
+    </component>
                 </xmp>
             </li>
 
@@ -276,18 +280,18 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-container-component">Container</a></b>.
                 Containers to be installed.<br />
                 <xmp>
-        <component type="Container">
-            <containerFiles>
-                <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
-                <containerName />
-                <containerFile>
-                    <path /> <!-- Target file folder. Relative to basePath. -->
-                    <name />
-                </containerFile>
-                <containerFile />
-                ...
-            </containerFiles>
-        </component>
+    <component type="Container">
+        <containerFiles>
+            <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
+            <containerName />
+            <containerFile>
+                <path /> <!-- Target file folder. Relative to basePath. -->
+                <name />
+            </containerFile>
+            <containerFile />
+            ...
+        </containerFiles>
+    </component>
                 </xmp>
             </li>
 
@@ -295,18 +299,18 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-dashboardcontrol-component">DashboardControl</a></b>.
                 <br />
                 <xmp>
-        <component type="DashboardControl">
-            <dashboardControl>
-                <key />
-                <src />
-                <localResources />
-                <controllerClass />
-                <isEnabled />
-                <viewOrder />
-            </dashboardControl>
-            <dashboardControl />
-            ...
-        </component>
+    <component type="DashboardControl">
+        <dashboardControl>
+            <key />
+            <src />
+            <localResources />
+            <controllerClass />
+            <isEnabled />
+            <viewOrder />
+        </dashboardControl>
+        <dashboardControl />
+        ...
+    </component>
                 </xmp>
             </li>
 
@@ -315,18 +319,18 @@
                 Files to be installed.
                 <p><b>Note:</b> Only files with allowed file extensions are installed. To view or modify the list of file extensions, go to <b>Host</b> &gt; <b>Host Settings</b> &gt; <b>Other Settings</b> &gt; <b>Allowable File Extensions</b> in your DNN installation.</p><br />
                 <xmp>
-        <component type="File">
-            <files>
-                <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
-                <file>
-                    <path /> <!-- Target file folder. Relative to basePath. -->
-                    <name />
-                    <sourceFileName /> <!-- Must include the path (relative to basePath) and the filename. -->
-                </file>
-                <file />
-                ...
-            </files>
-        </component>
+    <component type="File">
+        <files>
+            <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
+            <file>
+                <path /> <!-- Target file folder. Relative to basePath. -->
+                <name />
+                <sourceFileName /> <!-- Must include the path (relative to basePath) and the filename. -->
+            </file>
+            <file />
+            ...
+        </files>
+    </component>
                 </xmp>
             </li>
 
@@ -334,19 +338,19 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-corelanguage-component">CoreLanguage</a></b>.
                 Used for packaging the language pack to be used by the DNN Platform installation. For the list of supported language codes, see the .NET <a href="https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo(VS.80).aspx">CultureInfo</a> class.<br />
                 <xmp>
-        <component type="CoreLanguage">
-            <languageFiles>
-                <code />
-                <displayName />
-                <fallback /> <!-- Code for the alternative language. Used if a resource is not found in the current language pack. -->
-                <languageFile>
-                    <path /> <!-- Target file folder. Relative to the root of the DNN installation. -->
-                    <name />
-                </languageFile>
-                <languageFile />
-                ...
-            </languageFiles>
-        </component>
+    <component type="CoreLanguage">
+        <languageFiles>
+            <code />
+            <displayName />
+            <fallback /> <!-- Code for the alternative language. Used if a resource is not found in the current language pack. -->
+            <languageFile>
+                <path /> <!-- Target file folder. Relative to the root of the DNN installation. -->
+                <name />
+            </languageFile>
+            <languageFile />
+            ...
+        </languageFiles>
+    </component>
                 </xmp>
             </li>
 
@@ -354,19 +358,19 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-extensionlanguage-component">ExtensionLanguage</a></b>.
                 Used for packaging the language pack used by the extension. For the list of supported language codes, see the .NET <a href="https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo(VS.80).aspx">CultureInfo</a> class.<br />
                 <xmp>
-        <component type="ExtensionLanguage">
-            <languageFiles>
-                <code />
-                <package /> <!-- Name of another package that contains the extension that this language pack is intended for. -->
-                <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
-                <languageFile>
-                    <path /> <!-- Target file folder. Relative to basePath. -->
-                    <name />
-                </languageFile>
-                <languageFile />
-                ...
-            </languageFiles>
-        </component>
+    <component type="ExtensionLanguage">
+        <languageFiles>
+            <code />
+            <package /> <!-- Name of another package that contains the extension that this language pack is intended for. -->
+            <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
+            <languageFile>
+                <path /> <!-- Target file folder. Relative to basePath. -->
+                <name />
+            </languageFile>
+            <languageFile />
+            ...
+        </languageFiles>
+    </component>
                 </xmp>
             </li>
 
@@ -374,57 +378,57 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/module-component">Module</a></b>.
                 Only one component with type="Module" is allowed within a <b>package</b> section. To install a set of modules as a unit, create one <b>package</b> section per module in the same manifest.<br /> <!-- TODO: Joe will check if this still true in DNN8. -->
                 <xmp>
-        <component type="Module">
-            <desktopModule>
-                <moduleName />
-                <foldername />
-                <businessControllerClass />
-                <codeSubdirectory />
-                <isAdmin />
-                <isPremium />
-                <supportedFeatures> <!-- Requires a value for businessControllerClass. -->
-                    <supportedFeature type="Portable" /> <!-- The module has import/export capabilities using the IPortable interface. -->
-                    <supportedFeature type="Searchable" /> <!-- The module can be indexed or searched using the ISearchable interface. -->
-                    <supportedFeature type="Upgradeable" /> <!-- The module can be upgraded using the IUpgradeable interface. -->
+    <component type="Module">
+        <desktopModule>
+            <moduleName />
+            <foldername />
+            <businessControllerClass />
+            <codeSubdirectory />
+            <isAdmin />
+            <isPremium />
+            <supportedFeatures> <!-- Requires a value for businessControllerClass. -->
+                <supportedFeature type="Portable" /> <!-- The module has import/export capabilities using the IPortable interface. -->
+                <supportedFeature type="Searchable" /> <!-- The module can be indexed or searched using the ISearchable interface. -->
+                <supportedFeature type="Upgradeable" /> <!-- The module can be upgraded using the IUpgradeable interface. -->
+                ...
+            </supportedFeatures>
+            <moduleDefinition>
+                <friendlyName />
+                <defaultCacheTime />
+                <moduleControls>
+                    <moduleControl>
+                        <controlKey />
+                        <controlSrc />
+                        <supportsPartialRendering />
+                        <controlTitle />
+                        <controlType />
+                        <iconFile />
+                        <helpUrl />
+                        <viewOrder /> <!-- TODO: Joe will check what this is used for. -->
+                    </moduleControl>
+                    <moduleControl />
                     ...
-                </supportedFeatures>
-                <moduleDefinition>
-                    <friendlyName />
-                    <defaultCacheTime />
-                    <moduleControls>
-                        <moduleControl>
-                            <controlKey />
-                            <controlSrc />
-                            <supportsPartialRendering />
-                            <controlTitle />
-                            <controlType />
-                            <iconFile />
-                            <helpUrl />
-                            <viewOrder /> <!-- TODO: Joe will check what this is used for. -->
-                        </moduleControl>
-                        <moduleControl />
-                        ...
-                    </moduleControls>
-                    <permissions>
-                        <!-- In <permission>,
-                            "code" is the code for the module,
-                            "key" is the code for the permission, and
-                            "name" is the user-friendly name for the permission.
-                        -->
-                        <permission code="..." key="..." name="..." />
-                        <permission code="..." key="..." name="..." />
-                        ...
-                    </permissions>
-                </moduleDefinition>
-            </desktopModule>
-            <eventMessage>
-                <processorType />
-                <processorCommand />
-                <attributes>
-                    <node>value</node>
-                </attributes>
-            </eventMessage>
-        </component>
+                </moduleControls>
+                <permissions>
+                    <!-- In <permission>,
+                        "code" is the code for the module,
+                        "key" is the code for the permission, and
+                        "name" is the user-friendly name for the permission.
+                    -->
+                    <permission code="..." key="..." name="..." />
+                    <permission code="..." key="..." name="..." />
+                    ...
+                </permissions>
+            </moduleDefinition>
+        </desktopModule>
+        <eventMessage>
+            <processorType />
+            <processorCommand />
+            <attributes>
+                <node>value</node>
+            </attributes>
+        </eventMessage>
+    </component>
                 </xmp>
             </li>
 
@@ -432,7 +436,7 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-provider-component">Provider</a></b>.
                 Extends the list of allowed file extensions. <br />
                 <xmp>
-        <component type="Provider" />
+    <component type="Provider" />
                 </xmp>
             </li><!-- TODO: Joe will find more info on this. -->
 
@@ -440,16 +444,16 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-resourcefile-component">ResourceFile</a></b>.
                 Zip files to be expanded during installation. Can be used instead of type "File" to simplify the manifest for packages that contain many files.<br />
                 <xmp>
-        <component type="ResourceFile">
-            <resourceFiles>
-                <basePath /> <!-- Target folder where the contents of the zip file will be installed. Relative to the root of the DNN installation. -->
-                <resourceFile>
-                    <name /> <!-- Name of zip file. -->
-                </resourceFile>
-                <resourceFile />
-                ...
-            </resourceFiles>
-        </component>
+    <component type="ResourceFile">
+        <resourceFiles>
+            <basePath /> <!-- Target folder where the contents of the zip file will be installed. Relative to the root of the DNN installation. -->
+            <resourceFile>
+                <name /> <!-- Name of zip file. -->
+            </resourceFile>
+            <resourceFile />
+            ...
+        </resourceFiles>
+    </component>
                 </xmp>
             </li>
 
@@ -463,22 +467,22 @@
                     </ul>
                 </p><br />
                 <xmp>
-        <component type="Script">
-            <scripts>
-                <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
-                <script type="Install" >
-                    <path /> <!-- Target file folder. Relative to basePath. -->
-                    <name /> <!-- Must be named "<componentversion>.<dataprovider>". Example: 01.00.00.SqlDataProvider -->
-                    <version /> <!-- Version of script file to be installed. -->
-                </script>
-                <script type="UnInstall" >
-                    <path /> <!-- Location of script file. Relative to basePath. -->
-                    <name /> <!-- Must be named "uninstall.<dataprovidertype>". Example: uninstall.SqlDataProvider -->
-                    <version /> <!-- Version of script file to be removed. -->
-                </script>
-                ...
-            </scripts>
-        </component>
+    <component type="Script">
+        <scripts>
+            <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
+            <script type="Install" >
+                <path /> <!-- Target file folder. Relative to basePath. -->
+                <name /> <!-- Must be named "<componentversion>.<dataprovider>". Example: 01.00.00.SqlDataProvider -->
+                <version /> <!-- Version of script file to be installed. -->
+            </script>
+            <script type="UnInstall" >
+                <path /> <!-- Location of script file. Relative to basePath. -->
+                <name /> <!-- Must be named "uninstall.<dataprovidertype>". Example: uninstall.SqlDataProvider -->
+                <version /> <!-- Version of script file to be removed. -->
+            </script>
+            ...
+        </scripts>
+    </component>
                 </xmp>
             </li>
 
@@ -486,13 +490,13 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-skinobject-component">SkinObject</a></b>.
                 Custom theme objects. <br />
                 <xmp>
-        <component type="SkinObject">
-            <moduleControl>
-                <controlKey /> <!-- Token of the skin object within square brackets []; e.g., [COPYRIGHT] -->
-                <controlSrc /> <!-- Target file folder for the theme object's ASCX file. -->
-                <supportsPartialRendering /> <!-- "true" if the theme object supports partial rendering through an MS AJAX update panel wrapper. Default: "false" -->
-            </moduleControl>
-        </component>
+    <component type="SkinObject">
+        <moduleControl>
+            <controlKey /> <!-- Token of the skin object within square brackets []; e.g., [COPYRIGHT] -->
+            <controlSrc /> <!-- Target file folder for the theme object's ASCX file. -->
+            <supportsPartialRendering /> <!-- "true" if the theme object supports partial rendering through an MS AJAX update panel wrapper. Default: "false" -->
+        </moduleControl>
+    </component>
                 </xmp>
             </li>
 
@@ -500,18 +504,18 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-skin-component">Skin</a></b>.
                 All files related to the theme. The installer needs to parse the main theme files at installation time to replace relative folder names; therefore, every file of type <b>ASCX</b>, <b>HTML</b>, or <b>CSS</b> must be declared as a <b>skinFile</b>. Other files (i.e., images and scripts) can be packaged using component type "ResourceFile" to simplify the complexity of the theme manifest.<br />
                 <xmp>
-        <component type="Skin">
-            <skinFiles>
-                <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
-                <skinName />
-                <skinFile>
-                    <path /> <!-- Target file folder. Relative to basePath. -->
-                    <name />
-                </skinFile>
-                <skinFile />
-                ...
-            </skinFiles>
-        </component>
+    <component type="Skin">
+        <skinFiles>
+            <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
+            <skinName />
+            <skinFile>
+                <path /> <!-- Target file folder. Relative to basePath. -->
+                <name />
+            </skinFile>
+            <skinFile />
+            ...
+        </skinFiles>
+    </component>
                 </xmp>
             </li>
 
@@ -519,25 +523,29 @@
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-url-provider">URL Provider</a></b>.
                 Custom URL provider to be used with the Advanced URL Management System (AUM).<br />
                 <xmp>
-        <component type="URL Provider">
-            <name />
-            <type />
-            <settingsControlSrc />
-            <redirectAllUrls />
-            <replaceAllUrls />
-            <rewriteAllUrls />
-            <desktopModule />
-        </component>
-                </xmp><br />
+    <component type="URL Provider">
+        <name />
+        <type />
+        <settingsControlSrc />
+        <redirectAllUrls />
+        <replaceAllUrls />
+        <rewriteAllUrls />
+        <desktopModule />
+    </component>
+                </xmp>
             </li>
 
         </ul>
     </p>
 
 
+    <h2>Example</h2>
+    <p>Download a sample theme manifest <b><a href="..\samples\MyThemeManifest.dnn8" download>MyThemeManifest.dnn8</a></b>.</p>
+
+
     <h2>See Also</h2>
     <ul>
-        <li><a href="http://www.ifinity.com.au/Blog/EntryId/89/Top-5-DotNetNuke-Manifest-file-Module-Packaging-Tips">Top 5 DotNetNuke Manifest file Module Packaging Tips</a>by <a href="http://www.dnnsoftware.com/users/bruce-chapman">Bruce Chapman</a></li>
+        <li><a href="http://www.ifinity.com.au/Blog/EntryId/89/Top-5-DotNetNuke-Manifest-file-Module-Packaging-Tips">Top 5 DotNetNuke Manifest file Module Packaging Tips</a> by <a href="http://www.dnnsoftware.com/users/bruce-chapman">Bruce Chapman</a></li>
     </ul>
 
 

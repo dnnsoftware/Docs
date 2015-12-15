@@ -16,7 +16,7 @@
     <ol>
 
         <li>Prepare your files in folders.
-            <ul>
+            <ul> <!-- Are these the actual names of the folders? Or can they be named any way they want? -->
                 <li><b>Layout templates and associated files</b>
                     <p><b>Tip:</b> You can provide a preview by including an image file with the same filename as your layout template or container; example, add a <code>MyLayoutOrContainer.jpg</code> preview for the <code>MyLayoutOrContainer.ascx</code> layout template or container.</p> <!-- Is this correct? -->
                     <ul>
@@ -55,106 +55,27 @@
                         <li>mobmenu - All mobile menu files for the skin.</li>
                     </ul>
                 </li>
-                <li><b>License/Release Notes</b>
+                <li><b>License/Release Notes Files</b>
                     <p>These files are HTML-formatted files:</p>
                     <ul>
                         <li>MyContainerLicense.txt</li>
                         <li>MyContainerReleaseNotes.txt</li>
                         <li>MyPackageLicense.txt</li>
                         <li>MyPackageReleaseNotes.txt</li>
-                        <li>MySkinLicense.txt</li>
-                        <li>MySkinReleaseNotes.txt</li>
+                        <li>MyThemeLicense.txt</li>
+                        <li>MyThemeReleaseNotes.txt</li>
                     </ul>
-                    <p><b>Tip:</b> In the license files, you can include special offers, including a call to action and other details.</p>
-                    <p><b>Reminder:</b> Include the version number of your extension in the release notes. </p>
+                    <p><b>Tip:</b> The license files and release notes files are HTML files, so you can include special offers, including a call to action and other details.</p>
+                    <p><b>Reminder:</b> Include the version number of your extension in the release notes.</p>
                 </li>
-                <li></li>
-                <li></li>
             </ul>
         </li>
 
 
-        <li>Create the <a href="DNNManifestSchema.html">DNN manifest</a>.
-            <p><b>Note:</b> Containers must be defined under a separate <code><package></code> section, even though it would be installed as part of the theme.</p> <!-- Is this still true? -->
-            <p>Example of a portion of the <b>DNN manifest</b> of a theme:
-                <xmp>
-            <package name="..." type="Skin" version="...">
-                ...
-                <license src="MySkinLicense.txt" />
-                <releaseNotes src="MySkinReleaseNotes.txt" />
-                ...
-                <components>
-                    <component type="File">
-                        <files>
-                            <file>
-                                <name>MyPackageLicense.txt</name>
-                            </file>
-                            <file>
-                                <name>MyPackageReleaseNotes.txt</name>
-                            </file>
-                        </files>
-                    </component>
-                    <component type="Skin">
-                        <skinFiles>
-                            <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
-                            <skinName>MyThemeName</skinName>
-
-                            <!-- Create a skinFile section for every CSS file in your theme. -->
-                            <skinFile>
-                                <path>css</path>
-                                <name>skin.css</name>
-                            </skinFile>
-                            ...
-
-                            <!-- Create a skinFile section for every font used in your theme. -->
-                            <skinFile>
-                                <path>fonts</path>
-                                <name>NameOfFont.ttf</name>
-                            </skinFile>
-                            ...
-
-                            <!-- Create a skinFile section for every other file used in your theme, such as images. -->
-                            <skinFile>
-                                <path>images</path>
-                                <name>MyImage.png</name>
-                            </skinFile>
-                            ...
-                        </skinFiles>
-                    </component>
-                    ...
-                </components>
-            </package>
-            <package name="..." type="Container" version="...">
-                ...
-                <license src="MyContainerLicense.txt" />
-                <releaseNotes src="MyContainerReleaseNotes.txt" />
-                ...
-                <components>
-                    <component type="Container">
-                        <containerFiles>
-                            <basePath /> <!-- Target base folder for the component installation. Relative to the root of the DNN installation. -->
-                            <containerName>MyThemeName</containername>
-
-                            <!-- Create a containerFile section for every container file in your theme. -->
-                            <containerFile>
-                                <name>MyContainer.ascx</name>
-                            </containerFile>
-                            <containerFile>
-                                <name></name>
-                            </containerfile>
-                            ...
-                        </containerFiles>
-                    </component>
-                    ...
-                </components>
-            </package>
-                </xmp>
-            </p>
-            <p><b>Note: </b>Save the manifest file(s) (*.dnn*) in the base folder of your package.</p>
-        </li>
+        <li>Create the <a href="DNNManifestSchema.html">DNN manifest</a>.</li>
 
 
-        <li>Zip up your files, preserving the folder structure.</li>
+        <li>Zip up your files, including the DNN manifest file.</li>
 
 
     </ol>
