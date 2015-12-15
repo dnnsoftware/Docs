@@ -119,7 +119,9 @@ html_theme_options = {
   'navbar_pagenav': False,
   'source_link_position': "none",
   'navbar_title': 'Admin Center',
-  'navbar_version': False
+  'navbar_version': False,
+  'globaltoc_depth': 3,
+  'site_home': 'http://docs.dnndev.me/'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.

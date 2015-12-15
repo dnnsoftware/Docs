@@ -6,4 +6,3 @@
 
 .. include:: BuildMVCModule.html
 
-.. include:: /../common/stub-notice.txt

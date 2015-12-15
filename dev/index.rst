@@ -1,13 +1,12 @@
 .. _index:
 
-=============================
+==============================
 |InProgress| Dev Documentation
-=============================
+==============================
 
 (Insert introduction here.)
 
 .. toctree::
-   :maxdepth: 2
    :hidden:
 
    Building-Modules
