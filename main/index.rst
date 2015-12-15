@@ -17,5 +17,4 @@
 
 `What's New in DNN 8.0 <WhatsNewDNN80.html>`_
 
-.. include:: /../common/stub-notice.txt
-
+.. include:: /../common/stub-overview.txt

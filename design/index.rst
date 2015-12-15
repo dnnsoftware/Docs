@@ -16,7 +16,6 @@
    UX-Guide
    Glossary
    
-
 .. ## Best Practices (future)
 
-.. include:: /../common/stub-notice.txt
+.. include:: /../common/stub-overview.txt

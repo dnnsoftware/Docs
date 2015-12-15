@@ -1,7 +1,7 @@
 .. _index:
 
 ================================
-|stub-icon| Packaging Extensions
+|InProgress| Packaging Extensions
 ================================
 
 .. include:: /../common/stub-notice.txt

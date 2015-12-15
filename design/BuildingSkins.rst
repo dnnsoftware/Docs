@@ -76,9 +76,6 @@ DNN supports two different types of themes: HTML and ASCX.
 
 .. include:: /../common/stub-notice.txt
 
-.. include:: /../common/contribute.txt
-
-
 ..
    # How do I make the text wrap within a cell?
    # How do I add an image inside a table?
