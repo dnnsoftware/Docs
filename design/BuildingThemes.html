@@ -1,63 +1,58 @@
 .. raw:: html
 
-    <h1> Building Themes </hi>
-    
-    
+    <h1> Building Themes </h1>
+
+
     <h2> Overview </h2>
-    
-    <p> A DNN <b>theme</b> (formerly called a <b>skin</b>) defines the look and feel of the webpage or site. It is comprised of:
+
+    <p> A DNN <b>theme</b> (formerly called a <b>skin</b>) defines the look and feel of the website. It is comprised of:
     <ul>
     <li> one or more layout templates (HTML or ASCX)</li>
     <li> (optional) a style sheet (CSS) for each of the layout templates</li>
     <li> (optional) a master style sheet (CSS) for all the layout templates</li>
     </ul>
     </p>
-    
-    <image src="..\common\img\SkinTheme.png" alt="Three variations of a theme" width="75%" align=center>
-    
-    
+
+    <image src="/common/img/SkinTheme.png" alt="Three variations of a theme" width="75%" align=center>
+
+
     <h3> Components of a Theme </h3>
-    
-    <image src="..\common\img\PaneLayout.png" alt="Pane in a layout" width="50%" align=left>
-    
+
+    <image src="/common/img/PaneLayout.png" alt="Pane in a layout" width="50%" align=left>
+
     <h4> Layouts and Containers </h4>
-    
+
     <p>A <b>pane</b> is a section of a webpage that displays static content, dynamic content, or a standard theme object.</p>
-    
+
     <p>A <b>layout template</b> defines where panes are located on the webpage and what each pane contains. The layout templates included in a theme are variations that the web designer can choose from for each page in the site, such as the home page, a gallery of photos, or a listing of products for sale.</p>
-    
-    <p>A <b>container</b> is similar to a layout template, except a container's scope is a single pane, whereas a layout template's scope is the entire page. A container is associated with a <b>module</b>, which generates dynamic content.</p>
-    
-    <p>For both layouts and containers, DNN requires exactly one content pane called <b>ContentPane</b> (case-insensitive). In a layout, additional panes are optional. In a container, additional panes are ignored.
-    
-    <p>Layouts and containers can contain a <b>theme object</b>, which can be a typical component of a webpage, such as the menu bar, the copyright notice, the login/registration links, the privacy link, the terms of service link, and the search box.</p>
-    
-    
+
+    <p>A <b>container</b> is similar to a layout template, except a container's scope is a single pane, whereas a layout template's scope is the entire page. A container is associated with a <b>module</b>, which can generate dynamic content or perform other functionality.</p>
+
+    <p>For both layouts and containers, DNN requires exactly one content pane called <b>ContentPane</b> (case-insensitive). In a layout, additional panes are optional and names must be unique within the page. In a container, additional panes are ignored.
+
+    <p>Layouts and containers can contain a <b>theme object</b>, which can be a typical component of a webpage, such as the menu bar, the copyright notice, the login/registration links, the privacy link, the terms of service link, and the search box. Theme objects are inserted in the HTML or ASCX as tokens.</p>
+
+
     <h4> CSS Files </h4>
-    
-    <p>CSS files can be associated with layouts and containers.
+
+    <p>CSS files are associated with layouts and containers, if they are in the same folder and they share the same filename. Example: MyFirstLayout.css is associated with MyFirstLayout.ascx.
         <ul>
             <li>Any CSS file associated with a layout template defines how elements of the entire page are displayed.</li>
-            <li>Any CSS file associated with a container defines how the dynamic content is displayed within the pane. This ensures a unified design throughout the entire page, even if the various modules in the same page come from different creators.</li>
+            <li>Any CSS file associated with a container defines how the dynamic content is displayed within a single pane of the webpage. This ensures a unified design throughout the entire page, even if the various modules in the same page come from different creators.</li>
         </ul>
     </p>
-    
-    <p>Layouts and containers can share several CSS files or a single master CSS file.</p>
-    
+
     <p>If CSS files are not explicitly associated with the layouts and containers, the website's master CSS file is used. If no CSS files are associated with the website, the host's master CSS file is used.</p>
-    
+
+    <p>Layouts and containers can share several CSS files or a single master CSS file.</p>
+
     <p>When a layout template is applied to a webpage, any associated CSS is automatically added to the webpage. Likewise, when a container is applied to a pane, any associated CSS is automatically added to the pane.</p>
-    
-    
-    <h4> Packaging </h4>
-    
-    <p>The components of a theme can be packaged for easier distribution and installation. Layouts with their associated CSS files can be combined into one <b>package</b>, and containers with their associated CSS files can be combined into another package. Or you can combine them all into a single package.</p>
-    
-    
+
+
     <h3>Theme Types</h3>
-    
+
     <p>DNN supports two different types of themes: HTML and ASCX.</p>
-    
+
     <table border=1 width=75%>
         <tr align=center><th width=50%>HTML</th><th width=50%>ASCX</th></tr>
         <tr align=center>
@@ -77,33 +72,43 @@
             <td>More powerful.<br> Allows customization of code that call DNN APIs.</td>
         </tr>
     </table>
-    
+
     <!-- <p>For more information about DNN tokens and APIs, see ... </p> -->
-    
-    
+
+
     <h2> How to Build a Theme </h2>
-    
-    
-    <h3>Prerequisites</h3>
-    
+
+
+    <h3> Prerequisites </h3>
+
     <ul>
-        <li><object width="100%" data="..\common\bptext\BP-PrereqHost.html"></object></li> <!-- Replace with #include. -->
+        <!-- Do they need a local DNN installation? If so, is it similar to the development environment minus the Visual Studio requirement? -->
+        <li><!--#include virtual="/common/bptext/BP-PrereqHost.html" --></li>
     </ul>
-    
-    
-    <h3>Steps</h3> <!-- I want these steps to be more prominent: bigger fonts, colored background boxes, etc. -->
+
+
+    <h3> Steps </h3> <!-- I want these steps to be more prominent: bigger fonts, colored background boxes, etc. -->
     <ol>
-        <li><a href="BuildingThemes/CreateLayoutTemplate.html">Create layout templates for the webpages.</a></li>
-        <li><a href="BuildingThemes/CreateContainer.html">Create containers for modules.</a></li>
-        <li><b>HTML only:</b> <a href="BuildingThemes/ConvertHTMLToASCX.html">Convert the layout templates and containers from HTML to ASCX.</a></li>
-        <li>(Optional) <a href="BuildingThemes/CreateCSS.html">Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers.</a></li>
-        <li><a href="BuildingThemes/TestTheme.html">Test the theme on a webpage.</a></li>
-        <li>(Optional) <a href="BuildingThemes/CreateDocTypeXML.html">Create a doctype XML file.</a></li>
-        <li><a href="PackagingThemes.html">Package your DNN theme.</a></li>
-        <li><a href="UploadingThemes.html">Upload your DNN theme to your DNN website.</a></li>
+        <li><a href="/design/BuildingThemes/CreateLayoutTemplate.html">Create layout templates for the webpages.</a></li>
+        <li><a href="/design/BuildingThemes/CreateContainer.html">Create containers for modules.</a></li>
+        <li><b>HTML only:</b> <a href="/design/BuildingThemes/ConvertHTMLToASCX.html">Convert the layout templates and containers from HTML to ASCX.</a> (Requires <a href="/design/BuildingModules/Setup Dev Environment.html">a local DNN development environment</a>.)</li>
+        <li>(Optional) <a href="/design/BuildingThemes/CreateCSS.html">Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers.</a></li>
+        <li><a href="/design/BuildingThemes/TestTheme.html">Test the theme on a webpage.</a></li>
+        <li>(Optional) <a href="/design/BuildingThemes/CreateDocTypeXML.html">Create a doctype XML file.</a></li>
+        <li><a href="/common/Extensions/BuildPackage.html">Package your theme.</a></li>
     </ol>
-    
+
     <!--
     <h3>Example</h3>
     TODO: Create an example theme that readers can download and add the link here.
     -->
+
+    <!--#include virtual="/common/bptext/BP-TipSkinningTool.html" -->
+
+
+    <h2> See Also </h2>
+    <ul>
+        <li><a href="/design/REF-ContentsThemePack.html">Contents of a Theme Package</a></li>
+    </ul>
+
+

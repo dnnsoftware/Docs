@@ -1,6 +1,6 @@
 .. raw:: html
 
-    <h1> Create a Layout Template </hi>
+    <h1> Create a Layout Template </h1>
 
 
     <h2> Steps </h2>
@@ -21,13 +21,13 @@
             <ul>
                 <li>HTML
                     <xmp>
-        <div id="ContentPane" runat="server"></div>
-                    </xmp>
-                </li>
-                <li>ASCX
-                    <xmp>
-        <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
-        <div id="ContentPane" runat="server"></div>
+    <div id="ContentPane" runat="server"></div>
+                </xmp>
+            </li>
+            <li>ASCX
+                <xmp>
+    <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
+    <div id="ContentPane" runat="server"></div>
                     </xmp>
                 </li>
             </ul>
@@ -37,47 +37,47 @@
             <ul>
                 <li>HTML
                     <xmp>
-        <div id="wrapper">
-             <div id="header">
-                [LOGO]
-             </div>
-             <div id="sidebar">
-                  <div id="feed">
-                        <a class="feed-button" href="#">&nbsp;</a>
-                  </div>
-                  <div id="SidebarPane" class="SidebarPane" runat="server"></div>
-                  <div id="sidebar-bottom">&nbsp;</div>
-             </div>
-             <div id="content">
-                  <div id="BannerPane" class="BannerPane" runat="server"></div>
-                  <div id="ContentPane" runat="server"></div>
-             </div>
-             <div id="footer"></div>
-        </div>
+    <div id="wrapper">
+         <div id="header">
+            [LOGO]
+         </div>
+         <div id="sidebar">
+              <div id="feed">
+                    <a class="feed-button" href="#">&nbsp;</a>
+              </div>
+              <div id="SidebarPane" class="SidebarPane" runat="server"></div>
+              <div id="sidebar-bottom">&nbsp;</div>
+         </div>
+         <div id="content">
+              <div id="BannerPane" class="BannerPane" runat="server"></div>
+              <div id="ContentPane" runat="server"></div>
+         </div>
+         <div id="footer"></div>
+    </div>
                     </xmp>
                 </li>
                 <li>ASCX
                     <xmp>
-        <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
-        <%@ Register TagPrefix="dnn" TagName="LOGO" Src="~/Admin/Skins/Logo.ascx" %>
-        <div id="wrapper">
-             <div id="header">
-                <dnn:LOGO runat="server" id="dnnLOGO" />
-             </div>
-             <div id="sidebar">
-                  <div id="feed">
-                        <a class="feed-button" href="#">&nbsp;</a>
-                  </div>
-                  <div id="MySidebarPane" class="SidebarPane" runat="server"></div>
-                  <div id="sidebar-bottom">&nbsp;</div>
-             </div>
-             <div id="content">
-                  <div id="MyBannerPane" class="MyBannerPane" runat="server"></div>
-                  <div id="ContentPane" runat="server"></div>
+    <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
+    <%@ Register TagPrefix="dnn" TagName="LOGO" Src="~/Admin/Skins/Logo.ascx" %>
+    <div id="wrapper">
+         <div id="header">
+            <dnn:LOGO runat="server" id="dnnLOGO" />
+         </div>
+         <div id="sidebar">
+              <div id="feed">
+                    <a class="feed-button" href="#">&nbsp;</a>
+              </div>
+              <div id="MySidebarPane" class="SidebarPane" runat="server"></div>
+              <div id="sidebar-bottom">&nbsp;</div>
+         </div>
+         <div id="content">
+              <div id="MyBannerPane" class="MyBannerPane" runat="server"></div>
+              <div id="ContentPane" runat="server"></div>
 
-             </div>
-             <div id="footer"></div>
-        </div>
+         </div>
+         <div id="footer"></div>
+    </div>
                     </xmp>
                 </li>
             </ul>
@@ -88,23 +88,23 @@
 
     <li> (Optional) Add theme objects to any pane for a more dynamic page.
         <ul>
-            <li>In HTML, you can use the HTML token (e.g., <code>[LOGIN]</code>).
+            <li>In HTML, you can use the HTML token (example: <code>[LOGIN]</code>).
                 <p><b>Example:</b>
                     <xmp>
-        <div id="login_style" class="user">
-            [LOGIN]
-        </div>
+    <div id="login_style" class="user">
+        [LOGIN]
+    </div>
                     </xmp>
                 </p>
             </li>
-            <li>In ASCX, you must register the ASCX token (e.g., <code>&lt;dnn:Login ...</code>) before using it for the first time in the file.
+            <li>In ASCX, you must register the ASCX token (example: <code>&lt;dnn:Login ...</code>) before using it for the first time in the file.
                 <p><b>Example:</b>
                     <xmp>
-        <%@ Register TagPrefix="dnn" TagName="Login" Src="~/Admin/Skins/login.ascx" %>
-        ...
-        <div id="login_style" class="user">
-            <dnn:Login runat="server" id="dnnLogin" CssClass="user" />
-        </div>
+    <%@ Register TagPrefix="dnn" TagName="Login" Src="~/Admin/Skins/login.ascx" %>
+    ...
+    <div id="login_style" class="user">
+        <dnn:Login runat="server" id="dnnLogin" CssClass="user" />
+    </div>
                     </xmp>
                 </p>
             </li>
@@ -145,7 +145,7 @@
         </tr>
         </table>
 
-        <p><!--#include virtual="../../common/bptext/BP-TipSkinningTool.html" --></p>
+        <p><!--#include virtual="/common/bptext/BP-TipSkinningTool.html" --></p>
     </li>
 
     </ol>
