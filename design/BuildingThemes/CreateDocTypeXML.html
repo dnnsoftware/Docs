@@ -4,39 +4,51 @@
 
 
     <h2> Overview </h2>
-    If a page is not rendering properly in some browsers, you can force the theme to be rendered in <b>XHTML</b> or <b>HTML5</b> by creating a doctype XML file.
+    If a page is not rendering properly in some browsers, you can force the theme to be rendered in <b>XHTML</b> or <b>HTML5</b> by creating a DocType XML file.
 
     <h2> Steps </h2>
-    <ol type=a>
+    <ol>
 
-    <li>Create a doctype XML file with the same name as your layout template file, followed by <b>.doctype.xml</b>.<br>
-         <b>Example:</b> If your layout template file is called <b>MyAwesomeLayout.html</b>, give your doctype file the name <b>MyAwesomeLayout.doctype.xml</b>.
+    <li>Create a DocType XML file with the same name as your layout template file, followed by <b>.doctype.xml</b>.<br>
+         <b>Example:</b> If your layout template file is called <b>MyAwesomeLayout.html</b>, give your DocType file the name <b>MyAwesomeLayout.doctype.xml</b>.
     </li>
 
-    <li>Enter one of the following in your doctype file:
+    <li>Enter one of the following in your DocType file:
         <ul>
         <li>XHTML Strict
             <xmp>
-        <SkinDocType>
-            <![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">]]>
-        </SkinDocType>
+    <SkinDocType>
+        <![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">]]>
+    </SkinDocType>
             </xmp>
         </li>
         <li>XHTML Transitional
             <xmp>
-        <SkinDocType>
-            <![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">]]>
-        </SkinDocType>
+    <SkinDocType>
+        <![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">]]>
+    </SkinDocType>
             </xmp>
         </li>
         <li>HTML5
             <xmp>
-        <SkinDocType>
-            <![CDATA[<!DOCTYPE html>]]>
-        </SkinDocType>
+    <SkinDocType>
+        <![CDATA[<!DOCTYPE html>]]>
+    </SkinDocType>
             </xmp>
         </li>
         </ul>
     </li>
 
     </ol>
+
+
+    <h2> See Also </h2>
+    <ul>
+        <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/dotnetnuke-skins">DotNetNuke Skins</a></li>
+    </ul>
+
+
+    <h2> Sources </h2>
+    <ul>
+        <li>DNN Community blog: <a href="http://www.dnnsoftware.com/community-blog/cid/131999/dotnetnuke-skinning-101-part-2">DotNetNuke Skinning 101 (Part 2)</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/8129">Joe Brinkman</a></li>
+    </ul>

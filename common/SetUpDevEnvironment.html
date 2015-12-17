@@ -1,29 +1,20 @@
 .. raw:: html
 
-    <h1> Set up Your Development Environment </hi>
+    <h1> Set up Your DNN Development Environment </hi>
 
     <h2> Overview </h2>
-    <p>To set up a local development environment to create DNN modules:
-        <ol>
-            <li>Determine what DNN version to install.</li>
-            <li>Install the following:
-                <ul>
-                    <li>IIS with ASP.NET extensions</li>
-                    <li>.NET Framework</li>
-                    <li>SQL</li>
-                    <li>Visual Studio 2015</li>
-                </ul>
-                <p>Check the <a href="..\main\DNN8Requirements.html">DNN 8.0 Requirements</a> for compatible versions.</p>
-            </li>
-            <li>Install DNN.</li>
-            <li>
-            </li>
-        </ol>
+
+    <p>To create themes or modules for DNN, you need a local DNN installation for testing and other tasks. <!-- What else would they need a local DNN installation for? --></p>
+
+    <p>DNN offers three products:
+        <ul>
+            <li>DNN Platform is the free open-source package.</li>
+            <li>Evoq Content adds more advanced website management features over the DNN Platform.</li>
+            <li>Evoq Engage adds user engagement features over Evoq Content.</li>
+        </ul>
     </p>
 
-    <p><b>Note:</b> These instructions use DNNDEV.ME as the domain of your local DNN installation. DNNDEV.ME is a registered domain which points to the loopback address of 127.0.0.1, so it will always resolve locally.</p>
-
-    <ol>
+    <p>You can <a href="http://www.dnnsoftware.com/products/compare-dnn-platform-to-evoq">compare the features</a> in detail.</p>
 
     <!-- Cover older versions in the next iteration of the docs website.
     <li><b>Determine what DNN version to install.</b> Decide on the oldest DNN version that you are willing to support.
@@ -36,28 +27,38 @@
     -->
     <!-- Need a link to the What's New > Breaking Changes page. -->
 
+    <p><b>Note:</b> You can use DNNDEV.ME as the domain of your local DNN website. DNNDEV.ME is a registered domain which points to the loopback address of 127.0.0.1, so it will always resolve locally.</p>
 
-    <li><b><a href="http://www.dnnsoftware.com/products/compare-dnn-platform-to-evoq">Choose a DNN product.</a></b>
-        <ul>
-            <li>The DNN Platform is the free open-source package.
-            <li>Evoq (both Content and Engage) adds custom functionality over the DNN Platform.
-        </ul>
+
+    <h2> Prerequisites </h2>
+    <ul>
+        <li><a href="\main\DNN8Requirements.html">DNN 8.0 Requirements</a>, specifically:
+            <ul>
+                <li>IIS with ASP.NET extensions</li>
+                <li>.NET Framework</li>
+                <li>SQL</li>
+            </ul>
+        </li>
+        <li>(Optional) Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
+    </ul>
+
+
+    <h2> Steps </h2>
+    <!-- These steps were for DNN 7.0. Are they still the same for DNN 8.0? -->
+    <!-- Which of these steps are irrelevant to a theme creator? -->
+    <ol>
+
+    <li><b><a href="http://www.dnnsoftware.com/community/download">Download the DNN Platform.</a></b>
+        <p><b>Note:</b> For module or theme development, you don't need the source files.</p>
     </li>
 
-    <li><b>Check the <a href="http://www.dnnsoftware.com/platform/start/install">requirements</a> and install the appropriate versions for the chosen DNN version.</b>
-    </li>
-
-    <li><b>Download the <a href="http://www.dnnsoftware.com/community/download">DNN Platform</a>.</b>
-        <p><b>Note:</b> For module development, you won't need the source files.</p>
-    </li>
-
-    <li><b>Set file permissions for the DNN installation folder to Full or Modify.</b>
+    <li><b>Set file permissions for the DNN installation folder to <b>Full</b> or <b>Modify</b>.</b>
         <ul>
             <li>In Windows Explorer, right-click on the folder where you installed DNN, and choose <b>Properties</b>.</li>
             <li>Go to the <b>Security</b> tab.<br>
                 <b>Note:</b> If you are using Windows XP, go to <b>Tools</b> &gt; <b>Options</b> and uncheck <b>Use Simple File Sharing</b>.
             </li>
-            <li>Give Full or Modify permissions to the user account that is used to run your website. The account name differs, depending on your IIS and Windows version:
+            <li>Give <b>Full</b> or <b>Modify</b> permissions to the user account that is used to run your website. The account name differs, depending on your IIS and Windows version:
                 <table border=1>
                     <tr>
                         <th>If your IIS version is</th>
@@ -99,8 +100,7 @@
 
     <li><b>Create a SQL database.</b><br>
         <ol>
-            <li>In SQL Server, create a new database.<br>
-            </li>
+            <li>In SQL Server, create a new database for your website.</li>
             <li>Create a SQL user to access the database.
                 <ul>
                     <li>Use SQL authentication.</li>
@@ -127,7 +127,7 @@
             <li>In the installation wizard, choose <b>Typical</b> and follow the prompts to <b>Database Configuration</b>.</li>
             <li>In <b>Database Configuration</b>,
                 <ol>
-                    <li>Choose <b>SQL 2005/2008</b>.</li>
+                    <li>Choose <b>SQL 2005/2008</b>. <!-- Why is this specific? Is this the correct version for DNN 8? --></li>
                     <li>Uncheck integrated authentication</b>.</li>
                     <li>Use <code>(local)</code> as the name of your SQL Server.</li>
                     <li>Enter your database name.</li>
@@ -157,10 +157,23 @@
 
     </ol>
 
+
+    <!--
+    <p><b>Note:</b> The screenshots in this page were taken in an environment with the following:
+        <ul>
+            <li>Windows 10</li>
+            <li>IIS ...</li>
+            <li>.NET Framework ...</li>
+            <li>SQL ...</li>
+            <li>DNN 8.0 Beta</li>
+        </ul>
+    </p>
+    -->
+
+
     <h2>Sources</h2>
     <ul>
         <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by Chris Hammond.</li>
         <li><a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
     </ul>
 
-    <!-- In a footnote, document what environment (with versions) I use for screenshots. -->

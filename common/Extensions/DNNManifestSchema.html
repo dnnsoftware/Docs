@@ -7,11 +7,9 @@
 
     <p>The <b>DNN manifest</b> is an XML file (e.g., MyDNNExtension.dnn) that specifies how each file in the extension package must be processed during installation.</p>
 
-    <p>Only the files declared in the manifest would be installed. This includes files inside a zip file specified in <code>component type="ResourceFile"</code>.</p>
+    <p>Only the files declared in the manifest would be installed. This includes files inside a zip file specified in <code>component type="ResourceFile"</code>. Nonexistent files mentioned in the manifest will cause an error message.</p>
 
-    <p>Files mentioned in the manifest but do not exist in your package will cause an error message.</p>
-
-    <p>The manifest file extension must be <b>.dnn</b>. You can add the DNN version at the end; e.g., <code>MyDNNExtension.dnn8</code>.</p>
+    <p>The manifest file extension must be <code>.dnn</code>. You can add the DNN version at the end; e.g., <code>MyDNNExtension.dnn8</code>.</p>
 
     <p>Save the manifest file in the base folder of your package and include it when zipping your package files.</p>
 
@@ -141,13 +139,13 @@
             </xmp>
         </li>
 
-        <li><b>dependency list item</b> <!-- Needs more info. --> Example:<br />
+        <li><b>dependency list item</b>. <!-- Needs more info. --> Example:<br />
             <xmp>
     <dependency type="dependency list item">???</dependency>
             </xmp>
         </li>
 
-        <li><b>managedPackage</b> <!-- Seen this in an example, but not in the list of dependency types. --> Example:<br />
+        <li><b>managedPackage</b>. <!-- Seen this in an example, but not in the list of dependency types. --> Example:<br />
             <xmp>
     <dependency type="managedPackage">???</dependency>
             </xmp>
@@ -159,13 +157,13 @@
             </xmp>
         </li>
 
-        <li><b>permission</b> <!-- ??? --> Example:<br />
+        <li><b>permission</b>. <!-- ??? --> Example:<br />
             <xmp>
     <dependency type="permission">???</dependency> <!-- TODO for Joe for DNN permissions and to find out custom permissions.-->
             </xmp>
         </li>
 
-        <li><b>type</b> <!-- ??? --> Example:<br />
+        <li><b>type</b>. <!-- ??? --> Example:<br />
             <xmp>
     <dependency type="type">...</dependency> <!-- Name of namespace.class in .NET, in a DNN library, or a third-party library. -->
             </xmp>
@@ -316,8 +314,7 @@
 
 
             <li><b><a href="http://www.dnnsoftware.com/wiki/manifest-file-component">File</a></b>.
-                Files to be installed.
-                <p><b>Note:</b> Only files with allowed file extensions are installed. To view or modify the list of file extensions, go to <b>Host</b> &gt; <b>Host Settings</b> &gt; <b>Other Settings</b> &gt; <b>Allowable File Extensions</b> in your DNN installation.</p><br />
+                Files to be installed. Only files with allowed file extensions are installed. To view or modify the list of file extensions, go to <b>Host</b> &gt; <b>Host Settings</b> &gt; <b>Other Settings</b> &gt; <b>Allowable File Extensions</b> in your DNN installation.<br />
                 <xmp>
     <component type="File">
         <files>
@@ -546,6 +543,7 @@
     <h2>See Also</h2>
     <ul>
         <li><a href="http://www.ifinity.com.au/Blog/EntryId/89/Top-5-DotNetNuke-Manifest-file-Module-Packaging-Tips">Top 5 DotNetNuke Manifest file Module Packaging Tips</a> by <a href="http://www.dnnsoftware.com/users/bruce-chapman">Bruce Chapman</a></li>
+        <li>DNN Community blog: <a href="http://www.dnnsoftware.com/community-blog/cid/142201/dal-2-a-new-dotnetnuke-data-layer-for-a-new-decade">DAL 2 - A New DotNetNuke Data Layer for a New Decade</a> by Charles Nurse</li>
         <li><a href="/design/REF-ContentsThemePack.html">Contents of a Theme Package</a></li>
         <li><a href="/dev/REF-ContentsModulePack.html">Contents of a Module Package</a></li>
     </ul>
