@@ -1,0 +1,167 @@
+.. raw:: html
+
+    <h1> Create a Layout Template </h1>
+
+
+    <h2> Steps </h2>
+    <ol>
+
+    <li> Create a new file for the layout template.
+        <p><b>Note:</b>
+            <ul>
+                <li>The layout template must contain at least one pane.</li>
+                <li>Exactly one of the panes must be called <b>ContentPane</b>.</li>
+                <li>Each pane must have a name that is unique within the page.</li>
+                <li>All panes must be defined as a server control by adding <b>runat="server"</b> to the element.</li> <!-- Joe will confirm. -->
+                <li>A pane can be one of the following HTML elements: &lt;td&gt; (table cells), &lt;div&gt;, &lt;p&gt;, and &lt;span&gt;.
+            </ul>
+        </p>
+
+        <p><b>Example:</b> A very basic layout template.
+            <ul>
+                <li>HTML
+                    <xmp>
+    <div id="ContentPane" runat="server"></div>
+                </xmp>
+            </li>
+            <li>ASCX
+                <xmp>
+    <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
+    <div id="ContentPane" runat="server"></div>
+                    </xmp>
+                </li>
+            </ul>
+        </p>
+
+        <p><b>Example:</b> A layout template with several panes, a header, a footer, and a LOGO theme object.
+            <ul>
+                <li>HTML
+                    <xmp>
+    <div id="wrapper">
+         <div id="header">
+            [LOGO]
+         </div>
+         <div id="sidebar">
+              <div id="feed">
+                    <a class="feed-button" href="#">&nbsp;</a>
+              </div>
+              <div id="SidebarPane" class="SidebarPane" runat="server"></div>
+              <div id="sidebar-bottom">&nbsp;</div>
+         </div>
+         <div id="content">
+              <div id="BannerPane" class="BannerPane" runat="server"></div>
+              <div id="ContentPane" runat="server"></div>
+         </div>
+         <div id="footer"></div>
+    </div>
+                    </xmp>
+                </li>
+                <li>ASCX
+                    <xmp>
+    <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
+    <%@ Register TagPrefix="dnn" TagName="LOGO" Src="~/Admin/Skins/Logo.ascx" %>
+    <div id="wrapper">
+         <div id="header">
+            <dnn:LOGO runat="server" id="dnnLOGO" />
+         </div>
+         <div id="sidebar">
+              <div id="feed">
+                    <a class="feed-button" href="#">&nbsp;</a>
+              </div>
+              <div id="MySidebarPane" class="SidebarPane" runat="server"></div>
+              <div id="sidebar-bottom">&nbsp;</div>
+         </div>
+         <div id="content">
+              <div id="MyBannerPane" class="MyBannerPane" runat="server"></div>
+              <div id="ContentPane" runat="server"></div>
+
+         </div>
+         <div id="footer"></div>
+    </div>
+                    </xmp>
+                </li>
+            </ul>
+        </p>
+
+        <p><b>Tip:</b> ASP.NET might modify the control names (e.g., <b>div id</b>) when the page is rendered to avoid duplicate control names in a page. Instead of depending on the control name when styling, add a <b>class</b> attribute to each of the controls and refer to those class attributes in your CSS.</p>
+    </li>
+
+    <li> (Optional) Add theme objects to any pane for a more dynamic page.
+        <ul>
+            <li>In HTML, you can use the HTML token (example: <code>[LOGIN]</code>).
+                <p><b>Example:</b>
+                    <xmp>
+    <div id="login_style" class="user">
+        [LOGIN]
+    </div>
+                    </xmp>
+                </p>
+            </li>
+            <li>In ASCX, you must register the ASCX token (example: <code>&lt;dnn:Login ...</code>) before using it for the first time in the file.
+                <p><b>Example:</b>
+                    <xmp>
+    <%@ Register TagPrefix="dnn" TagName="Login" Src="~/Admin/Skins/login.ascx" %>
+    ...
+    <div id="login_style" class="user">
+        <dnn:Login runat="server" id="dnnLogin" CssClass="user" />
+    </div>
+                    </xmp>
+                </p>
+            </li>
+        </ul>
+
+        <p>A default DNN installation includes the following theme objects:</p>  <!-- Send email to Joe for the current list. -->
+        <table width=100%>
+        <tr>
+            <td valign=top>
+                BANNER<br>
+                BREADCRUMB<br>
+                COPYRIGHT<br>
+                CURRENTDATE<br>
+                DOTNETNUKE<br>
+                HELP<br>
+                HOSTNAME<br>
+                LANGUAGE<br>
+            </td>
+            <td valign=top>
+                LEFTMENU<br>
+                LINKS<br>
+                LOGIN<br>
+                LOGO<br>
+                MENU<br>
+                NAV<br>
+                PRIVACY<br>
+                SEARCH<br>
+            </td>
+            <td valign=top>
+                SOLPARTMENU<br>
+                STYLES<br>
+                TAGS<br>
+                TERMS<br>
+                TEXT<br>
+                TREEVIEW<br>
+                USER<br>
+            </td>
+        </tr>
+        </table>
+
+        <p><!--#include virtual="/common/bptext/BP-TipSkinningTool.html" --></p>
+    </li>
+
+    </ol>
+
+
+    <h2> See Also </h2>
+    <ul>
+        <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/dotnetnuke-skins">DotNetNuke Skins</a></li>
+        <li><a href="CreateCSS.html">Create CSS</a></li>
+        <li><a href="/design/BuildingThemes/CreateContainer.html">Create a Container</a></li>
+    </ul>
+
+
+    <h2> Sources </h2>
+    <ul>
+        <li>DNN Community blog: <a href="http://www.dnnsoftware.com/community-blog/cid/132000/dotnetnuke-skinning-101-part-1">DotNetNuke Skinning 101 (Part 1) and
+            <a href="http://www.dnnsoftware.com/community-blog/cid/131999/dotnetnuke-skinning-101-part-2">DotNetNuke Skinning 101 (Part 2)</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/8129">Joe Brinkman</a></li>
+        <li>DNN Professional Training: <a href="http://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-2-creating-html-skins"></a>Creating HTML Skins</li>
+    </ul>

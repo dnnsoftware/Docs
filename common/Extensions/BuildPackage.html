@@ -1,83 +1,32 @@
 .. raw:: html
 
-    <h1> Build a Package </hi>
+    <h1> Build the Package </h1>
+
 
     <h2> Overview </h2>
-    The most basic DNN skin configuration is comprised of one layout template. However, you can also create a master CSS file for all layout templates or one CSS file for each layout template.
+    <p>For easier distribution and installation, the components of an extension (theme or module) can be bundled into a package.</p>
 
-    <h2> Prerequisites </h2>
-
-    <ul>
-        <li><!--#include virtual="..\common\bptext\BP-PrereqHost.html" --></li>
-    </ul>
+    <p>An extension package is simply a zip file that contains all the files required by your extension. The most important part of the process is creating the DNN Manifest, which provides information required by the installer, such as the target locations for the files.</p>
 
 
     <h2> Steps </h2>
     <ol>
-
         <li>Prepare your files in folders.
             <ul> <!-- Are these the actual names of the folders? Or can they be named any way they want? -->
-                <li><b>Layout templates and associated files</b>
-                    <p><b>Tip:</b> You can provide a preview by including an image file with the same filename as your layout template or container; example, add a <code>MyLayoutOrContainer.jpg</code> preview for the <code>MyLayoutOrContainer.ascx</code> layout template or container.</p> <!-- Is this correct? -->
+                <li><a href="/design/REF-ContentsThemePack.html">Layout templates, containers, and associated files</a></li>
+                <li><a href="/dev/REF-ContentsModulePack.html">Modules and associated files</a></li>
+                <li>Files that are common among all packages:
                     <ul>
-                        <li>Layout template files (*.ascx)</li>
-                        <li>Preview of individual layout templates (*.png/jpg/etc.)</li> <!-- Video only showed jpg. Is it restricted to jpg? -->
-                        <li>Document Type XML file for individual layout templates (*.doctype.xml)</li>
-                        <li>CSS for individual layout templates (*.css)</li>
-                        <li>CSS for the theme (skin.css)</li>
-                        <li>Custom attributes of tokens (skin.xml)</li>
-                   </ul>
-                </li>
-                <li><b>Containers and associated files</b>
-                    <ul>
-                        <li>Container files (*.ascx)</li>
-                        <li>Preview of individual containers (*.png/jpg/etc.)</li> <!-- Video only showed jpg. Is it restricted to jpg? -->
-                        <li>CSS for individual containers (*.css)</li>
-                        <li>Custom attributes of tokens (container.xml)</li>
+                        <li>(Optional) <b>MyLicense.txt</b> is displayed to the user during package installation.</li>.
+                        <li>(Optional) <b>MyReleaseNotes.txt</b> lists the changes for the current version of the package and is also provided during installation.</li>
                     </ul>
-                </li>
-                <li><b>Modules and associated files</b>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </li>
-                <li><b>Folders</b>
-                    <ul>
-                        <li>css - All CSS required by layout templates and containers.</li>
-                        <li>fonts - All web fonts used by the theme.</li>
-                        <li>images - All image files used by the theme.</li>
-                        <li>js - All JScript files used by the theme, such as bootstrap.min.js and common.js.</li>
-                        <li>menu - All desktop menu files for the skin.</li>
-                        <li>mobmenu - All mobile menu files for the skin.</li>
-                    </ul>
-                </li>
-                <li><b>License/Release Notes Files</b>
-                    <p>These files are HTML-formatted files:</p>
-                    <ul>
-                        <li>MyContainerLicense.txt</li>
-                        <li>MyContainerReleaseNotes.txt</li>
-                        <li>MyPackageLicense.txt</li>
-                        <li>MyPackageReleaseNotes.txt</li>
-                        <li>MyThemeLicense.txt</li>
-                        <li>MyThemeReleaseNotes.txt</li>
-                    </ul>
-                    <p><b>Tip:</b> The license files and release notes files are HTML files, so you can include special offers, including a call to action and other details.</p>
+                    <p><b>Tip:</b> The license and release notes are HTML files, so you can include special offers, including a call to action and other details.</p>
                     <p><b>Reminder:</b> Include the version number of your extension in the release notes.</p>
                 </li>
             </ul>
         </li>
-
-
-        <li>Create the <a href="DNNManifestSchema.html">DNN manifest</a>.</li>
-
-
-        <li>Zip up your files, including the DNN manifest file.</li>
-
-
+        <li>Create the <a href="DNNManifestSchema.html">DNN Manifest</a>.</li>
+        <li>Zip up your files, including the DNN Manifest in the root folder.</li>
     </ol>
 
 
@@ -85,3 +34,5 @@
     <ul>
         <li>DNN Professional Training video: <a href="http://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-5-packaging">Skinning 5: Packaging</a></li>
     </ul>
+
+

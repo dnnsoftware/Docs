@@ -11,8 +11,7 @@
         </ul>
     </p>
 
-    <p>CSS files are applied hierarchically. If a style is defined for an element in multiple CSS files, the last CSS which mentions the same element overrides the style definitions in previously loaded CSS files.
-    By default, the CSS files are loaded in this order:
+    <p>CSS files are applied hierarchically. If a style is defined for an element in multiple CSS files, the last CSS which mentions the same element overrides the style definitions in previously loaded CSS files. By default, the CSS files are loaded in this order:
     <ol>
         <li><b>Skin.css</b> (~/Portals/PortalID/Skins/SkinPackageName/skin.css) - The master CSS for the theme must be called <code>skin.css</code>.</li>
         <li><b>MyLayoutTemplate.css</b> or <b>MyModule.css</b></li>
@@ -41,26 +40,26 @@
     <h2> Steps </h2>
     <ol>
 
-    <li>For every pane (&lt;div&gt;) that contains a theme object, add a style definition in the CSS file. The style definition must start with <b>#</b> followed by the <b>div</b> <b>id</b>.<br>
+    <li>For every pane (&lt;div&gt;) that contains a theme object, add a style definition in the CSS file. The style definition must start with <b>#</b> followed by the <b>id</b>.<br/>
     <b>Example:</b>
         <table border=1 width=100%>
         <tr align=center bgcolor=silver><th width=50%>layout template</th><th width=50%>CSS</th></tr>
         <tr>
             <td>
             <xmp>
-        <div id="login_style" class="user">
-            <object id="dnnLOGIN" codebase="LOGIN" codetype="dotnetnuke/server">
-                <param name="CssClass" value="user" />
-            </object>
-        </div>
+    <div id="login_style" class="user">
+        <object id="dnnLOGIN" codebase="LOGIN" codetype="dotnetnuke/server">
+            <param name="CssClass" value="user" />
+        </object>
+    </div>
             </xmp>
             </td>
             <td>
             <xmp>
-        #login_style .linkseparator{
-             color: white;
-             font-weight: bold;
-        }
+    #login_style .linkseparator{
+         color: white;
+         font-weight: bold;
+    }
             </xmp>
             </td>
         </tr>
@@ -70,49 +69,9 @@
     </ol>
 
 
-    <h2> Example </h2> <!-- I think I need a simpler and more generic example. -->
-    <xmp>
-    .c_container {
-        padding-bottom: 15px;
-        margin: 5px 10px;
-    }
-    .c_actions, .c_icon, .c_icon > img, h2.c_title {
-        float: left;
-    }
-    .c_actions {
-        height: 2em;
-        line-height: 2em;
-    }
-    .icn img {
-        margin-right: 5px;
-    }
-    h2.c_title {
-        margin: 0;
-        padding: 0;
-    }
-    .c_contentpane{
-        padding-top: 5px;
-    }
-    .c_left_actions {
-        float: left;
-        margin-top: 5px;
-    }
-    .c_right_actions {
-        float: right;
-        margin-top: 5px;
-    }
-    .clearfix:after {
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden;
-    }
-    </xmp>
-
-
     <h2> See Also </h2>
     <ul>
+        <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/dotnetnuke-skins">DotNetNuke Skins</a></li>
         <li><a href="CreateLayoutTemplate.html">Create Layout Template</a></li>
         <li><a href="CreateContainer.html">Create Container</a></li>
     </ul>

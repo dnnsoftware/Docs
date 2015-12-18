@@ -1,0 +1,55 @@
+.. raw:: html
+
+    <h1> Contents of a Module Package </h1>
+
+    <p>A module package includes the following:</p>
+    <ul>
+
+        <li><b>references</b> contains the libraries required by the module.
+            <p><b>Note:</b> The <b>DotNetNuke.dll</b> is required in all modules; it provides additional functionality, such as authentication and user information.</p>
+        </li>
+
+        <li><b>components\FeatureController.cs</b> contains the list of DNN interfaces that the module implements.</li>
+
+        <li><b>packages.config</b> specifies the recommended .NET Framework version for the module.</li>
+
+        <li><b>data\DataProvider.cs</b> defines the abstract data provider's methods to access data. The abstract data provider hides the details of the concrete data provider, so that the module can access the data, whether the concrete data provider is a SQL database or an Oracle database.
+        <p>The <b>providers</b> folder contains the actual implementations (concrete data providers). A module can use multiple concrete data providers.</p>
+        </li>
+
+        <li><b>providers</b> contains definitions of <a href="http://www.dnnsoftware.com/wiki/providers">providers</a> required by the module.
+        <p><b>Example:</b> The <b>providers\SQLDataProvider</b> subfolder contains three files:
+            <ul>
+                <li><b>00.00.01 SQLDataProvider</b> contains the SQL scripts that create tables and stored procedures required by the module to access the data. These scripts run when the module is installed.</li>
+                <li><b>Uninstall.SqlDataProvider</b> contains the SQL scripts that delete tables and stored procedures used by the module. These scripts run when the module is uninstalled.</li>
+                <li><b>SQLDataProvider.cs</b> defines the concrete data provider class's methods to access data, as well as set the value of <b>SqlConnection.ConnectionString</b>.</li>
+            </ul>
+        </p>
+        </li>
+
+        <li>(Optional) <b>App_LocalResources\*.resx</b> are string tables that contain localized or translated terms.</li>
+
+        <li>(Optional) <b>Documentation\Documentation.html</b> describes the module functionality.</li>
+
+        <li>(Optional) <b>module.css</b> defines how the module should be displayed. If the module is applied to a pane that has an assigned container, that container's CSS overrides the module's CSS. <!--Is this correct? Or the other way around? --></li>
+
+        <li><b>Properties\Assembly.cs</b> contains information about the module assembly. <!-- Confirm the file extension. Why is it a C# file? --></li>
+
+        <li><b>.build</b> contains files required for MSBuild to compile the module and to assemble the installation file.</li>
+
+    </ul>
+
+
+    <h2> See Also </h2>
+    <ul>
+        <li><a href="/design/REF-ContentsThemePack.html">Contents of a Theme Package</a></li>
+        <li><a href="/common/Extensions/BuildPackage.html">Build the Package</a></li>
+    </ul>
+
+
+    <h2> Sources </h2>
+    <ul>
+        <li>DNN Community Blog - <a href="http://www.dnnsoftware.com/community-blog/cid/155065/what-is-a-module">What Is a Module</a>
+            and <a href="http://www.dnnsoftware.com/community-blog/cid/155075/module-development-templates">Module Development Templates</a> by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/710933">Clinton Patterson<a></li>
+        <li>DNN Wiki - <a href="http://www.dnnsoftware.com/wiki/providers">Providers</a></li>
+    </ul>
