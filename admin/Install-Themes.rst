@@ -9,7 +9,9 @@ Prerequisites
 Steps
 ==================
 
-#. While logged in as a host, go to **Host** > **File Management**. |filemanagement|
+#. While logged in as a host, go to **Host** > **File Management**. 
+
+   |filemanagement|
 
 #. In your DNN installation, create a new folder for your theme under **Skins\_default**. The new folder name becomes the name of the DNN theme.
 
