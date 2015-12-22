@@ -20,6 +20,7 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.intersphinx',
+    'breathe'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -354,3 +355,8 @@ epub_exclude_files = ['search.html']
 intersphinx_mapping = {
 }
 
+# -- Options for Breathe output -------------------------------------------
+
+breathe_projects = { "dnn-platform": "./api-source/xml" }
+
+breathe_default_project = "dnn-platform"
