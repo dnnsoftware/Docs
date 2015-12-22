@@ -1,0 +1,74 @@
+.. raw:: html
+
+    <h1> Run the DNN Installation Wizard </h1>
+
+
+    <h2>Prerequisites</h2>
+    <ul>
+        <li><a href="/common/Setup/SetUpDNNFolder.html">DNN installed with folder permissions for the user account that will run your website.</a></li>
+        <li><a href="/common/Setup/SetUpIIS.html">IIS enabled and set up.</a></li>
+        <li><a href="/common/Setup/SetUpSQL.html">SQL installed and set up.</a></li>
+    </ul>
+
+
+    <h2> Steps </h2>
+    <ol>
+
+        <li>Run the DNN Installation Wizard. <!-- Verify the actual names of the UI objects. Need screenshots. -->
+            <!-- Make this section expandable. -->
+            <ol type=a>
+                <li>Open your website (<code>http://www.dnndev.me</code>) in a browser.</li>
+                <li>Under <b>Administrative Information</b>, enter the username, password, and email address for the host / super user account to create. This account will have permissions for all websites created in this DNN installation.
+                <p><b>Note:</b> Remember the host's username and password, which you will need to manage your websites.</p>
+                </li>
+                <li>Under <b>Website Information</b>, enter the name, template, and language to use for the first website.</li>
+                <li>Under <b>Database Information</b>,
+                    <ul>
+                        <li><b>Database Setup:</b> Custom</li>
+                        <li><b>Database Type:</b> SQL Server/SQL Server Express Database</li>
+                        <li><b>Server Name:</b>
+                            <br/><b>Developers and Designers:</b> You can use the default value (example: <code>.\SQLExpress</code>).
+                            <br/><b>Administrators:</b> Set the value to <code>(local)</code>.
+                        </li>
+                        <li><b>Database Name:</b> Enter the name of the SQL database you created earlier.</li>
+                        <li><b>Object Qualifier:</b>
+                            <p><b>Developers:</b>
+                                <ul>
+                                    <li>If creating modules for your own websites, set <b>objectQualifier</b> to blank.</li>
+                                    <li>If creating modules for sale, set <b>objectQualifier</b> to <code>dnn</code> to prepend <code>dnn_</code> to all DNN-generated objects, such as tables and stored procedures. This practice is recommended to avoid naming conflicts in your clients' databases.</li>
+                                </ul>
+                            </p>
+                        </li>
+                        <li><b>Security:</b> User Defined</li>
+                        <li>For <b>Database Username / Password</b>, enter the information for the SQL user you created earlier. </li>
+                    </ul>
+                </li>
+                <li>Follow the prompts to the end of the wizard.</li>
+            </ol>
+            <br/><img src="/common/img/scr-InstallWizard-7.png" alt="DNN Installation Wizard"/>
+        </li>
+
+        <li>Test the installation by viewing the first website.</li>
+
+        <li><b>Tip:</b> To assist with localization, modify the web.config file to set ShowMissingKeys to <code>true</code>.
+            <xmp>
+    <add key="ShowMissingKeys" value="true" />
+            </xmp>
+            <p>If <b>TRUE</b>,
+                <ul>
+                    <li>Any localized text in DNN will be displayed with an "L" in front of it to help with translating text in your module.</li>
+                    <li>DNN displays an error if the localized version of a string is missing from the resource files. The resource files are XML files that contain the localized string tables.</li>
+                </ul>
+            </p>
+            <!-- What else needs to be updated in web.config? -->
+        </li>
+
+    </ol>
+
+
+    <h2>Sources</h2>
+    <ul>
+        <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by Chris Hammond.</li>
+        <li><a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <!-- <li><a href="https://support.microsoft.com/en-us/kb/224609">How to obtain versions of Internet Information Server (IIS)</a></li> -->
+    </ul>
