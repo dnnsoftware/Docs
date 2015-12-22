@@ -1,0 +1,92 @@
+.. raw:: html
+
+    <h1> Set Up DNN Folder and the User Account </h1>
+
+
+    <h2> Steps </h2>
+    <ol>
+        <li><b><a href="http://www.dnnsoftware.com/community/download">Download DNN and extract the files.</a></b> The folder where you extract the files becomes the DNN installation folder.
+            <p><b>Developers and Designers:</b> For module or theme development, you don't need the source files.</p>
+        </li>
+
+        <li>Determine the user account used to run your website. The account name differs, depending on your IIS and Windows version:
+            <table border=1>
+                <tr>
+                    <th>If your OS is</th>
+                    <th>and your IIS version is</th>
+                    <th>then the account name is</th>
+                </tr>
+                <tr>
+                    <td>Windows 2000<br/>
+                        Windows XP
+                    </td>
+                    <td>IIS 5<br/>
+                        IIS 5.1
+                    </td>
+                    <td>localmachine\ASPNET</td>
+                </tr>
+                <tr>
+                    <td>Windows 2003<br/>
+                        Windows Vista<br/>
+                        Windows Server 2008
+                    </td>
+                    <td>IIS 6<br/>
+                        IIS 7
+                    </td>
+                    <td>localmachine\Network Service</td>
+                </tr>
+                <tr>
+                    <td>Windows 7<br/>
+                        Windows Server 2008 R2
+                    </td>
+                    <td>IIS 7.5</td>
+                    <td rowspan=3>the <b>NETWORK SERVICE</b> account, or<br/>
+                        the <b>IIS AppPool\AppPoolName</b>, which is the name of the automatically generated app.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Windows 8<br/>
+                        Windows Server 2012
+                    </td>
+                    <td>IIS 8</td>
+                    Same as Windows 7.
+                </tr>
+                <tr>
+                    <td>Windows 10</td>
+                    <td>IIS 10</td>
+                    Same as Windows 7.
+                </tr>
+            </table>
+        </li>
+
+        <li><b>Give <b>Full</b> or <b>Modify</b> permissions for the DNN installation folder to the user account that will run your website.</b>
+            <!-- Make this section expandable. Do we really want to go into this much detail? -->
+            <ol type=a>
+                <li>In Windows Explorer, right-click on the DNN installation folder, and choose <b>Properties</b>.
+                    <br/><img src="/common/img/scr-FolderPerms-1.png" alt="Right-click on the DNN folder and choose Properties"/>
+                </li>
+                <li>Go to the <b>Security</b> tab and click <b>Edit...</b>.
+                    <br/><img src="/common/img/scr-FolderPerms-2.png" alt="In the Security tab, click Edit..."></img><br/>
+                    <b>Note:</b> If you are using Windows XP, go to <b>Tools</b> &gt; <b>Options</b> and uncheck <b>Use Simple File Sharing</b>.
+                </li>
+                <li>Click <b>Add...</b>.
+                    <br/><img src="/common/img/scr-FolderPerms-3.png" alt="Click Add..."></img>
+                </li>
+                <li>In <b>Select Users or Groups</b>, enter the user name, then click <b>Check Names</b>. After the name is resolved, click OK.
+                    <br/><img src="/common/img/scr-FolderPerms-5a.png" alt="In Select Users or Groups, enter the user name, then click Check Names."></img>
+                </li>
+                <li>Highlight the newly added user name and check <b>Full Control</b> and <b>Modify</b> under <b>Allow</b>.
+                    <br/><img src="/common/img/scr-FolderPerms-6.png" alt="Highlight the newly added user name and check Full Control and Modify under Allow."></img>
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+
+    <h2>Sources</h2>
+    <ul>
+        <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by Chris Hammond.</li>
+        <li><a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <!-- <li><a href="https://support.microsoft.com/en-us/kb/224609">How to obtain versions of Internet Information Server (IIS)</a></li> -->
+    </ul>
+

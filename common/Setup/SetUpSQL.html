@@ -1,0 +1,81 @@
+.. raw:: html
+
+    <h1> Install and Set Up SQL </h1>
+
+
+    <h2> Steps </h2>
+    <ol>
+
+        <li>Install SQL. (<a href="/main/DNN8Requirements.html">Check compatible versions.</a>)
+            <ol type=a>
+                <li>Choose <b>New SQL Server stand-alone installation...</b>.</li>
+                    <br/><img src="/common/img/scr-InstallSQL-1.png" alt="New SQL Server stand-alone installation"/>
+                <li>Include any product updates.</li>
+                <li>Accept the defaults in <b>Feature Selection</b>, <b>Instance Configuration</b>, and <b>Server Configuration</b>.</li>
+                <li>In <b>Database Engine Configuration</b>, under <b>Authentication Mode</b>, choose <b>Mixed Mode</b>.
+                    <br/><img src="/common/img/scr-InstallSQL-6.png" alt="Database Engine Conf > Authentication Mode > Mixed Mode"/>
+                </li>
+                <li>Accept the defaults in remaining dialogs.</li>
+            </ol>
+        </li>
+
+        <li><b>Create a SQL database for your website.</b>
+            <!-- Make this section expandable. -->
+            <ol type=a>
+                <li>In the <b>Microsoft SQL Server Management Studio</b> &gt; <b>Object Explorer</b>, right-click on <b>Databases</b>, and choose <b>New Database...</b>.
+                    <br/><img src="/common/img/scr-SetupSQL-2.png" alt="In Object Explorer, right-click Databases, choose New Database."/>
+                </li>
+                <li>Enter the name of the new database. Click OK.
+                    <br/><img src="/common/img/scr-SetupSQL-3.png" alt="Enter new database name."/>
+                </li>
+                <li><b>Note:</b> Remember the database name, because it will be required by the DNN Installation Wizard.</li>
+            </ol>
+        </li>
+
+        <li><b>Create a SQL user account.</b>
+            <p><b>Notes:</b>
+            <ul>
+                <li>Use SQL authentication.</li>
+                <li>Turn off the <b>Enforce Password</b> requirement.</li> <!-- Is this the actual name of the UI object? -->
+            </ul>
+            </p>
+
+            <!-- Make this section expandable. -->
+            <ol type=a>
+                <li>Under <b>Security</b>, right-click on <b>Logins</b>, and choose <b>New Login...</b>.
+                    <br/><img src="/common/img/scr-SetupSQL-4.png" alt="Under Security, right-click Logins, choose New Login."/>
+                </li>
+                <li>Enter the username, choose <b>SQL Server authentication</b>, add a password, uncheck <b>Enforce password policy</b>, and choose the database.
+                    <br/><img src="/common/img/scr-SetupSQL-5.png" alt="Choose SQL Server authentication. Uncheck Enforce password policy."/>
+                </li>
+                <li><b>Note:</b> Remember the username and password, because they will be required by the DNN Installation Wizard.</li>
+            </ol>
+        </li>
+
+        <li>Give the new SQL user <b>db_owner</b> access to the new database.</li> <!-- I don't see how to assign Public access. -->
+            <!-- Make this section expandable. -->
+            <ol type=a>
+                <li>In <b>Object Explorer</b>, under your database &gt; <b>Security</b>, right-click on <b>Users</b>, and choose <b>New User...</b>.
+                    <br/><img src="/common/img/scr-SetupSQL-6.png" alt="Under your database > Security, right-click Users, choose New User."/>
+                </li>
+                <li>Set <b>User type</b> to <b>SQL user with login</b>.
+                    <br/><img src="/common/img/scr-SetupSQL-7.png" alt="User type = SQL user with login"/>
+                </li>
+                <li>Enter the username of the account you just created, then click <b>Check Names</b>.
+                    <br/><img src="/common/img/scr-SetupSQL-8.png" alt="Enter the new account's login name, then click Check Names."/>
+                </li>
+                <li>Under <b>Select a page</b>, select <b>Membership</b>, and check the <b>db_owner</b> database role membership.
+                    <br/><img src="/common/img/scr-SetupSQL-10.png" alt="For Membership page, check db_owner."/>
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+
+    <h2>Sources</h2>
+    <ul>
+        <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by Chris Hammond.</li>
+        <li><a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <!-- <li><a href="https://support.microsoft.com/en-us/kb/224609">How to obtain versions of Internet Information Server (IIS)</a></li> -->
+    </ul>
+
