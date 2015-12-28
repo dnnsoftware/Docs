@@ -1,26 +1,81 @@
 .. raw:: html
 
-    <h1> Build a Web Forms Module </h1>
+    <h1> Create a Web Forms Module </h1>
 
     <h2> Overview </h2>
+    <p><b>Note:</b> These instructions use templates to illustrate how to create a web forms module.</p>
 
 
     <h2> Prerequisites </h2>
 
     <ul>
-        <li><!--#include virtual="/common/bptext/BP-PrereqHost.html" --></li>
+        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.</li>
+        <li>Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
     </ul>
 
 
     <h2> Steps </h2>
     <ol>
 
-    <li></li>
+    <li><b>Download and install the templates.</b>
+        <ul>
+            <li>If installing Chris Hammond's templates, see <a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">his instructions</a> under "Installing the Templates."
+                <!-- ol type=a>
+                    <li>
+                        <br/><img src="/common/img/scr-VS2015ExtAndUpdates.png" alt=""/>
+                    </li>
+                    <li>
+                        <br/><img src="/common/img/scr-VS2015Search4DNN.png" alt=""/>
+                    </li>
+                </ol -->
+            </li>
+            <li>If installing the DNN 8 templates:
+                <ol type=a>
+                    <li><a href="https://github.com/jbrinkman/DNN8Templates">Download the zip file and unzip.</a></li>
+                    <li>In the <code>templates</code> folder, unzip the file of the specific template you want. Two are included: <b>Dnn Mvc Module</b> and <b>Dnn Spa Module</b>.</li>
+                    <li>Copy the extracted template folder to your DNN installation folder, under <b>Portals</b> &gt; <b>_default</b> &gt; <b>Templates</b>???.</li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+
+
+    <li><b>Create a Visual Studio project.</b>
+        <ol type=a>
+            <li>Run Visual Studio as an administrator.</li>
+            <li><b>File</b> &gt; <b>New</b> &gt; <b>Project</b>
+                <br/><img src="" alt=""/>
+            </li>
+            <li>Choose the following settings:
+                <ol type=i>
+                    <li>Expand <b>Installed</b> &gt; <b>Templates</b> &gt; <b>Visual C#</b> or <b>Visual Basic</b> &gt; <b>DotNetNuke</b>.</li>
+                    <li>Choose one of the compiled modules.</li>
+                    <li><b>Name:</b> the name of your new module</li>
+                    <li><b>Location:</b> the <code>DesktopModules</code> folder inside your DNN installation folder</li>
+                    <li>Uncheck <b>Create directory for solution</b> and <b>Add to source control</b>.</li>
+                </ol>
+                <br/><img src="/common/img/scr-VS2015NewProj-1.png" alt="New Project settings"/>
+            </li>
+        </ol>
+    </li>
+
+
+    <li><b>Modify the Visual Studio project to add functionality to your new module.</b></li>
+
 
     </ol>
+
+
+    <h2> See Also </h2>
+    <ul>
+        <li><a href="/dev/CreatingModules.html">Creating Modules</a></li>
+        <li><a href="/dev/CreatingModules/CreateMVCModule.html">Create an MVC module.</a></li>
+        <li><a href="/dev/CreatingModules/CreateSPAModule.html">Create a SPA module.</a></li>
+    </ul>
 
 
     <h2> Sources </h2>
     <ul>
         <li>DNN Community blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro">Module Development for Non-Developers, Skinners, & DNN Beginners - Blog Series</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <li><a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">Using the new Module Development Templates for DotNetNuke 7</a> by Chris Hammond</li>
     </ul>

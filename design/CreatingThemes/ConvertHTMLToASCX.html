@@ -26,16 +26,21 @@
     <ol>
 
         <li>While logged in as an admin or host, go to <b>Admin</b> &gt; (double-gear tab) &gt; <b>Themes</b>.
-            <br/><img src="/common/img/scr-HTMLtoASCX-4.png">
+            <br/><img src="/common/img/scr-HTMLtoASCX-4.png" width=75%>
         </li>
 
         <li>Choose your new theme in the <b>Themes</b> dropdown, then click <b>Parse Theme Package</b>.
-            <br/><img src="/common/img/scr-HTMLtoASCX-6.1.png">
+            <br/><img src="/common/img/scr-HTMLtoASCX-10.png" width=75%>
         </li>
 
-    <!-- Missing steps. What do you do after the conversion? Where would you find the converted files? -->
-
-    <!-- Are all html files converted (layout templates and containers)? -->
+        <li>Confirm:
+            <ul>
+                <li>That a section appears under <b>Themes</b> for each converted HTML file.</li>
+                <li>That no errors appear in the log.</li>
+                <li>That the new ASCX file appears in the same folder as the HTML file.</li>
+            </ul>
+            <br/><img src="/common/img/scr-HTMLtoASCX-11.png" width=75%>
+        </li>
 
     </ol>
 
@@ -63,24 +68,30 @@
     </p>
 
 
-    <!-- Need example with tokens.
     <h2>Example 2</h2>
-    <p>This HTML layout template or container, which includes some DNN tokens,:
+    <p>This HTML layout template or container, which includes the <code>[COPYRIGHT]</code> token:
         <xmp>
+    <div id="ContentPane" runat="server">
+        [COPYRIGHT]
+    </div>
         </xmp>
     </p>
     <p>is converted to this ASCX layout template:
         <xmp>
+    <%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
+    <%@ Register TagPrefix="dnn" TagName="COPYRIGHT" Src="~/Admin/Skins/Copyright.ascx" %>
+    <div id="ContentPane" runat="server">
+        <dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" />
+    </div>
         </xmp>
     </p>
-    -->
 
 
     <h2> See Also </h2>
     <ul>
         <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/dotnetnuke-skins">DotNetNuke Skins</a></li>
         <li><a href="CreateLayoutTemplate.html">Create Layout Template</a></li>
-        <li><a href="/design/BuildingThemes/CreateContainer.html">Create a Container</a></li>
+        <li><a href="/design/CreatingThemes/CreateContainer.html">Create a Container</a></li>
     </ul>
 
 
