@@ -1,11 +1,11 @@
 .. raw:: html
 
-    <h1> Building Modules </h1>
+    <h1> Creating Modules </h1>
 
     <h2> Overview </h2>
     <p>You can produce a module in different ways:
         <ul>
-            <li>Build an entire module from scratch.</li>
+            <li>Create an entire module from scratch.</li>
             <li>Start with module development templates, such as:
                 <ul>
                     <li><a href="https://github.com/jbrinkman/DNN8Templates">DNN 8 Templates</a></li>
@@ -13,28 +13,20 @@
                     <!-- What other templates can we mention here? -->
                 </ul>
             </li>
-            <li>Customize a pre-existing module. Hundreds of third-party modules are available from these sources:
-                <ul>
-                    <li>For sale: <a href="http://store.dnnsoftware.com">DNN Store</a> - Some developers provide versions that include the source code.</li>
-                    <li>Open source and free:
-                        <ul>
-                            <li><a href="http://www.DNNSoftware.com/Forge">DNN Forge</a></li>
-                            <li><a href="http://DotNetNuke.CodePlex.com">DNN at Codeplex</a></li>
-                            <li><a href="https://github.com/dnnsoftware">DNN at GitHub</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <li>Customize a pre-existing module.
+                <!--#include virtual="/common/bptext/BP-3rdPartyExtensions.html" -->
             </li>
         </ul>
     </p>
 
 
-    <h2>How to Build a Module</h2>
+    <h2>How to Create a Module</h2>
 
     <h3>Prerequisites</h3>
 
     <ul>
-        <li><a href="/common/Setup/SetUpDNN.html">A local DNN development environment</a></li>
+        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.</li>
+        <li>Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
     </ul>
 
 
@@ -44,17 +36,21 @@
 
     <li><b>Create a new module or modify an existing one.</b>
         <ul>
-            <li><a href="BuildWebFormsModule">Build a Web Forms module.</a></li>
-            <li><a href="BuildMVCModule.html">Build an MVC module.</a></li>
-            <li><a href="BuildSPAModule.html">Build SPA module.</a></li>
+            <li><a href="/dev/CreatingModules/CreateWebFormsModule">Create a Web Forms module.</a></li>
+            <li><a href="/dev/CreatingModules/CreateMVCModule.html">Create an MVC module.</a></li>
+            <li><a href="/dev/CreatingModules/CreateSPAModule.html">Create SPA module.</a></li>
         </ul>
     </li>
 
-    <li><b>Test your module.</b></li>
+    <li><b><a href="/common/Extensions/CreatePackage.html">Package your module.</a></b></li>
 
-    <li><b><a href="/common/Extensions/BuildPackage.html">Package your module.</a></b></li>
+    <li><b>Test your module.</b>
+        <ol>
+            <li><a href="/common/Extensions/InstallExtension.html">Install the package.</a></li>
+            <li>Apply the module to a pane in a new webpage in your DNN website.</li>
+            <li>Check how the module behaves in different browsers.</li>
+        </ol>
 
-    <li><b>Test your package.</b>
         <p><b>Tip:</b> As part of your tests, run your module through the DNN <a href="http://evs.dotnetnuke.com/">Extension Verification Service</a> (EVS) to perform the compatibility tests in three areas:
             <ul>
                 <li><b>Module packaging</b>. EVS verifies:

@@ -1,19 +1,19 @@
 .. raw:: html
 
-    <h1> Building Themes </h1>
+    <h1> Creating Themes </h1>
 
 
     <h2> Overview </h2>
 
     <p> A DNN <b>theme</b> (formerly called a <b>skin</b>) defines the look and feel of the website. It is comprised of:
-    <ul>
-    <li> one or more layout templates (HTML or ASCX)</li>
-    <li> (optional) a style sheet (CSS) for each of the layout templates</li>
-    <li> (optional) a master style sheet (CSS) for all the layout templates</li>
-    </ul>
+        <ul>
+            <li> one or more layout templates (HTML or ASCX)</li>
+            <li> (optional) a style sheet (CSS) for each of the layout templates</li>
+            <li> (optional) a master style sheet (CSS) for all the layout templates</li>
+        </ul>
     </p>
 
-    <image src="/common/img/SkinTheme.png" alt="Three variations of a theme" width="75%" align=center>
+    <image src="/common/img/SkinTheme.png" alt="Three variations of a theme" width="50%" align=center>
 
 
     <h3> Components of a Theme </h3>
@@ -76,25 +76,31 @@
     <!-- <p>For more information about DNN tokens and APIs, see ... </p> -->
 
 
-    <h2> How to Build a Theme </h2>
+    <h2> How to Create a Theme </h2>
 
 
-    <h2> Prerequisites </h2>
+    <h3> Prerequisites </h3>
 
     <ul>
-        <li><a href="/design/BuildingModules/Setup Dev Environment.html">A local DNN installation</a> with <b>Host</b> permissions.</li>
+        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.</li>
     </ul>
 
 
     <h3> Steps </h3> <!-- I want these steps to be more prominent: bigger fonts, colored background boxes, etc. -->
     <ol>
-        <li><a href="/design/BuildingThemes/CreateLayoutTemplate.html">Create layout templates for the webpages.</a></li>
-        <li><a href="/design/BuildingThemes/CreateContainer.html">Create containers for modules.</a></li>
-        <li><b>HTML only:</b> <a href="/design/BuildingThemes/ConvertHTMLToASCX.html">Convert the layout templates and containers from HTML to ASCX.</a></li>
-        <li>(Optional) <a href="/design/BuildingThemes/CreateCSS.html">Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers.</a></li>
-        <li>Test the theme. Apply it to a new webpage in your DNN site, and check how the page looks in different browsers.</li>
-        <li>(Optional) <a href="/design/BuildingThemes/CreateDocTypeXML.html">Create a doctype XML file.</a></li>
-        <li><a href="/common/Extensions/BuildPackage.html">Package your theme.</a></li>
+        <li><a href="/design/CreatingThemes/CreateLayoutTemplate.html">Create layout templates for the webpages.</a></li>
+        <li><a href="/design/CreatingThemes/CreateContainer.html">Create containers for modules.</a></li>
+        <li><b>HTML only:</b> <a href="/design/CreatingThemes/ConvertHTMLToASCX.html">Convert the layout templates and containers from HTML to ASCX.</a></li>
+        <li>(Optional) <a href="/design/CreatingThemes/CreateCSS.html">Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers.</a></li>
+        <li>(Optional) <a href="/design/CreatingThemes/CreateDocTypeXML.html">Create a doctype XML file.</a></li>
+        <li><a href="/common/Extensions/CreatePackage.html">Package your theme.</a></li>
+        <li>Test the theme.
+            <ol>
+                <li><a href="/common/Extensions/InstallExtension.html">Install the package.</a></li>
+                <li>Apply the theme to a new webpage in your DNN website.</li>
+                <li>Check how the page looks in different browsers.</li>
+            </ol>
+        </li>
     </ol>
 
 
@@ -104,6 +110,8 @@
     -->
 
     <!--#include virtual="/common/bptext/BP-TipSkinningTool.html" -->
+
+    <!--#include virtual="/common/bptext/BP-3rdPartyExtensions.html" -->
 
 
     <h2> See Also </h2>
