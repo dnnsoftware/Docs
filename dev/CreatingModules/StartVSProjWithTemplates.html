@@ -1,0 +1,95 @@
+.. raw:: html
+
+    <h1> Start a Visual Studio Project with Templates </h1>
+
+
+    <h2> Prerequisites </h2>
+
+    <ul>
+        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.</li>
+        <li>Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
+    </ul>
+
+
+    <h2> Steps </h2>
+    <ol>
+
+    <li><b>Download and install the templates.</b>
+        <ul>
+            <li>For Chris Hammond's templates,
+                <ol type=a>
+                    <li>Run Visual Studio as an administrator.</li>
+                    <li>Go to <b>Tools</b> &gt; <b>Extensions and Updates</b>.
+                        <br/><img src="/common/img/scr-VS2015ExtAndUpdates.png" width=75% alt="Tools > Extensions and Updates"/>
+                    </li>
+                    <li>Highlight the <b>Online</b> tree and search for <code>DotNetNuke</code>.
+                        <br/><img src="/common/img/scr-VS2015Search4DNN.png" width=75% alt="In the Online tree, search for DotNetNuke then Download."/>
+                    </li>
+                    <li>Click the <b>Download</b> button for the <b>DotNetNuke Project Templates</b>.</li>
+                </ol>
+                <p><b>Note:</b> See <a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">his instructions</a> for other installation methods.</p>
+            </li>
+
+            <li>For the DNN 8 templates,
+                <ol type=a>
+                    <li><a href="https://github.com/jbrinkman/DNN8Templates">Download the zip file and unzip.</a></li>
+                    <li>In the <code>templates</code> folder, you'll find the zip files for the templates. Two are included: <b>Dnn Mvc Module</b> and <b>Dnn Spa Module</b>.</li>
+                    <li>Copy the template zip file(s) to your Visual Studio project templates folder. By default, this folder is <code>%USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#</code> or <code>Visual Basic</code>.
+                        <br/><img src="/common/img/scr-VS2015DNN8Templates-1.png" width=75% alt="Copy template zip files to VS project templates folder."/>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+
+    <li><b>Create a new Visual Studio project.</b>
+        <ol type=a>
+            <li>Run Visual Studio as an administrator.</li>
+            <li><b>File</b> &gt; <b>New</b> &gt; <b>Project</b></li>
+            <li>Select the template for the new project.
+                <ul>
+                    <li>For Chris Hammond's templates,
+                        <ol>
+                            <li>Expand <b>Installed</b> &gt; <b>Templates</b> &gt; <b>Visual C#</b> or <b>Visual Basic</b> &gt; <b>DotNetNuke</b>.</li>
+                            <li>Choose one of the compiled modules.</li>
+                        </ol>
+                        <br/><img src="/common/img/scr-VS2015NewProj-1.png" width=75% alt="New Project settings for Chris Hammond's templates"/>
+                    </li>
+
+                    <li>For the DNN 8 templates,
+                        <ol>
+                            <li>Search for <code>DNN</code>.</li>
+                            <li>Select the module template (<b>Dnn Mvc Module</b> or <b>Dnn Spa Module</b>).</li>
+                        </ol>
+                        <br/><img src="/common/img/scr-VS2015DNN8Templates-2.png" width=75% alt="New Project settings for DNN 8 templates"/>
+                    </li>
+                </ul>
+            </li>
+            <li>Set the following:
+                <ol type=i>
+                    <li><b>Name:</b> the name of your new module</li>
+                    <li><b>Location:</b> the <code>DesktopModules</code> folder inside your DNN installation folder</li>
+                </ol>
+            </li>
+            <li>Uncheck <b>Create directory for solution</b>. The templates expect Visual Studio's solution file (.sln) to be in the same folder as the project file. Checking this option puts the solution file in a different folder, which can cause build errors.</li>
+        </ol>
+    </li>
+
+    </ol>
+
+
+    <h2> See Also </h2>
+    <ul>
+        <li><a href="/dev/CreatingModules.html">Creating Modules</a></li>
+        <li><a href="/dev/CreatingModules/CreateWebFormsModule">Create a Web Forms module.</a></li>
+        <li><a href="/dev/CreatingModules/CreateMVCModule.html">Create an MVC module.</a></li>
+        <li><a href="/dev/CreatingModules/CreateSPAModule.html">Create a SPA module.</a></li>
+        <li><a href="/dev/REF-ContentsModulePack.html">Contents of a Module Package</a></li>
+    </ul>
+
+
+    <h2> Sources </h2>
+    <ul>
+        <li>DNN Community blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro">Module Development for Non-Developers, Skinners, & DNN Beginners - Blog Series</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <li><a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">Using the new Module Development Templates for DotNetNuke 7</a> by Chris Hammond</li>
+    </ul>

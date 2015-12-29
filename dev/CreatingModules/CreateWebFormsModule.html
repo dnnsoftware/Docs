@@ -3,7 +3,7 @@
     <h1> Create a Web Forms Module </h1>
 
     <h2> Overview </h2>
-    <p><b>Note:</b> These instructions use templates to illustrate how to create a web forms module.</p>
+    <p><b>Note:</b> These instructions use templates to illustrate how to create a web forms module. You can also <a href="/dev/CreatingModules/CreateModuleInline.html">create a module within the DNN installation</a>.</p>
 
 
     <h2> Prerequisites </h2>
@@ -17,51 +17,50 @@
     <h2> Steps </h2>
     <ol>
 
-    <li><b>Download and install the templates.</b>
-        <ul>
-            <li>If installing Chris Hammond's templates, see <a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">his instructions</a> under "Installing the Templates."
-                <!-- ol type=a>
-                    <li>
-                        <br/><img src="/common/img/scr-VS2015ExtAndUpdates.png" alt=""/>
-                    </li>
-                    <li>
-                        <br/><img src="/common/img/scr-VS2015Search4DNN.png" alt=""/>
-                    </li>
-                </ol -->
-            </li>
-            <li>If installing the DNN 8 templates:
-                <ol type=a>
-                    <li><a href="https://github.com/jbrinkman/DNN8Templates">Download the zip file and unzip.</a></li>
-                    <li>In the <code>templates</code> folder, unzip the file of the specific template you want. Two are included: <b>Dnn Mvc Module</b> and <b>Dnn Spa Module</b>.</li>
-                    <li>Copy the extracted template folder to your DNN installation folder, under <b>Portals</b> &gt; <b>_default</b> &gt; <b>Templates</b>???.</li>
-                </ol>
-            </li>
-        </ul>
+    <li><b><a href="/dev/CreatingModules/StartVSProjWithTemplates.html">Start a Visual Studio project using templates.</a></b></li>
+
+    <li><b>Modify the Visual Studio project to add functionality to your new module.</b>
+    </li>
+
+    <li>
     </li>
 
 
-    <li><b>Create a Visual Studio project.</b>
-        <ol type=a>
-            <li>Run Visual Studio as an administrator.</li>
-            <li><b>File</b> &gt; <b>New</b> &gt; <b>Project</b>
-                <br/><img src="" alt=""/>
-            </li>
-            <li>Choose the following settings:
-                <ol type=i>
-                    <li>Expand <b>Installed</b> &gt; <b>Templates</b> &gt; <b>Visual C#</b> or <b>Visual Basic</b> &gt; <b>DotNetNuke</b>.</li>
-                    <li>Choose one of the compiled modules.</li>
-                    <li><b>Name:</b> the name of your new module</li>
-                    <li><b>Location:</b> the <code>DesktopModules</code> folder inside your DNN installation folder</li>
-                    <li>Uncheck <b>Create directory for solution</b> and <b>Add to source control</b>.</li>
-                </ol>
-                <br/><img src="/common/img/scr-VS2015NewProj-1.png" alt="New Project settings"/>
-            </li>
-        </ol>
-    </li>
+    <!--
+    From http://www.dnnsoftware.com/community-blog/cid/155075/module-development-templates
 
+* After Visual Studio creates your project you will have a few tabs open where Chris is giving you some helpful links and instructions.
+* update some of the information in the module’s properties, but for now we’ll just leave everything the way it is and close all the open tabs.
 
-    <li><b>Modify the Visual Studio project to add functionality to your new module.</b></li>
+When we select the solution name and right-click we have the option to “Build Solution”. This also works in combination with the build option we have selected which can be “Debug” or “Release” mode. You select this from the drop down at the top center of Visual Studio. Building in debug mode creates .pdb files that help you troubleshoot your module or to “step through the code” in your module should you have any issues with the module compiling - More on debugging in a future blog.
 
+Building in “Release” mode uses MSBuild to create an install package. The install package, by DNN terms, is a zip file that gets placed in your module’s folder (the one inside of the “Desktop Modules” folder) in a new “install” folder. This package is what we will use to install the module and we will select this install package whenever we go to the HOST > EXTENSIONS page and click “Install Extension”.
+
+* Build in debug mode.
+* When successful, build in release mode to create the install folder and the install package.
+* Install the module.
+* Add the module to a non-administrative page.
+    CtrlPanel > Modules menu > Add New Module
+    Find your module under Available Module dropdown list.
+    Drag your new module to the page.
+
+Once you get into the module settings notice those first 3 tabs (yes the tabs we previously discussed). Here again we didn’t have to do anything to get these to appear. That is one example of the power of using DNN. We don’t have to code permissions/security access… it’s already built in for us. There should now be a 4th tab, the “MyFirstModule” settings tab. This is a result of the settings user control that we just installed.
+
+So now that we are slowly connecting the dots let’s go back into Visual Studio. Once you get there go into the Solution Explorer and double-click the very last file the “View.ascx” file and when it loads up in the editor window type some text in the view file. Let’s type “My first module” there and then click save. Because this is simple text and not really any code that needs to be compiled (server side code) we don’t need to build our solution again. Now toggle back to the website where your module is on the page and click refresh. You should see the “My first module” text on the page. Congratulations! You’ve just made your first view control in a DNN module.
+
+Now it should be very clear that our view.ascx is the file that’s loaded on the page whenever our module is present. The data, content, and functionality we want to offer from the initial entry point of our module needs to be added here.
+
+This is a good point to reiterate that we can have as many user controls (.ascx files) that we want within our module. How many user controls you add is totally up to you and we can easily navigate to other controls in our module via the NavigateURL method that DNN provides us. Again, there are typically 3 controls at minimum which are the view, the edit, and the settings.
+
+Speaking of settings, let’s discuss the settings control. Like we discussed earlier modules often times have settings that are specific to their functionality. These settings are controlled by the 4th tab the module specific settings tab. Click on the “Settings.ascx” file in your solution inside of Visual Studio and open it just type in “My Module’s Settings” and click save. After saving, go back to your site and refresh the page then go into your module’s settings again. This time venture to the 4th or last tab and see if you see the “My Module’s Settings” text that we just added now showing up on the page. Settings are somewhat unique in that their values are stored in something called a hash table. We will review this more in depth later.
+
+The Edit control is usually the control that’s loaded whenever data is either being added or updated within a module. Depending on how your module is structured there may not be a need for an Edit control, but that is obviously up to how you structure your module’s functionality. There are different ways that we can allow our users to access or arrive to the edit control. We can have buttons they click, text hyperlinks to get them there, or we can use the module action menu. By default Chris’s template uses the Module Action Menu as the way to access the edit control. We will investigate different ways to access the edit control in a future blog. Initially in our module will not even use the edit control, but we can easily extend it to do so.
+
+Anyways, in Visual Studio find the “Edit” control and double click it to make it open inside of Visual Studio. Once you’ve got it open type in some text, something like “My Edit Control” into the Edit control and click save. Now go to your site and hover over the module action menu and you should see a small pencil icon as the left most icon. Click the edit icon and the pop-up window will open and you should see the “My Edit Control” text that we just entered into the edit control in Visual Studio.
+
+By now you should be successfully wrapping your mind around what the View, Edit, & Settings controls are within a DNN module. Hopefully it makes sense to you where you can find these controls in Visual Studio as well as where they are surfaced within your module. With the basic understanding of user controls let’s now take a look some of the other items in our module.
+
+    -->
 
     </ol>
 

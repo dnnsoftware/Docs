@@ -1,0 +1,85 @@
+.. raw:: html
+
+    <h1> Create a Module Inline</h1>
+
+
+    <h2> Overview </h2>
+    <p><b>Note:</b> These instructions use the DNN Module Creator, which is generally recommended only for very simple modules. For more complex modules, you can <a href="/dev/CreatingModules/CreateWebFormsModule.html">create a Web Forms Module using templates</a>.</p>
+
+
+    <h2> Prerequisites </h2>
+
+    <ul>
+        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.
+        </li>
+    </ul>
+
+
+    <h2> Steps </h2>
+    <ol>
+        <li>Go to <b>Host</b> &gt; <b>Extensions</b>.
+            <br/><img src="/common/img/scr-CreateModuleAsHost-1.png" width=75% alt="Host > Extensions"/>
+        </li>
+
+        <li>Click <b>Create New Module</b>.
+            <br/><img src="/common/img/scr-CreateModuleAsHost-2.png" width=75% alt="Create New Module"/>
+        </li>
+
+        <li>For <b>Create Module From</b>, choose <b>New</b>.
+            <br/><img src="/common/img/scr-CreateModuleAsHost-3.png" width=75% alt="Create Module From: New"/>
+        </li>
+
+        <li>In <b>Edit Module Definition</b>,
+            <ol type=a>
+                <li>For <b>Owner Folder</b> and <b>Module Folder</b>, click <b>Add Folder</b>.
+                    <br/><img src="/common/img/scr-CreateModuleAsHost-4a.png" width=75% alt=""/></li>
+                <li>Enter the folder names and click <b>Create Folder</b> for each.
+                <li>Choose the language you prefer (C# or VB).</li>
+                <li>Enter the filename and the module name.</li>
+                <li>(Optional) Add a description.</li>
+                <li>Check <b>Add Test Page?</b></li>
+            </ol>
+            <br/><img src="/common/img/scr-CreateModuleAsHost-4b.png" width=75% alt=""/></li>
+        </li>
+
+        <li>You'll see the test page with the name of your module.
+            <br/><img src="/common/img/scr-CreateModuleAsHost-8.png" width=75% alt=""/>
+        </li>
+
+        <li>To modify the module,
+            <ol type=a>
+                <li>Click the gear icon and choose <b>Develop</b>.
+                    <br/><img src="/common/img/scr-CreateModuleAsHost-9a.png" width=75% alt=""/>
+                </li>
+                <li>Delete all the lines, except the first one.
+                    <br/><img src="/common/img/scr-CreateModuleAsHost-9b.png" width=75% alt=""/>
+                </li>
+                <li>Add the following line which says "Hello" and add the current user's display name.
+                    <xmp>
+    <h1>Hello, <%: UserInfo.DisplayName %></h1>
+                    </xmp>
+                    <br/><img src="/common/img/scr-CreateModuleAsHost-10.png" width=75% alt=""/>
+                </li>
+                <li>Click <b>Update</b>.</li>
+            </ol>
+        </li>
+
+        <li>The test page displays the new functionality.
+            <br/><img src="/common/img/scr-CreateModuleAsHost-11.png" width=75% alt=""/>
+        </li>
+    </ol>
+
+
+    <h2> See Also </h2>
+    <ul>
+        <li><a href="/dev/CreatingModules.html">Creating Modules</a></li>
+        <li><a href="/dev/CreatingModules/CreateMVCModule.html">Create an MVC module.</a></li>
+        <li><a href="/dev/CreatingModules/CreateSPAModule.html">Create a SPA module.</a></li>
+    </ul>
+
+
+    <h2> Sources </h2>
+    <ul>
+        <li>Walker, Shaun. <i>Professional DNN7 Open Source</i>. Indianapolis, IN: Wrox, 2015.
+        </li>
+    </ul>
