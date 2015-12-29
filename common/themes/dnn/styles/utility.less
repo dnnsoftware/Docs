@@ -1,0 +1,28 @@
+.horizontal-list {
+    margin:0 -1.14285714em 0 0;
+    padding:0;
+    
+    overflow-x: hidden;
+
+    li {
+        list-style:none;
+        float: left;
+        position: relative;
+        padding-right: 1.14285714em; // Should match &::before{width}
+        line-height: 1.4em;
+
+        &:before {
+            width: 1.14285714em; // Should match li{padding-right}
+            content: '|';
+            text-align: center;
+            position: absolute;
+            right: 100%;
+        }
+        &:first-child:before {
+            display: none;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

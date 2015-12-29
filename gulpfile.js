@@ -1,8 +1,19 @@
 var gulp = require('gulp');
 var shell = require('gulp-shell');
 var argv = require('yargs').argv;
+var less = require('gulp-less');
+var sourcemaps = require('gulp-sourcemaps');
+
+gulp.task('compile-styles', function () {
+    gulp.src('./common/themes/dnn/styles/dnn.styles.less')
+        .pipe(sourcemaps.init())
+        .pipe(less())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./common/themes/dnn/static'))
+});
 
 gulp.task('build-main',
+    ['compile-styles'],
 	shell.task('make html', { cwd: './main' })
 );
 

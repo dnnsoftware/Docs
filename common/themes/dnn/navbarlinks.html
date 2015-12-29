@@ -1,0 +1,17 @@
+{%- for link in theme_navbar_links %}
+	{% if link[3] %}
+		<li class="nav-node-wrapper dropdown">
+			<a class="nav-node" href="#!">{{ link[0] }}</a>
+            <button class="dropdown-toggle" aria-expanded="false">
+                <span class="caret"></span>
+            </button>
+			<ul class="nav-sub-level">
+				{%- for child in link[3] %}
+				<li class="nav-node-wrapper"><a class="nav-node" href="{{ pathto(*child[1:2]) }}" >{{ child[0] }}</a></li>
+				{%- endfor %}
+			</ul>
+		</li>
+	{% else %}
+		<li class="nav-node-wrapper"><a class="nav-node" href="{{ pathto(*link[1:2]) }}" >{{ link[0] }}</a></li>
+	{% endif %}
+{%- endfor %} 

@@ -1,0 +1,32 @@
+<header class="header {% if theme_navbar_fixed_top|tobool -%} navbar-fixed-top{%- endif -%}">
+    <div class="container">
+        <div class="col-md-3 col-xs-12 logo-wrapper">
+            <a class="logo" href="{{ theme_site_home }}">
+                {%- block sidebarlogo %}
+                    {%- if logo %}<img class="img-responsive" src="{{ pathto('_static/' + logo, 1) }}">{%- endif %}
+                {%- endblock %}
+                {% if theme_navbar_title -%}
+                    {{ theme_navbar_title|e }}
+                {%- else -%}
+                    {{ project|e }}
+                {%- endif -%}
+            </a>
+            <button class="navbar-toggle" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="close-nav">X</span>
+            </button>
+        </div>
+        <div class="col-md-9 col-xs-12 nav-wrapper">
+            <nav class="nav">
+                <ul class="nav-main-level">
+                    {% if theme_navbar_links %} 
+                        {% include "navbarlinks.html" %}
+                    {% endif %} 
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
