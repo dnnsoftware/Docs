@@ -82,21 +82,21 @@
     <h3> Prerequisites </h3>
 
     <ul>
-        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.</li>
+        <li><a href="/common/Setup/SetUpDNN.shtml">A local DNN installation</a> with <b>Host</b> permissions.</li>
     </ul>
 
 
     <h3> Steps </h3> <!-- I want these steps to be more prominent: bigger fonts, colored background boxes, etc. -->
     <ol>
-        <li><a href="/design/CreatingThemes/CreateLayoutTemplate.html">Create layout templates for the webpages.</a></li>
-        <li><a href="/design/CreatingThemes/CreateContainer.html">Create containers for modules.</a></li>
-        <li><b>HTML only:</b> <a href="/design/CreatingThemes/ConvertHTMLToASCX.html">Convert the layout templates and containers from HTML to ASCX.</a></li>
-        <li>(Optional) <a href="/design/CreatingThemes/CreateCSS.html">Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers.</a></li>
-        <li>(Optional) <a href="/design/CreatingThemes/CreateDocTypeXML.html">Create a doctype XML file.</a></li>
-        <li><a href="/common/Extensions/CreatePackage.html">Package your theme.</a></li>
+        <li><a href="/design/CreatingThemes/CreateLayoutTemplate.shtml">Create layout templates for the webpages.</a></li>
+        <li><a href="/design/CreatingThemes/CreateContainer.shtml">Create containers for modules.</a></li>
+        <li><b>HTML only:</b> <a href="/design/CreatingThemes/ConvertHTMLToASCX.shtml">Convert the layout templates and containers from HTML to ASCX.</a></li>
+        <li>(Optional) <a href="/design/CreatingThemes/CreateCSS.shtml">Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers.</a></li>
+        <li>(Optional) <a href="/design/CreatingThemes/CreateDocTypeXML.shtml">Create a doctype XML file.</a></li>
+        <li><a href="/common/Extensions/CreatePackage.shtml">Package your theme.</a></li>
         <li>Test the theme.
             <ol>
-                <li><a href="/common/Extensions/InstallExtension.html">Install the package.</a></li>
+                <li><a href="/common/Extensions/InstallExtension.shtml">Install the package.</a></li>
                 <li>Apply the theme to a new webpage in your DNN website.</li>
                 <li>Check how the page looks in different browsers.</li>
             </ol>

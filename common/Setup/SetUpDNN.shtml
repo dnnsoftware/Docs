@@ -29,17 +29,17 @@
 
     <h2> Requirements </h2>
     <ul>
-        <li><a href="/main/DNN8Requirements.html">DNN 8.0 Requirements</a></li>
+        <li><a href="/main/DNN8Requirements.shtml">DNN 8.0 Requirements</a></li>
         <li>(Optional) <b>Developers:</b> Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
     </ul>
 
 
     <h2> Steps </h2>
     <ol>
-        <li><a href="/common/Setup/SetUpDNNFolder.html">Download DNN and set up folder permissions for the user account that will run your website.</a></li>
-        <li><a href="/common/Setup/SetUpIIS.html">Enable and set up IIS.</a></li>
-        <li><a href="/common/Setup/SetUpSQL.html">Install and set up SQL.</a></li>
-        <li><a href="/common/Setup/RunInstWiz.html">Run the DNN Installation Wizard.</a></li>
+        <li><a href="/common/Setup/SetUpDNNFolder.shtml">Download DNN and set up folder permissions for the user account that will run your website.</a></li>
+        <li><a href="/common/Setup/SetUpIIS.shtml">Enable and set up IIS.</a></li>
+        <li><a href="/common/Setup/SetUpSQL.shtml">Install and set up SQL.</a></li>
+        <li><a href="/common/Setup/RunInstWiz.shtml">Run the DNN Installation Wizard.</a></li>
     </ol>
 
 
@@ -58,7 +58,7 @@
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/common/Extensions/InstallExtension.html">Install an Extension</a></li>
+        <li><a href="/common/Extensions/InstallExtension.shtml">Install an Extension</a></li>
     </ul>
 
 

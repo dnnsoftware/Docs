@@ -6,7 +6,7 @@
     <h2> Steps </h2>
     <ol>
 
-        <li>Install SQL. (<a href="/main/DNN8Requirements.html">Check compatible versions.</a>)
+        <li>Install SQL. (<a href="/main/DNN8Requirements.shtml">Check compatible versions.</a>)
             <ol type=a>
                 <li>Choose <b>New SQL Server stand-alone installation...</b>.</li>
                     <br/><img src="/common/img/scr-InstallSQL-1.png" alt="New SQL Server stand-alone installation"/>

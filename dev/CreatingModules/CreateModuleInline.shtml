@@ -4,13 +4,13 @@
 
 
     <h2> Overview </h2>
-    <p><b>Note:</b> These instructions use the DNN Module Creator, which is generally recommended only for very simple modules. For more complex modules, you can <a href="/dev/CreatingModules/CreateWebFormsModule.html">create a Web Forms Module using templates</a>.</p>
+    <p><b>Note:</b> These instructions use the DNN Module Creator, which is generally recommended only for very simple modules. For more complex modules, you can <a href="/dev/CreatingModules/CreateWebFormsModule.shtml">create a Web Forms Module using templates</a>.</p>
 
 
     <h2> Prerequisites </h2>
 
     <ul>
-        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.
+        <li><a href="/common/Setup/SetUpDNN.shtml">A local DNN installation</a> with <b>Host</b> permissions.
         </li>
     </ul>
 
@@ -72,9 +72,9 @@
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/dev/CreatingModules.html">Creating Modules</a></li>
-        <li><a href="/dev/CreatingModules/CreateMVCModule.html">Create an MVC module.</a></li>
-        <li><a href="/dev/CreatingModules/CreateSPAModule.html">Create a SPA module.</a></li>
+        <li><a href="/dev/CreatingModules.shtml">Creating Modules</a></li>
+        <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module.</a></li>
+        <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create a SPA module.</a></li>
         <li><a href="/dev/DNN8APIReference.pdf">DNN 8 API Reference</a></li>
     </ul>
 

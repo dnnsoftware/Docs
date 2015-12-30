@@ -15,8 +15,8 @@
     <ol>
         <li>Prepare your files in folders.
             <ul> <!-- Are these the actual names of the folders? Or can they be named any way they want? -->
-                <li><a href="/design/REF-ContentsThemePack.html">Layout templates, containers, and associated files</a></li>
-                <li><a href="/dev/REF-ContentsModulePack.html">Modules and associated files</a></li>
+                <li><a href="/design/REF-ContentsThemePack.shtml">Layout templates, containers, and associated files</a></li>
+                <li><a href="/dev/REF-ContentsModulePack.shtml">Modules and associated files</a></li>
                 <li>Files that are common among all packages:
                     <ul>
                         <li>(Optional) <b>MyLicense.txt</b> is displayed to the user during package installation.</li>.
@@ -27,14 +27,14 @@
                 </li>
             </ul>
         </li>
-        <li>Create the <a href="DNNManifestSchema.html">DNN Manifest</a>.</li>
+        <li>Create the <a href="/common/Extensions/DNNManifestSchema.shtml">DNN Manifest</a>.</li>
         <li>Zip up your files, including the DNN Manifest in the root folder.</li>
     </ol>
 
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/common/Extensions/InstallExtension.html">Install an Extension</a></li>
+        <li><a href="/common/Extensions/InstallExtension.shtml">Install an Extension</a></li>
     </ul>
 
 

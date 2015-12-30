@@ -21,9 +21,9 @@
         <ul>
             <li>Installation Guide</li>
                 <ul>
-                    <li><a href="/common/Setup/SetUpDNN.html">Set up the DNN Platform</a> on a web server.</li>
+                    <li><a href="/common/Setup/SetUpDNN.shtml">Set up the DNN Platform</a> on a web server.</li>
                     <!-- <li>Upgrade DNN on your web server.</li> -->
-                    <li><a href="/common/Extensions/InstallExtension.html">Install extensions (modules and themes)</a> on the web server.</li>
+                    <li><a href="/common/Extensions/InstallExtension.shtml">Install extensions (modules and themes)</a> on the web server.</li>
                 </ul>
             <li>User Guides
                 <ul>
@@ -43,26 +43,26 @@
 
     <div><b>Developer</b><br/>
         <ul>
-            <li><a href="/common/Setup/SetUpDNN.html">Set up the DNN Platform</a> in your local development environment.</li>
-            <li><a href="/dev/CreatingModules.html">Create a module</a>.</li>
-            <li><a href="/common/Extensions/CreatePackage.html">Create a package</a> containing your module.</li>
+            <li><a href="/common/Setup/SetUpDNN.shtml">Set up the DNN Platform</a> in your local development environment.</li>
+            <li><a href="/dev/CreatingModules.shtml">Create a module</a>.</li>
+            <li><a href="/common/Extensions/CreatePackage.shtml">Create a package</a> containing your module.</li>
             <li>API Reference</li>
         </ul>
     </div>
 
     <div><b>Designer</b><br/>
         <ul>
-            <li><a href="/common/Setup/SetUpDNN.html">Set up the DNN Platform</a> in your local development environment.</li>
-            <li><a href="/design/CreatingThemes.html">Create a theme</a>.</li>
-            <li><a href="/common/Extensions/CreatePackage.html">Create a package</a> containing your theme.</li>
+            <li><a href="/common/Setup/SetUpDNN.shtml">Set up the DNN Platform</a> in your local development environment.</li>
+            <li><a href="/design/CreatingThemes.shtml">Create a theme</a>.</li>
+            <li><a href="/common/Extensions/CreatePackage.shtml">Create a package</a> containing your theme.</li>
             <li>UX Guide</li>
         </ul>
     </div>
 
     <div><b>References</b>
         <ul>
-            <li><a href="/main/DNN8WhatsNew.html">DNN 8.0 What's New</a></li>
-            <li><a href="/main/DNN8Requirements.html">DNN 8.0 Requirements</a></li>
-            <li><a href="/common/Glossary.html">Glossary</a></li>
+            <li><a href="/main/DNN8WhatsNew.shtml">DNN 8.0 What's New</a></li>
+            <li><a href="/main/DNN8Requirements.shtml">DNN 8.0 Requirements</a></li>
+            <li><a href="/common/Glossary.shtml">Glossary</a></li>
         </ul>
     </div>

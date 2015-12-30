@@ -41,7 +41,7 @@
 
         <li><b>Views</b> contains Razor-based template files (.cshtml) that are used to display the module's output in HTML format.</li>
 
-        <li><b>*.dnn*</b> is the <a href="/common/Extensions/DNNManifestSchema.html">DNN Manifest</a>, which specifies where files are copied during module installation.</li>
+        <li><b>*.dnn*</b> is the <a href="/common/Extensions/DNNManifestSchema.shtml">DNN Manifest</a>, which specifies where files are copied during module installation.</li>
 
         <li><b>License.txt</b> and <b>ReleaseNotes.txt</b> are displayed when the module is installed. You can rename the files and specify the custom filenames in the DNN Manifest.</li>
 
@@ -55,8 +55,8 @@
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/design/REF-ContentsThemePack.html">Contents of a Theme Package</a></li>
-        <li><a href="/common/Extensions/CreatePackage.html">Create the Package</a></li>
+        <li><a href="/design/REF-ContentsThemePack.shtml">Contents of a Theme Package</a></li>
+        <li><a href="/common/Extensions/CreatePackage.shtml">Create the Package</a></li>
     </ul>
 
 

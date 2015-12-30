@@ -3,13 +3,13 @@
     <h1> Create a Web Forms Module </h1>
 
     <h2> Overview </h2>
-    <p><b>Note:</b> These instructions use templates to illustrate how to create a web forms module. You can also <a href="/dev/CreatingModules/CreateModuleInline.html">create a module within the DNN installation</a>.</p>
+    <p><b>Note:</b> These instructions use templates to illustrate how to create a web forms module. You can also <a href="/dev/CreatingModules/CreateModuleInline.shtml">create a module within the DNN installation</a>.</p>
 
 
     <h2> Prerequisites </h2>
 
     <ul>
-        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.</li>
+        <li><a href="/common/Setup/SetUpDNN.shtml">A local DNN installation</a> with <b>Host</b> permissions.</li>
         <li>Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
     </ul>
 
@@ -17,7 +17,7 @@
     <h2> Steps </h2>
     <ol>
 
-    <li><b><a href="/dev/CreatingModules/StartVSProjWithTemplates.html">Start a Visual Studio project using DNN templates.</a></b></li>
+    <li><b><a href="/dev/CreatingModules/StartVSProjWithTemplates.shtml">Start a Visual Studio project using DNN templates.</a></b></li>
 
     <li><b>Modify the Visual Studio project to add functionality to your new module. </b>
         <ol>
@@ -76,9 +76,9 @@ By now you should be successfully wrapping your mind around what the View, Edit,
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/dev/CreatingModules.html">Creating Modules</a></li>
-        <li><a href="/dev/CreatingModules/CreateMVCModule.html">Create an MVC module.</a></li>
-        <li><a href="/dev/CreatingModules/CreateSPAModule.html">Create a SPA module.</a></li>
+        <li><a href="/dev/CreatingModules.shtml">Creating Modules</a></li>
+        <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module.</a></li>
+        <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create a SPA module.</a></li>
         <li><a href="/dev/DNN8APIReference.pdf">DNN 8 API Reference</a></li>
     </ul>
 

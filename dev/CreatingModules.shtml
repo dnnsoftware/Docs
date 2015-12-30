@@ -29,7 +29,7 @@
     <h3>Prerequisites</h3>
 
     <ul>
-        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.</li>
+        <li><a href="/common/Setup/SetUpDNN.shtml">A local DNN installation</a> with <b>Host</b> permissions.</li>
         <li>Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
     </ul>
 
@@ -40,18 +40,18 @@
 
     <li><b>Create a new module or modify an existing one.</b>
         <ul>
-            <li><a href="/dev/CreatingModules/CreateModuleInline.html">Create a very simple module inside a DNN installation.</a></li>
-            <li><a href="/dev/CreatingModules/CreateWebFormsModule.html">Create a Web Forms module using templates.</a></li>
-            <li><a href="/dev/CreatingModules/CreateMVCModule.html">Create an MVC module using templates.</a></li>
-            <li><a href="/dev/CreatingModules/CreateSPAModule.html">Create SPA module using templates.</a></li>
+            <li><a href="/dev/CreatingModules/CreateModuleInline.shtml">Create a very simple module inside a DNN installation.</a></li>
+            <li><a href="/dev/CreatingModules/CreateWebFormsModule.shtml">Create a Web Forms module using templates.</a></li>
+            <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module using templates.</a></li>
+            <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create SPA module using templates.</a></li>
         </ul>
     </li>
 
-    <li><b><a href="/common/Extensions/CreatePackage.html">Package your module.</a></b></li>
+    <li><b><a href="/common/Extensions/CreatePackage.shtml">Package your module.</a></b></li>
 
     <li><b>Test your module.</b>
-        <ol>
-            <li><a href="/common/Extensions/InstallExtension.html">Install the package.</a></li>
+        <ol type=a>
+            <li><a href="/common/Extensions/InstallExtension.shtml">Install the package.</a></li>
             <li>Apply the module to a pane in a new webpage in your DNN website.</li>
             <li>Check how the module behaves in different browsers.</li>
         </ol>
@@ -91,7 +91,7 @@
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/dev/REF-ContentsModulePack.html">Contents of a Module Package</a></li>
+        <li><a href="/dev/REF-ContentsModulePack.shtml">Contents of a Module Package</a></li>
         <li>DNN 8 API Reference</li>
     </ul>
 

@@ -6,7 +6,7 @@
     <h2> Prerequisites </h2>
 
     <ul>
-        <li><a href="/common/Setup/SetUpDNN.html">A local DNN installation</a> with <b>Host</b> permissions.</li>
+        <li><a href="/common/Setup/SetUpDNN.shtml">A local DNN installation</a> with <b>Host</b> permissions.</li>
         <li>Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
     </ul>
 
@@ -83,11 +83,11 @@
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/dev/CreatingModules.html">Creating Modules</a></li>
-        <li><a href="/dev/CreatingModules/CreateWebFormsModule">Create a Web Forms module.</a></li>
-        <li><a href="/dev/CreatingModules/CreateMVCModule.html">Create an MVC module.</a></li>
-        <li><a href="/dev/CreatingModules/CreateSPAModule.html">Create a SPA module.</a></li>
-        <li><a href="/dev/REF-ContentsModulePack.html">Contents of a Module Package</a></li>
+        <li><a href="/dev/CreatingModules.shtml">Creating Modules</a></li>
+        <li><a href="/dev/CreatingModules/CreateWebFormsModule.shtml">Create a Web Forms module.</a></li>
+        <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module.</a></li>
+        <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create a SPA module.</a></li>
+        <li><a href="/dev/REF-ContentsModulePack.shtml">Contents of a Module Package</a></li>
     </ul>
 
 
