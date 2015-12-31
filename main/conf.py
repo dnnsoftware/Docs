@@ -18,8 +18,12 @@ import os
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+
+sys.path.append(os.path.abspath('../common/ext'))
+
 extensions = [
     'sphinx.ext.intersphinx',
+    'div'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

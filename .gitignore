@@ -198,3 +198,4 @@ FakesAssemblies/
 *.opt
 
 project.lock.json
+common/ext/__pycache__/

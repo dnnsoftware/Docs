@@ -49,6 +49,10 @@ h2 {
 .horizontal-list li:last-child {
   padding-right: 0;
 }
+.no-gutter {
+  padding-left: 0;
+  padding-right: 0;
+}
 .footer {
   background: #382224;
   clear: both;
@@ -190,6 +194,16 @@ h2 {
 .header .logo {
   display: block;
   padding: 15px 75px 15px 0;
+  color: #777;
+  font-size: 18px;
+  line-height: 20px;
+}
+.header .logo:hover {
+  text-decoration: none;
+}
+.header .logo img {
+  margin-right: 5px;
+  vertical-align: calc(-37%);
 }
 .logo-wrapper {
   position: relative;
@@ -332,10 +346,12 @@ h2 {
 }
 .welcome-hero-wrapper .img-responsive {
   display: inline-block;
+  max-width: 800px;
+  width: 100%;
 }
 .card-row {
-  background-image: linear-gradient(to bottom, white 12.5%, #f4f4f4 12.5%);
-  margin: 0 0 30px;
+  background-image: linear-gradient(to bottom, white 12%, #f4f4f4 30%);
+  margin: 0 -15px 30px;
 }
 .home-card {
   background: white;
@@ -352,7 +368,7 @@ h2 {
   box-shadow: 0 0 15px #333;
   text-decoration: none;
 }
-.home-card > h2 {
+.home-card > .card-title {
   color: white;
   padding: 45px 0;
   display: block;
@@ -360,7 +376,7 @@ h2 {
   width: 100%;
   font-size: 2em;
   text-transform: uppercase;
-  margin: 0;
+  margin: 20px 0 10px;
 }
 .home-card .card-img-wrapper {
   padding: 45px 120px;
@@ -375,19 +391,19 @@ h2 {
 .home-card.dev-card {
   border-bottom-color: #8b098f;
 }
-.home-card.dev-card > h2 {
+.home-card.dev-card > .card-title {
   background: #8b098f;
 }
 .home-card.admin-card {
   border-bottom-color: #9daa12;
 }
-.home-card.admin-card > h2 {
+.home-card.admin-card > .card-title {
   background: #9daa12;
 }
 .home-card.designer-card {
   border-bottom-color: #d48e12;
 }
-.home-card.designer-card > h2 {
+.home-card.designer-card > .card-title {
   background: #d48e12;
 }
 .listing-wrapper {
@@ -499,6 +515,9 @@ h2 {
 }
 .listing-footer a {
   font-weight: bold;
+}
+.main-body {
+  margin-top: 67px;
 }
 .doc-main-body {
   clear: both;

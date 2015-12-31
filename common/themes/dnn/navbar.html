@@ -1,9 +1,11 @@
 <header class="header {% if theme_navbar_fixed_top|tobool -%} navbar-fixed-top{%- endif -%}">
     <div class="container">
-        <div class="col-md-3 col-xs-12 logo-wrapper">
+        <div class="col-md-4 col-xs-12 logo-wrapper">
             <a class="logo" href="{{ theme_site_home }}">
                 {%- block sidebarlogo %}
-                    {%- if logo %}<img class="img-responsive" src="{{ pathto('_static/' + logo, 1) }}">{%- endif %}
+                    {%- if logo %}
+                    <img src="{{ pathto('_static/' + logo, 1) }}">
+                    {%- endif %}
                 {%- endblock %}
                 {% if theme_navbar_title -%}
                     {{ theme_navbar_title|e }}
@@ -19,7 +21,7 @@
                 <span class="close-nav">X</span>
             </button>
         </div>
-        <div class="col-md-9 col-xs-12 nav-wrapper">
+        <div class="col-md-8 col-xs-12 nav-wrapper">
             <nav class="nav">
                 <ul class="nav-main-level">
                     {% if theme_navbar_links %} 

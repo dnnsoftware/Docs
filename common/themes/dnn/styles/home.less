@@ -5,13 +5,15 @@
 
 	.img-responsive{
 		display: inline-block;
+        max-width: 800px;
+        width: 100%;
 	}
 }
 
 // Card Styles
 .card-row{
-	background-image: linear-gradient(to bottom, white 12.5%, #f4f4f4 12.5%);
-	margin: 0 0 30px;
+	background-image: linear-gradient(to bottom, white 12%, #f4f4f4 30%);
+	margin: 0 -15px 30px;
 }
 	.home-card{
 		background: white;
@@ -30,7 +32,7 @@
 			text-decoration: none;
 		}
 
-		> h2{
+		> .card-title{
 			color: white;
 			padding: 45px 0;
 			display: block;
@@ -38,7 +40,7 @@
 			width: 100%;
 			font-size: 2em;
 			text-transform: uppercase;
-			margin: 0;
+			margin: 20px 0 10px;
 		}
 
 		.card-img-wrapper{
@@ -57,7 +59,7 @@
 		&.dev-card{
 			border-bottom-color: @purple;
 
-			> h2 {
+			> .card-title {
 				background: @purple;
 			}
 		}
@@ -65,7 +67,7 @@
 		&.admin-card{
 			border-bottom-color: @green;
 
-			> h2 {
+			> .card-title {
 				background: @green;
 			}
 		}
@@ -73,7 +75,7 @@
 		&.designer-card{
 			border-bottom-color: @orange;
 
-			> h2 {
+			> .card-title {
 				background: @orange;
 			}
 		}
