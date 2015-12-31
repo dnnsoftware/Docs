@@ -1,0 +1,68 @@
+.. raw:: html
+
+    <h1> Contents of a Module Package </h1>
+
+    <p>A module package includes the following:</p>
+    <ul>
+
+        <li><b>Properties\Assembly.cs</b> contains information about the module assembly. <!-- Confirm the file extension. Why is it a C# file? --></li>
+
+        <li><b>References</b> contains the libraries required by the module.
+            <p><b>Note:</b> The <b>DotNetNuke.dll</b> is required in all modules; it provides additional functionality, such as authentication and user information.</p>
+        </li>
+
+        <li>(Optional) <b>App_LocalResources\*.resx</b> are string tables that contain localized or translated terms.</li>
+
+        <li><b>BuildScripts</b> (formerly <b>.build</b>) contains files required for MSBuild to compile the module and to assemble the installation file.</li>
+
+        <li><b>Components\FeatureController.cs</b> contains the list of DNN interfaces that the module implements.</li>
+
+        <li><b>Controllers</b> ??? </li>
+
+        <!-- There is no Data folder in DNN8 templates.
+        <li><b>Data\DataProvider.cs</b> defines the abstract data provider's methods to access data. The abstract data provider hides the details of the concrete data provider, so that the module can access the data, whether the concrete data provider is a SQL database or an Oracle database.
+        <p>The <b>providers</b> folder contains the actual implementations (concrete data providers). A module can use multiple concrete data providers.</p>
+        </li>
+        -->
+
+        <li>(Optional) <b>Documentation\Documentation.html</b> describes the module functionality.</li>
+
+        <li><b>Models</b> ??? </li>
+
+        <li><b>Providers</b> contains the actual implementations of concrete data <a href="http://www.dnnsoftware.com/wiki/providers">providers</a> required by the module.
+        <p><b>Example:</b> The <b>Providers\DataProviders\SQLDataProvider</b> subfolder contains three files:
+            <ul>
+                <li><b>00.00.01 SQLDataProvider</b> contains the SQL scripts that create tables and stored procedures required by the module to access the data. These scripts run when the module is installed.</li>
+                <li><b>Uninstall.SqlDataProvider</b> contains the SQL scripts that delete tables and stored procedures used by the module. These scripts run when the module is uninstalled.</li>
+                <li><b>SQLDataProvider.cs</b> sets the value of <b>SqlConnection.ConnectionString</b> and defines the concrete data provider class's methods to access data.</li>
+            </ul>
+        </p>
+        </li>
+
+        <li><b>Views</b> contains Razor-based template files (.cshtml) that are used to display the module's output in HTML format.</li>
+
+        <li><b>*.dnn*</b> is the <a href="/common/Extensions/DNNManifestSchema.shtml">DNN Manifest</a>, which specifies where files are copied during module installation.</li>
+
+        <li><b>License.txt</b> and <b>ReleaseNotes.txt</b> are displayed when the module is installed. You can rename the files and specify the custom filenames in the DNN Manifest.</li>
+
+        <li>(Optional) <b>module.css</b> defines how the module should be displayed. If the module is applied to a pane that has an assigned container, that container's CSS overrides the module's CSS. <!--Is this correct? Or the other way around? --></li>
+
+        <li><b>packages.config</b> specifies the recommended .NET Framework version for the module.</li>
+
+        <br/><img src="/common/img/scr-VS2015SolutionExplorer.png" width=50% alt="Visual Studio's Solution Explorer showing components of a module."/>
+
+    </ul>
+
+    <h2> See Also </h2>
+    <ul>
+        <li><a href="/design/REF-ContentsThemePack.shtml">Contents of a Theme Package</a></li>
+        <li><a href="/common/Extensions/CreatePackage.shtml">Create the Package</a></li>
+    </ul>
+
+
+    <h2> Sources </h2>
+    <ul>
+        <li>DNN Community Blog - <a href="http://www.dnnsoftware.com/community-blog/cid/155065/what-is-a-module">What Is a Module</a>
+            and <a href="http://www.dnnsoftware.com/community-blog/cid/155075/module-development-templates">Module Development Templates</a> by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/710933">Clinton Patterson<a></li>
+        <li>DNN Wiki - <a href="http://www.dnnsoftware.com/wiki/providers">Providers</a></li>
+    </ul>

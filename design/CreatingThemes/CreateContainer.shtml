@@ -77,8 +77,8 @@
     <h2> See Also </h2>
     <ul>
         <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/dotnetnuke-skins">DotNetNuke Skins</a></li>
-        <li><a href="CreateCSS.html">Create CSS</a></li>
-        <li><a href="CreateLayoutTemplate.html">Create Layout Template</a></li>
+        <li><a href="/design/CreatingThemes/CreateCSS.shtml">Create CSS</a></li>
+        <li><a href="/design/CreatingThemes/CreateLayoutTemplate.shtml">Create Layout Template</a></li>
     </ul>
 
 

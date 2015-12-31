@@ -5,9 +5,9 @@
 
     <h2>Prerequisites</h2>
     <ul>
-        <li><a href="/common/Setup/SetUpDNNFolder.html">DNN installed with folder permissions for the user account that will run your website.</a></li>
-        <li><a href="/common/Setup/SetUpIIS.html">IIS enabled and set up.</a></li>
-        <li><a href="/common/Setup/SetUpSQL.html">SQL installed and set up.</a></li>
+        <li><a href="/common/Setup/SetUpDNNFolder.shtml">DNN installed with folder permissions for the user account that will run your website.</a></li>
+        <li><a href="/common/Setup/SetUpIIS.shtml">IIS enabled and set up.</a></li>
+        <li><a href="/common/Setup/SetUpSQL.shtml">SQL installed and set up.</a></li>
     </ul>
 
 

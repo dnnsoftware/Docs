@@ -9,7 +9,7 @@
 
     <!--#include virtual="/common/bptext/BP-3rdPartyExtensions.html" -->
 
-    <p>You can also create your custom <a href="/dev/CreatingModules.html">modules</a> and <a href="/design/CreatingThemes.html">themes</a>.</p>
+    <p>You can also create your custom <a href="/dev/CreatingModules.shtml">modules</a> and <a href="/design/CreatingThemes.shtml">themes</a>.</p>
 
     <p>The extension must be added by the host / super user account to the DNN installation before it can be used in any of the websites.</p>
 
@@ -56,8 +56,8 @@
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/common/Extensions/CreatePackage.html">Create the Package</a></li>
-        <li><a href="/common/Extensions/DNNManifestSchema.html">The DNN Manifest Schema</a></li>
+        <li><a href="/common/Extensions/CreatePackage.shtml">Create the Package</a></li>
+        <li><a href="/common/Extensions/DNNManifestSchema.shtml">The DNN Manifest Schema</a></li>
     </ul>
 
 

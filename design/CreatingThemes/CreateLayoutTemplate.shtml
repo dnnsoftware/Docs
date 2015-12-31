@@ -154,8 +154,8 @@
     <h2> See Also </h2>
     <ul>
         <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/dotnetnuke-skins">DotNetNuke Skins</a></li>
-        <li><a href="CreateCSS.html">Create CSS</a></li>
-        <li><a href="/design/CreatingThemes/CreateContainer.html">Create a Container</a></li>
+        <li><a href="/design/CreatingThemes/CreateCSS.shtml">Create CSS</a></li>
+        <li><a href="/design/CreatingThemes/CreateContainer.shtml">Create a Container</a></li>
     </ul>
 
 
