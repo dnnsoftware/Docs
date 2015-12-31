@@ -8,7 +8,7 @@
                     {%- endif %}
                 {%- endblock %}
                 {% if theme_navbar_title -%}
-                    {{ theme_navbar_title|e }}
+                    <span>{{ theme_navbar_title|e }}</span>
                 {%- else -%}
                     {{ project|e }}
                 {%- endif -%}

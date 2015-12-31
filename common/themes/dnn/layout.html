@@ -78,29 +78,64 @@
 
 {%- block footer %}
 <footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      {% if theme_source_link_position == "footer" %}
-        <br/>
-        {% include "sourcelink.html" %}
-      {% endif %}
-    </p>
-    <p>
-    {%- if show_copyright %}
-      {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}<br/>
-      {%- else %}
-        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}<br/>
-      {%- endif %}
-    {%- endif %}
-    {%- if last_updated %}
-      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
-    {%- endif %}
-    {%- if show_sphinx %}
-      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}<br/>
-    {%- endif %}
-    </p>
-  </div>
+    <div class="container">
+        <div class="row footer-quick-links">
+            <div class="col-xs-12">
+                <ul class="quick-links">
+                    <li>
+                        <a href="mailto:sales@dnnsoftware.com" class="email">
+                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                            sales@dnnsoftware.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:650.288.3150" class="phone">
+                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                            (650) 288.3150
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:350.288.3191" class="fax">
+                            <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+                            (650) 288.3191
+                        </a>
+                    </li>
+                    <li class="social-media-wrapper">
+                        Follow
+                        <ul class="social-media">
+                            <li><a href="http://facebook.com/dotnetnuke" class="facebook"></a></li>
+                            <li><a href="http://twitter.com/dnncorp" class="twitter"></a></li>
+                            <li><a href="http://www.linkedin.com/company/207975" class="linkedin"></a></li>
+                            <li><a href="http://www.youtube.com/user/dotnetnuke#" class="youtube"></a></li>
+                            <li><a href="http://twitter.com/dnn" class="twitter"></a></li>
+                        </ul>
+                    </li>
+                    <li class="pull-right">
+                        <a href="#">Back to Top</a>
+                    </li>
+                    {% if theme_source_link_position == "footer" %}
+                    <li class="pull-right">
+                        {% include "sourcelink.html" %}
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        <div class="row footer-policy">
+            <div class="col-xs-12">
+                <ul class="horizontal-list">
+                    <li>Copyright 2015 by DNN Corp</li>
+                    <li><a href="http://www.dnnsoftware.com/Terms">Terms of Use</a></li>
+                    <li><a href="http://www.dnnsoftware.com/Privacy">Privacy</a></li>
+                    {%- if last_updated %}
+                    <li>
+                        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
+                    </li>
+                    {%- endif %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
 </footer>
 {%- endblock %}

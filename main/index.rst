@@ -11,8 +11,8 @@
         |hero|
 
 .. |hero| image:: ../common/img/welcome-hero.jpg
-    :class: img-responsive
-    :alt:   Welcome to the DNN Documentation Center
+    :class: welcome-hero
+    :alt:  Welcome to the DNN Documentation Center
                         
 .. div:: row card-row
 
