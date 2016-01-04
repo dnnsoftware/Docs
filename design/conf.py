@@ -18,8 +18,12 @@ import os
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+sys.path.append(os.path.abspath('../common/ext'))
+
 extensions = [
     'sphinx.ext.intersphinx',
+    'div',
+    'link'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -103,24 +107,24 @@ html_theme = 'bootstrap'
 # documentation.
 html_theme_options = {
   'navbar_links': [
-    ("Documentation", "http://docs.dnndev.me/", True, [
-      ("Admin", "http://docs.dnndev.me/admin/index", True),
-      ("Developer", "http://docs.dnndev.me/dev/index", True),
-      ("Designer", "http://docs.dnndev.me/design/index", True)
+    ("Documentation", "#", True, [
+      ("Admin", "/admin/index", True),
+      ("Developer", "/dev/index", True),
+      ("Designer", "/design/index", True)
     ]),
-    ("Blogs", "http://example.com", True),
-    ("Download", "http://example.com", True),
-    ("Support", "http://example.com", True, [
-      ("DNN Platform", "http://example.com", True),
-      ("Evoq", "http://example.com", True),
+    ("Blogs", "http://www.dnnsoftware.com/community-blog", False),
+    ("Download", "http://www.dnnsoftware.com/community/download", False),
+    ("Support", "#", True, [
+      ("Forums", "http://www.dnnsoftware.com/forums", False),
+      ("Evoq Success Network", "http://www.dnnsoftware.com/services/customer-support/success-network", False),
     ])
   ],
-  'navbar_pagenav': False,
   'source_link_position': "none",
   'navbar_title': 'Design Center',
   'navbar_version': False,
   'globaltoc_depth': 2,
-  'site_home': 'http://docs.dnndev.me/'
+  'site_home': 'http://docs.dnndev.me/',
+  'hide_sidebar': []
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
