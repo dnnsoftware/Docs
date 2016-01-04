@@ -43,7 +43,7 @@
             <li><a href="/dev/CreatingModules/CreateModuleInline.shtml">Create a very simple module inside a DNN installation.</a></li>
             <li><a href="/dev/CreatingModules/CreateWebFormsModule.shtml">Create a Web Forms module using templates.</a></li>
             <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module using templates.</a></li>
-            <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create SPA module using templates.</a></li>
+            <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create a SPA module using templates.</a></li>
         </ul>
     </li>
 

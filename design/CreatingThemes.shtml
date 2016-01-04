@@ -18,7 +18,7 @@
 
     <h3> Components of a Theme </h3>
 
-    <image src="/common/img/PaneLayout.png" alt="Pane in a layout" width="50%" align=left>
+    <image src="/common/img/PaneLayout.png" alt="Pane in a layout" width="50%" align=center>
 
     <h4> Layouts and Containers </h4>
 
@@ -64,7 +64,7 @@
             <td>Requires <a href="http://www.visualstudio.com/">Microsoft Visual Studio</a>.</td>
         </tr>
         <tr align=center>
-            <td>Automatically converted to ASCX when installed. Only the <code>&lt;innerHtml&gt;</code> portion of the <code>&lt;body&gt;</code> tag is retained; everything else is discarded, including the entire <code>&lt;header&gt;</code>.</td>
+            <td>Automatically converted to ASCX when installed. Only the contents inside the <code>&lt;body&gt;</code> tag is retained (without the tag); everything else is discarded, including the entire <code>&lt;header&gt;</code>.</td>
             <td>Used as is.</td>
         </tr>
         <tr align=center>
@@ -109,9 +109,9 @@
     TODO: Create an example theme that readers can download and add the link here.
     -->
 
-    <!--#include virtual="/common/bptext/BP-TipSkinningTool.html" -->
+    <p><!--#include virtual="/common/bptext/BP-TipSkinningTool.html" --></p>
 
-    <!--#include virtual="/common/bptext/BP-3rdPartyExtensions.html" -->
+    <p><!--#include virtual="/common/bptext/BP-3rdPartyExtensions.html" --></p>
 
 
     <h2> See Also </h2>

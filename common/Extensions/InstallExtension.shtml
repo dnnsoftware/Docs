@@ -7,7 +7,7 @@
 
     <p>A DNN extension can contain a module, a theme, or other components that extend the functionality of the DNN Platform.</p>
 
-    <!--#include virtual="/common/bptext/BP-3rdPartyExtensions.html" -->
+    <p><!--#include virtual="/common/bptext/BP-3rdPartyExtensions.html" --></p>
 
     <p>You can also create your custom <a href="/dev/CreatingModules.shtml">modules</a> and <a href="/design/CreatingThemes.shtml">themes</a>.</p>
 

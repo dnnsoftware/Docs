@@ -24,7 +24,7 @@
 
 	<b>Web Server</b>
 	<ul>
-		<li>Microsoft IIS 7.0, 7.5, 8.0, 8.5, 10</li> <!-- IIS 10 is included in Windows 10. Should we include it here? -->
+		<li>Microsoft IIS 7.0, 7.5, 8.0, 8.5, 10</li>
 	</ul>
 
 	<b>Database Server</b>
