@@ -23,7 +23,8 @@ sys.path.append(os.path.abspath('../common/ext'))
 
 extensions = [
     'sphinx.ext.intersphinx',
-    'div'
+    'div',
+    'link'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -109,24 +110,24 @@ html_theme = 'dnn'
 # documentation.
 html_theme_options = {
   'navbar_links': [
-    ("Documentation", "http://docs.dnndev.me/", True, [
-      ("Admin", "http://docs.dnndev.me/admin/index", True),
-      ("Developer", "http://docs.dnndev.me/dev/index", True),
-      ("Designer", "http://docs.dnndev.me/design/index", True)
+    ("Documentation", "#", True, [
+      ("Admin", "/admin/index", True),
+      ("Developer", "/dev/index", True),
+      ("Designer", "/design/index", True)
     ]),
-    ("Blogs", "http://example.com", True),
-    ("Download", "http://example.com", True),
-    ("Support", "http://example.com", True, [
-      ("DNN Platform", "http://example.com", True),
-      ("Evoq", "http://example.com", True),
+    ("Blogs", "http://www.dnnsoftware.com/community-blog", False),
+    ("Download", "http://www.dnnsoftware.com/community/download", False),
+    ("Support", "#", True, [
+      ("Forums", "http://www.dnnsoftware.com/forums", False),
+      ("Evoq Success Network", "http://www.dnnsoftware.com/services/customer-support/success-network", False),
     ])
   ],
-  'navbar_pagenav': False,
   'source_link_position': "none",
   'navbar_title': 'Documentation Center',
   'navbar_version': False,
   'globaltoc_depth': 2,
-  'site_home': 'http://docs.dnndev.me/'
+  'site_home': 'http://docs.dnndev.me/',
+  'hide_sidebar': ['index']
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -171,7 +172,7 @@ html_last_updated_fmt = '%b %d, %Y'
 html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {'**': ['searchbox.html', 'sidebartoc.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

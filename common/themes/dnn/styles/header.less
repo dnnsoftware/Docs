@@ -1,14 +1,14 @@
 .header{
 	.c-B;
 
-	background: #f4f4f4;
+	background: @gray-light;
 	border-top: 5px solid @blue-dark;
-	border-bottom: 2px solid #ccc;
+    .box-shadow(0 0px 5px);
 
 	.logo{
 		display: block;
 		padding: 15px 75px 15px 0;
-        color: #777;
+        color: @gray-medium;
         font-size: 18px;
         line-height: 20px;
         
@@ -73,13 +73,20 @@
 			position: relative;
 
 			&.dropdown{
-				
+				min-width: 190px;
+                
+                >a{
+                    cursor: pointer;
+                }
 			}
+            
+            
 		}
 			.nav-node{
 				display: block;
 				padding: 15px;
 				border-top: 1px solid;
+                text-align: center;
 
 				&:hover{
 					background:#ddd;
@@ -95,7 +102,7 @@
 				width: 25%;
 				border:none;
 				border-left:1px solid #ccc;
-				background: #f4f4f4;
+				background: @gray-light;
 				height: 50px;
 
 				&:hover{
@@ -168,7 +175,7 @@
 				top: 100%;
 				left: 0;
 				z-index: 1;
-				background: #f4f4f4;
+				background: @gray-light;
 				padding: 0;
 				border-style: solid;
 				border-color: #ccc;
@@ -178,7 +185,7 @@
 					padding: 0;
 					float: none;
 					border-top: 2px solid #e5e5e5;
-					background: #f4f4f4;
+					background: @gray-light;
 				}
 					.nav-node{
 						text-align: center;

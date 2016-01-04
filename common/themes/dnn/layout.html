@@ -6,6 +6,7 @@
 {% block relbar2 %}{% endblock %}
 {% block sidebarsourcelink %}{% endblock %}
 
+{% set debug = false %}
 {% set theme_css_files = [
     'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
     '_static/dnn.styles.css'
@@ -20,16 +21,14 @@
   ]
 %}
 
-{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and sidebars %}
-
-{%- set bs_content_width = render_sidebar and "9" or "12" %}
+{%- set rendersidebar = (not embedded) and sidebars and (pagename not in theme_hide_sidebar) %}
 
 {% macro navBar() %}
 {% include "navbar.html" %}
 {% endmacro %}
 
 {%- macro bsidebar() %}
-    {%- if render_sidebar %}
+    {%- if rendersidebar %}
     <nav class="doc-nav-wrapper">
         {%- for sidebartemplate in sidebars %}
           {%- include sidebartemplate %}
@@ -51,7 +50,20 @@
 {%- block content %}
 {{ navBar() }}
 
-{% if sidebars %} 
+{% if debug == true %}
+<pre style="margin-top: 60px">
+    Embedded: {{embedded}}
+    Sidebars: {{sidebars}}
+    PageName: {{pagename}}
+    HideSidebar: {{theme_hide_sidebar}}
+    Show: {{ pagename not in theme_hide_sidebar }}
+    Render: {{(not embedded) and sidebars and (pagename not in theme_hide_sidebar)}}
+    Render Sidebar: {{ rendersidebar }}
+    Debug: {{debug}}
+</pre>
+{% endif %}
+
+{% if rendersidebar %} 
 <main class="main-body doc-main-body">
     {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
     <section class="doc-wrapper">
@@ -63,7 +75,7 @@
 
 {% block body %}{% endblock %}
 
-{% if sidebars %}
+{% if rendersidebar %}
         </div>
         <nav class="article-nav-wrapper">
             {% block sidebar2 %}{% endblock %}         
@@ -77,65 +89,5 @@
 {%- endblock %}
 
 {%- block footer %}
-<footer class="footer">
-    <div class="container">
-        <div class="row footer-quick-links">
-            <div class="col-xs-12">
-                <ul class="quick-links">
-                    <li>
-                        <a href="mailto:sales@dnnsoftware.com" class="email">
-                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                            sales@dnnsoftware.com
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:650.288.3150" class="phone">
-                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                            (650) 288.3150
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:350.288.3191" class="fax">
-                            <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
-                            (650) 288.3191
-                        </a>
-                    </li>
-                    <li class="social-media-wrapper">
-                        Follow
-                        <ul class="social-media">
-                            <li><a href="http://facebook.com/dotnetnuke" class="facebook"></a></li>
-                            <li><a href="http://twitter.com/dnncorp" class="twitter"></a></li>
-                            <li><a href="http://www.linkedin.com/company/207975" class="linkedin"></a></li>
-                            <li><a href="http://www.youtube.com/user/dotnetnuke#" class="youtube"></a></li>
-                            <li><a href="http://twitter.com/dnn" class="twitter"></a></li>
-                        </ul>
-                    </li>
-                    <li class="pull-right">
-                        <a href="#">Back to Top</a>
-                    </li>
-                    {% if theme_source_link_position == "footer" %}
-                    <li class="pull-right">
-                        {% include "sourcelink.html" %}
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-        <div class="row footer-policy">
-            <div class="col-xs-12">
-                <ul class="horizontal-list">
-                    <li>Copyright 2015 by DNN Corp</li>
-                    <li><a href="http://www.dnnsoftware.com/Terms">Terms of Use</a></li>
-                    <li><a href="http://www.dnnsoftware.com/Privacy">Privacy</a></li>
-                    {%- if last_updated %}
-                    <li>
-                        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
-                    </li>
-                    {%- endif %}
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</footer>
+{% include "footer.html" %}
 {%- endblock %}

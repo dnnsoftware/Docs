@@ -4,7 +4,7 @@
             <a class="logo" href="{{ theme_site_home }}">
                 {%- block sidebarlogo %}
                     {%- if logo %}
-                    <img src="{{ pathto('_static/' + logo, 1) }}">
+                    <img src="{{ pathto('_static/' + logo, 1) }}" alt="DNN Logo" />
                     {%- endif %}
                 {%- endblock %}
                 {% if theme_navbar_title -%}
