@@ -1,9 +1,10 @@
 {%- if pagename != "search" %}
-<form action="{{ pathto('search') }}" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
+<form action="{{ pathto('search') }}" method="get" class="doc-search-wrapper">
+    <label>
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        <input type="text" name="q" class="doc-search" placeholder="Search" />
+    </label>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
 </form>
 {%- endif %}

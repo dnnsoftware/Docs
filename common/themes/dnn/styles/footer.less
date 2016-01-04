@@ -1,7 +1,7 @@
 .footer{
 	background:@brown;
 	clear:both;
-	position:relative;
+	position: relative;
 	border-top: 5px solid @blue;
 	padding: 0 75px;
 
@@ -80,20 +80,27 @@
 
 			&.social-media-wrapper{
 				position: relative;
-				padding-right: 10px;
+                margin-top: -5px;
+                
+                span{
+                    vertical-align: middle;
+                }
 			}
 		}
+        
+        >li{
+            margin-bottom: 20px;
+        }
 	}
 
 	.social-media{
-		padding: 0;
-		position: absolute;
-		left: 100%;
-		top:-7px;
+		display: inline-block;
+        padding: 0;
 		white-space: nowrap;
+        vertical-align: middle;
 
 		li{
-			padding: 5px;
+			padding: 0 5px;
 			display: inline-block;
 			float: none;
 		}

@@ -18,14 +18,17 @@ gulp.task('build-main',
 );
 
 gulp.task('build-admin',
+    ['compile-styles'],
 	shell.task('make html', { cwd: './admin' })
 );
 
 gulp.task('build-dev',
+    ['compile-styles'],
 	shell.task('make html', { cwd: './dev' })
 );
 
 gulp.task('build-design',
+    ['compile-styles'],
 	shell.task('make html', { cwd: './design' })
 );
 

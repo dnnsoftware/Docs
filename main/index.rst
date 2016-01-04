@@ -2,58 +2,105 @@
 
 .. title:: DNN Documentation Center
 
-.. _index::
-
-.. div:: row 
+.. toctree::
+    :hidden:
+    
+    Overview-DNN-Platform
+    DNN8-Requirements
+    DNN8-Whats-New
+   
+.. div:: row
     
     .. div:: col-xs-12 welcome-hero-wrapper
     
         |hero|
 
-.. |hero| image:: ../common/img/welcome-hero.jpg
-    :class: welcome-hero
-    :alt:  Welcome to the DNN Documentation Center
-                        
 .. div:: row card-row
 
     .. div:: container
 
         .. div:: col-sm-4 col-xs-12
-        
-            .. raw:: html
 
-                <a href="#" class="home-card dev-card">
-                    <div class="card-title">Developer</div>
-                    <div class="card-img-wrapper">
-                        <img class="card-img" alt="Developer" src="/_static/developer.jpg">
-                    </div>
-                </a>        
+            .. link:: /dev/
+                :class: home-card dev-card
+
+                .. div:: card-title
+
+                    Developer
+                
+                .. div:: card-img-wrapper
+
+                    |dev-icon|        
         
         .. div:: col-sm-4 col-xs-12
         
-            .. raw:: html
+            .. link:: /admin/
+                :class: home-card admin-card
 
-                <a href="#" class="home-card admin-card">
-                    <div class="card-title">Admin</div>
-                    <div class="card-img-wrapper">
-                        <img class="card-img" alt="Admin" src="/_static/admin.jpg">
-                    </div>
-                </a>        
-        
+                .. div:: card-title
+
+                    Admin
+                
+                .. div:: card-img-wrapper
+
+                    |admin-icon|        
         
         .. div:: col-sm-4 col-xs-12
         
-            .. raw:: html
+            .. link:: /design/
+                :class: home-card designer-card
 
-                <a href="#" class="home-card designer-card">
-                    <div class="card-title">Designer</div>
-                    <div class="card-img-wrapper">
-                        <img class="card-img" alt="Designer" src="/_static/designer.jpg">
-                    </div>
-                </a>        
+                .. div:: card-title
+
+                    Designer
+                
+                .. div:: card-img-wrapper
+
+                    |design-icon|        
+
+.. div:: row link-row 
+
+    .. div:: container
     
+        .. div:: col-sm-4 col-xs-12 page-link
+        
+            :doc:`Overview-DNN-Platform`
+        
+        .. div:: col-sm-4 col-xs-12 page-link
+        
+            :doc:`DNN8-Requirements`
+        
+        .. div:: col-sm-4 col-xs-12 page-link
+
+            :doc:`DNN8-Whats-New`
+
 .. div:: row 
     
     .. div:: container
+
+        |coming-soon|
+
+.. role:: hidden
+
+..  ***** Image Substitutions *****
+
+.. |hero| image:: ../common/img/welcome-hero.jpg
+    :class: welcome-hero
+    :alt:  Welcome to the DNN Documentation Center
+                        
+.. |dev-icon| image:: ../common/img/developer.jpg
+    :class: card-img
+    :alt:  Developer Center
     
-        .. include:: /../common/stub-overview.txt
+.. |admin-icon| image:: ../common/img/admin.jpg
+    :class: card-img
+    :alt:  Admin Center    
+
+.. |design-icon| image:: ../common/img/designer.jpg
+    :class: card-img
+    :alt:  Design Center   
+
+.. |coming-soon| image:: ../common/img/home-comming-soon.jpg
+    :class: comming-soon
+    :alt:  Comming Soon
+    

@@ -11,6 +11,9 @@
   /*width: auto;*/
   /*max-width: 1440px;*/
 }
+html {
+  position: relative;
+}
 body {
   position: relative;
 }
@@ -136,17 +139,22 @@ h2 {
 }
 .footer .quick-links li.social-media-wrapper {
   position: relative;
-  padding-right: 10px;
+  margin-top: -5px;
+}
+.footer .quick-links li.social-media-wrapper span {
+  vertical-align: middle;
+}
+.footer .quick-links > li {
+  margin-bottom: 20px;
 }
 .footer .social-media {
+  display: inline-block;
   padding: 0;
-  position: absolute;
-  left: 100%;
-  top: -7px;
   white-space: nowrap;
+  vertical-align: middle;
 }
 .footer .social-media li {
-  padding: 5px;
+  padding: 0 5px;
   display: inline-block;
   float: none;
 }
@@ -183,7 +191,8 @@ h2 {
   clear: both;
   background: #f4f4f4;
   border-top: 5px solid #07a7e3;
-  border-bottom: 2px solid #ccc;
+  -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
 }
 .header:before,
 .header:after {
@@ -194,7 +203,7 @@ h2 {
 .header .logo {
   display: block;
   padding: 15px 75px 15px 0;
-  color: #777;
+  color: #888;
   font-size: 18px;
   line-height: 20px;
 }
@@ -250,10 +259,17 @@ h2 {
   display: block;
   position: relative;
 }
+.nav-node-wrapper.dropdown {
+  min-width: 190px;
+}
+.nav-node-wrapper.dropdown > a {
+  cursor: pointer;
+}
 .nav-node {
   display: block;
   padding: 15px;
   border-top: 1px solid;
+  text-align: center;
 }
 .nav-node:hover {
   background: #ddd;
@@ -344,14 +360,14 @@ h2 {
   margin: 0 0 60px;
   text-align: center;
 }
-.welcome-hero-wrapper .img-responsive {
+.welcome-hero-wrapper .welcome-hero {
   display: inline-block;
   max-width: 800px;
   width: 100%;
 }
 .card-row {
   background-image: linear-gradient(to bottom, white 12%, #f4f4f4 30%);
-  margin: 0 -15px 30px;
+  margin: 0 -15px;
 }
 .home-card {
   background: white;
@@ -361,7 +377,7 @@ h2 {
   transition: all 0.18s ease-in;
   box-shadow: 0 0 0 #333;
   transform-origin: bottom;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .home-card:hover {
   transform: scale3d(1.05, 1.05, 1.05);
@@ -376,7 +392,6 @@ h2 {
   width: 100%;
   font-size: 2em;
   text-transform: uppercase;
-  margin: 20px 0 10px;
 }
 .home-card .card-img-wrapper {
   padding: 45px 120px;
@@ -405,6 +420,25 @@ h2 {
 }
 .home-card.designer-card > .card-title {
   background: #d48e12;
+}
+.link-row {
+  margin: 0 -15px 30px;
+  -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+}
+.link-row .page-link {
+  text-align: center;
+  font-size: 1.2em;
+}
+.link-row .page-link a {
+  display: block;
+  padding: 1em 0;
+  color: #888;
+}
+.link-row .page-link a:hover {
+  background: #ddd;
+  text-decoration: none;
+  color: #19aee5;
 }
 .listing-wrapper {
   margin-bottom: 75px;
@@ -516,6 +550,9 @@ h2 {
 .listing-footer a {
   font-weight: bold;
 }
+.comming-soon {
+  margin: 0 0 2em;
+}
 .main-body {
   margin-top: 67px;
 }
@@ -549,17 +586,17 @@ h2 {
   width: 10%;
   transition: all 0.2s ease-out;
 }
-.doc-search-wrapper {
+.doc-nav-wrapper .doc-search-wrapper {
   padding: 1px 2px 0;
 }
-.doc-search-wrapper label {
+.doc-nav-wrapper .doc-search-wrapper label {
   display: block;
   float: none;
   margin: 0;
   font-weight: normal;
   position: relative;
 }
-.doc-search-wrapper label .glyphicon {
+.doc-nav-wrapper .doc-search-wrapper label .glyphicon {
   border-radius: 5px;
   position: absolute;
   top: 3px;
@@ -569,23 +606,17 @@ h2 {
   display: block;
   padding: 5px;
 }
-.doc-search {
-  padding: 5px;
-  width: 100%;
-  border-radius: 5px;
-  border: none;
-  color: #787878;
-}
-.doc-nav {
+.doc-nav-wrapper > ul {
   margin: 0;
   padding: 2px;
 }
-.doc-nav li {
+li.toctree-l1 {
   display: block;
   width: 100%;
   overflow: hidden;
 }
-.doc-btn {
+li.toctree-l1 > a {
+  display: inline-block;
   color: #787878;
   background: #f2f2f2;
   border: none;
@@ -597,12 +628,20 @@ h2 {
   white-space: nowrap;
   transition: all 0.2s ease-out;
 }
-.doc-btn .glyphicon {
+li.toctree-l1 > a .glyphicon {
   margin-right: 15px;
 }
-.doc-btn:hover,
-.doc-btn.open {
+li.toctree-l1 > a:hover,
+li.toctree-l1 > a.current {
   background: #dbeef4;
+  text-decoration: none;
+}
+.doc-search {
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #787878;
 }
 .glyphicon {
   width: 100%;

@@ -3,7 +3,7 @@
 	margin: 0 0 60px;
 	text-align: center;
 
-	.img-responsive{
+	.welcome-hero{
 		display: inline-block;
         max-width: 800px;
         width: 100%;
@@ -13,7 +13,7 @@
 // Card Styles
 .card-row{
 	background-image: linear-gradient(to bottom, white 12%, #f4f4f4 30%);
-	margin: 0 -15px 30px;
+	margin: 0 -15px;
 }
 	.home-card{
 		background: white;
@@ -23,7 +23,7 @@
 		transition:all .18s ease-in;
 		box-shadow: 0 0 0 #333;
 		transform-origin:bottom;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 
 		&:hover{
 			transform: scale3d(1.05, 1.05, 1.05);
@@ -40,7 +40,6 @@
 			width: 100%;
 			font-size: 2em;
 			text-transform: uppercase;
-			margin: 20px 0 10px;
 		}
 
 		.card-img-wrapper{
@@ -80,6 +79,29 @@
 			}
 		}
 	}
+
+// Link Row styles
+.link-row{
+    margin: 0 -15px 30px;
+    .box-shadow(0 0px 5px);
+    
+    .page-link{
+        text-align: center;
+        font-size: 1.2em;
+        
+        a{
+            display: block;
+            padding: 1em 0;
+            color: @gray-medium;
+            
+            &:hover{
+                background:#ddd;
+				text-decoration: none;
+				color:@blue-light;
+            }
+        }
+    }
+}
 
 // Listing Styles
 .listing-wrapper{
@@ -204,3 +226,7 @@
 			font-weight: bold;
 		}
 	}
+    
+.comming-soon{
+    margin: 0 0 2em;
+}
