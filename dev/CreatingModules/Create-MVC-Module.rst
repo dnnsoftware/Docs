@@ -1,9 +1,7 @@
-.. _index:
-
 =======================================
-|InProgress| Building Web Forms Modules
+|InProgress| Building MVC Modules
 =======================================
 
-.. include:: BuildWebFormsModule.html
+.. include:: CreateMVCModule.shtml
 
 .. include:: /../common/stub-notice.txt

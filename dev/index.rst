@@ -9,7 +9,7 @@
 .. toctree::
    :hidden:
 
-   Building-Modules
+   Creating-Modules
    Packaging-Extensions
    API-Reference
    Glossary

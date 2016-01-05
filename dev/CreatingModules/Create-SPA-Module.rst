@@ -1,8 +1,7 @@
-.. _index:
-
 =======================================
 |InProgress| Building SPA Modules
 =======================================
 
-.. include:: BuildSPAModule.html
+.. include:: CreateSPAModule.shtml
 
+.. include:: /../common/stub-notice.txt
