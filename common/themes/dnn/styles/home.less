@@ -1,5 +1,6 @@
 .welcome-hero-wrapper{
 	padding-top: 40px;
+    background: white;
 	margin: 0 0 60px;
 	text-align: center;
 
@@ -12,6 +13,7 @@
 
 // Card Styles
 .card-row{
+    .c-B;
 	background-image: linear-gradient(to bottom, white 12%, #f4f4f4 30%);
 	margin: 0 -15px;
 }
@@ -43,11 +45,14 @@
 		}
 
 		.card-img-wrapper{
-			padding:45px 120px;
+			padding:45px 80px;
 			border-color: #ccc;
 			border-style: solid;
 			border-width: 0 1px;
-
+            
+			@media(min-width: 992px){
+				padding:45px 120px;
+			}
 		}
 			.card-img{
 				width:100%;
@@ -230,3 +235,4 @@
 .comming-soon{
     margin: 0 0 2em;
 }
+

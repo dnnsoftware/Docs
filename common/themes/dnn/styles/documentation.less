@@ -26,6 +26,17 @@
 
 		.doc-wrapper{
 			width: 15%;
+
+			&:before{
+				background: rgba(0,0,0,.5);
+				content: 'X';
+				cursor: pointer;
+			}
+			&:hover{
+				&:before{
+					background: rgba(0,0,0,.6);
+				}
+			}
 		}
 	}
 }
@@ -68,27 +79,56 @@ li.toctree-l1{
     display: block;
     width: 100%;
     overflow: hidden;
+    color: #787878;
+    background: #f2f2f2;
+    position: relative;
 
+    >.glyphicon{
+        position: absolute;
+        left: 5px;
+        top: 10px;
+        z-index: 10;
+        cursor: pointer;
+    }
+        
     >a{
         display: inline-block;
-        color: #787878;
-        background: #f2f2f2;
         border: none;
         position: relative;
         width: 100%;
-        padding: 7px;
+        padding: 7px 7px 7px 22px;
         margin: 1px 0;
         text-align: left;
         white-space: nowrap;
         transition:all .2s ease-out;
 
-        .glyphicon{
-            margin-right: 15px;
-        }
-
         &:hover, &.current{
             background: #dbeef4;
             text-decoration: none;
+        }
+    }
+    
+    >ul{
+        display: none;
+        margin:0;
+        padding: 10px 5px;
+        background: white;
+
+        > li{ 
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            
+            a{
+                display: block;
+                padding: 5px 15px;
+
+                &:hover{
+                    background: #e6e6e6;
+                    color: @blue-light;
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
@@ -107,30 +147,27 @@ li.toctree-l1{
     transition:all .2s ease-out;
 }
 
-.doc-sub-nav{
-    display: none;
-    margin:0;
-    padding: 10px 5px;
-    background: white;
-
-    > li a{
-        display: block;
-        padding: 5px 15px;
-
-        &:hover{
-            background: #e6e6e6;
-            color: @blue-light;
-            text-decoration: none;
-        }
-    }
-}
-
 .doc-wrapper{
     float:left;
     width:90%;
     background: white;
     position: relative;
     transition:all .2s ease-out;
+
+
+    &:before{
+            background: rgba(0,0,0,0);
+            color: white;
+            content: '';
+            font-size: 2em;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: all .2s ease-out;
+            text-align: center;
+        }
 }
 
 .doc{

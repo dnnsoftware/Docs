@@ -10,15 +10,21 @@
 		padding: 15px 75px 15px 0;
         color: @gray-medium;
         font-size: 18px;
-        line-height: 20px;
+        white-space: nowrap;
         
         &:hover{
             text-decoration: none;
         }
         
         img{
-            margin-right: 5px;
-            vertical-align: calc(-37%);
+            display: inline-block;
+            margin-right: 8px;
+            // vertical-align: calc(-37%);
+        }
+        
+        span{
+            position: relative;
+            top: 2px;
         }
 	}
 }
