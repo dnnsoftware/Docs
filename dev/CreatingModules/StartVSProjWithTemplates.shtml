@@ -34,7 +34,7 @@
 
             <li>For the DNN 8 templates,
                 <ol type=a>
-                    <li><a href="https://github.com/jbrinkman/DNN8Templates">Download the zip file and unzip.</a></li>
+                    <li><a href="https://github.com/jbrinkman/DNN8Templates">Download the zip file</a> and unzip.</li>
                     <li>In the <code>templates</code> folder, you'll find the zip files for the templates. Two are included: <b>Dnn Mvc Module</b> and <b>Dnn Spa Module</b>.</li>
                     <li>Copy the template zip file(s) to your Visual Studio project templates folder. By default, this folder is <code>%USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#</code> or <code>Visual Basic</code>.
                         <br/><img src="/common/img/scr-VS2015DNN8Templates-1.png" width=75% alt="Copy template zip files to VS project templates folder."/>

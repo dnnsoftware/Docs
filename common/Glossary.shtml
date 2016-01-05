@@ -5,7 +5,7 @@
     <dl>
 
     <dt>Advanced URL Management (AUM)</dt>
-        <dd>The advanced URL management system is the latest implementation of the Friendly URL Rewriter.  AUM includes additional tools which gives DNN administrators greater control over the formatting of URLs within DNN.</dd>
+        <dd>The latest implementation of the Friendly URL Rewriter. Includes additional tools which gives DNN administrators greater control over the formatting of URLs within DNN.</dd>
 
     <dt>ASCX</dt>
         <dd>ASP.NET user control.</dd>
@@ -13,33 +13,50 @@
     <dt>container</dt>
         <dd>A set of related components that define the look and feel of a module. In contrast, a <b><term>skin</term></b> or <b><term>theme</term></b> defines the look and feel of an entire web page or site.</dd>
 
-    <dt>Community Technology Preview (CTP)</dt>
-        <dd>A CTP is an early preview of a DNN release which provides an opportunity for customers to get an early look at a particular software feature.</dd>
-
     <dt>data access layer (DAL)</dt>
         <dd>The set of scripts and other files that are required by a module to access the database. This layer includes scripts of both the abstract data provider and the concrete data provider. <!-- Is the last sentence correct? --></dd>
 
+    <dt>DNN Forge</dt>
+    <dt>Forge</dt>
+        <dd>The marketplace for third-party DNN extensions, including modules and themes.</dd>
+
     <dt>extension</dt>
-        <dd>A combination of themes, modules, or other components that extend the functionality of DNN Platform.</dd>
+        <dd>A combination of themes, modules, or other components that extend the functionality of the DNN Platform.</dd>
+
+    <dt>friendly URL</dt>
+        <dd>A URL that hides a coded path. Example: http://www.example.com/myanswerpage might actually resolve to http://www.example.com/default.aspx?tabid=42 . DNN provides three modes of friendly URLs:
+        <ul>
+            <li><b>Advanced</b> provides both human-friendly and search-friendly URLs.</li>
+            <li><b>HumanFriendly</b> uses simple URLs for page names and uses <code>tabid</code> in more complicated URLs. Limited redirect support.</li>
+            <li><b>SearchFriendly</b> includes <code>tabid</code> patterns in URLs.</li>
+        </ul>
+        See <a href="http://www.dnnsoftware.com/wiki/url-rewriting">URL Rewriting</a>.
+        </dd>
 
     <dt>host</dt>
     <dt>super user</dt>
-        <dd>An administrator account used to manage the server and its apps. A host account is the most priveleged administrative account and has complete access to all DNN functionality.</dd>
+        <dd>An administrator account used to manage the server and its apps. A host account is the most privileged administrative account and has complete access to all DNN functionality.</dd>
 
     <dt>manifest</dt>
-        <dd>An XML file (e.g., MyExtension.dnn) that specifies how to install an extension. The manifest contains information regarding the extension type, and the various components that make up the extension.</dd>
+        <dd>An XML file (e.g., MyExtension.dnn) that specifies how to install an extension. The manifest contains information regarding the extension type, and the various components that make up the extension. See the <a href="/common/Extensions/DNNManifestSchema.html">DNN Manifest Schema</a>.</dd>
+
+    <dt>model-view-controller (MVC)</dt>
+        <dd>A software architecture that separates how the data is stored (model), how it is presented (view), and how the process is managed (controller).</dd>
 
     <dt>module</dt>
         <dd>Code that provides some functionality in a webpage. Example: A module could produce dynamic content, which is displayed in a <b><term>pane</term></b> on the page.</dd>
 
-    <dt>model-view-controller (MVC)</dt>
-        <dd>A software architecture that separates how the data is stored (model), how it is presented (view), and how the process is managed (controller).</dd>
+    <dt>module action menu</dt>
+        <dd>The menu that provides access to module functionality. Some actions may be specific to the module, and others are common among all modules. Available only in <b>Edit</b> mode.</dd>
 
     <dt>package</dt>
         <dd>A structure that holds all components of an extension to be added to a DNN-based website.</dd>
 
     <dt>pane</dt>
         <dd>An area in a layout template. A pane displays user-generated content or a standard skin element.</dd>
+
+    <dt>portal</dt>
+        <dd>A website in a DNN installation. A single DNN installation can host multiple websites that share files and resources. Each of those websites is sometimes called a <b>portal</b>.</dd>
 
     <dt>skin</dt>
     <dt>theme</dt>
@@ -55,6 +72,27 @@
         <dd>A web application that allows content to fit in a single page for a better user experience.</dd>
 
     <dt>theme object</dt>
-        <dd>A standard element that is common among websites. Examples: menu bar, copyright notice, login/registration links, privacy link, terms of service link, and search box.</dd>
+        <dd>A standard element that is common among websites. Examples: menu bar, copyright notice, login/registration links, privacy link, terms of service link, and search box. <!--#include virtual="/common/bptext/BP-TipSkinningTool.html" --></dd>
+
+    <dt>token</dt>
+        <dd>A word that represents common code for a <b><term>theme object</term></b> in DNN.
+        <ul>
+            <li>When used in an HTML layout template or container, the token is in UPPERCASE and enclosed in square brackets. Examples: [NAV], [COPYRIGHT], [LOGIN], [PRIVACY], [TERMS], and [SEARCH].</li>
+            <li>When used in an ASCX layout template or container, the token is an <code>object</code> tag. Examples:
+                <xmp>
+    <object id="dnnNAV" codetype="dotnetnuke/server" codebase="NAV">
+    <object id="dnnCOPYRIGHT" codetype="dotnetnuke/server" codebase="COPYRIGHT">
+    <object id="dnnLOGIN" codetype="dotnetnuke/server" codebase="LOGIN">
+                </xmp>
+            </li>
+        </ul>
+        </dd>
 
     </dl>
+
+
+    <h2>See Also</h2>
+    <ul>
+        <li>DNN wiki: <a href="http://www.dnnsoftware.com/wiki/dotnetnuke-glossary">DNN Glossary</a></li>
+        <li>DNN wiki: <a href="http://www.dnnsoftware.com/wiki/international-glossary">Globalization Glossary</a></li>
+    </ul>
