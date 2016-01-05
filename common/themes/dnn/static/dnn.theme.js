@@ -67,14 +67,26 @@
         setDocumentHeight();
 
         // and check to do the same on resize
-        $(window).resize(function () {
+        $(window).smartresize(function () {
             setTimeout(function () { setDocumentHeight(); }, 270);
         });
+
+        // adjust the HTML rendered by Sphinx for the TOC
+        $('.article-nav-wrapper > ul')
+            .attr({
+                id: 'articleNavAffix',
+                class: 'affix-top'
+            })
+            .children('li')
+            .children()
+            .wrapAll('<div id="articleNavSpy"></div>')
+            .siblings('ul')
+            .addClass('nav nav-tabs article-nav');
 
         //affix the article nav to the screen as you scroll down (bootstrap library)
         $('#articleNavAffix').affix({
             offset: {
-                top: $('.header').height() + 28,
+                top: 27, // - $('.header').height(),
                 bottom: function () {
                     return (this.bottom = $('.footer').outerHeight(true) + 30);
                 },
@@ -113,11 +125,12 @@
         var $docWrapper = $('.doc-wrapper');
         var docMinHeight = (window.innerHeight - ($('.header').height() + $('.footer').height()));
         var docNav = $('.doc-nav-wrapper').height();
+		var offsetToMakeFitPerfectly = -12;
 
         if ($doc.height() < docMinHeight || $doc.height() < docNav) {
             docNav > docMinHeight ?
                 $docWrapper.height(docNav) :
-                $docWrapper.height(docMinHeight - 12);
+				$docWrapper.height(docMinHeight + offsetToMakeFitPerfectly) ;
         }
     }
     
@@ -144,3 +157,34 @@
     }
 
 } (jQuery));
+
+// debouncing function from John Hann
+// http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+(function($,sr){
+  var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced () {
+          var obj = this, args = arguments;
+          function delayed () {
+              if (!execAsap) {
+                  func.apply(obj, args);
+              }
+
+              timeout = null;
+          }
+
+          if (timeout){
+              clearTimeout(timeout);
+          }
+          else if (execAsap){
+              func.apply(obj, args);
+          }
+
+          timeout = setTimeout(delayed, threshold || 100);
+      };
+  };
+  // smartresize 
+  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+})(jQuery,'smartresize');

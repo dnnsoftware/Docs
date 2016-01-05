@@ -598,6 +598,7 @@ h2 {
   background: rgba(0, 0, 0, 0.5);
   content: 'X';
   cursor: pointer;
+  z-index: 1;
 }
 .doc-main-body.open .doc-wrapper:hover:before {
   background: rgba(0, 0, 0, 0.6);
@@ -713,6 +714,7 @@ li.toctree-l1 > ul > li a:hover {
   right: 0;
   transition: all 0.2s ease-out;
   text-align: center;
+  z-index: -1;
 }
 .doc {
   padding: 15px;
@@ -803,25 +805,24 @@ li.toctree-l1 > ul > li a:hover {
     right: 0;
     padding: 30px 0;
   }
-  .article-nav-wrapper h3 {
+  .article-nav-wrapper #articleNavAffix {
+    margin: 0;
+    padding: 0;
+    list-style: outside none none;
+  }
+  .article-nav-wrapper #articleNavSpy > a {
     color: #8f8f8f;
-    margin: 0 0 20px;
-    padding: 0 30px;
+    margin: 0 0 15px;
+    padding: 0 20px;
+    display: block;
+    font-size: 18px;
   }
-  .affix {
-    top: 30px;
-  }
-  .affix-bottom {
-    position: absolute !important;
-    bottom: 30px;
-    top: auto !important;
-  }
-  .article-nav {
+  .article-nav-wrapper .article-nav {
     padding: 0;
     margin: 0;
     position: relative;
   }
-  .article-nav:before {
+  .article-nav-wrapper .article-nav:before {
     content: '';
     position: absolute;
     top: 0;
@@ -830,14 +831,14 @@ li.toctree-l1 > ul > li a:hover {
     background: #0aa8e7;
     opacity: 0;
   }
-  .article-nav li {
+  .article-nav-wrapper .article-nav li {
     display: block;
     position: relative;
     float: none;
     margin: 0;
     padding: 0;
   }
-  .article-nav li:before {
+  .article-nav-wrapper .article-nav li:before {
     content: '';
     position: absolute;
     top: 40%;
@@ -849,25 +850,39 @@ li.toctree-l1 > ul > li a:hover {
     transition: all .27s;
     border-radius: 50%;
   }
-  .article-nav li:hover:before {
+  .article-nav-wrapper .article-nav li:hover:before {
     top: 20%;
     bottom: 20%;
     border-radius: 20%;
   }
-  .article-nav li a {
+  .article-nav-wrapper .article-nav li a {
     padding: 5px 30px;
     display: block;
   }
-  .article-nav .active a {
+  .article-nav-wrapper .article-nav .active a {
     color: #bdbdbd;
   }
-  .article-nav .active:before,
-  .article-nav .active:hover:before {
+  .article-nav-wrapper .article-nav .active:before,
+  .article-nav-wrapper .article-nav .active:hover:before {
     top: 0;
     bottom: 0;
     opacity: 1;
     border-radius: 0;
   }
+  .affix {
+    top: 77px;
+  }
+  .affix-bottom {
+    position: absolute !important;
+    bottom: 30px;
+    top: auto !important;
+  }
+}
+div.note {
+  padding: 1em;
+  border: 1px solid #888;
+  border-radius: 3px;
+  background-color: #ffffdb;
 }
 
 /*# sourceMappingURL=dnn.styles.css.map */

@@ -31,6 +31,7 @@
 				background: rgba(0,0,0,.5);
 				content: 'X';
 				cursor: pointer;
+                z-index: 1;
 			}
 			&:hover{
 				&:before{
@@ -167,6 +168,7 @@ li.toctree-l1{
             right: 0;
             transition: all .2s ease-out;
             text-align: center;
+            z-index: -1;
         }
 }
 
@@ -301,70 +303,67 @@ li.toctree-l1{
         right: 0;
         padding: 30px 0;
 
-            h3{
-                color:#8f8f8f;
-                margin: 0 0 20px;
-                padding: 0 30px;
-            }
-    }
-
-    .affix{
-        top:30px;
-    }
-
-    .affix-bottom{
-        position: absolute !important;
-        bottom: 30px;
-        top: auto !important;
-    }
-
-    .article-nav{
-        padding:0;
-        margin: 0;
-        position: relative;
-
-        &:before{
-            content: '';
-            position: absolute;
-            top: 0;
-            width: 5px;
-            right: 100%;
-            background: @blue;
-            opacity: 0;
-        }
-
-        li{
-            display: block;
-            position: relative;
-            float: none;
+        #articleNavAffix{
             margin: 0;
             padding: 0;
+            list-style: outside none none;
+        }
+        
+        #articleNavSpy > a {
+            color:#8f8f8f;
+            margin: 0 0 15px;
+            padding: 0 20px;
+            display: block;
+            font-size: 18px;
+        }
+        
+        .article-nav{
+            padding:0;
+            margin: 0;
+            position: relative;
 
             &:before{
-                content:'';
+                content: '';
                 position: absolute;
-                top: 40%;
-                bottom: 40%;
+                top: 0;
                 width: 5px;
                 right: 100%;
                 background: @blue;
-                opacity:.5;
-                transition:all .27s;
-                border-radius: 50%;
+                opacity: 0;
             }
 
-            &:hover:before{
-                top: 20%;
-                bottom: 20%;
-                border-radius: 20%;
-            }
-
-            a{
-                padding: 5px 30px;
+            li{
                 display: block;
+                position: relative;
+                float: none;
+                margin: 0;
+                padding: 0;
+
+                &:before{
+                    content:'';
+                    position: absolute;
+                    top: 40%;
+                    bottom: 40%;
+                    width: 5px;
+                    right: 100%;
+                    background: @blue;
+                    opacity:.5;
+                    transition:all .27s;
+                    border-radius: 50%;
+                }
+
+                &:hover:before{
+                    top: 20%;
+                    bottom: 20%;
+                    border-radius: 20%;
+                }
+
+                a{
+                    padding: 5px 30px;
+                    display: block;
+                }
             }
-        }
-            
+                
             .active{
                 a{
                     color:#bdbdbd;
@@ -377,5 +376,18 @@ li.toctree-l1{
                     border-radius: 0;
                 }
             }
+        }
+
     }
+
+    .affix{
+        top:77px;
+    }
+
+    .affix-bottom{
+        position: absolute !important;
+        bottom: 30px;
+        top: auto !important;
+    }
+
 }
