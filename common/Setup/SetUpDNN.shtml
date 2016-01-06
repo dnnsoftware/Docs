@@ -29,7 +29,7 @@
 
     <h2> Requirements </h2>
     <ul>
-        <li><a href="/main/DNN8Requirements.shtml">DNN 8.0 Requirements</a></li>
+        <li><a href="/main/Requirements.shtml">DNN 8.0 Requirements</a></li>
         <li>(Optional) <b>Developers:</b> Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
     </ul>
 
