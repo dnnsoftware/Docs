@@ -8,7 +8,7 @@
 
     <p>An extension package is simply a zip file that contains all the files required by your extension. The most important part of the process is creating the DNN Manifest, which provides information required by the installer, such as the target locations for the files.</p>
 
-    <p>If you use the DNN templates and compile in Visual Studio, the Release build creates the zip file for you. <!-- Does it also automatically update the DNN Manifest. --></p>
+    <p>If you use the DNN templates and compile in Visual Studio, the Release build creates the .zip file for you. <!-- Does it also automatically update the DNN Manifest. --></p>
 
 
     <h2> Steps </h2>
@@ -38,7 +38,7 @@
     </ul>
 
 
-    <h2>Sources</h2>
+    <h2> Sources </h2>
     <ul>
         <li>DNN Professional Training video: <a href="http://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-5-packaging">Skinning 5: Packaging</a></li>
     </ul>

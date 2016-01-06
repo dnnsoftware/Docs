@@ -27,7 +27,7 @@
                         <li><b>Database Setup:</b> Custom</li>
                         <li><b>Database Type:</b> SQL Server/SQL Server Express Database</li>
                         <li><b>Server Name:</b>
-                            <br/><b>Developers and Designers:</b> You can use the default value (example: <code>.\SQLExpress</code>).
+                            <br/><b>Developers and Designers:</b> You can use the default value (example: <code>.\SQLExpress</code> or <code>(local)</code>).
                             <br/><b>Administrators:</b> Set the value to <code>(local)</code>.
                         </li>
                         <li><b>Database Name:</b> Enter the name of the SQL database you created earlier.</li>
@@ -35,7 +35,8 @@
                             <p><b>Developers:</b>
                                 <ul>
                                     <li>If creating modules for your own websites, set <b>objectQualifier</b> to blank.</li>
-                                    <li>If creating modules for sale, set <b>objectQualifier</b> to <code>dnn</code> to prepend <code>dnn_</code> to all DNN-generated objects, such as tables and stored procedures. This practice is recommended to avoid naming conflicts in your clients' databases.</li>
+                                    <li>If creating modules for sale, set <b>objectQualifier</b> to <code>dnn</code> to prepend <code>dnn_</code> to all DNN-generated objects, such as tables and stored procedures. This practice is recommended in your local development environment, so that you can catch name-matching errors that could occur if the target DNN installation's <b>objectQualifier</b> setting (found in web.config) is not blank.
+                                    </li>
                                 </ul>
                             </p>
                         </li>
@@ -68,7 +69,7 @@
 
     <h2>Sources</h2>
     <ul>
-        <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by Chris Hammond.</li>
-        <li><a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by <a href="http://www.dnnsoftware.com/users/chris-hammond">Chris Hammond</a></li>
+        <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
         <!-- <li><a href="https://support.microsoft.com/en-us/kb/224609">How to obtain versions of Internet Information Server (IIS)</a></li> -->
     </ul>

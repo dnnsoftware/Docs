@@ -95,10 +95,10 @@
         <li>(Optional) <a href="/design/CreatingThemes/CreateDocTypeXML.shtml">Create a doctype XML file.</a></li>
         <li><a href="/common/Extensions/CreatePackage.shtml">Package your theme.</a></li>
         <li>Test the theme.
-            <ol>
+            <ol type=a>
                 <li><a href="/common/Extensions/InstallExtension.shtml">Install the package.</a></li>
                 <li>Apply the theme to a new webpage in your DNN website.</li>
-                <li>Check how the page looks in different browsers.</li>
+                <li>Check how the webpage looks in different browsers.</li>
             </ol>
         </li>
     </ol>
@@ -123,5 +123,5 @@
 
     <h2> Sources </h2>
     <ul>
-        <li>DNN Community blog: <a href="http://www.dnnsoftware.com/community-blog/cid/132000/dotnetnuke-skinning-101-part-1">DotNetNuke Skinning 101 (Part 1)</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/8129">Joe Brinkman</a></li>
+        <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/132000/dotnetnuke-skinning-101-part-1">DotNetNuke Skinning 101 (Part 1)</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/8129">Joe Brinkman</a></li>
     </ul>

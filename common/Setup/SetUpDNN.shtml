@@ -30,7 +30,7 @@
     <h2> Requirements </h2>
     <ul>
         <li><a href="/main/Requirements.shtml">DNN 8.0 Requirements</a></li>
-        <li>(Optional) <b>Developers:</b> Visual Studio 2015 is the recommended IDE for developing DNN modules.</li>
+        <li>(Optional) <b>Developers:</b> Visual Studio 2015 is the recommended IDE for developing DNN modules. It is required if you are contributing to the DNN Platform.</li>
     </ul>
 
 
@@ -64,8 +64,8 @@
 
     <h2> Sources </h2>
     <ul>
-        <li>DNN wiki: <a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by Chris Hammond.</li>
-        <li>DNN Community blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by <a href="http://www.dnnsoftware.com/users/chris-hammond">Chris Hammond</a></li>
+        <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
         <!-- <li><a href="https://support.microsoft.com/en-us/kb/224609">How to obtain versions of Internet Information Server (IIS)</a></li> -->
     </ul>
 

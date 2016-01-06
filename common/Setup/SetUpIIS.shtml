@@ -4,7 +4,7 @@
     <p>You can create a new IIS website or set up an existing one.</p>
 
 
-    <h2>Prerequisites</h2>
+    <h2> Prerequisites </h2>
     <ul>
         <li><a href="/common/Setup/SetUpDNNFolder.shtml">DNN installed with folder permissions for the user account that will run your website.</a></li>
     </ul>
@@ -25,14 +25,16 @@
                                 <li><b>Application Development Features</b>: ASP.NET 3.5 and 4.6 </li>
                                 <li><b>Common HTTP Features</b>: Default Document and Static Content</li>
                                 <li>(Optional) <b>Security</b>: Basic Authentication</li>
+                                <!-- TODO: Per Joe's tech review on 20160106: Add Windows Authentication here and in the screenshot. -->
                             </ul>
                         <li><b>Internet Information Services Hostable Web Core</b></li>
                     </ul>
                     <br/><img src="/common/img/scr-InstallIIS-6.png" alt="IIS options to turn on"/>
                 </li>
+                <!-- TODO: Per Joe's tech review on 20160106: Add (Optional) Performance Features: Static Content Compression -->
             </ol>
-            <p><b>Note:</b> For IIS 5 or IIS 6, verify that ASP.NET 2.0 is selected.</p>
         </li>
+
         <li>You can create a new website or set up an existing one for use with DNN.
             <!-- Make this section expandable. -->
              <ul>
@@ -45,7 +47,7 @@
                         <li>Enter the new site's name and choose the location.
                             <br/><img src="/common/img/scr-NewSiteInIIS-2.png" alt="Enter the new site's name and choose the location."/>
                         </li>
-                        <li><b>Developers and Designers:</b> If setting up a local development environment, you can use <code>www.dnndev.me</code> as the Host name. DNNDEV.ME is a registered domain which points to the loopback address of 127.0.0.1, so it will always resolve locally.<br/>
+                        <li><b>Developers and Designers:</b> If setting up a local development environment, you can use <code>www.dnndev.me</code> (or any subdomain) as the Host name. DNNDEV.ME is a registered domain which points to the loopback address of 127.0.0.1, so it will always resolve locally.<br/>
                             <b>Administrators: </b> If setting up a live site, use your site's domain.
                             <br/><img src="/common/img/scr-NewSiteInIIS-4.png" alt="For local, use www.dnndev.me."/>
                         </li>
@@ -64,13 +66,15 @@
                 </li>
             </ul>
         </li>
+
+        <li>If you do not use <b>NETWORK SERVICE</b> as the user account to run your website, verify that the automatically created IIS AppPool\AppPoolName has <b>Full</b> or <b>Modify</b> permissions for the DNN installation folder. See <a href="/common/Setup/SetUpDNNFolder.shtml">Set Up DNN Folder and the User Account</a>.</li>
     </ol>
 
 
-    <h2>Sources</h2>
+    <h2> Sources </h2>
     <ul>
-        <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by Chris Hammond.</li>
-        <li><a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <li>DNN Wiki:  <a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by <a href="http://www.dnnsoftware.com/users/chris-hammond">Chris Hammond</a></li>
+        <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
         <!-- <li><a href="https://support.microsoft.com/en-us/kb/224609">How to obtain versions of Internet Information Server (IIS)</a></li> -->
     </ul>
 

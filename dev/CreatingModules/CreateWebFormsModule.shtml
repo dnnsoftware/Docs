@@ -3,7 +3,7 @@
     <h1> Create a Web Forms Module </h1>
 
     <h2> Overview </h2>
-    <p><b>Note:</b> These instructions use templates to illustrate how to create a web forms module. You can also <a href="/dev/CreatingModules/CreateModuleInline.shtml">create a module within the DNN installation</a>.</p>
+    <p><b>Note:</b> These instructions use templates to illustrate how to create a web forms module. You can also <a href="/dev/CreatingModules/CreateModuleInline.shtml">create a very simple module within the DNN installation</a>.</p>
 
 
     <h2> Prerequisites </h2>
@@ -21,9 +21,8 @@
 
     <li><b>Modify the Visual Studio project to add functionality to your new module. </b>
         <ol>
-            <li>Update <code>view.ascx</code>.</li>
+            <li>Update <code>view.ascx</code>. </li>
             <li>Add more user controls (.ascx) as needed.</li>
-            <li></li>
         </ol>
         <p><b>Example:</b>
             <xmp>
@@ -31,6 +30,49 @@
         </p>
     </li>
 
+    <li><b>Build in debug mode.</b> This build produces .pdb files that are needed for stepping through your code.
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </li>
+
+    <li><b>Debug, if needed.</b>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </li>
+
+    <li><b>Build in release mode.</b> This build creates an installation .zip file in the <code>Desktop Modules</code>/your module/<code>install</code> folder.
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </li>
+
+    <li>Test the module.
+        <ol type=a>
+            <li><a href="/common/Extensions/InstallExtension.shtml">Install the package.</a></li>
+            <li>Apply the module to a new pane in a non-administrative webpage in your DNN website.
+                <ol type=i>
+                    <li><b>CtrlPanel</b> > <b>Modules menu</b> > <b>Add New Module</b></li>
+                    <li>Find your module in the <b>Available Modules</b> dropdown list.</li>
+                    <li>Drag your new module to the page.</li>
+                </ol>
+            </li>
+            <li>Check how the webpage looks in different browsers.</li>
+        </ol>
+    </li>
 
 
     <!--
@@ -75,14 +117,16 @@ By now you should be successfully wrapping your mind around what the View, Edit,
     <h2> See Also </h2>
     <ul>
         <li><a href="/dev/CreatingModules.shtml">Creating Modules</a></li>
-        <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module.</a></li>
-        <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create a SPA module.</a></li>
+        <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module</a></li>
+        <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create a SPA module</a></li>
+        <li><a href="/common/Extensions/CreatePackage.shtml">Create a Package</a></li>
+        <li><a href="/common/Extensions/InstallExtension.shtml">Install an Extension</a></li>
         <li><a href="/dev/DNN8APIReference.pdf">DNN 8 API Reference</a></li>
     </ul>
 
 
     <h2> Sources </h2>
     <ul>
-        <li>DNN Community blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro">Module Development for Non-Developers, Skinners, & DNN Beginners - Blog Series</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
-        <li><a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">Using the new Module Development Templates for DotNetNuke 7</a> by Chris Hammond</li>
+        <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro">Module Development for Non-Developers, Skinners, & DNN Beginners - Blog Series</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <li><a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">Using the new Module Development Templates for DotNetNuke 7</a> by <a href="http://www.dnnsoftware.com/users/chris-hammond">Chris Hammond</a></li>
     </ul>

@@ -17,21 +17,10 @@
                     <th>then the account name is</th>
                 </tr>
                 <tr>
-                    <td>Windows 2000<br/>
-                        Windows XP
-                    </td>
-                    <td>IIS 5<br/>
-                        IIS 5.1
-                    </td>
-                    <td>localmachine\ASPNET</td>
-                </tr>
-                <tr>
-                    <td>Windows 2003<br/>
-                        Windows Vista<br/>
+                    <td>Windows Vista<br/>
                         Windows Server 2008
                     </td>
-                    <td>IIS 6<br/>
-                        IIS 7
+                    <td>IIS 7
                     </td>
                     <td>localmachine\Network Service</td>
                 </tr>
@@ -42,6 +31,12 @@
                     <td>IIS 7.5</td>
                     <td rowspan=3>the <b>NETWORK SERVICE</b> account, or<br/>
                         the <b>IIS AppPool\AppPoolName</b>, which is the name of the automatically generated app.
+                        <!-- TODO: Per Joe's tech review on 20160106, "We should include a screenshot of IIS Manager showing where to find this value." Addl info from Skype: "
+                            [12:02:15 PM] Joe Brinkman: We don't actually show the correct account for Window 7/8/10
+                            [12:02:23 PM] Joe Brinkman: there are two accounts shown
+                            [12:03:07 PM] Joe Brinkman: and it is valid to have an app pool use one or the other account
+                            [12:03:49 PM] Joe Brinkman: by default it will use the ApplicationPoolIdentity"
+                        -->
                     </td>
                 </tr>
                 <tr>
@@ -66,8 +61,7 @@
                     <br/><img src="/common/img/scr-FolderPerms-1.png" alt="Right-click on the DNN folder and choose Properties"/>
                 </li>
                 <li>Go to the <b>Security</b> tab and click <b>Edit...</b>.
-                    <br/><img src="/common/img/scr-FolderPerms-2.png" alt="In the Security tab, click Edit..."></img><br/>
-                    <b>Note:</b> If you are using Windows XP, go to <b>Tools</b> &gt; <b>Options</b> and uncheck <b>Use Simple File Sharing</b>.
+                    <br/><img src="/common/img/scr-FolderPerms-2.png" alt="In the Security tab, click Edit..."></img>
                 </li>
                 <li>Click <b>Add...</b>.
                     <br/><img src="/common/img/scr-FolderPerms-3.png" alt="Click Add..."></img>
@@ -85,8 +79,8 @@
 
     <h2>Sources</h2>
     <ul>
-        <li><a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by Chris Hammond.</li>
-        <li><a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
+        <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment">Setting up Your Module Development Environment</a>, based on <a href="http://www.christoc.com/Tutorials/All-Tutorials/aid/1">Setting up your DotNetNuke Module Development Environment</a> by <a href="http://www.dnnsoftware.com/users/chris-hammond">Chris Hammond</a></li>
+        <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn">Installing DNN</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/710933">Clinton Patterson</a></li>
         <!-- <li><a href="https://support.microsoft.com/en-us/kb/224609">How to obtain versions of Internet Information Server (IIS)</a></li> -->
     </ul>
 
