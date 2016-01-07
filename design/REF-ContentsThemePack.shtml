@@ -8,21 +8,18 @@
             <ul>
                 <li>Layout template files (*.ascx)</li>
                 <li>Container files (*.ascx)</li>
+                <li>(Optional) CSS for individual layout templates or containers (*.css with the same filename as your layout template or container)</li>
+                <li>(Optional) CSS for the entire theme (skin.css)</li>
                 <li>(Optional) Document Type XML file for individual layout templates or containers (*.doctype.xml)</li>
-                <li>(Optional) Custom attributes of tokens (skin.xml) <!-- Or should this be "attributes of custom tokens"? --></li>
+                <li>(Optional) Property values of tokens used in your HTML layout template or container (*.xml with the same filename as your HTML layout template or container) </li>
             </ul>
         </li>
+
+        <p><b>Note:</b> You can choose your own folder names for the following.</p>
 
         <li><b>images</b> contains all image files used by the theme, including:
             <ul>
-                <li>(Optional) Preview images of individual layout templates or containers (*.png/jpg/etc. with the same filename as your layout template or container) <!-- Video only showed jpg. Is it restricted to jpg? --></li>
-            </ul>
-        </li>
-
-        <li><b>css</b> contains all CSS required by layout templates and containers, including:
-            <ul>
-                <li>(Optional) CSS for individual layout templates or containers (*.css)</li>
-                <li>(Optional) CSS for the entire theme (skin.css)</li>
+                <li>(Optional) Preview images of individual layout templates or containers (*.png/jpg with the same filename and in the same folder as your layout template or container)</li>
             </ul>
         </li>
 
@@ -30,9 +27,7 @@
 
         <li><b>js</b> contains all JScript files used by the theme, such as <b>bootstrap.min.js</b> and <b>common.js</b>.</li>
 
-        <li><b>menu</b> contains all desktop menu files for the theme.</li>
-
-        <li><b>mobmenu</b> contains all mobile menu files for the theme.</li>
+        <li><b>menu</b> contains all desktop menu files for the theme. If a theme includes multiple menu templates (i.e., a left-hand nav tree and a horizontal menu bar), you can store each menu in its own folder.</li>
     </ul>
 
 

@@ -2,7 +2,7 @@
 
 	<h1> DNN Platform and DNN Evoq Requirements </hi>
 
-	<h2> DNN 8.0 / Evoq 8.3 </h2>
+	<h2> DNN Platform 8.0 / Evoq 8.3 </h2>
 
 	<b>Supported Operating Systems</b>
 	<ul>
@@ -36,7 +36,7 @@
 		<li>Microsoft SQL Server 2012</li>
 		<li>Microsoft SQL Server 2012 Express</li>
 		<li>Microsoft SQL Server 2014</li>
-		<li>Microsoft Azure SQL database</li>
+		<li>Microsoft Azure SQL Database</li>
 	</ul>
 
 	<b>Browsers</b>

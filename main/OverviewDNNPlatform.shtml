@@ -7,7 +7,9 @@
 
         <p>This site is organized according to role:
             <ul>
-                <li><b>Administrators</b> could be <i>hosts (super users)</i> who manage the web servers or <i>website admins</i> who manage the individual websites.</li>
+                <li><b>Administrators</b> could be <i>hosts (super users)</i> who manage the web servers or <i>website admins</i> who manage the individual websites.
+                <!-- TODO: When applicable, uncomment this:  The Admin Center would also include information for content managers/editors who add content to the websites. -->
+                </li>
                 <li><b>Developers</b> create modules that extend the functionality of the DNN Platform.</li>
                 <li><b>Designer</b> create themes that customize the look of a website.</li>
             </ul>

@@ -69,7 +69,7 @@
                 <li><b>Data layer</b>. EVS verifies:
                     <ul>
                         <li>That core database objects were not modified.</li>
-                        <li>That any SQL scripts in the module are compatible with SQL Azure and can execute without errors. If Azure-incompatible SQL scripts are found, EVS generates Azure-compatible versions of those scripts and makes them available in a zip file.</li>
+                        <li>That any SQL scripts in the module are compatible with Microsoft Azure SQL Database and can execute without errors. If Azure-incompatible SQL scripts are found, EVS generates Azure-compatible versions of those scripts and makes them available in a zip file.</li>
                         <li>That SQL's {databaseOwner} and {objectQualifier} are correctly used.</li>
                         <li>That the uninstall script completely removes all objects added by the installation script.</li>
                     </ul>
