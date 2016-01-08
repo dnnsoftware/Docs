@@ -36,7 +36,7 @@
                 <ol type=a>
                     <li><a href="https://github.com/jbrinkman/DNN8Templates">Download the zip file</a> and unzip.</li>
                     <li>In the <code>templates</code> folder, you'll find the zip files for the templates. Two are included: <b>Dnn Mvc Module</b> and <b>Dnn Spa Module</b>.</li>
-                    <li>Copy the template zip file(s) to your Visual Studio project templates folder. By default, this folder is <code>%USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#</code> or <code>Visual Basic</code>.
+                    <li>Copy the template zip file(s) to your Visual Studio project templates folder. By default, this folder is <code>%USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#</code>.
                         <br/><img src="/common/img/scr-VS2015DNN8Templates-1.png" width=75% alt="Copy template zip files to VS project templates folder."/>
                     </li>
                 </ol>
@@ -71,7 +71,8 @@
             <li>Set the following:
                 <ol type=i>
                     <li><b>Name:</b> the name of your new module</li>
-                    <li><b>Location:</b> the <code>DesktopModules</code> folder inside your DNN installation folder</li>
+                    <li><b>Location:</b> a subfolder inside the <code>DesktopModules</code> folder of your DNN installation folder</li>
+                    <p><b>Tip:</b> Use your company name or a unique name as the subfolder name to avoid conflicts with other module creators in a production environment.</p>
                 </ol>
             </li>
             <li>Uncheck <b>Create directory for solution</b>. The templates expect Visual Studio's solution file (.sln) to be in the same folder as the project file. Checking this option puts the solution file in a different folder, which can cause build errors.</li>
@@ -87,7 +88,7 @@
         <li><a href="/dev/CreatingModules/CreateWebFormsModule.shtml">Create a Web Forms module.</a></li>
         <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module.</a></li>
         <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create a SPA module.</a></li>
-        <li><a href="/dev/REF-ContentsModulePack.shtml">Contents of a Module Package</a></li>
+        <!-- <li><a href="/dev/REF-ContentsModulePack.shtml">Contents of a Module Package</a></li> -->
     </ul>
 
 

@@ -14,9 +14,9 @@
     <h2> Steps </h2>
     <ol>
         <li>Prepare your files in folders.
-            <ul> <!-- Are these the actual names of the folders? Or can they be named any way they want? -->
-                <li><a href="/design/REF-ContentsThemePack.shtml">Layout templates, containers, and associated files</a></li>
-                <li><a href="/dev/REF-ContentsModulePack.shtml">Modules and associated files</a></li>
+            <ul>
+                <!-- <li><a href="/design/REF-ContentsThemePack.shtml">Layout templates, containers, and associated files</a></li> -->
+                <!-- <li><a href="/dev/REF-ContentsModulePack.shtml">Modules and associated files</a></li> -->
                 <li>Files that are common among all packages:
                     <ul>
                         <li>(Optional) <b>MyLicense.txt</b> is displayed to the user during package installation.</li>.

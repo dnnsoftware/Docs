@@ -55,7 +55,7 @@
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/design/REF-ContentsThemePack.shtml">Contents of a Theme Package</a></li>
+        <!-- <li><a href="/design/REF-ContentsThemePack.shtml">Contents of a Theme Package</a></li> -->
         <li><a href="/common/Extensions/CreatePackage.shtml">Create the Package</a></li>
     </ul>
 

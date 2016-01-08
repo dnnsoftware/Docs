@@ -617,8 +617,8 @@
     <ul>
         <li><a href="http://www.ifinity.com.au/Blog/EntryId/89/Top-5-DotNetNuke-Manifest-file-Module-Packaging-Tips">Top 5 DotNetNuke Manifest file Module Packaging Tips</a> by <a href="http://www.dnnsoftware.com/users/bruce-chapman">Bruce Chapman</a></li>
         <li>DNN Community blog: <a href="http://www.dnnsoftware.com/community-blog/cid/142201/dal-2-a-new-dotnetnuke-data-layer-for-a-new-decade">DAL 2 - A New DotNetNuke Data Layer for a New Decade</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/43261">Charles Nurse</a></li>
-        <li><a href="/design/REF-ContentsThemePack.shtml">Contents of a Theme Package</a></li>
-        <li><a href="/dev/REF-ContentsModulePack.shtml">Contents of a Module Package</a></li>
+        <!-- <li><a href="/design/REF-ContentsThemePack.shtml">Contents of a Theme Package</a></li> -->
+        <!-- <li><a href="/dev/REF-ContentsModulePack.shtml">Contents of a Module Package</a></li> -->
     </ul>
 
 

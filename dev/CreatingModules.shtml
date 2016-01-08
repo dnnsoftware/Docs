@@ -10,7 +10,7 @@
             <li>Create an entire module from scratch.</li>
             <li>Start with module development templates, such as:
                 <ul>
-                    <li><a href="https://github.com/jbrinkman/DNN8Templates">DNN 8 Templates</a></li>
+                    <li><a href="https://github.com/dnnsoftware/DNN.Templates/releases">DNN 8 Templates</a></li>
                     <li><a href="https://github.com/ChrisHammond/DNNTemplates">Chris Hammond's DotNetNuke Module and Theme Development Templates</a> (<a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">Installation instructions</a>)</li>
                     <!-- What other templates can we mention here? -->
                 </ul>
@@ -40,7 +40,7 @@
 
     <li><b>Create a new module or modify an existing one.</b>
         <ul>
-            <li><a href="/dev/CreatingModules/CreateModuleInline.shtml">Create a very simple module inside a DNN installation.</a></li>
+            <li>Create a very simple module using the DNN Module Creator.</li>
             <li><a href="/dev/CreatingModules/CreateWebFormsModule.shtml">Create a Web Forms module using templates.</a></li>
             <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module using templates.</a></li>
             <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create a SPA module using templates.</a></li>
@@ -56,7 +56,7 @@
             <li>Check how the module behaves in different browsers.</li>
         </ol>
 
-        <p><b>Tip:</b> As part of your tests, run your module through the DNN <a href="http://evs.dotnetnuke.com/">Extension Verification Service</a> (EVS) to perform the compatibility tests in three areas:
+        <p><b>Tip:</b> As part of your tests, run your module through the DNN <a href="http://evs.dnnsoftware.com">Extension Verification Service</a> (EVS) to perform the compatibility tests in three areas:
             <ul>
                 <li><b>Module packaging</b>. EVS verifies:
                     <ul>
@@ -69,8 +69,8 @@
                 <li><b>Data layer</b>. EVS verifies:
                     <ul>
                         <li>That core database objects were not modified.</li>
-                        <li>That any SQL scripts in the module are compatible with Microsoft Azure SQL Database and can execute without errors. If Azure-incompatible SQL scripts are found, EVS generates Azure-compatible versions of those scripts and makes them available in a zip file.</li>
-                        <li>That SQL's {databaseOwner} and {objectQualifier} are correctly used.</li>
+                        <li>That any SQL scripts in the module are compatible with Microsoft Azure SQL Database and can execute without errors. If Azure-incompatible SQL scripts are found, EVS generates Azure-compatible versions of those scripts and makes them available in a zip file; however, you must verify that the converted scripts still behave as expected.</li>
+                        <li>That {databaseOwner} and {objectQualifier} are correctly used.</li>
                         <li>That the uninstall script completely removes all objects added by the installation script.</li>
                     </ul>
                 </li>
@@ -91,7 +91,7 @@
 
     <h2> See Also </h2>
     <ul>
-        <li><a href="/dev/REF-ContentsModulePack.shtml">Contents of a Module Package</a></li>
+        <!-- <li><a href="/dev/REF-ContentsModulePack.shtml">Contents of a Module Package</a></li> -->
         <li>DNN 8 API Reference</li>
     </ul>
 
