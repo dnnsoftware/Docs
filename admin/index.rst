@@ -8,7 +8,7 @@
    :hidden:
 
    Install-Themes
-   User-Guide
+   Set-Up-DNN
    Glossary
    
 .. include:: /../common/stub-overview.txt

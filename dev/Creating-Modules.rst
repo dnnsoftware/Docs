@@ -5,7 +5,7 @@
 .. toctree::
    :hidden:
 
-   CreatingModules/Create-Module-Inline
+   CreatingModules/Using-The-Module-Creator
    CreatingModules/Create-Web-Forms-Module
    CreatingModules/Create-MVC-Module
    CreatingModules/Create-SPA-Module
