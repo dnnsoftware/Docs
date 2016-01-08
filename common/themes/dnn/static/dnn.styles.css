@@ -20,9 +20,6 @@ body {
 a {
   color: #19aee5;
 }
-p {
-  color: #838383;
-}
 h1,
 h2 {
   color: #19aee5;
@@ -51,6 +48,9 @@ h2 {
 }
 .horizontal-list li:last-child {
   padding-right: 0;
+}
+.img-600 {
+  max-width: 600px;
 }
 .footer {
   background: #382224;
@@ -876,6 +876,14 @@ li.toctree-l1 > ul > li a:hover {
     position: absolute !important;
     bottom: 30px;
     top: auto !important;
+  }
+}
+@media print {
+  .doc-nav-wrapper,
+  .article-nav-wrapper,
+  .header,
+  .footer {
+    display: none;
   }
 }
 div.note {
