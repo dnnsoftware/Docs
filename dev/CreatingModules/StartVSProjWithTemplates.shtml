@@ -26,19 +26,16 @@
                         <br/><img src="/common/img/scr-VS2015Search4DNN.png" width=75% alt="In the Online > Visual Studio Gallery tree, search for DotNetNuke then Download."/>
                     </li>
                     <li>Click the <b>Download</b> button for the <b>DotNetNuke Project Templates</b>.</li>
-                    <li>Agree to the license to continue.</li>
-                    <li>Agree to restart Visual Studio.</li>
                 </ol>
                 <p><b>Note:</b> See <a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">Chris Hammond's instructions</a> for other installation methods.</p>
             </li>
 
             <li>For the DNN 8 templates,
                 <ol type=a>
-                    <li><a href="https://github.com/jbrinkman/DNN8Templates">Download the zip file</a> and unzip.</li>
-                    <li>In the <code>templates</code> folder, you'll find the zip files for the templates. Two are included: <b>Dnn Mvc Module</b> and <b>Dnn Spa Module</b>.</li>
-                    <li>Copy the template zip file(s) to your Visual Studio project templates folder. By default, this folder is <code>%USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#</code>.
-                        <br/><img src="/common/img/scr-VS2015DNN8Templates-1.png" width=75% alt="Copy template zip files to VS project templates folder."/>
+                    <li><a href="https://github.com/dnnsoftware/DNN.Templates/releases">Download the appropriate .vsix file.</a> Two are included: one for MVC and one for SPA.
+                        <br/><img src="/common/img/scr-VS2015DNN8Templates-11.png" alt="Download DNN8 templates."/>
                     </li>
+                    <li>In your download folder, double-click the .vsix file to install the template in Visual Studio.</li>
                 </ol>
             </li>
         </ul>
@@ -50,21 +47,11 @@
             <li><b>File</b> &gt; <b>New</b> &gt; <b>Project</b></li>
             <li>Select the template for the new project.
                 <ul>
-                    <li>For Chris Hammond's templates,
-                        <ol>
-                            <li>Expand <b>Installed</b> &gt; <b>Templates</b> &gt; <b>Visual C#</b> or <b>Visual Basic</b> &gt; <b>DotNetNuke</b>.</li>
-                            <li>Choose one of the compiled modules.</li>
-                        </ol>
-                        <br/><img src="/common/img/scr-VS2015NewProj-1.png" width=75% alt="New Project settings for Chris Hammond's templates"/>
-                        <!-- I'm seeing an error after this: The Web server 'http://dnndev.me/desktopmodules/MyDNNModule2' could not be found. -->
+                    <li>For Chris Hammond's templates, go to <b>Installed</b> &gt; <b>Templates</b> &gt; <b>Visual C#</b> or <b>Visual Basic</b> &gt; <b>DotNetNuke</b>.
+                        <br /><img src="/common/img/scr-VS2015NewProjectWithTemplates-02.png" alt="Visual Studio > New > Project with Chris Hammond's templates"/>
                     </li>
-
-                    <li>For the DNN 8 templates,
-                        <ol>
-                            <li>Search for <code>DNN</code>.</li>
-                            <li>Select the module template (<b>Dnn Mvc Module</b> or <b>Dnn Spa Module</b>).</li>
-                        </ol>
-                        <br/><img src="/common/img/scr-VS2015DNN8Templates-2.png" width=75% alt="New Project settings for DNN 8 templates"/>
+                    <li>For the DNN 8 templates, go to <b>Installed</b> &gt; <b>Templates</b> &gt; <b>Visual C#</b> &gt; <b>Dnn</b>.
+                        <br /><img src="/common/img/scr-VS2015NewProjectWithTemplates-01.png" alt="Visual Studio > New > Project with DNN8 templates"/>
                     </li>
                 </ul>
             </li>

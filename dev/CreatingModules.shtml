@@ -7,7 +7,7 @@
 
     <p>You can produce a module in different ways:
         <ul>
-            <li>Create an entire module from scratch.</li>
+            <li>Create an entire module from scratch. For very simple modules, you can use the <a href="/dev/CreatingModules/Create-With-Module-Creator.html">DNN Module Creator</a>.</li>
             <li>Start with module development templates, such as:
                 <ul>
                     <li><a href="https://github.com/dnnsoftware/DNN.Templates/releases">DNN 8 Templates</a></li>
@@ -24,7 +24,7 @@
     <p>You can also use different programming frameworks (Web Forms, MVC, SPA) and languages (C#, VB) to create your module.</p>
 
 
-    <h2>How to Create a Module</h2>
+    <h2>How to Create a Module Using Templates</h2>
 
     <h3>Prerequisites</h3>
 
@@ -35,25 +35,47 @@
 
 
     <h3>Steps</h3>
-
     <ol>
 
-    <li><b>Create a new module or modify an existing one.</b>
+    <li><b><a href="/dev/CreatingModules/StartVSProjWithTemplates.shtml">Start a Visual Studio project using DNN templates.</a></b></li>
+
+    <li><b>Modify the Visual Studio project to add functionality to your new module.</b>
         <ul>
-            <li>Create a very simple module using the DNN Module Creator.</li>
             <li><a href="/dev/CreatingModules/CreateWebFormsModule.shtml">Create a Web Forms module using templates.</a></li>
             <li><a href="/dev/CreatingModules/CreateMVCModule.shtml">Create an MVC module using templates.</a></li>
             <li><a href="/dev/CreatingModules/CreateSPAModule.shtml">Create a SPA module using templates.</a></li>
         </ul>
     </li>
 
-    <li><b><a href="/common/Extensions/CreatePackage.shtml">Package your module.</a></b></li>
+    <li><b>Build, debug, and package.</b>
+        <ol>
+            <li><b>Build in debug mode.</b> This build produces .pdb files that are needed when stepping through your code.
+                <br/><img src="/common/img/scr-VS2015Build-01.png" alt="Visual Studio debug build"/>
+            </li>
+
+            <li><b>Debug, if needed.</b></li>
+
+            <li><b>Create the <a href="/common/Extensions/DNNManifestSchema.shtml">DNN Manifest</a>.</b></li>
+
+            <li><b>Build in release mode.</b> This build creates an installation zip file (your module's package) in the folder <code>Desktop Modules</code>/yourorganization/yourmodule/<code>install</code>.
+                <br/><img src="/common/img/scr-VS2015Build-01.png" alt="Visual Studio release build"/>
+            </li>
+
+            <li><b>Alternatively, you can manually <a href="/common/Extensions/CreatePackage.shtml">package your module</a>.</b></li>
+        </ol>
+    </li>
 
     <li><b>Test your module.</b>
         <ol type=a>
             <li><a href="/common/Extensions/InstallExtension.shtml">Install the package.</a></li>
-            <li>Apply the module to a pane in a new webpage in your DNN website.</li>
-            <li>Check how the module behaves in different browsers.</li>
+            <li>Apply the module to a pane in a new webpage in your DNN website.
+                <ol type=i>
+                    <li><b>Host</b> &gt; <b>Modules</b> &gt; <b>Add New Module</b></li>
+                    <li>Find your module in the <b>Available Modules</b> list.</li>
+                    <li>Drag your new module to the page.</li>
+                </ol>
+            </li>
+            <li>Check how the webpage looks in different browsers.</li>
         </ol>
 
         <p><b>Tip:</b> As part of your tests, run your module through the DNN <a href="http://evs.dnnsoftware.com">Extension Verification Service</a> (EVS) to perform the compatibility tests in three areas:
@@ -101,6 +123,7 @@
         <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/module-development">Module Development</a></li>
         <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro">Module Development</a> series by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/710933">Clinton Patterson</a></li>
         <li>DNN Community Blog: <a href="http://www.dnnsoftware.com/community-blog/cid/147439/extension-verification-service-evs">Extension Verification Service (EVS)</a> and <a href="http://www.dnnsoftware.com/community-blog/cid/154576/extension-verification-service-evs-update%20from%20june%202013">Extension Verification Service (EVS) Update</a> by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/169038">Nathan Rover</a></li>
+        <li><a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot">Using the new Module Development Templates for DotNetNuke 7</a> by <a href="http://www.dnnsoftware.com/users/chris-hammond">Chris Hammond</a></li>
     </ul>
 
 
