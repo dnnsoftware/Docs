@@ -32,8 +32,13 @@
 
             <li>For the DNN 8 templates,
                 <ol type=a>
-                    <li><a href="https://github.com/dnnsoftware/DNN.Templates/releases">Download the appropriate .vsix file.</a> Two are included: one for MVC and one for SPA.
-                        <br/><img src="/common/img/scr-VS2015DNN8Templates-11.png" alt="Download DNN8 templates."/>
+                    <li><a href="https://github.com/dnnsoftware/DNN.Templates/releases">Download the appropriate .vsix file.</a> Two are included:
+                        <ul>
+                            <li>Dnn.Mvc.Module.vsix</li>
+                            <li>Dnn.Spa.Module.vsix</li>
+                        </ul>
+                        <br /><img src="/common/img/scr-VS2015DNN8Templates-11.png" alt="Download DNN8 templates from Github."/>
+                        <!-- This screenshot might not be a good idea to include because it will need to be updated frequently. However, we need to visually balance the bullet for Chris Hammond's templates. Without this screenshot, this step could easily be overlooked. -->
                     </li>
                     <li>In your download folder, double-click the .vsix file to install the template in Visual Studio.</li>
                 </ol>
