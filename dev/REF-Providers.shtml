@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+</head>
+<body>
+
+
+    <h1> Providers Reference </h1>
+
+    <h2> Overview </h2>
+    <p>Services can be provided by third parties to provide common functionality to sites. In most cases, these services are provided by apps on the server or by modules in DNN. To replace the default provider, the <b>web.config</b> file must be updated to indicate the new provider.</p>
+
+    <p>In a module, a provider is comprised of two layers:
+        <ul>
+            <li><b>Abstract provider</b>. Exposed as a part of the DNN API set.</li>
+            <li><b>Concrete provider</b>. Specific implementation of the abstract provider.</li>
+        </ul>
+        <b>Example:</b> An abstract provider can be <b>Data Provider</b>, and a concrete provider can be <b>SQL Data Provider</b>.
+    </p>
+
+    <p>The following are some of the types of providers used in DNN:
+        <ul>
+            <li><a href="#authprov">Authentication providers</a></li>
+            <li><a href="#cacheprov">Caching providers</a></li>
+            <li><a href="#dataprov">Data providers</a></li>
+            <li><a href="#folderprov">Folder providers</a></li>
+            <li><a href="#friendprov">Friendly URL providers</a></li>
+            <li><a href="#htmlprov">HTML editor providers</a></li>
+            <li><a href="#logprov">Logging providers</a></li>
+            <li><a href="#membprov">Membership providers</a></li>
+            <li><a href="#modcacheprov">Module caching providers</a></li>
+            <li><a href="#navprov">Navigation providers</a></li>
+            <li><a href="#outcacheprov">Output caching providers</a></li>
+            <li><a href="#permsprov">Permissions providers</a></li>
+            <li><a href="#profprov">Profile providers</a></li>
+            <li><a href="#rolesprov">Roles providers</a></li>
+            <li><a href="#schedprov">Scheduling providers</a></li>
+            <li><a href="#searchdataprov">Search data store providers</a></li>
+            <li><a href="#searchindexprov">Search index providers</a></li>
+            <li><a href="#sitemapprov">Sitemap providers</a></li>
+        </ul>
+    </p>
+
+
+    <h2> Provider types </h2>
+
+
+    <h3 id="authprov"> Authentication providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <authentication defaultProvider="ADSIAuthenticationProvider">
+        <providers>
+            <clear/>
+            <add name="ADSIAuthenticationProvider" type="DotNetNuke.Authentication.ActiveDirectory.ADSI.ADSIProvider, DotNetNuke.Authentication.ActiveDirectory" providerPath="~\Providers\AuthenticationProviders\ADSIProvider\"/>
+        </providers>
+    </authentication>
+            </xmp>
+        </p>
+        <p>An <b>authentication provider</b> manages your website user logins. It includes these UI elements:
+            <ul>
+                <li>a login control</li>
+                <li>a settings control</li>
+                <li>(optional) a logout control</li>
+            </ul>
+        </p>
+        <p>DNN provides the following authentication providers:
+            <ul>
+                <li>Facebook</li>
+                <li>Google</li>
+                <li>Microsoft Live</li>
+                <li>Twitter</li>
+            </ul>
+        </p>
+        <p>However, you can use other third-party providers, including:
+            <ul>
+                <li><a href="http://dnnldap.codeplex.com/">LDAP</a></li>
+                <li><a href="http://dnn511liveid.codeplex.com/">Authentication.LiveID</a></li>
+                <li><a href="http://dnnmultifactor.codeplex.com/">Multi-factor Authentication Provider</a></li>
+                <li><a href="http://www.hilbertsolutions.com/Products/Novell-Authentication-Provider">Novell Authentication Provider</a></li>
+                <li><a href="http://store.dnnsoftware.com/home/product-details/external-database-authentication-provider-601">External Database Authentication Provider</a></li>
+                <li><a href="http://dnnshibauthprovider.codeplex.com/">Shibboleth Authentication Provider</a></li>
+            </ul>
+            <b>Note:</b> Some of these may not be compatible with DNN8+.
+        </p>
+        <p>You can also <a href="http://www.dnnsoftware.com/community-blog/cid/134678/dotnetnuke-tips-and-tricks-12-creating-your-own-authentication-provider">create your own</a>.</p>
+        <p>See <b><a href="#membprov">membership providers</a></b>, <b><a href="#permsprov">permissions providers</a></b>, and <b><a href="#rolesprov">roles providers</a></b>.</p>
+
+
+    <h3 id="cacheprov"> Caching providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <caching defaultProvider="FileBasedCachingProvider">
+        <providers>
+            <clear/>
+            <add name="FileBasedCachingProvider" type="DotNetNuke.Services.Cache.FBCachingProvider, DotNetNuke" providerPath="~\Providers\CachingProviders\FileBasedCachingProvider\"/>
+        </providers>
+    </caching>
+            </xmp>
+        </p>
+        <p>A <b>caching provider</b> ensures that cached settings are synchronized across multiple servers in a webfarm.</p>
+
+
+    <h3 id="dataprov"> Data providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <data defaultProvider="SqlDataProvider">
+        <providers>
+            <clear/>
+            <add name="SqlDataProvider" type="DotNetNuke.Data.SqlDataProvider, DotNetNuke" connectionStringName="SiteSqlServer" upgradeConnectionString="" providerPath="~\Providers\DataProviders\SqlDataProvider\" objectQualifier="" databaseOwner="dbo"/>
+        </providers>
+    </data>
+            </xmp>
+        </p>
+        <p>A <b>data provider</b> allows a module to transfer data to and from a data store. To enable upgrades, data provider files include their version numbers in their filenames. During an upgrade, all intervening upgrades that were not previously installed will be installed with the current version.</p>
+
+        <p>Two settings are required by data providers. These are set in web.config.
+            <ul>
+                <li>objectQualifier. A custom string used as a prefix for names of DNN-generated objects, such as tables and stored procedures, to distinguish objects generated by different module creators. The default is blank.</li>
+                <li>databaseOwner. The user account used to access the database. The default is <code>dbo</code>.</li>
+            </ul>
+        </p>
+
+        <p>DNN provides SQL Data Provider as the default concrete data provider. These UTF-8 files are required to use the SQL Data Providers:
+            <ul>
+                <li><b>xx.xx.xx.sqldataprovider</b> is a script executed during module/core installation/upgrade to modify the objectQualifier and databaseOwner settings. The <code>xx.xx.xx</code> portion of the filename is the script version.</li>
+                <li><b>uninstall.sqldataprovider</b> includes all of the module's SQL stored procedures, functions, views, and tables to be removed from the data store when the module is uninstalled. <b>Developers:</b> Always check if an item exists before removing it.</li>
+            </ul>
+        </p>
+
+
+    <h3 id="folderprov"> Folder providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <folder defaultProvider="StandardFolderProvider">
+        <providers>
+            <clear />
+            <add name="StandardFolderProvider" type="DotNetNuke.Services.FileSystem.StandardFolderProvider, DotNetNuke" />
+            <add name="SecureFolderProvider" type="DotNetNuke.Services.FileSystem.SecureFolderProvider, DotNetNuke" />
+            <add name="DatabaseFolderProvider" type="DotNetNuke.Services.FileSystem.DatabaseFolderProvider, DotNetNuke" />
+        </providers>
+    </folder>
+            </xmp>
+        </p>
+        <p>A <b>folder provider</b> enables sites to map folder paths to third-party cloud storage systems, such as Amazon Simple Storage Service (S3), Dropbox, Google Drive, and Microsoft Azure Storage.</p>
+        <p>A <b>folder type</b> or <b>folder mapping</b> is a specific implementation of a folder provider for a specific storage system.</p>
+        <ul>
+            <li><b>Administrators:</b> You can configure which folder types to allow in the site.</li>
+            <li><b>Developers:</b> To create a folder provider,
+                <ol>
+                    <li>Implement the abstract methods inherited from the <code>FolderProvider</code> class.</li>
+                    <li>Provide a Settings control that inherits from the <code>FolderMappingSettingsControlBase</code> class.</li>
+                    <li>Provide an icon to be displayed in the File Manager.</li>
+                </ol>
+            </li>
+        </ul>
+        <p>See <a href="http://www.dnnsoftware.com/wiki/folder-providers">Folder Providers</a> in the DNN Wiki.</p>
+
+
+    <h3 id="friendprov"> Friendly URL providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <friendlyUrl defaultProvider="DNNFriendlyUrl">
+        <providers>
+            <clear/>
+            <add name="DNNFriendlyUrl" type="DotNetNuke.Services.Url.FriendlyUrl.DNNFriendlyUrlProvider, DotNetNuke.HttpModules" includePageName="true" regexMatch="[^a-zA-Z0-9 _-]" urlFormat="advanced"/>
+        </providers>
+    </friendlyUrl>
+            </xmp>
+        </p>
+        <p>A friendly URL is a human-friendly and/or search-friendly URL that hides a coded URL. A <b>friendly URL provider</b> associates the internal URL (used to retrieve the requested page) with the friendly URL (displayed on the browser's address bar when the page is displayed).</p>
+        <p>See <a href="http://www.ifinity.com.au/Blog/EntryId/102/Building-Friendly-Urls-into-DotNetNuke-Modules-ndash-Part-1">Building Friendly URLs in the iFinity blog by Bruce Chapman</a>.</p>
+
+
+    <h3 id="htmlprov"> HTML editor providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <htmlEditor defaultProvider="DNNConnect.CKE">
+        <providers>
+            <clear/>
+            <add name="DNNConnect.CKE" type="DNNConnect.CKEditorProvider.CKHtmlEditorProvider, DNNConnect.CKEditorProvider" providerPath="~/Providers/HtmlEditorProviders/DNNConnect.CKE/" settingsControlPath="~/Providers/HtmlEditorProviders/DNNConnect.CKE/Module/EditorConfigManager.ascx" />
+        </providers>
+    </htmlEditor>
+            </xmp>
+        </p>
+        <p>An <b>HTML editor provider</b> is simply a third-party editor used to edit HTML in the sites. Third-party HTML editors include the following:
+            <ul>
+                <li><a href="http://freetextbox.com/default.aspx">Ftb3HtmlEditorProvider</a></li>
+                <li><a href="http://ckeditor.com/">FckHtmlEditorProvider</a> (<a href="http://dnnckeditor.codeplex.com/">in Codeplex</a>)</li>
+                <li><a href="http://www.telerik.com/products/aspnet-ajax/editor.aspx">TelerikEditorProvider</a></li>
+                <li><a href="https://radeditor.codeplex.com/">RadEditorProvider</a></li>
+            </ul>
+        </p>
+
+
+    <h3 id="logprov"> Logging providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <logging defaultProvider="DBLoggingProvider">
+        <providers>
+            <clear/>
+            <add name="DBLoggingProvider" type="DotNetNuke.Services.Log.EventLog.DBLoggingProvider, DotNetNuke" providerPath="~\Providers\LoggingProviders\DBLoggingProvider\"/>
+        </providers>
+    </logging>
+            </xmp>
+        </p>
+        <p>A <b>logging provider</b> manages error logs, event logs, and security logs in DNN.</p>
+
+
+    <h3 id="membprov"> Membership providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <members defaultProvider="AspNetMembershipProvider">
+        <providers>
+            <clear/>
+            <add name="AspNetMembershipProvider" type="DotNetNuke.Security.Membership.AspNetMembershipProvider, DotNetNuke" providerPath="~\Providers\MembershipProviders\AspNetMembershipProvider\"/>
+        </providers>
+    </members>
+            </xmp>
+        </p>
+        <p>A <b>membership provider</b> manages the ability of site members to access restricted pages or additional functionality, such as areas that are accessible only with a paid subscription.</p>
+
+        <p>See <b><a href="#authprov">authentication providers</a></b>, <b><a href="#permsprov">permissions providers</a></b>, and <b><a href="#rolesprov">roles providers</a></b>.</p>
+
+
+    <h3 id="modcacheprov"> Module caching providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <moduleCaching defaultProvider="FileModuleCachingProvider">
+        <providers>
+            <clear />
+            <add name="FileModuleCachingProvider" type="DotNetNuke.Services.ModuleCache.FileProvider, DotNetNuke" providerPath="~\Providers\ModuleCachingProviders\FileModuleCachingProvider\" />
+            <add name="MemoryModuleCachingProvider" type="DotNetNuke.Services.ModuleCache.MemoryProvider, DotNetNuke" providerPath="~\Providers\ModuleCachingProviders\MemoryModuleCachingProvider\" />
+        </providers>
+    </moduleCaching>
+            </xmp>
+        </p>
+        <p>A <b>module caching provider</b> manages how the modules themselves are cached and aged.</p>
+        <p>See <b><a href="#outcacheprov">output caching provider</a></b>.</p>
+
+
+    <h3 id="navprov"> Navigation providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <navigationControl defaultProvider="DDRMenuNavigationProvider">
+        <providers>
+            <clear/>
+            <add name="DDRMenuNavigationProvider" type="DotNetNuke.Web.DDRMenu.DDRMenuNavigationProvider, DotNetNuke.Web.DDRMenu" />
+        </providers>
+    </navigationControl>
+            </xmp>
+        </p>
+        <p>A <b>navigation provider</b> supplies a specific type of navigation. <a href="http://www.dnnsoftware.com/wiki/ddrmenu-user-guide">DDRMenu</a> is the default navigation provider in DNN8.</p>
+        <p>In addition, the following navigation providers are included in a DNN installation:
+            <ul>
+                <li>DNNDropDownNavigationProvider</li>
+                <li>DNNMenuNavigationProvider</li>
+                <li>DNNTreeNavigationProvider</li>
+                <li>SolpartMenuNavigationProvider</li>
+            </ul>
+        </p>
+
+
+    <h3 id="outcacheprov"> Output caching providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <outputCaching defaultProvider="FileOutputCachingProvider">
+        <providers>
+            <clear />
+        </providers>
+    </outputCaching>
+            </xmp>
+        </p>
+        <p>An <b>output caching provider</b> manages how the HTML output of a module is cached and aged.</p>
+        <p>See <b><a href="#modcacheprov">module caching provider</a></b>.</p>
+
+
+    <h3 id="permsprov"> Permissions providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <permissions defaultProvider="CorePermissionProvider">
+        <providers>
+            <clear/>
+            <add name="CorePermissionProvider" type="DotNetNuke.Security.Permissions.CorePermissionProvider, DotNetNuke" providerPath="~\Providers\PermissionProviders\CorePermissionProvider\" />
+        </providers>
+    </permissions>
+            </xmp>
+        </p>
+        <p>A <b>permissions provider</b> manages asset permissions, such as those associated with components of the site, including page permissions and module permissions. These permissions are used in conjunction with user permissions (membership providers) and group permissions (roles provider) to determine if a specific user would be allowed to access the asset.</p>
+
+        <p>See <b><a href="#authprov">authentication providers</a></b>, <b><a href="#membprov">membership providers</a></b>, and <b><a href="#rolesprov">roles providers</a></b>.</p>
+
+
+    <h3 id="profprov"> Profile providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <profiles defaultProvider="DNNProfileProvider">
+        <providers>
+            <clear/>
+            <add name="DNNProfileProvider" type="DotNetNuke.Security.Profile.DNNProfileProvider, DotNetNuke" providerPath="~\Providers\MembershipProviders\DNNProfileProvider\"/>
+        </providers>
+    </profiles>
+            </xmp>
+        </p>
+        <p>A <b>profile provider</b> manages the profiles of registered users of the website.</p>
+
+
+    <h3 id="rolesprov"> Roles providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <roles defaultProvider="DNNRoleProvider">
+        <providers>
+            <clear/>
+            <add name="DNNRoleProvider" type="DotNetNuke.Security.Roles.DNNRoleProvider, DotNetNuke" providerPath="~\Providers\MembershipProviders\DNNMembershipProvider\"/>
+        </providers>
+    </roles>
+            </xmp>
+        </p>
+        <p>A <b>roles provider</b> manages the permissions required for specific roles. This allows the administrator to easily assign/revoke all permissions associated with a role by simply adding/deleting a user or a set of users to/from the role.</p>
+
+        <p>See <b><a href="#authprov">authentication providers</a></b>, <b><a href="#membprov">membership providers</a></b>, and <b><a href="#permsprov">permissions providers</a></b>.</p>
+
+
+    <h3 id="schedprov"> Scheduling providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <scheduling defaultProvider="DNNScheduler">
+        <providers>
+            <clear/>
+            <add name="DNNScheduler" type="DotNetNuke.Services.Scheduling.DNNScheduler, DotNetNuke" providerPath="~\Providers\SchedulingProviders\DNNScheduler\" debug="false" maxThreads="1" delayAtAppStart="60" />
+        </providers>
+    </scheduling>
+            </xmp>
+        </p>
+        <p>A <b>scheduling provider</b> manages when tasks are performed.</p>
+        <p>See <a href="https://dnnzone.files.wordpress.com/2010/08/dotnetnuke-scheduler.pdf">DotNetNuke Scheduling Provider</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/2386">Dan Caron</a>.</p>
+
+
+    <h3 id="searchdataprov"> Search data store providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <searchDataStore defaultProvider="SearchDataStoreProvider">
+        <providers>
+            <clear/>
+            <add name="SearchDataStoreProvider" type="DotNetNuke.Services.Search.SearchDataStore, DotNetNuke" providerPath="~\Providers\SearchProviders\SearchDataStore\"/>
+        </providers>
+    </searchDataStore>
+            </xmp>
+        </p>
+        <p>A <b>search data store provider</b> allows you to specify where to store search results.</p>
+        <p>See <b><a href="#searchindexprov">search index providers</a></b>.</p>
+
+
+    <h3 id="searchindexprov"> Search index providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <searchIndex defaultProvider="ModuleIndexProvider">
+        <providers>
+            <clear/>
+            <add name="ModuleIndexProvider" type="DotNetNuke.Services.Search.ModuleIndexer, DotNetNuke" providerPath="~\Providers\SearchProviders\ModuleIndexer\"/>
+        </providers>
+    </searchIndex>
+            </xmp>
+        </p>
+        <p>A <b>search index provider</b> allows you to specify how the site content is indexed and what rules are performed to do searches.</p>
+        <p>See <b><a href="#searchdataprov">search data store providers</a></b>.</p>
+
+
+    <h3 id="sitemapprov"> Sitemap providers </h3>
+        <p>Default web.config setting:
+            <xmp>
+    <sitemap defaultProvider="coreSitemapProvider">
+        <providers>
+            <clear />
+            <add name="coreSitemapProvider" type="DotNetNuke.Services.Sitemap.CoreSitemapProvider, DotNetNuke" providerPath="~\Providers\MembershipProviders\Sitemap\CoreSitemapProvider\" />
+        </providers>
+    </sitemap>
+            </xmp>
+        </p>
+        <p>A <b>sitemap provider</b> creates an XML file that informs web crawlers and users how your site is organized. A module's sitemap exposes the multiple pages generated by the module, such as when a module serves up blog posts, articles, and forum discussions.</p>
+
+
+    <h2> Sources </h2>
+    <ul>
+        <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/providers">Providers</a> and child links.</li>
+        <li></li>
+    </ul>
+
+
+</body>
