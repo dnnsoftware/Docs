@@ -110,6 +110,7 @@
     <h2> See Also </h2>
     <ul>
         <!-- <li><a href="/dev/REF-ContentsModulePack.shtml">Contents of a Module Package</a></li> -->
+        <li><a href="/dev/REF-Providers.shtml">Providers Reference</a></li>
         <li>DNN 8 API Reference</li>
     </ul>
 

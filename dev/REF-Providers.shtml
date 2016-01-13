@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-</head>
-<body>
-
+.. raw:: html
 
     <h1> Providers Reference </h1>
 
     <h2> Overview </h2>
-    <p>Services can be provided by third parties to provide common functionality to sites. In most cases, these services are provided by apps on the server or by modules in DNN. To replace the default provider, the <b>web.config</b> file must be updated to indicate the new provider.</p>
+    <p>Services can be provided by third parties to provide common functionality to sites. In most cases, these services are provided by apps on the server or by modules in DNN.</p>
 
     <p>In a module, a provider is comprised of two layers:
         <ul>
@@ -21,26 +13,28 @@
         <b>Example:</b> An abstract provider can be <b>Data Provider</b>, and a concrete provider can be <b>SQL Data Provider</b>.
     </p>
 
+    <p>To replace the default provider, simply change the value of the <code>defaultProvider</code> attribute of the appropriate tag in the <b>web.config</b> file.</p>
+
     <p>The following are some of the types of providers used in DNN:
         <ul>
-            <li><a href="#authprov">Authentication providers</a></li>
-            <li><a href="#cacheprov">Caching providers</a></li>
-            <li><a href="#dataprov">Data providers</a></li>
-            <li><a href="#folderprov">Folder providers</a></li>
-            <li><a href="#friendprov">Friendly URL providers</a></li>
-            <li><a href="#htmlprov">HTML editor providers</a></li>
-            <li><a href="#logprov">Logging providers</a></li>
-            <li><a href="#membprov">Membership providers</a></li>
-            <li><a href="#modcacheprov">Module caching providers</a></li>
-            <li><a href="#navprov">Navigation providers</a></li>
-            <li><a href="#outcacheprov">Output caching providers</a></li>
-            <li><a href="#permsprov">Permissions providers</a></li>
-            <li><a href="#profprov">Profile providers</a></li>
-            <li><a href="#rolesprov">Roles providers</a></li>
-            <li><a href="#schedprov">Scheduling providers</a></li>
-            <li><a href="#searchdataprov">Search data store providers</a></li>
-            <li><a href="#searchindexprov">Search index providers</a></li>
-            <li><a href="#sitemapprov">Sitemap providers</a></li>
+            <li><a href="#authprov">Authentication provider</a></li>
+            <li><a href="#cacheprov">Caching provider</a></li>
+            <li><a href="#dataprov">Data provider</a></li>
+            <li><a href="#folderprov">Folder provider</a></li>
+            <li><a href="#friendprov">Friendly URL provider</a></li>
+            <li><a href="#htmlprov">HTML editor provider</a></li>
+            <li><a href="#logprov">Logging provider</a></li>
+            <li><a href="#membprov">Membership provider</a></li>
+            <li><a href="#modcacheprov">Module caching provider</a></li>
+            <li><a href="#navprov">Navigation provider</a></li>
+            <li><a href="#outcacheprov">Output caching provider</a></li>
+            <li><a href="#permsprov">Permissions provider</a></li>
+            <li><a href="#profprov">Profile provider</a></li>
+            <li><a href="#rolesprov">Roles provider</a></li>
+            <li><a href="#schedprov">Scheduling provider</a></li>
+            <li><a href="#searchdataprov">Search data store provider</a></li>
+            <li><a href="#searchindexprov">Search index provider</a></li>
+            <li><a href="#sitemapprov">Sitemap provider</a></li>
         </ul>
     </p>
 
@@ -48,7 +42,7 @@
     <h2> Provider types </h2>
 
 
-    <h3 id="authprov"> Authentication providers </h3>
+    <h3 id="authprov"> Authentication provider </h3>
         <p>Default web.config setting:
             <xmp>
     <authentication defaultProvider="ADSIAuthenticationProvider">
@@ -59,14 +53,14 @@
     </authentication>
             </xmp>
         </p>
-        <p>An <b>authentication provider</b> manages your website user logins. It includes these UI elements:
+        <p>An <b>authentication provider</b> manages your website user logins using a single sign-on (SSO) provider. An SSO provider installs these UI elements:
             <ul>
                 <li>a login control</li>
                 <li>a settings control</li>
                 <li>(optional) a logout control</li>
             </ul>
         </p>
-        <p>DNN provides the following authentication providers:
+        <p>DNN natively provides support for the following SSO providers:
             <ul>
                 <li>Facebook</li>
                 <li>Google</li>
@@ -86,10 +80,10 @@
             <b>Note:</b> Some of these may not be compatible with DNN8+.
         </p>
         <p>You can also <a href="http://www.dnnsoftware.com/community-blog/cid/134678/dotnetnuke-tips-and-tricks-12-creating-your-own-authentication-provider">create your own</a>.</p>
-        <p>See <b><a href="#membprov">membership providers</a></b>, <b><a href="#permsprov">permissions providers</a></b>, and <b><a href="#rolesprov">roles providers</a></b>.</p>
+        <p>See <b><a href="#membprov">membership provider</a></b> (local authentication), <b><a href="#permsprov">permissions provider</a></b>, and <b><a href="#rolesprov">roles provider</a></b>.</p>
 
 
-    <h3 id="cacheprov"> Caching providers </h3>
+    <h3 id="cacheprov"> Caching provider </h3>
         <p>Default web.config setting:
             <xmp>
     <caching defaultProvider="FileBasedCachingProvider">
@@ -100,10 +94,17 @@
     </caching>
             </xmp>
         </p>
-        <p>A <b>caching provider</b> ensures that cached settings are synchronized across multiple servers in a webfarm.</p>
+        <p>A <b>caching provider</b> ensures that cached settings are synchronized across multiple servers in a web farm.</p>
+        <p>DNN provides two caching providers:
+            <ul>
+                <li>The default <b>FileBasedCachingProvider</b> uses a central file store to invalidate cache entries. This caching provider requires setting up permissions, application pools, domain users, and code access security.</li>
+                <li>The <b>WebBasedCachingProvider</b> is available only for Evoq customers and is recommended over the default. It requires minimal setup. Any web server can notify the other web servers to expire their cache in order to remain synchronized.</li>
+            </ul>
+            <b>Note:</b> These two providers use cache invalidation to synchronize caching; they do not handle site changes, such as newly uploaded files or newly installed modules.
+        </p>
 
 
-    <h3 id="dataprov"> Data providers </h3>
+    <h3 id="dataprov"> Data provider </h3>
         <p>Default web.config setting:
             <xmp>
     <data defaultProvider="SqlDataProvider">
@@ -116,14 +117,14 @@
         </p>
         <p>A <b>data provider</b> allows a module to transfer data to and from a data store. To enable upgrades, data provider files include their version numbers in their filenames. During an upgrade, all intervening upgrades that were not previously installed will be installed with the current version.</p>
 
-        <p>Two settings are required by data providers. These are set in web.config.
+        <p>Data providers require these web.config settings:
             <ul>
-                <li>objectQualifier. A custom string used as a prefix for names of DNN-generated objects, such as tables and stored procedures, to distinguish objects generated by different module creators. The default is blank.</li>
-                <li>databaseOwner. The user account used to access the database. The default is <code>dbo</code>.</li>
+                <li><b>objectQualifier</b>. A custom string used as a prefix for names of DNN-generated objects, such as tables and stored procedures, to distinguish objects generated by different module creators. The default is blank.</li>
+                <li><b>databaseOwner</b>. The user account used to access the database. The default is <code>dbo</code>.</li>
             </ul>
         </p>
 
-        <p>DNN provides SQL Data Provider as the default concrete data provider. These UTF-8 files are required to use the SQL Data Providers:
+        <p>DNN's default concrete data provider is the SQL Data Provider, which requires these UTF-8 files:
             <ul>
                 <li><b>xx.xx.xx.sqldataprovider</b> is a script executed during module/core installation/upgrade to modify the objectQualifier and databaseOwner settings. The <code>xx.xx.xx</code> portion of the filename is the script version.</li>
                 <li><b>uninstall.sqldataprovider</b> includes all of the module's SQL stored procedures, functions, views, and tables to be removed from the data store when the module is uninstalled. <b>Developers:</b> Always check if an item exists before removing it.</li>
@@ -131,7 +132,7 @@
         </p>
 
 
-    <h3 id="folderprov"> Folder providers </h3>
+    <h3 id="folderprov"> Folder provider </h3>
         <p>Default web.config setting:
             <xmp>
     <folder defaultProvider="StandardFolderProvider">
@@ -144,14 +145,21 @@
     </folder>
             </xmp>
         </p>
-        <p>A <b>folder provider</b> enables sites to map folder paths to third-party cloud storage systems, such as Amazon Simple Storage Service (S3), Dropbox, Google Drive, and Microsoft Azure Storage.</p>
-        <p>A <b>folder type</b> or <b>folder mapping</b> is a specific implementation of a folder provider for a specific storage system.</p>
+        <p>A <b>folder provider</b> enables sites to use multiple storage locations, including third-party cloud storage systems, such as Amazon Simple Storage Service (S3), Dropbox, Google Drive, and Microsoft Azure Storage.</p>
+        <p>DNN provides three folder providers, and each has its own icon in the File Manager:
+            <ul>
+                <li><b>StandardFolderProvider</b>, an unsecured file system.</li>
+                <li><b>SecureFolderProvider</b>, a secured file system.</li>
+                <li><b>DatabaseFolderProvider</b>, a secured database.</li>
+            </ul>
+        </p>
+        <p>A <b>folder mapping</b> or <b>folder type</b> is an implementation of a folder provider for a specific storage system. A folder mapping can have its own settings, and it can be prioritized in case of collisions during synchronization.</p>
         <ul>
-            <li><b>Administrators:</b> You can configure which folder types to allow in the site.</li>
+            <li><b>Administrators:</b> You can choose and configure the folder types you allow in the DNN installation (host) or in a specific site (administrator).</li>
             <li><b>Developers:</b> To create a folder provider,
                 <ol>
                     <li>Implement the abstract methods inherited from the <code>FolderProvider</code> class.</li>
-                    <li>Provide a Settings control that inherits from the <code>FolderMappingSettingsControlBase</code> class.</li>
+                    <li>Provide a <b>Settings</b> control that inherits from the <code>FolderMappingSettingsControlBase</code> class.</li>
                     <li>Provide an icon to be displayed in the File Manager.</li>
                 </ol>
             </li>
@@ -159,7 +167,7 @@
         <p>See <a href="http://www.dnnsoftware.com/wiki/folder-providers">Folder Providers</a> in the DNN Wiki.</p>
 
 
-    <h3 id="friendprov"> Friendly URL providers </h3>
+    <h3 id="friendprov"> Friendly URL provider </h3>
         <p>Default web.config setting:
             <xmp>
     <friendlyUrl defaultProvider="DNNFriendlyUrl">
@@ -171,10 +179,18 @@
             </xmp>
         </p>
         <p>A friendly URL is a human-friendly and/or search-friendly URL that hides a coded URL. A <b>friendly URL provider</b> associates the internal URL (used to retrieve the requested page) with the friendly URL (displayed on the browser's address bar when the page is displayed).</p>
-        <p>See <a href="http://www.ifinity.com.au/Blog/EntryId/102/Building-Friendly-Urls-into-DotNetNuke-Modules-ndash-Part-1">Building Friendly URLs in the iFinity blog by Bruce Chapman</a>.</p>
+        <p>Third-party friendly URL providers include:
+            <ul>
+                <li>Aricie: <a href="http://www.dnnsoftware.com/forge/aricie-friendlier-url-provider-1">Friendlier URL Provider</a></li>
+                <li>DNNSharp: <a href="http://www.dnnsharp.com/dnn/modules/seo-rewriter/url-adapter">Ultimate DNN SEO URL Rewriter</a></li>
+                <li>iFinity: <a href="http://www.ifinity.com.au/Products/Url_Master/Downloads">URL Master</a></li>
+                <li>PackFlash: <a href="http://www.packflash.com/dotnetnuke-dnn-friendly-urls-seo-and-sitemaps-module">PackFlash SEO</a></li>
+            </ul>
+        </p>
+        <p>See <a href="http://www.ifinity.com.au/Blog/EntryId/102/Building-Friendly-Urls-into-DotNetNuke-Modules-ndash-Part-1">Building Friendly URLs</a> in the iFinity blog by <a href="http://www.dnnsoftware.com/users/bruce-chapman">Bruce Chapman</a>.</p>
 
 
-    <h3 id="htmlprov"> HTML editor providers </h3>
+    <h3 id="htmlprov"> HTML editor provider </h3>
         <p>Default web.config setting:
             <xmp>
     <htmlEditor defaultProvider="DNNConnect.CKE">
@@ -185,7 +201,7 @@
     </htmlEditor>
             </xmp>
         </p>
-        <p>An <b>HTML editor provider</b> is simply a third-party editor used to edit HTML in the sites. Third-party HTML editors include the following:
+        <p>An <b>HTML editor provider</b> is used to edit HTML directly within the site. Third-party HTML editors include:
             <ul>
                 <li><a href="http://freetextbox.com/default.aspx">Ftb3HtmlEditorProvider</a></li>
                 <li><a href="http://ckeditor.com/">FckHtmlEditorProvider</a> (<a href="http://dnnckeditor.codeplex.com/">in Codeplex</a>)</li>
@@ -195,7 +211,7 @@
         </p>
 
 
-    <h3 id="logprov"> Logging providers </h3>
+    <h3 id="logprov"> Logging provider </h3>
         <p>Default web.config setting:
             <xmp>
     <logging defaultProvider="DBLoggingProvider">
@@ -209,7 +225,7 @@
         <p>A <b>logging provider</b> manages error logs, event logs, and security logs in DNN.</p>
 
 
-    <h3 id="membprov"> Membership providers </h3>
+    <h3 id="membprov"> Membership provider </h3>
         <p>Default web.config setting:
             <xmp>
     <members defaultProvider="AspNetMembershipProvider">
@@ -220,12 +236,22 @@
     </members>
             </xmp>
         </p>
-        <p>A <b>membership provider</b> manages the ability of site members to access restricted pages or additional functionality, such as areas that are accessible only with a paid subscription.</p>
+        <p>A <b>membership provider</b> manages your website user logins using a local solution. The default membership provider ASP.NET Membership supports the following:
+            <ul>
+                <li>Creating new user accounts.</li>
+                <li>Storing user information in SQL, Active Directory, or other data store.</li>
+                <li>Authenticating users.</li>
+                <li>Managing passwords.</li>
+                <li>Exposing a unique identifier for authenticated users to use in your own modules.</li>
+            </ul>
+        </p>
 
-        <p>See <b><a href="#authprov">authentication providers</a></b>, <b><a href="#permsprov">permissions providers</a></b>, and <b><a href="#rolesprov">roles providers</a></b>.</p>
+        <p>Unlike authentication providers which provide SSO authentication, the membership provider is a standalone authentication solution that is local to the site or to the DNN installation.</p>
+
+        <p>See <b><a href="#authprov">authentication provider</a></b> (SSO authentication), <b><a href="#permsprov">permissions provider</a></b>, and <b><a href="#rolesprov">roles provider</a></b>. Also see the MSDN Library's <a href="https://msdn.microsoft.com/en-us/library/yh26yfzy.aspx">Introduction to Membership</a> and Engage Weblog's <a href="http://www.engagesoftware.com/blog/post/447/building-your-own-membership-provider-for-dotnetnuke-and-asp-net-2-0">Building your own Membership Provider</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/32389">Henry Kenuam</a>.</p>
 
 
-    <h3 id="modcacheprov"> Module caching providers </h3>
+    <h3 id="modcacheprov"> Module caching provider </h3>
         <p>Default web.config setting:
             <xmp>
     <moduleCaching defaultProvider="FileModuleCachingProvider">
@@ -237,11 +263,11 @@
     </moduleCaching>
             </xmp>
         </p>
-        <p>A <b>module caching provider</b> manages how the modules themselves are cached and aged.</p>
+        <p>A <b>module caching provider</b> manages how the output of modules are cached and aged, whether they are stored in a file or in memory.</p>
         <p>See <b><a href="#outcacheprov">output caching provider</a></b>.</p>
 
 
-    <h3 id="navprov"> Navigation providers </h3>
+    <h3 id="navprov"> Navigation provider </h3>
         <p>Default web.config setting:
             <xmp>
     <navigationControl defaultProvider="DDRMenuNavigationProvider">
@@ -261,9 +287,16 @@
                 <li>SolpartMenuNavigationProvider</li>
             </ul>
         </p>
+        <p>Third-party navigation providers include:
+            <ul>
+                <li><a href="http://dnnradmenu.codeplex.com/">RadMenu</a></li>
+                <li><a href="http://dnnjdmenu.codeplex.com/">JDmenu</a></li>
+                <li><a href="http://housemenumodulednn6.codeplex.com/">HouseMenu</a></li>
+            </ul>
+        </p>
 
 
-    <h3 id="outcacheprov"> Output caching providers </h3>
+    <h3 id="outcacheprov"> Output caching provider </h3>
         <p>Default web.config setting:
             <xmp>
     <outputCaching defaultProvider="FileOutputCachingProvider">
@@ -273,11 +306,11 @@
     </outputCaching>
             </xmp>
         </p>
-        <p>An <b>output caching provider</b> manages how the HTML output of a module is cached and aged.</p>
+        <p>An <b>output caching provider</b> manages how the entire page is cached and aged.</p>
         <p>See <b><a href="#modcacheprov">module caching provider</a></b>.</p>
 
 
-    <h3 id="permsprov"> Permissions providers </h3>
+    <h3 id="permsprov"> Permissions provider </h3>
         <p>Default web.config setting:
             <xmp>
     <permissions defaultProvider="CorePermissionProvider">
@@ -288,12 +321,12 @@
     </permissions>
             </xmp>
         </p>
-        <p>A <b>permissions provider</b> manages asset permissions, such as those associated with components of the site, including page permissions and module permissions. These permissions are used in conjunction with user permissions (membership providers) and group permissions (roles provider) to determine if a specific user would be allowed to access the asset.</p>
+        <p>A <b>permissions provider</b> manages asset permissions, such as those associated with components of the site, including page permissions and module permissions. These permissions are used in conjunction with user permissions (authentication provider or membership provider) and group permissions (roles provider) to determine if a specific user would be allowed to access the asset.</p>
 
-        <p>See <b><a href="#authprov">authentication providers</a></b>, <b><a href="#membprov">membership providers</a></b>, and <b><a href="#rolesprov">roles providers</a></b>.</p>
+        <p>See <b><a href="#authprov">authentication provider</a></b> (SSO authentication), <b><a href="#membprov">membership provider (local authentication)</a></b>, and <b><a href="#rolesprov">roles provider</a></b>.</p>
 
 
-    <h3 id="profprov"> Profile providers </h3>
+    <h3 id="profprov"> Profile provider </h3>
         <p>Default web.config setting:
             <xmp>
     <profiles defaultProvider="DNNProfileProvider">
@@ -307,7 +340,7 @@
         <p>A <b>profile provider</b> manages the profiles of registered users of the website.</p>
 
 
-    <h3 id="rolesprov"> Roles providers </h3>
+    <h3 id="rolesprov"> Roles provider </h3>
         <p>Default web.config setting:
             <xmp>
     <roles defaultProvider="DNNRoleProvider">
@@ -320,10 +353,10 @@
         </p>
         <p>A <b>roles provider</b> manages the permissions required for specific roles. This allows the administrator to easily assign/revoke all permissions associated with a role by simply adding/deleting a user or a set of users to/from the role.</p>
 
-        <p>See <b><a href="#authprov">authentication providers</a></b>, <b><a href="#membprov">membership providers</a></b>, and <b><a href="#permsprov">permissions providers</a></b>.</p>
+        <p>See <b><a href="#authprov">authentication provider</a></b> (SSO authentication), <b><a href="#membprov">membership provider</a></b> (local authentication), and <b><a href="#permsprov">permissions provider</a></b>.</p>
 
 
-    <h3 id="schedprov"> Scheduling providers </h3>
+    <h3 id="schedprov"> Scheduling provider </h3>
         <p>Default web.config setting:
             <xmp>
     <scheduling defaultProvider="DNNScheduler">
@@ -334,11 +367,12 @@
     </scheduling>
             </xmp>
         </p>
-        <p>A <b>scheduling provider</b> manages when tasks are performed.</p>
+        <p>A <b>scheduling provider</b> manages when tasks are performed and triggers them automatically at the indicated time.</p>
+        <p>The DNN Scheduler can be accessed through <b>Host</b> &gt; <b>Advanced Settings</b> (double gear icon) &gt; <b>Schedule</b>.</p>
         <p>See <a href="https://dnnzone.files.wordpress.com/2010/08/dotnetnuke-scheduler.pdf">DotNetNuke Scheduling Provider</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/2386">Dan Caron</a>.</p>
 
 
-    <h3 id="searchdataprov"> Search data store providers </h3>
+    <h3 id="searchdataprov"> Search data store provider </h3>
         <p>Default web.config setting:
             <xmp>
     <searchDataStore defaultProvider="SearchDataStoreProvider">
@@ -349,11 +383,11 @@
     </searchDataStore>
             </xmp>
         </p>
-        <p>A <b>search data store provider</b> allows you to specify where to store search results.</p>
-        <p>See <b><a href="#searchindexprov">search index providers</a></b>.</p>
+        <p>A <b>search data store provider</b> allows you to specify where the search engine should store search results and other search-related data.</p>
+        <p>See <b><a href="#searchindexprov">search index provider</a></b>.</p>
 
 
-    <h3 id="searchindexprov"> Search index providers </h3>
+    <h3 id="searchindexprov"> Search index provider </h3>
         <p>Default web.config setting:
             <xmp>
     <searchIndex defaultProvider="ModuleIndexProvider">
@@ -365,10 +399,10 @@
             </xmp>
         </p>
         <p>A <b>search index provider</b> allows you to specify how the site content is indexed and what rules are performed to do searches.</p>
-        <p>See <b><a href="#searchdataprov">search data store providers</a></b>.</p>
+        <p>See <b><a href="#searchdataprov">search data store provider</a></b> and <b><a href="#sitemapprov">sitemap provider</a></b>.</p>
 
 
-    <h3 id="sitemapprov"> Sitemap providers </h3>
+    <h3 id="sitemapprov"> Sitemap provider </h3>
         <p>Default web.config setting:
             <xmp>
     <sitemap defaultProvider="coreSitemapProvider">
@@ -380,13 +414,17 @@
             </xmp>
         </p>
         <p>A <b>sitemap provider</b> creates an XML file that informs web crawlers and users how your site is organized. A module's sitemap exposes the multiple pages generated by the module, such as when a module serves up blog posts, articles, and forum discussions.</p>
+        <p>If your DNN website's sitemap is requested (<code>http://www.domain.com/Sitemap.aspx</code>), the HTTP handler (set in web.config) runs its <b>ProcessRequest</b> method, which serves up the sitemap.xml file, if it exists. Otherwise, the <b>ProcessRequest</b> method calls <b>BuildSiteMap</b> to create sitemap.xml as follows:
+            <ol>
+                <li>Checks the cache settings configured through the <b>SiteMap</b> module, which is available under <b>Admin</b> &gt; <b>Search Engine SiteMap</b>.</li>
+                <li>Loops through all sitemap providers to build a collection of URLs.</li>
+                <li>Creates the sitemap.xml file and stores it in the <b>Portals/</b>portalID<b>/SiteMap</b> folder.</li>
+            </ol>
+        </p>
+        <p>See the DNN Wiki's <a href="http://www.dnnsoftware.com/community-blog/cid/131987/creating-a-sitemap-provider-for-your-module">Creating a Sitemap Provider for Your Module</a> by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/3015">Christopher Paterra</a>.</p>
 
 
     <h2> Sources </h2>
     <ul>
         <li>DNN Wiki: <a href="http://www.dnnsoftware.com/wiki/providers">Providers</a> and child links.</li>
-        <li></li>
     </ul>
-
-
-</body>
