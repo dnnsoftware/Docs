@@ -24,32 +24,32 @@
     <h2> Steps </h2>
     <ol>
         <li>Go to <b>Host</b> &gt; <b>Extensions</b>.
-            <br/><img src="\common\img\scr-InstallExt-1.png" width="75%" alt="Host > Extensions"/>
+            <br/><img src="/common/img/scr-InstallExt-1.png" width="75%" alt="Host > Extensions"/>
         </li>
         <li>Click <b>Install Extension Wizard</b>.
-            <br/><img src="\common\img\scr-InstallExt-3.png" width="75%" alt="Install Extension Wizard"/>
+            <br/><img src="/common/img/scr-InstallExt-3.png" width="75%" alt="Install Extension Wizard"/>
         </li>
         <li>Click <b>Choose File</b> and select the zip file of the extension. The button name changes to the name of the zip file.
-            <br/><img src="\common\img\scr-InstallExt-4.png" width="50%" alt="Choose zip file of the extension"/>
+            <br/><img src="/common/img/scr-InstallExt-4.png" width="50%" alt="Choose zip file of the extension"/>
         </li>
         <li>Informational pages will be displayed one after the other:
             <ol>
                 <li><b>Package Information</b> includes the extension's version and description, as well as information about the creator.
-                    <br/><img src="\common\img\scr-InstallExt-6.png" width="50%" alt="Package Information"/>
+                    <br/><img src="/common/img/scr-InstallExt-6.png" width="50%" alt="Package Information"/>
                 </li>
                 <li><b>Release Notes</b> displays what's new in the current release of the extension.
-                    <br/><img src="\common\img\scr-InstallExt-7.png" width="50%" alt="Release Notes"/>
+                    <br/><img src="/common/img/scr-InstallExt-7.png" width="50%" alt="Release Notes"/>
                 </li>
                 <li><b>License</b> displays the creator's license terms. Accept the license to continue.
-                    <br/><img src="\common\img\scr-InstallExt-8.png" width="50%" alt="License"/>
+                    <br/><img src="/common/img/scr-InstallExt-8.png" width="50%" alt="License"/>
                 </li>
                 <li><b>Package Installation Report</b> displays a log of actions performed by the installation.
-                    <br/><img src="\common\img\scr-InstallExt-10.png" width="50%" alt="Package Installation Report"/>
+                    <br/><img src="/common/img/scr-InstallExt-10.png" width="50%" alt="Package Installation Report"/>
                 </li>
             </ol>
         </li>
         <li>Verify that the newly installed extension appears in the list under the <b>Installed Extensions</b> tab.
-            <br/><img src="\common\img\scr-InstallExt-11.png" width="75%" alt="New extension appears under Installed Extensions."/>
+            <br/><img src="/common/img/scr-InstallExt-11.png" width="75%" alt="New extension appears under Installed Extensions."/>
         </li>
     </ol>
 

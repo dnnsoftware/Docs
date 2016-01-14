@@ -25,7 +25,14 @@
     <h2> Steps </h2>
     <ol>
 
-        <li>While logged in as an admin or host, go to <b>Admin</b> &gt; (double-gear tab) &gt; <b>Themes</b>.
+        <li>Add your theme to your local DNN installation.
+            <ol type=a>
+                <li>Create a folder for your theme in the <code>Portals\</code><i>websitename</i><code>\Skins folder</code> of your DNN installation. The folder name becomes your theme name. Example: If you create the folder <code>C:\DNN8\Portals\MyWebsite\Skins\MyTheme</code>, <b>MyTheme</b> becomes your theme's name.</li>
+                <li>Copy your files to the new theme folder.</li>
+            </ol>
+        </li>
+
+        <li>In <code>www.dnndev.me</code>, log in as an admin or host, and go to <b>Admin</b> &gt; (double-gear tab) &gt; <b>Themes</b>.
             <br/><img src="/common/img/scr-HTMLtoASCX-4.png" width=75%>
         </li>
 
