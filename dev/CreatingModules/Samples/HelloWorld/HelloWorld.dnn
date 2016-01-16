@@ -1,0 +1,69 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages><package name="MyOrganizationName.HelloWorld" type="Module" version="1.0.0">
+  <friendlyName>Hello World</friendlyName>
+  <description>A simple hello world</description>
+  <iconFile />
+  <owner>
+    <name>MyOrganizationName</name>
+    <organization>MyOrganizationName</organization>
+    <url />
+    <email />
+  </owner>
+  <license>The license for this package is not currently included within the installation file, please check with the vendor for full license details.</license>
+  <releaseNotes>This package has no Release Notes.</releaseNotes>
+  <components>
+    <component type="Module">
+      <desktopModule>
+        <moduleName>MyOrganizationName.HelloWorld</moduleName>
+        <foldername>MyOrganizationName/HelloWorld</foldername>
+        <businessControllerClass />
+        <supportedFeatures />
+        <page type="Host" common="true">
+          <name>Hello World</name>
+          <icon>~/Icons/Sigma/Extensions_16X16_Standard.png</icon>
+          <largeIcon>~/Icons/Sigma/Extensions_32X32_Standard.png</largeIcon>
+          <description>Example hello world module</description>
+        </page>
+        <moduleDefinitions>
+          <moduleDefinition>
+            <friendlyName>MyOrganizationName.HelloWorld</friendlyName>
+            <definitionName>MyOrganizationName.HelloWorld</definitionName>
+            <defaultCacheTime>0</defaultCacheTime>
+            <moduleControls>
+              <moduleControl>
+                <controlKey />
+                <controlSrc>DesktopModules/MyOrganizationName/HelloWorld/View.ascx</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle />
+                <controlType>View</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>False</supportsPopUps>
+                <viewOrder>0</viewOrder>
+              </moduleControl>
+            </moduleControls>
+          </moduleDefinition>
+        </moduleDefinitions>
+      </desktopModule>
+    </component>
+    <component type="File">
+      <files>
+        <basePath>DesktopModules\MyOrganizationName\HelloWorld</basePath>
+        <file>
+          <path>App_LocalResources</path>
+          <name>View.ascx.resx</name>
+        </file>
+        <file>
+          <name>readme.txt</name>
+        </file>
+        <file>
+          <name>View.ascx</name>
+        </file>
+        <file>
+          <name>View.ascx.cs</name>
+        </file>
+      </files>
+    </component>
+  </components>
+</package></packages>
+</dotnetnuke>
