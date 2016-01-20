@@ -3,7 +3,7 @@
     <h1> Providers Reference </h1>
 
     <h2> Overview </h2>
-    <p>Services can be provided by third parties to provide common functionality to sites. In most cases, these services are provided by apps on the server or by modules in DNN.</p>
+    <p>Services can be provided by third parties to provide common functionality to websites. In most cases, these services are provided by apps on the server or by modules in DNN.</p>
 
     <p>In a module, a provider is comprised of two layers:
         <ul>
@@ -100,7 +100,7 @@
                 <li>The default <b>FileBasedCachingProvider</b> uses a central file store to invalidate cache entries. This caching provider requires setting up permissions, application pools, domain users, and code access security.</li>
                 <li>The <b>WebBasedCachingProvider</b> is available only for Evoq customers and is recommended over the default. It requires minimal setup. Any web server can notify the other web servers to expire their cache in order to remain synchronized.</li>
             </ul>
-            <b>Note:</b> These two providers use cache invalidation to synchronize caching; they do not handle site changes, such as newly uploaded files or newly installed modules.
+            <b>Note:</b> These two providers use cache invalidation to synchronize caching; they do not handle website changes, such as newly uploaded files or newly installed modules.
         </p>
 
 
@@ -145,7 +145,7 @@
     </folder>
             </xmp>
         </p>
-        <p>A <b>folder provider</b> enables sites to use multiple storage locations, including third-party cloud storage systems, such as Amazon Simple Storage Service (S3), Dropbox, Google Drive, and Microsoft Azure Storage.</p>
+        <p>A <b>folder provider</b> enables websites to use multiple storage locations, including third-party cloud storage systems, such as Amazon Simple Storage Service (S3), Dropbox, Google Drive, and Microsoft Azure Storage.</p>
         <p>DNN provides three folder providers, and each has its own icon in the File Manager:
             <ul>
                 <li><b>StandardFolderProvider</b>, an unsecured file system.</li>
@@ -155,7 +155,7 @@
         </p>
         <p>A <b>folder mapping</b> or <b>folder type</b> is an implementation of a folder provider for a specific storage system. A folder mapping can have its own settings, and it can be prioritized in case of collisions during synchronization.</p>
         <ul>
-            <li><b>Administrators:</b> You can choose and configure the folder types you allow in the DNN installation (host) or in a specific site (administrator).</li>
+            <li><b>Administrators:</b> You can choose and configure the folder types you allow in the DNN installation (host) or in a specific website (administrator).</li>
             <li><b>Developers:</b> To create a folder provider,
                 <ol>
                     <li>Implement the abstract methods inherited from the <code>FolderProvider</code> class.</li>
@@ -201,7 +201,7 @@
     </htmlEditor>
             </xmp>
         </p>
-        <p>An <b>HTML editor provider</b> is used to edit HTML directly within the site. Third-party HTML editors include:
+        <p>An <b>HTML editor provider</b> is used to edit HTML directly within the website. Third-party HTML editors include:
             <ul>
                 <li><a href="http://freetextbox.com/default.aspx">Ftb3HtmlEditorProvider</a></li>
                 <li><a href="http://ckeditor.com/">FckHtmlEditorProvider</a> (<a href="http://dnnckeditor.codeplex.com/">in Codeplex</a>)</li>
@@ -246,7 +246,7 @@
             </ul>
         </p>
 
-        <p>Unlike authentication providers which provide SSO authentication, the membership provider is a standalone authentication solution that is local to the site or to the DNN installation.</p>
+        <p>Unlike authentication providers which provide SSO authentication, the membership provider is a standalone authentication solution that is local to the website or to the DNN installation.</p>
 
         <p>See <b><a href="#authprov">authentication provider</a></b> (SSO authentication), <b><a href="#permsprov">permissions provider</a></b>, and <b><a href="#rolesprov">roles provider</a></b>. Also see the MSDN Library's <a href="https://msdn.microsoft.com/en-us/library/yh26yfzy.aspx">Introduction to Membership</a> and Engage Weblog's <a href="http://www.engagesoftware.com/blog/post/447/building-your-own-membership-provider-for-dotnetnuke-and-asp-net-2-0">Building your own Membership Provider</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/32389">Henry Kenuam</a>.</p>
 
@@ -321,7 +321,7 @@
     </permissions>
             </xmp>
         </p>
-        <p>A <b>permissions provider</b> manages asset permissions, such as those associated with components of the site, including page permissions and module permissions. These permissions are used in conjunction with user permissions (authentication provider or membership provider) and group permissions (roles provider) to determine if a specific user would be allowed to access the asset.</p>
+        <p>A <b>permissions provider</b> manages asset permissions, such as those associated with components of the website, including page permissions and module permissions. These permissions are used in conjunction with user permissions (authentication provider or membership provider) and group permissions (roles provider) to determine if a specific user would be allowed to access the asset.</p>
 
         <p>See <b><a href="#authprov">authentication provider</a></b> (SSO authentication), <b><a href="#membprov">membership provider (local authentication)</a></b>, and <b><a href="#rolesprov">roles provider</a></b>.</p>
 
@@ -398,7 +398,7 @@
     </searchIndex>
             </xmp>
         </p>
-        <p>A <b>search index provider</b> allows you to specify how the site content is indexed and what rules are performed to do searches.</p>
+        <p>A <b>search index provider</b> allows you to specify how the website content is indexed and what rules are performed to do searches.</p>
         <p>See <b><a href="#searchdataprov">search data store provider</a></b> and <b><a href="#sitemapprov">sitemap provider</a></b>.</p>
 
 
@@ -413,7 +413,7 @@
     </sitemap>
             </xmp>
         </p>
-        <p>A <b>sitemap provider</b> creates an XML file that informs web crawlers and users how your site is organized. A module's sitemap exposes the multiple pages generated by the module, such as when a module serves up blog posts, articles, and forum discussions.</p>
+        <p>A <b>sitemap provider</b> creates an XML file that informs web crawlers and users how your website is organized. A module's sitemap exposes the multiple pages generated by the module, such as when a module serves up blog posts, articles, and forum discussions.</p>
         <p>If your DNN website's sitemap is requested (<code>http://www.domain.com/Sitemap.aspx</code>), the HTTP handler (set in web.config) runs its <b>ProcessRequest</b> method, which serves up the sitemap.xml file, if it exists. Otherwise, the <b>ProcessRequest</b> method calls <b>BuildSiteMap</b> to create sitemap.xml as follows:
             <ol>
                 <li>Checks the cache settings configured through the <b>SiteMap</b> module, which is available under <b>Admin</b> &gt; <b>Search Engine SiteMap</b>.</li>

@@ -1,7 +1,7 @@
 .. raw:: html
 
     <h1> REFERENCE: Theme Objects </h1>
-    <!-- 10 Pound Gorilla's Skinning Tool writes the code based on attribute values that you enter. Better to link to their site instead of this page. But keep this for reference. -->
+    <!-- 10 Pound Gorilla's Skinning Tool writes the code based on attribute values that you enter. Better to link to their website instead of this page. But keep this for reference. -->
     <!-- http://www.10poundgorilla.com/DNN/Skinning-Tool -->
     <!-- How to have checkboxes on top that would filter what's displayed; i.e., HTML vs ASCX vs object token, DNN version. -->
 
@@ -24,7 +24,7 @@
         <dd>Displays the copyright notice for DotNetNuke. (optional)</dd>
 
     <dt>HELP</dt>
-        <dd>Displays a Help link, which sends email to the site's administrator, using the user's default email client.</dd>
+        <dd>Displays a Help link, which sends email to the website's administrator, using the user's default email client.</dd>
 
     <dt>HOSTNAME</dt>
         <dd>Displays the host title linked to the host URL. <-- What is the host title? Is the host URL the same as the website's URL? --></dd>

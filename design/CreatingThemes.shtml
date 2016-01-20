@@ -24,7 +24,7 @@
 
     <p>A <b>pane</b> is a section of a webpage that displays static content, dynamic content, or a standard theme object.</p>
 
-    <p>A <b>layout template</b> defines where panes are located on the webpage and what each pane contains. The layout templates included in a theme are variations that the web designer can choose from for each page in the site, such as the home page, a gallery of photos, or a listing of products for sale.</p>
+    <p>A <b>layout template</b> defines where panes are located on the webpage and what each pane contains. The layout templates included in a theme are variations that the web designer can choose from for each page in the website, such as the home page, a gallery of photos, or a listing of products for sale.</p>
 
     <p>A <b>container</b> is similar to a layout template, except a container's scope is a single pane, whereas a layout template's scope is the entire page. A container is associated with a <b>module</b>, which can generate dynamic content or perform other functionality.</p>
 

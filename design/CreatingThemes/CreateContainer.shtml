@@ -5,7 +5,7 @@
 
     <h2> Overview </h2>
 
-    <p>Containers allow designers to seamlessly integrate modules from many different developers into a cohesive site design. Containers can also include visual elements that allow site users to interact with the module.</p>
+    <p>Containers allow designers to seamlessly integrate modules from many different developers into a cohesive website design. Containers can also include visual elements that allow website users to interact with the module.</p>
 
     <ul>
         <li>You can have a default container, which would be overridden by individual panes or modules if they provide their own style definitions.</li>

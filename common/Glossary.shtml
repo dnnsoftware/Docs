@@ -8,7 +8,7 @@
         <dd>The latest implementation of the Friendly URL Rewriter. Includes additional tools which gives DNN administrators greater control over the formatting of URLs within DNN.</dd>
 
     <dt>container</dt>
-        <dd>A set of related components that define the look and feel of a module. In contrast, a <b><term>skin</term></b> or <b><term>theme</term></b> defines the look and feel of an entire web page or site.</dd>
+        <dd>A set of related components that define the look and feel of a module. In contrast, a <b><term>skin</term></b> or <b><term>theme</term></b> defines the look and feel of an entire webpage or website.</dd>
 
     <dt>databaseOwner</dt>
         <dd>A token used in database scripts to refer to the SQL Server database schema that is used during DNN installation. Default: <code>dbo</code>.</dd>
@@ -30,7 +30,7 @@
         </dd>
 
     <dt>host</dt>
-        <dd>Also known as <b>super user</b>. An administrator account used to manage the server and its apps. A host account is the most privileged administrative account and has complete access to all DNN functionality and all sites supported by the DNN installation.</dd>
+        <dd>Also known as <b>super user</b>. An administrator account used to manage the server and its apps. A host account is the most privileged administrative account and has complete access to all DNN functionality and all websites supported by the DNN installation.</dd>
 
     <dt>manifest</dt>
         <dd>An XML file (e.g., MyExtension.dnn) that specifies how to install an extension. The manifest contains information regarding the extension type, and the various components that make up the extension. See the <a href="/common/Extensions/DNNManifestSchema.shtml">DNN Manifest Schema</a>.</dd>
@@ -57,13 +57,13 @@
         <dd>See <b><term>site</term></b>.</dd>
 
     <dt>portal alias</dt>
-        <dd>A URL that refers to a specific site in a DNN installation. Examples: <code>http://www.example.com</code> (parent portal alias), <code>http://www.example.com/pathname</code> (child portal alias). Each site can have one or more portal aliases.</dd>
+        <dd>A URL that refers to a specific website in a DNN installation. Examples: <code>http://www.example.com</code> (parent portal alias), <code>http://www.example.com/pathname</code> (child portal alias). Each website can have one or more portal aliases.</dd>
 
     <dt>provider</dt>
         <dd>A type of DNN extension that provides an alternative implementation of a specific functionality of the DNN Platform. Examples: authentication providers, data providers, and navigation providers. In most cases, even if multiple implementations are available in a DNN installation, only one implementation of each provider type is active at any time. See <a href="/dev/REF-Providers.shtml">Providers Reference</a>.</dd>
 
     <dt>site</dt>
-        <dd>Also known as <b>portal</b>. A specific website in a DNN installation, which can host multiple sites that share files and resources.</dd>
+        <dd>Also known as <b>portal</b>. A specific website in a DNN installation, which can host multiple websites that share files and resources.</dd>
 
     <dt>skin</dt>
         <dd>See <b><term>theme</term></b>.</dd>
@@ -78,10 +78,10 @@
         <dd>See <b><term>page</term></b>.</dd>
 
     <dt>theme</dt>
-        <dd>Formerly <b>skin</b>. A set of related components that define the look and feel of a page or site. These components include:
+        <dd>Formerly <b>skin</b>. A set of related components that define the look and feel of a webpage or website. These components include:
             <ul>
                 <li>one or more layout templates, and</li>
-                <li>an optional CSS for each of the templates, or an optional master CSS for the entire site.</li>
+                <li>an optional CSS for each of the templates, or an optional master CSS for the entire website.</li>
             </ul>
             <p>In contrast, a <b><term>container</term></b> and any associated CSS define the look and feel of a module in a single pane of a page.</p>
         </dd>

@@ -44,11 +44,11 @@
                         <li>In the <b>Connections</b> panel, expand your host tree, right-click on <b>Sites</b>, and choose <b>Add Website</b>.
                             <br/><img src="/common/img/scr-NewSiteInIIS-1.png" alt="In Connections, Sites, then Add Website"/>
                         </li>
-                        <li>Enter the new site's name and choose the location.
-                            <br/><img src="/common/img/scr-NewSiteInIIS-2.png" alt="Enter the new site's name and choose the location."/>
+                        <li>Enter the new website's name and choose the location.
+                            <br/><img src="/common/img/scr-NewSiteInIIS-2.png" alt="Enter the new website's name and choose the location."/>
                         </li>
                         <li><b>Developers and Designers:</b> If setting up a local development environment, you can use <code>www.dnndev.me</code> (or any subdomain) as the Host name. DNNDEV.ME is a registered domain which points to the loopback address of 127.0.0.1, so it will always resolve locally.<br/>
-                            <b>Administrators: </b> If setting up a live site, use your site's domain.
+                            <b>Administrators: </b> If setting up a live website, use your website's domain.
                             <br/><img src="/common/img/scr-NewSiteInIIS-4.png" alt="For local, use www.dnndev.me."/>
                         </li>
                     </ol>
@@ -56,8 +56,8 @@
 
                 <li>To use an existing IIS website:
                     <ol type=a>
-                        <li>In the <b>Connections</b> panel, right-click on the name of the existing site, and choose <b>Edit Bindings...</b>.
-                            <br/><img src="/common/img/scr-NewSiteInIIS-6.png" alt="Right-click on the site and choose Edit Bindings."/>
+                        <li>In the <b>Connections</b> panel, right-click on the name of the existing website, and choose <b>Edit Bindings...</b>.
+                            <br/><img src="/common/img/scr-NewSiteInIIS-6.png" alt="Right-click on the website's name and choose Edit Bindings."/>
                         </li>
                         <li>In <b>Site Bindings</b>, click <b>Add...</b>. Then, in <b>Add Site Binding</b>, enter <code>www.dnndev.me</code> as the Host name.
                             <br/><img src="/common/img/scr-NewSiteInIIS-7.png" alt="For local, use www.dnndev.me."/>
