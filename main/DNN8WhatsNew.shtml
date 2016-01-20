@@ -7,16 +7,16 @@
 
     <p>The following are updates geared towards extension developers and theme designers:</p>
     <ul>
-        <li>Single Page Application (SPA) and MVC modules are now supported, so developers can create non-Webforms-based modules. Visual Studio 2015 templates for both types are also available.</li>
-        <li>The module settings API is updated to support strongly typed settings.</li>
-        <li>Incremental upgrade support is now possible through <b>SqlDataProvider</b>, cleanup files, and configuration merge files. This allows changes to the platform or third-party extensions to be made without requiring a new versioned release.</li>
-        <li>Extension developers can now create admin and host pages through the DNN manifest (.dnn).</li>
-        <li>A new control allows developers to exclude individual CSS and/or JS files from being loaded or combined during minification.</li>
-        <li><b>Default.css</b> now has versioning support, which can be set by theme designers to limit the amount of CSS they must override in their own designs.</li>
-        <li>Third party components (CodeMirror, Newtonsoft) are upgraded to newer versions.</li>
-        <li>DAL 2 is enhanced to add a fluent configuration API that allows developers to keep their Data implementation details and their Models separate.</li>
+        <li>Single Page Application (SPA) and MVC modules are now supported, so developers can create non-Webforms-based modules. Visual Studio 2015 templates for both types are also released.</li>
+        <li>The module settings API was updated to support strongly typed settings.</li>
+        <li>Incremental upgrade support is now possible through <b>SqlDataProvider</b>, cleanup files, and configuration merge files. This allows changes to the platform or third-party extensions without requiring a new versioned release.</li>
+        <li>Extension developers can now create admin and host pages through the DNN Manifest (.dnn).</li>
+        <li>Developers can now exclude individual CSS and/or JS files from being loaded or combined during minification through a new control.</li>
+        <li><b>Default.css</b> now has versioning support, which can be set by theme designers to reduce the CSS that their themes need to override.</li>
+        <li>Third party components (CodeMirror and Newtonsoft) were upgraded to newer versions.</li>
+        <li>DAL 2 is enhanced to add a fluent configuration API that allows developers to separate their data implementation details from their models.</li>
         <li>The DNN Platform now uses Web API 2.0.</li>
-        <li>JSON Web Token (JWT) authentication support is added to allow developers a way to expose WebAPI services for consumption outside of the framework, such as mobile applications. <b>Note:</b> This feature is still in beta.</li>
+        <li>JSON Web Token (JWT) authentication support is added to allow developers a way to expose WebAPI services for consumption outside of the framework, such as mobile applications. <b>Warning:</b> This feature is still in beta.</li>
     </ul>
 
     <p>Additional changes:</p>
@@ -25,14 +25,14 @@
         <li>CK Editor is the new default HTML provider in new installations (replacing the Telerik RadEditor as default).</li>
         <li>All administration modules were extracted from the base platform, so they can be installed/uninstalled separately.</li>
         <li>A new default theme that uses Bootstrap 3 is now available.</li>
-        <li>The base project was converted from WSP (Website project) to a WAP (Web application project) to help reduce application startup time.</li>
+        <li>The base project was converted from a Website Project (WSP) to a Web Application Project (WAP) to help reduce application startup time.</li>
         <li>The page output caching provider was moved from Evoq to the DNN Platform.</li>
-        <li>Password resets now use the same token as long as it isn’t expired. This means that, if the user clicks <b>Send password</b> multiple times quickly, only a single token will be generated.</li>
+        <li>Password resets now use the same token as long as it isn't expired. This means that, if the user clicks <b>Send password</b> multiple times quickly, only a single token will be generated.</li>
         <li>Password inputs now allow 39 characters instead of 20.</li>
         <li>The default robots.txt now allows client-side resources to be indexed.</li>
-        <li>Text used throughout the entire application were reviewed and converted for consistency.</li>
+        <li>Text used throughout the entire application were reviewed for consistency.</li>
         <li>The Breadcrumb theme object now outputs schema.org markup.</li>
-        <li>Fixed: The issue where some platform functionality injected CSS files too late, so that they couldn’t be modified by skin.css.</li>
+        <li>Fixed: The issue where some platform functionality injected CSS files too late, so that they couldn't be modified by skin.css.</li>
         <li>SMTP now supports TLS authentication.</li>
     </ul>
 
@@ -41,7 +41,7 @@
 
     <p>All updates in DNN Platform 8.0, plus:</p>
     <ul>
-        <li>Administrators can now manage a user’s roles within the Users section of the Persona bar.</li>
+        <li>Administrators can now manage a user's roles within the Users section of the Persona bar.</li>
         <li>Fixed: Several issues around generating URLs for Digital Asset Manager.</li>
         <li>Additional minor enhancements and bug fixes.</li>
     </ul>
@@ -60,11 +60,11 @@
 
     <p>All updates in Evoq Content 8.3, plus:</p>
     <ul>
-        <li>Users can now subscribe to activity stream posts and associated comments (for items created within the activity stream).</li>
+        <li>Users can now subscribe to activity stream posts and associated comments for items created within the activity stream.</li>
         <li>Emojis are now supported in the activity stream.</li>
         <li>The activity stream comment area now provides the same experience as creating a new post (support for images, videos, etc.).</li>
         <li>Notifications for votes on Ideas were removed.</li>
-        <li>Comments in the Discussions module are now sortable by newest or oldest (also available for third party extensions utilizing the commenting control of Engage).</li>
+        <li>Comments in the Discussions module are now sortable by date, chronologically or reverse-chronologically. This sorting ability is also available for third-party extensions that use the Comments feature of Evoq Engage.</li>
         <li>Users can now delete posts made by other users from their own activity stream.</li>
         <li>Fixed: Issues where Ideas votes cannot be returned or added back.</li>
         <li>Additional minor enhancements and bug fixes.</li>
@@ -72,5 +72,8 @@
 
 
     <h2> Sources </h2>
-    http://dotnetnuke.codeplex.com/releases/view/619410
-    http://www.dnnsoftware.com/services/customer-support/success-network/software-downloads/changelog
+    <ul>
+        <li><a href="http://dotnetnuke.codeplex.com/releases/view/619410">DNN Installation in Codeplex</a></li>
+        <li><a href="http://www.dnnsoftware.com/services/customer-support/success-network/software-downloads/changelog">DNN Software Downloads</a></li>
+    </ul>
+
