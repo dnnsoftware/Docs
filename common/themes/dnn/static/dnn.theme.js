@@ -82,8 +82,13 @@
             .wrapAll('<div id="articleNavSpy"></div>')
             .siblings('ul')
             .addClass('nav nav-tabs article-nav');
-
-        //affix the article nav to the screen as you scroll down (bootstrap library)
+            
+        $('#articleNavSpy > a').text('In this article:');
+        
+        // If there are no document sections, then hide the nav
+        $('#articleNavSpy:not(:has(ul))').hide();
+    
+        // affix the article nav to the screen as you scroll down (bootstrap library)
         $('#articleNavAffix').affix({
             offset: {
                 top: 27, // - $('.header').height(),
