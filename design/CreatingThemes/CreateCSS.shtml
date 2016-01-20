@@ -20,21 +20,6 @@
         <li><b>Default.css</b> (~/Portals/_default/default.css) - The default CSS for the website.</li>
     </ol>
     </p>
-    <!--
-    This is what shows in the sample we looked at:
-        <link href="skin.css">
-        <link href="Main.css">
-        <link href="container.css">
-        <link href="/Portals/0/portal.css">
-        <link href="/Resources/Shared/stylesheets/dnndefault/8.0.0/default.css">
-    The  Professional Training Video (http://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-2-creating-html-skins) shows this:
-        1. Default.css      (~/Portals/_default/default.css)
-        2. Module.css       (~/DesktopModule/ModuleName/module.css)
-        3. Skin.css         (~/Portals/PortalID/Skins/SkinPackageName/skin.css)
-        4. Container.css    (~/Portals/PortalID/Containers/ContainerPackageName/container.css)
-        5. Portal.css       (~/Portals/PortalID/portal.css)
-    Which is correct?
-    -->
 
 
     <h2> Steps </h2>
@@ -79,5 +64,5 @@
 
     <h2> Sources </h2>
     <ul>
-        <li>DNN Professional Training: <a href="http://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-2-creating-html-skins"></a>Creating HTML Skins</li>
+        <li>DNN Professional Training: <a href="http://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-2-creating-html-skins">Creating HTML Skins</a></li>
     </ul>

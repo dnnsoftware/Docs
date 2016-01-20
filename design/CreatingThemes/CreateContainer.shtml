@@ -18,7 +18,7 @@
     <ol>
 
     <li>Create a new file for the container.
-        <p><b>Note:</b> <!-- Need to be confirmed. -->
+        <p><b>Note:</b>
             <ul>
                 <li>The container must contain exactly one pane called <b>ContentPane</b>.</li>
                 <li>The single pane must be defined as a server control by adding <b>runat="server"</b> to the element.</li>
@@ -65,13 +65,6 @@
         </table>
         <p><!--#include virtual="/common/bptext/BP-TipSkinningTool.html" --></p>
     </li>
-
-
-    <!--
-    <h2> Example </h2>
-    <xmp>
-    </xmp>
-    -->
 
 
     <h2> See Also </h2>

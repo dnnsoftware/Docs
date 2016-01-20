@@ -21,25 +21,16 @@
 
     <div><b>Administrator</b><br />
         <ul>
-            <li>Installation Guide</li>
-                <ul>
-                    <li><a href="/common/Setup/SetUpDNN.shtml">Set up the DNN Platform</a> on a web server.</li>
-                    <!-- <li>Upgrade DNN on your web server.</li> -->
-                    <li><a href="/common/Extensions/InstallExtension.shtml">Install extensions (modules and themes)</a> on the web server.</li>
-                </ul>
-            <li>User Guides
-                <ul>
-                    <li>DNN 8.0 User Guide</li>
-                    <li>Evoq 8.x User Guide</li>
-                </ul>
-            </li>
-            <!-- <li>Advanced Configuration
-                <ul>
-                    <li>Security Guide</li>
-                    <li>Web Farm Configuration Guide</li>
-                    <li>Performance Tuning</li>
-                </ul>
-            </li> -->
+            <li><a href="/common/Setup/SetUpDNN.shtml">Set up the DNN Platform</a> on a web server.</li>
+            <!-- <li>Upgrade DNN on your web server.</li> -->
+            <li><a href="/common/Extensions/InstallExtension.shtml">Install extensions (modules and themes)</a> on the web server.</li>
+            <li><a href="placeholderlink">DNN 8.0 User Guide</a></li>
+            <li><a href="placeholderlink">Evoq 8.x User Guide</a></li>
+            <!--
+            <li>Security Guide</li>
+            <li>Web Farm Configuration Guide</li>
+            <li>Performance Tuning</li>
+            -->
         </ul>
     </div>
 
@@ -48,7 +39,7 @@
             <li><a href="/common/Setup/SetUpDNN.shtml">Set up the DNN Platform</a> in your local development environment.</li>
             <li><a href="/dev/CreatingModules.shtml">Create a module</a>.</li>
             <li><a href="/common/Extensions/CreatePackage.shtml">Create a package</a> containing your module.</li>
-            <li>API Reference</li>
+            <li><a href="placeholderlink">API Reference</a></li>
         </ul>
     </div>
 
@@ -57,7 +48,7 @@
             <li><a href="/common/Setup/SetUpDNN.shtml">Set up the DNN Platform</a> in your local development environment.</li>
             <li><a href="/design/CreatingThemes.shtml">Create a theme</a>.</li>
             <li><a href="/common/Extensions/CreatePackage.shtml">Create a package</a> containing your theme.</li>
-            <li>UX Guide</li>
+            <li><a href="placeholderlink">UX Guide</a></li>
         </ul>
     </div>
 
