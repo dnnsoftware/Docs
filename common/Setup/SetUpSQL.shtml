@@ -22,7 +22,8 @@
         <li><b>Create a SQL database for your website.</b>
             <!-- Make this section expandable. -->
             <ol type=a>
-                <li>In the <b>Microsoft SQL Server Management Studio</b> &gt; <b>Object Explorer</b>, right-click on <b>Databases</b>, and choose <b>New Database...</b>.
+                <li>Start the <b>Microsoft SQL Server Management Studio</b> app.</li>
+                <li>In the <b>Object Explorer</b> panel, right-click on <b>Databases</b>, and choose <b>New Database...</b>.
                     <br/><img src="/common/img/scr-SetupSQL-2.png" alt="In Object Explorer, right-click Databases, choose New Database."/>
                 </li>
                 <li>Enter the name of the new database. Click OK.
