@@ -42,7 +42,7 @@
         <dd>The set of menus that provides access to the functionality of a module. Available only if the page is in <b>Edit</b> mode. The menus can include the pencil menu (module editing, optional), the gear menu (module settings), and the plus menu (additional module features, optional). The DNN Platform provides actions that are common to all modules, and the specific module can provide additional actions. Actions performed through the module action menu affect only that specific module in that specific webpage.</dd>
 
     <dt>objectQualifier</dt>
-        <dd>A custom string used as a prefix to names of DNN-related SQL objects, such as tables and stored procedures, to distinguish them from SQL objects created by non-DNN systems.</dd>
+        <dd>A custom string used as a prefix to names of DNN-related SQL objects, such as tables and stored procedures. This allows you to identify the DNN objects in a database that supports other applications besides DNN. Default: blank.</dd>
 
     <dt>package</dt>
         <dd>The zip file that contains all files required to install an extension in a DNN-based website. Also, a section of the DNN Manifest schema that specifies how the core components of the extension are installed.</dd>
