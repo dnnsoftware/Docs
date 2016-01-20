@@ -5,7 +5,7 @@
     <dl>
 
     <dt>Advanced URL Management (AUM)</dt>
-        <dd>The latest implementation of the Friendly URL Rewriter. Includes additional tools which gives DNN administrators greater control over the formatting of URLs within DNN.</dd>
+        <dd>The latest implementation of the Friendly URL Rewriter. Includes additional tools that give DNN administrators greater control over the formatting of URLs within DNN.</dd>
 
     <dt>container</dt>
         <dd>A set of related components that define the look and feel of a module. In contrast, a <b><term>skin</term></b> or <b><term>theme</term></b> defines the look and feel of an entire webpage or website.</dd>
@@ -36,7 +36,7 @@
         <dd>An XML file (e.g., MyExtension.dnn) that specifies how to install an extension. The manifest contains information regarding the extension type, and the various components that make up the extension. See the <a href="/common/Extensions/DNNManifestSchema.shtml">DNN Manifest Schema</a>.</dd>
 
     <dt>module</dt>
-        <dd>Code that provides some functionality in a webpage. Example: A module could produce dynamic content, which is displayed in a <b><term>pane</term></b> on the page.</dd>
+        <dd>Code that provides some functionality in a webpage. Example: A module could produce dynamic content that is displayed in a <b><term>pane</term></b> on the webpage.</dd>
 
     <dt>module action menu</dt>
         <dd>The set of menus that provides access to the functionality of a module. Available only if the page is in <b>Edit</b> mode. The menus can include the pencil menu (module editing, optional), the gear menu (module settings), and the plus menu (additional module features, optional). The DNN Platform provides actions that are common to all modules, and the specific module can provide additional actions. Actions performed through the module action menu affect only that specific module in that specific webpage.</dd>

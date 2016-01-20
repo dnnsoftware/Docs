@@ -3,7 +3,7 @@
     <h1> Create a CSS File </hi>
 
     <h2> Overview </h2>
-    <p>CSS files can be associated with a layout template or container by giving it the same filename and placing it in the same folder. When a layout template (or container) is applied to a webpage (or pane), the associated CSS file is automatically applied. Example: These three files are automatically associated with each other:
+    <p>A CSS file can be associated with a layout template or container by giving it the same filename and placing it in the same folder. When a layout template (or container) is applied to a webpage (or pane), the associated CSS file is automatically applied. Example: These three files are automatically associated with each other:
         <ul>
             <li>MyLayout.ascx</li>
             <li>MyLayout.css</li>
@@ -11,12 +11,12 @@
         </ul>
     </p>
 
-    <p>CSS files are applied hierarchically. If a style is defined for an element in multiple CSS files, the last CSS which mentions the same element overrides the style definitions in previously loaded CSS files. By default, the CSS files are loaded in this order:
+    <p>CSS files are applied hierarchically. If a style is defined for an element in multiple CSS files, the last CSS that mentions the same element overrides the style definitions in previously loaded CSS files. By default, the CSS files are loaded in this order:
     <ol>
         <li><b>Skin.css</b> (~/Portals/PortalID/Skins/SkinPackageName/skin.css) - The master CSS for the theme must be called <code>skin.css</code>.</li>
         <li><b>MyLayoutTemplate.css</b> or <b>MyModule.css</b></li>
         <li><b>Container.css</b> (~/Portals/PortalID/Containers/ContainerPackageName/container.css) - The CSS for all containers in your theme.</li>
-        <li><b>Portal.css</b> (~/Portals/PortalID/portal.css) - The CSS that can override elements in the installed themes if the webside admin does not have modify permissions to installed themes.</li>
+        <li><b>Portal.css</b> (~/Portals/PortalID/portal.css) - The CSS that can override elements in the installed themes if the website admin does not have modify permissions to installed themes.</li>
         <li><b>Default.css</b> (~/Portals/_default/default.css) - The default CSS for the website.</li>
     </ol>
     </p>
