@@ -27,7 +27,7 @@
 
         <li>Add your theme to your local DNN installation.
             <ol type=a>
-                <li>Create a folder for your theme in the <code>Portals\</code><i>websitename</i><code>\Skins folder</code> of your DNN installation. The folder name becomes your theme name. Example: If you create the folder <code>C:\DNN8\Portals\MyWebsite\Skins\MyTheme</code>, <b>MyTheme</b> becomes your theme's name.</li>
+                <li>Create a folder for your theme inside the <code>Portals\</code><i>websitename</i><code>\Skins folder</code> of your DNN installation. (<i>websitename</i> could be a number representing the PortalID.) The folder name becomes your theme name. Example: If you create the folder <code>C:\DNN8\Portals\MyWebsite\Skins\MyTheme</code>, <b>MyTheme</b> becomes your theme's name.</li>
                 <li>Copy your files to the new theme folder.</li>
             </ol>
         </li>
@@ -53,8 +53,8 @@
 
     <p><b>NOTE:</b> The conversion only goes in one direction (from HTML to ASCX). To make changes to the layout template:
         <ul>
-            <li>Make changes directly to the ASPX file.</li>
-            <li>Make the changes in your original HTML file and reconvert it to ASPX. <b>Warning:</b> This overrides prior changes made directly to the ASPX file.</li>
+            <li>Make changes directly to the ASCX file.</li>
+            <li>Make the changes in your original HTML file and reconvert it to ASCX. <b>Warning:</b> This overrides prior changes made directly to the ASCX file.</li>
         </ul>
     </p>
 
