@@ -10,7 +10,7 @@
 Overview
 --------
 
-The DNN Module Creator is a module that enables developers to quickly build modules without requiring a full-blown IDE like Visual Studio.  It automates many of the initial module creation tasks so that module developers can quickly start writing code.  In addition, the Module Creator can be extended with custom templates to further streamline development.
+The DNN Module Creator is a module that enables developers to quickly build modules without requiring a full-blown IDE like Visual Studio.  It automates many of the initial module creation tasks so that module developers can quickly start writing code.  In addition, the Module Creator can be extended with custom templates to further streamline development. 
 
 The DNN Module Creator is generally recommended only for simple modules.  For more complex modules, you can :doc:`create a web Forms Module using templates <Create-Web-Forms-Module>`.
     
@@ -23,17 +23,27 @@ Steps
 -----
 
 #. Go to **Pages** > **Add New Page**.
+
    |step-1|
+   
 #. Enter the Page Name and scroll down to click **Add Page**.
+
    |step-2|
+   
 #. Go to **Module** > **Add New Module**.
+
    |step-3|
    
 #. Search for the Module Creator among the installed modules.
+
    |step-4|
+   
 #. Drag the Module Creator module to the page.
+
    |step-5|
+   
 #. On the Module Creation form
+
    |step-6|
 
    a. Enter the name of your organization.
@@ -61,6 +71,7 @@ Steps
       :muted:`The module control name will be used as the name of the primary module control that is registered with DNN.  You will be able to create additional controls once the initial module creation steps are complete.`
 
 #. Your new module has been created and is automatically added to the page, replacing the Module Creator.
+
    |step-7|
    
    :muted:`Your module is now ready to be customized.`
@@ -68,9 +79,13 @@ Steps
 #. Modify the module.
 
    a. Click the gear icon and choose **Develop**.
+   
       |step-8a|
+      
    #. In the **View.ascx** file, delete all the lines of code, except the first one.
+   
       |step-8b|
+      
    #. Add markup to customize the module. Example:
    
       .. code-block:: aspx-cs
@@ -81,12 +96,17 @@ Steps
        
    #. Click **Update** to save your changes.
    #. From the **Select File** dropdown, choose the **View.ascx.cs** file
+      
       |step-8e|
+      
    #. Remove all of the code in the **Event Handlers** region and click **Update** to save your changes.
+   
       |step-8f|
+      
    #. Click **Cancel** (or click the **X** in the upper right) to close the popup dialog.
     
 #. Your page displays the new functionality
+
    |step-9|
 
 See Also
