@@ -16,6 +16,7 @@ html {
 }
 body {
   position: relative;
+  font-size: 16px;
 }
 a {
   color: #19aee5;
@@ -305,6 +306,24 @@ h2 {
 }
 .nav-sub-level .nav-node {
   padding: 15px 45px;
+}
+ul.dnn-breadcrumbs {
+  margin: -25px 0 0 0;
+  padding: 0;
+}
+ul.dnn-breadcrumbs + hr {
+  margin: 0 0 20px;
+}
+ul.dnn-breadcrumbs li {
+  display: inline-block;
+  margin: 0;
+}
+ul.dnn-breadcrumbs li a {
+  display: inline-block;
+  padding: 5px;
+}
+ul.dnn-breadcrumbs li a:first-child {
+  padding-left: 0;
 }
 @media (min-width: 992px) {
   .header .logo {
@@ -669,19 +688,25 @@ li.toctree-l1 > ul {
   padding: 10px 5px;
   background: white;
 }
-li.toctree-l1 > ul > li {
+li.toctree-l1 > ul li {
   display: block;
   width: 100%;
   overflow: hidden;
 }
-li.toctree-l1 > ul > li a {
+li.toctree-l1 > ul li a {
   display: block;
   padding: 5px 15px;
 }
-li.toctree-l1 > ul > li a:hover {
+li.toctree-l1 > ul li a:hover {
   background: #e6e6e6;
   color: #19aee5;
   text-decoration: none;
+}
+.toctree-l2 > ul {
+  padding-left: 1em;
+}
+.toctree-l3 {
+  border-left: 1px solid #ccc;
 }
 .doc-search {
   padding: 5px;
@@ -726,6 +751,9 @@ li.toctree-l1 > ul > li a:hover {
 .doc h2 {
   padding-top: 20px;
   font-size: 22px;
+}
+.doc li {
+  margin-bottom: 10px;
 }
 .breadcrumb {
   display: none;
