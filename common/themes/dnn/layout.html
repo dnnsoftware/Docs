@@ -69,6 +69,7 @@
     {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
     <section class="doc-wrapper">
         <div class="doc">
+            {% include "breadcrumbs.html" %}
 {% else %}
 <main class="main-body">
     <div class="container-fluid">

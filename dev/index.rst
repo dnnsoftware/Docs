@@ -1,21 +1,17 @@
-.. _index:
-
-==============================
-|InProgress| Dev Documentation
-==============================
+===================
+ Dev Documentation
+===================
 
 (Insert introduction here.)
 
 .. toctree::
    :hidden:
 
-   Creating-Modules
-   Packaging-Extensions
-   API-Reference
+   Getting-Started
+   API
+   How-To
+   Concepts
    Glossary
-   
 
 .. ## Best Practices (future)
 
-.. include:: /../common/stub-overview.txt
- 
