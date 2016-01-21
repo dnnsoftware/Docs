@@ -341,7 +341,7 @@
             </xmp>
         </p>
         <p>A <b>scheduling provider</b> manages when tasks are performed and triggers them automatically at the indicated time.</p>
-        <p>The DNN Scheduler can be accessed through <b>Host</b> &gt; <b>Advanced Settings</b> (double gear icon) &gt; <b>Schedule</b>.</p>
+        <p>The DNN Scheduler can be accessed through <b>Host</b> &gt; <b>Advanced Settings</b> (double-gear tab) &gt; <b>Schedule</b>.</p>
         <p>See <a href="https://dnnzone.files.wordpress.com/2010/08/dotnetnuke-scheduler.pdf">DotNetNuke Scheduling Provider</a> by <a href="http://www.dnnsoftware.com/activity-feed/userid/2386">Dan Caron</a>.</p>
 
 
@@ -400,7 +400,7 @@
                 <li>In DNN Evoq Engage: Answers, Blogs, Discussions, Ideas, Events, Wiki</li>
             </ul>
         </p>
-        <p>See the DNN Wiki's <a href="http://www.dnnsoftware.com/community-blog/cid/131987/creating-a-sitemap-provider-for-your-module">Creating a Sitemap Provider for Your Module</a> by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/3015">Christopher Paterra</a>.</p>
+        <p>See the DNN Wiki's <a href="http://www.dnnsoftware.com/community-blog/cid/131987/creating-a-sitemap-provider-for-your-module">Creating a Sitemap Provider for Your Module</a> by <a href="http://www.dnnsoftware.com/Activity-Feed/userId/3015">Chris Paterra</a>.</p>
 
 
     <h2> Sources </h2>

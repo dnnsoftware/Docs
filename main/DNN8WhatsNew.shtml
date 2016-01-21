@@ -23,7 +23,7 @@
     <ul>
         <li>A new image handler is exposed to developers to be used for profile pictures throughout the application.</li>
         <li>CK Editor is the new default HTML provider in new installations (replacing the Telerik RadEditor as default).</li>
-        <li>All administration modules were extracted from the base platform, so they can be installed/uninstalled separately.</li>
+        <li>A number of Administration modules (including Vendors, Site Log, Newsletters) were removed from the base installation.</li>
         <li>A new default theme that uses Bootstrap 3 is now available.</li>
         <li>The base project was converted from a Website Project (WSP) to a Web Application Project (WAP) to help reduce application startup time.</li>
         <li>The page output caching provider was moved from Evoq to the DNN Platform.</li>
