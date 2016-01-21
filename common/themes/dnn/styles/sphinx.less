@@ -1,6 +1,90 @@
-div.note{
+.well {
+	background: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	padding: 1em;	
+}
+
+.admonition {
     padding: 1em;
-    border: 1px solid @gray-medium;
     border-radius: 3px;
-    background-color: @yellow-light;
+}
+
+/* Tips: blue color */
+
+.tip {
+	background-color: #e8fcff;
+	border: 1px solid #c0eaef;
+    
+    p.admonition-title{
+        color: #7eb9c1;
+    }
+} 
+
+.tip.has-title{
+    .admonition-title {
+        display: none;
+    }
+
+    p:nth-of-type(2) {
+        font-weight: 700;
+        color: #7eb9c1;
+    }    
+}
+
+/* Notes: yellow color */
+.note {
+	background-color: #ffffdb;
+	border: 1px solid #e6df8f;
+
+    p.admonition-title{
+        color: #c2bc69;
+    } 
+} 
+
+.note.has-title{
+    .admonition-title {
+        display: none;
+    }
+
+    p:nth-of-type(2) {
+        font-weight: 700;
+        color: #c2bc69;
+    }    
+} 
+
+/* Inline Code (<code>) */
+code { 
+    background-color: #f2f8f9; 
+    color: #062873; 
+} 
+
+/* dark blue color text on light blue/grey background */
+
+table.docutils{
+    margin-bottom: 2em;
+}
+
+table.dnn-table {
+    border-collapse: separate !important;
+    border-spacing: 0;
+
+    th {
+        padding: 5px 10px;
+        background-color: #f5f5f5;
+        
+        &:first-of-type {
+            border-top-left-radius: 3px;
+        }
+        &:last-of-type {
+            border-top-right-radius: 3px;
+        }
+    }    
+
+    td {
+        padding: 10px;
+
+        p {
+            margin: 0;
+        }
+    }
 }
