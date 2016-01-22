@@ -165,7 +165,12 @@ Dependencies can be any of these types (case-insensitive):
 
       <dependency type="package">AnotherPackageRequiredByThisComponent</dependency>
 
+   |red-install|
+
+   |red-wiz|
+
 .. FYI: Per Joe's tech review, the permission dependency "is only relevant if the application is running in a partial trust environment. DNN no longer supports running in a partial trust environment and therefore this dependency check should not be used." Therefore, not included here.
+
 
 *  **type**. A type in .NET, in a DNN library, or a third-party library. Ensures that the installation can create an object of the specified type. Example:
 
@@ -187,6 +192,10 @@ Dependencies can be any of these types (case-insensitive):
    .. note::
       
       The custom dependency type must already be installed before it is used in another installation.
+
+   |blue-install|
+
+   |blue-wiz|
 
 components
 ++++++++++
@@ -637,3 +646,17 @@ Sources
 
 *  DNN Wiki: `Manifests <http://www.dnnsoftware.com/wiki/manifests>`_
 *  DNN Community blog: `The New Extension Installer Manifest - Part 1, Introduction <http://www.dnnsoftware.com/community-blog/cid/135060/the-new-extension-installer-manifest-part-1-introduction>`_ by `Charles Nurse <http://www.dnnsoftware.com/activity-feed/userid/43261>`_
+
+..  ***** Image Substitutions *****
+
+.. |blue-install| image:: /../common/img/testimages/blue-InstallExt-1.png
+    :class: img-responsive img-600
+
+.. |blue-wiz| image:: /../common/img/testimages/blue-InstallWizard-7.png
+    :class: img-responsive img-600
+
+.. |red-install| image:: /../common/img/testimages/red-InstallExt-1.png
+    :class: img-responsive img-600
+
+.. |red-wiz| image:: /../common/img/testimages/red-InstallWizard-7.png
+    :class: img-responsive img-600
