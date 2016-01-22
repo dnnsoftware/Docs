@@ -655,8 +655,8 @@ Sources
 .. |blue-wiz| image:: /../common/img/testimages/blue-InstallWizard-7.png
     :class: img-responsive img-600
 
-.. |red-install| image:: /../common/img/testimages/red-InstallExt-1.png
+.. |red-install| image:: /../common/img/testimages/whiteonblue-InstallExt-1.png
     :class: img-responsive img-600
 
-.. |red-wiz| image:: /../common/img/testimages/red-InstallWizard-7.png
+.. |red-wiz| image:: /../common/img/testimages/whiteonblue-InstallWizard-7.png
     :class: img-responsive img-600
