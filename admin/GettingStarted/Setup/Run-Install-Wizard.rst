@@ -5,7 +5,7 @@
 Prerequisites
 -------------
 
-.. class:: simple-list
+.. class:: collapse-list
 
 * :doc:`DNN installed with folder permissions for the user account that will run your website. <Set-Up-DNN-Folder>`
 
@@ -75,7 +75,7 @@ Steps
 
    If **TRUE**,
 
-   .. class:: simple-list 
+   .. class:: collapse-list 
 
    *  Any localized text in DNN will be displayed with an "L" in front of it to help with translating text in your module.
 
@@ -84,16 +84,7 @@ Steps
 ..  What else needs to be updated in web.config?
 
 
-Sources
--------
-
-.. class:: simple-list
-
-*  DNN Wiki: `Setting up Your Module Development Environment <http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment>`_, based on `Setting up your DotNetNuke Module Development Environment <http://www.christoc.com/Tutorials/All-Tutorials/aid/1>`_ by `Chris Hammond <http://www.dnnsoftware.com/users/chris-hammond>`_
-*  DNN Community Blog: `Installing DNN <http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn>`_ by `Clinton Patterson <http://www.dnnsoftware.com/activity-feed/userid/710933>`_
-
-.. *  `How to obtain versions of Internet Information Server (IIS) <https://support.microsoft.com/en-us/kb/224609>`_
-
+.. include:: Set-Up-Sources.rst
 
 ..  ***** Image Substitutions *****
 

@@ -15,7 +15,7 @@ Overview
 
 DNN offers three products:
 
-.. class:: simple-list
+.. class:: collapse-list
 
 *  DNN Platform is the free open-source package.
 *  Evoq Content adds more advanced website management features over the DNN Platform.
@@ -36,7 +36,7 @@ You can `compare the features <http://www.dnnsoftware.com/products/compare-dnn-p
 Requirements
 ------------
 
-.. class:: simple-list
+.. class:: collapse-list
 
 *  `DNN 8.0 Requirements </DNN8-Requirements.html>`_
 *  (Optional) **Developers:** Visual Studio 2015 is the recommended IDE for developing DNN modules. It is required if you are contributing to the DNN Platform.
@@ -45,7 +45,7 @@ Requirements
 Steps
 -----
 
-.. class:: simple-list
+.. class:: collapse-list
 
 1. :doc:`Download DNN and set up folder permissions for the user account that will run your website. <Setup/Set-Up-DNN-Folder>`
 #. :doc:`Enable and set up IIS. <Setup/Set-Up-IIS>`
@@ -71,13 +71,4 @@ See Also
 
 *  :doc:`Install an Extension <Install-Extensions>`
 
-Sources
--------
-
-.. class:: simple-list
-
-*  DNN Wiki: `Setting up Your Module Development Environment <http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment>`_, based on `Setting up your DotNetNuke Module Development Environment <http://www.christoc.com/Tutorials/All-Tutorials/aid/1>`_ by `Chris Hammond <http://www.dnnsoftware.com/users/chris-hammond>`_
-
-*  DNN Community Blog: `Installing DNN <http://www.dnnsoftware.com/community-blog/cid/155070/installing-dnn>`_ by `Clinton Patterson <http://www.dnnsoftware.com/activity-feed/userid/710933>`_
-
-.. *  `How to obtain versions of Internet Information Server (IIS) <https://support.microsoft.com/en-us/kb/224609>`_
+.. include:: Setup/Set-Up-Sources.rst

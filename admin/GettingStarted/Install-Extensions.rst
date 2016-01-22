@@ -59,7 +59,7 @@ Steps
 See Also
 --------
 
-.. class:: simple-list
+.. class:: collapse-list
 
 * `Create the Package </common/Extensions/CreatePackage.shtml>`_
 
@@ -68,7 +68,7 @@ See Also
 Sources
 -------
 
-.. class:: simple-list
+.. class:: collapse-list
 
 * DNN Community blog: `Installing Our Module in Another DNN Instance <http://www.dnnsoftware.com/community-blog/cid/155092/installing-our-module-in-another-dnn-instance>`_ by `Clinton Patterson <http://www.dnnsoftware.com/Activity-Feed/userId/710933>`_
 
