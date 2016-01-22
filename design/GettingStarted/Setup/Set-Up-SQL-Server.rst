@@ -2,4 +2,4 @@
  Set Up SQL Server
 ===================
 
-.. include:: /../common/gettingstarted/Set-Up-SQL-Server.rst
+.. include:: /../common/setup/Set-Up-SQL-Server.rst

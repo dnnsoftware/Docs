@@ -5,8 +5,8 @@
 .. toctree::
    :hidden:
 
-   CreatingModules/Using-The-Module-Creator
-   CreatingModules/Module-Templates
+   Using-The-Module-Creator
+   Module-Templates
 ..   CreatingModules/Create-Web-Forms-Module
 ..   CreatingModules/Create-MVC-Module
 ..   CreatingModules/Create-SPA-Module
@@ -18,7 +18,7 @@ You can produce a module in different ways:
 
 .. class:: collapse-list
 
-* Create an entire module from scratch. For very simple modules, you can use the :doc:`DNN Module Creator <CreatingModules/Using-The-Module-Creator>`.
+* Create an entire module from scratch. For very simple modules, you can use the :doc:`DNN Module Creator <Using-The-Module-Creator>`.
 * Start with module development templates, such as:
 
   .. class:: collapse-list
@@ -134,7 +134,7 @@ Sources
 
 .. class:: collapse-list
 
-*  DNN Wiki: `Module Development <http://www.dnnsoftware.com/wiki/module-development>`_
+*  DNN Wiki: `Module Development <http://www.dnnsoftware.com/wiki/module-development>`__
 
 *  DNN Community Blog: `Module Development <http://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro>`_ series by `Clinton Patterson <http://www.dnnsoftware.com/Activity-Feed/userId/710933>`_
 

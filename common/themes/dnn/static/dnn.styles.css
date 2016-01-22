@@ -55,6 +55,10 @@ h2 {
 a {
   color: #0d8dbf;
 }
+dd {
+  margin-left: 1em;
+  margin-bottom: 1.5em;
+}
 .horizontal-list {
   margin: 0 -1.14285714em 0 0;
   padding: 0;
@@ -741,7 +745,6 @@ ul.dnn-breadcrumbs li a:first-child {
 .doc-search {
   padding: 5px;
   width: 100%;
-  border-radius: 5px;
   border: none;
   color: #787878;
 }
@@ -784,6 +787,9 @@ ul.dnn-breadcrumbs li a:first-child {
 }
 .doc li {
   margin-bottom: 1.5em;
+}
+.doc dd li {
+  margin-bottom: 0;
 }
 .doc ul img,
 .doc ol img {

@@ -112,6 +112,8 @@ Steps
 See Also
 --------
 
+.. class:: collapse-list
+
 * `Creating Modules <../Creating-Modules>`_
 * `Create an MVC Module <Create-MVC-Module>`_
 * `Create a SPA Module <Create-SPA-Module>`_

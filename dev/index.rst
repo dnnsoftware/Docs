@@ -9,7 +9,7 @@
 
    GettingStarted/Getting-Started
    API
-   How-To
+   HowTo/How-To
    Concepts
    Glossary
 

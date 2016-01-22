@@ -612,10 +612,11 @@ Example
 
 Below is a sample theme manifest: 
 
-.. literalinclude:: ../common/samples/MyThemeManifest.dnn
+.. literalinclude:: /../common/samples/MyThemeManifest.dnn
     :language: xml
     :linenos:
-    
+
+
 See Also
 --------
 

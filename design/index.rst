@@ -9,10 +9,11 @@
 .. toctree::
    :hidden:
 
-   Getting-Started
-   Building-Themes
+   GettingStarted/Getting-Started
+   Style-Guide
+   Skin-Objects
+   HowTo/Building-Themes
    Packaging-Themes
-   UX-Guide
    Glossary
    
 .. ## Best Practices (future)

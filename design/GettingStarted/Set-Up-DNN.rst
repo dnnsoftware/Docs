@@ -9,4 +9,4 @@
    Setup/Set-Up-SQL-Server
    Setup/Run-Install-Wizard
  
-.. include:: /../common/gettingstarted/Set-Up-DNN.rst
+.. include:: /../common/setup/Set-Up-DNN.rst

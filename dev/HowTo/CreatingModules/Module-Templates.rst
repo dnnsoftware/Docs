@@ -5,6 +5,8 @@
 Prerequisites
 -------------
 
+.. class:: collapse-list
+
 *  `A local DNN installation </common/Setup/SetUpDNN.shtml>`_ with **Host** permissions.
 
 *  Visual Studio 2015 is the recommended IDE for developing DNN modules.
@@ -37,6 +39,8 @@ Steps
    
       a. `Download the appropriate .vsix file. <https://github.com/dnnsoftware/DNN.Templates/releases>`_ Two are included:
      
+         .. class:: collapse-list
+         
          *  Dnn.Mvc.Module.vsix
         
          *  Dnn.Spa.Module.vsix
@@ -63,15 +67,21 @@ Steps
          
    #. Set the following:
    
+      .. class:: collapse-list
+      
       *  **Name:** the name of your new module
       *  **Location:** a subfolder inside the :code:`DesktopModules` folder of your DNN installation folder
       
-      **Tip:** Use your company name or a unique name as the subfolder name to avoid conflicts with other module creators in a production environment.
+         .. tip::
+        
+            Use your company name or a unique name as the subfolder name to avoid conflicts with other module creators in a production environment.
       
    #. Uncheck **Create directory for solution**. The templates expect Visual Studio's solution file (.sln) to be in the same folder as the project file. Checking this option puts the solution file in a different folder, which can cause build errors.
    
 See Also
 --------
+
+.. class:: collapse-list
 
 *  `Creating Modules </dev/CreatingModules.shtml>`_
 *  `Create a Web Forms module. </dev/CreatingModules/CreateWebFormsModule.shtml>`_
@@ -80,6 +90,8 @@ See Also
 
 Sources
 -------
+
+.. class:: collapse-list
 
 *  DNN Community Blog: `Module Development for Non-Developers, Skinners, & DNN Beginners - Blog Series <a href="http://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro>`_ by `Clinton Patterson <http://www.dnnsoftware.com/activity-feed/userid/710933>`_
 *  `Using the new Module Development Templates for DotNetNuke 7 <http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot>`_ by `Chris Hammond <http://www.dnnsoftware.com/users/chris-hammond>`_
@@ -94,7 +106,7 @@ Sources
     :class: img-responsive img-600
     :alt: In the Online > Visual Studio Gallery tree, search for DotNetNuke then Download.
 
-.. |download-templates| image:: /../common/img/scr-VS2015DNN8Templates.png
+.. |download-templates| image:: /../common/img/scr-VS2015DNN8Templates-11.png
     :class: img-responsive img-600
     :alt: Download DNN8 templates from Github.
 

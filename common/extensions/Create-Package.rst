@@ -13,18 +13,17 @@ Steps
 
 #. Prepare your files in folders.
 
-.. *  <a href="/design/REF-ContentsThemePack.shtml">Layout templates, containers, and associated files</a>
-.. *  <a href="/dev/REF-ContentsModulePack.shtml">Modules and associated files</a>
-
    *  Files that are common among all packages:
       
-      *  (Optional) <b>MyLicense.txt</b> is displayed to the user during package installation.</li>.
-      *  (Optional) <b>MyReleaseNotes.txt</b> lists the changes for the current version of the package and is also provided during installation.</li>
+      .. class:: collapse-list
+      
+      *  (Optional) **MyLicense.txt** is displayed to the user during package installation.
+      *  (Optional) **MyReleaseNotes.txt** lists the changes for the current version of the package and is also provided during installation.
     
-    .. tip::
-       The license and release notes are HTML files, so you can include special offers, including a call to action and other details.
+      .. tip::
+         The license and release notes are HTML files, so you can include special offers, including a call to action and other details.
        
-       <b>Reminder:</b> Include the version number of your extension in the release notes.
+         **Reminder:** Include the version number of your extension in the release notes.
         
 #. Create the :doc:`DNN Manifest <Dnn-Manifest>`
 
