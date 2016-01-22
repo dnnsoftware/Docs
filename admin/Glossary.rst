@@ -1,5 +1,5 @@
-============================
-|InReview| Glossary
-============================
+==========
+ Glossary
+==========
 
 .. include:: /../common/Glossary.rst

@@ -1,15 +1,9 @@
-.. _index:
-
-=================================
-|InProgress| Admin Documentation
-=================================
+=====================
+ Admin Documentation
+=====================
 
 .. toctree::
-   :hidden:
 
-   Install-Themes
-   Set-Up-DNN
+   GettingStarted/Getting-Started
+   UserGuide/User-Guides
    Glossary
-   
-.. include:: /../common/stub-overview.txt
-
