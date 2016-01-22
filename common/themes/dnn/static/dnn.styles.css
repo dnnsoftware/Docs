@@ -944,6 +944,9 @@ ol.collapse-list li {
     padding: 5px 30px;
     display: block;
   }
+  .article-nav-wrapper .article-nav li > ul {
+    display: none;
+  }
   .article-nav-wrapper .article-nav .active a {
     color: #bdbdbd;
   }
