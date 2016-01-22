@@ -358,8 +358,8 @@ epub_exclude_files = ['search.html']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-  'admin': ('http://docs.dnndev.me/admin', 'admin.inv'),
-  'main': ('http://docs.dnndev.me/', 'main.inv'),
-  'design': ('http://docs.dnndev.me/design', 'design.inv'),
 }
 
+#  'admin': ('http://docs.dnndev.me/admin', 'admin.inv'),
+#  'main': ('http://docs.dnndev.me/', 'main.inv'),
+#  'design': ('http://docs.dnndev.me/design', 'design.inv'),
