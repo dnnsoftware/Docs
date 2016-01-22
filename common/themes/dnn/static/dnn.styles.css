@@ -797,10 +797,12 @@ ul.dnn-breadcrumbs li a:first-child {
 .article-nav-wrapper {
   display: none;
 }
-ul.simple-list {
+ul.collapse-list,
+ol.collapse-list {
   margin-bottom: 10px;
 }
-ul.simple-list li {
+ul.collapse-list li,
+ol.collapse-list li {
   margin: 0;
 }
 #in-this-section li {
