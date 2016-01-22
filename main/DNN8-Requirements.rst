@@ -7,6 +7,8 @@ DNN 8.0/Evoq 8.3
 
 **Supported Operating Systems**
 
+.. class:: collapse-list
+
 * Windows Vista
 * Windows 7
 * Windows 8
@@ -27,6 +29,8 @@ DNN 8.0/Evoq 8.3
 
 **Database Server**
 
+.. class:: collapse-list
+
 * Microsoft SQL Server 2008
 * Microsoft SQL Server 2008 Express
 * Microsoft SQL Server 2008 R2
@@ -37,6 +41,8 @@ DNN 8.0/Evoq 8.3
 * Microsoft SQL Server Azure
 
 **Browsers**
+
+.. class:: collapse-list
 
 * Chrome
 * Firefox
@@ -49,6 +55,8 @@ DNN 8.0/Evoq 8.3
 
 Recommended Environment
 -----------------------
+
+.. class:: collapse-list
 
 * Windows Server 2012 R2
 * IIS 8.5
