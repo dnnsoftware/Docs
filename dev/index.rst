@@ -7,7 +7,7 @@
 .. toctree::
    :hidden:
 
-   Getting-Started
+   GettingStarted/Getting-Started
    API
    How-To
    Concepts

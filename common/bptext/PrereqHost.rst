@@ -1,0 +1,1 @@
+**A host / super user account.** Host privileges are required to upload modules and themes, because they might contain executable code. (An administrator account is sufficient to apply modules and themes to a website.)
