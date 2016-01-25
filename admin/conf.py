@@ -154,7 +154,6 @@ html_favicon = '../common/img/favicon.ico'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = [
   '../common/img',
-  '../common/css',
   '../common/js'
 ]
 

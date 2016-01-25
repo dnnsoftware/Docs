@@ -1,8 +1,6 @@
-.. _index:
-
-=================================
-|InProgress| Design Documentation
-=================================
+======================
+ Design Documentation
+======================
 
 (Insert introduction here.)
  
@@ -16,5 +14,3 @@
    Glossary
    
 .. ## Best Practices (future)
-
-.. include:: /../common/stub-overview.txt
