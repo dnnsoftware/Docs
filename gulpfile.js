@@ -17,9 +17,23 @@ gulp.task('build-main',
 	shell.task('make html', { cwd: './main' })
 );
 
+gulp.task('build-main-all',
+    ['compile-styles'],
+    shell.task('sphinx-build -b html -a -E . _build/html',
+        { cwd: './main' }
+    )
+);
+
 gulp.task('build-admin',
     ['compile-styles'],
 	shell.task('make html', { cwd: './admin' })
+);
+
+gulp.task('build-admin-all',
+    ['compile-styles'],
+    shell.task('sphinx-build -b html -a -E . _build/html',
+        { cwd: './admin' }
+    )
 );
 
 gulp.task('build-dev',
@@ -27,12 +41,26 @@ gulp.task('build-dev',
 	shell.task('make html', { cwd: './dev' })
 );
 
+gulp.task('build-dev-all',
+    ['compile-styles'],
+    shell.task('sphinx-build -b html -a -E . _build/html',
+        { cwd: './dev' }
+    )
+);
+
 gulp.task('build-design',
     ['compile-styles'],
 	shell.task('make html', { cwd: './design' })
 );
 
-gulp.task('build-all', ['build-main', 'build-admin', 'build-dev', 'build-design']);
+gulp.task('build-design-all',
+    ['compile-styles'],
+    shell.task('sphinx-build -b html -a -E . _build/html',
+        { cwd: './design' }
+    )
+);
+
+gulp.task('build-all', ['build-main-all', 'build-admin-all', 'build-dev-all', 'build-design-all']);
 
 gulp.task('watch', function () {
 	switch (argv.proj) {
