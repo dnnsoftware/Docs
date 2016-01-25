@@ -4,7 +4,7 @@ Overview
 
 A DNN extension can contain a module, a theme, or other components that extend the functionality of the DNN Platform.
 
-.. include::  /../common/bptext/3rdPartyExtensions.rst
+.. include::  /../common/bptext/3rdPartyExtensions.inc
 
 You can also create your custom `modules </dev/CreatingModules.shtml>`_ and `themes </design/CreatingThemes.shtml>`_.
 
@@ -13,7 +13,7 @@ The extension must be added by the host / super user account to the DNN installa
 Prerequisites
 --------------
 
-* .. include::  /../common/bptext/PrereqHost.rst
+* .. include::  /../common/bptext/PrereqHost.inc
 
 Steps
 ------

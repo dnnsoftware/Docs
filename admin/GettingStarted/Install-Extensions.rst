@@ -2,4 +2,4 @@
  Install an Extension
 ======================
 
-.. include:: /../common/gettingstarted/Install-Extensions.rst
+.. include:: /../common/gettingstarted/Install-Extensions.inc

@@ -143,7 +143,7 @@ Steps
          * TREEVIEW
          * USER
 
-      .. include::  /../common/bptext/TipSkinningTool.rst
+      .. include::  /../common/bptext/TipSkinningTool.inc
 
 
 

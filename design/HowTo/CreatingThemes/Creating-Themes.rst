@@ -130,9 +130,9 @@ Steps
    -------
    TODO: Create an example theme that readers can download and add the link here.
 
-.. include::  /../common/bptext/TipSkinningTool.rst
+.. include::  /../common/bptext/TipSkinningTool.inc
 
-.. include::  /../common/bptext/3rdPartyExtensions.rst
+.. include::  /../common/bptext/3rdPartyExtensions.inc
 
 
 See Also

@@ -72,7 +72,7 @@ Steps
 
 #. If you do not use **NETWORK SERVICE** as the user account to run your website, verify that the automatically created :code:`IIS AppPool\AppPoolName` has **Full** or **Modify** permissions for the DNN installation folder. See :doc:`Set Up DNN Folder and the User Account <Set-Up-DNN-Folder>`
 
-.. include:: /../common/gettingstarted/Set-Up-Sources.rst
+.. include:: /../common/gettingstarted/Set-Up-Sources.inc
 
 ..  ***** Image Substitutions *****
 

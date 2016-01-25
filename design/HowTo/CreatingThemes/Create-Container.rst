@@ -55,7 +55,7 @@ Steps
       *  TITLE
       *  VISIBILITY
 
-   .. include::  /../common/bptext/TipSkinningTool.rst
+   .. include::  /../common/bptext/TipSkinningTool.inc
 
 
 See Also

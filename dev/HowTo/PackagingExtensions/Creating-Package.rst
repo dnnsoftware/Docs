@@ -2,5 +2,5 @@
 Create the Package
 ===================
 
-.. include::  /../common/extensions/Create-Package.rst
+.. include::  /../common/extensions/Create-Package.inc
  

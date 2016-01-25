@@ -29,7 +29,7 @@ You can produce a module in different ways:
   
 * Customize a pre-existing module.
 
-  .. include::  /../common/bptext/3rdPartyExtensions.rst
+  .. include::  /../common/bptext/3rdPartyExtensions.inc
 
 You can also use different programming frameworks (Web Forms, MVC, SPA) and languages (C#, VB) to create your module.
 

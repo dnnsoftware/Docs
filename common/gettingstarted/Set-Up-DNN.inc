@@ -60,4 +60,4 @@ See Also
 
 *  :doc:`Install an Extension <Install-Extensions>`
 
-.. include:: /../common/gettingstarted/Set-Up-Sources.rst
+.. include:: /../common/gettingstarted/Set-Up-Sources.inc

@@ -56,7 +56,7 @@ Steps
       
       |full-control|
 
-.. include:: /../common/gettingstarted/Set-Up-Sources.rst
+.. include:: /../common/gettingstarted/Set-Up-Sources.inc
 
 ..  ***** Image Substitutions *****
 

@@ -79,7 +79,7 @@ Steps
 
 ..  What else needs to be updated in web.config?
 
-.. include:: /../common/gettingstarted/Set-Up-Sources.rst
+.. include:: /../common/gettingstarted/Set-Up-Sources.inc
 
 ..  ***** Image Substitutions *****
 

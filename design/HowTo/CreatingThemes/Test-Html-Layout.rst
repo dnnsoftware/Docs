@@ -24,7 +24,7 @@ The conversion:
 Prerequisites
 -------------
 
-.. include::  /../common/bptext/PrereqHost.rst
+.. include::  /../common/bptext/PrereqHost.inc
 
 Steps
 -----
