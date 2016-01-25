@@ -11,9 +11,8 @@
 
    GettingStarted/Getting-Started
    Style-Guide
-   Skin-Objects
-   HowTo/Building-Themes
-   Packaging-Themes
+   Theme-Objects
+   HowTo/How-To
    Glossary
    
 .. ## Best Practices (future)

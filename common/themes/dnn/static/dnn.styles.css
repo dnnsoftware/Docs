@@ -804,12 +804,17 @@ ul.dnn-breadcrumbs li a:first-child {
   display: none;
 }
 ul.collapse-list,
-ol.collapse-list {
+ol.collapse-list,
+.hlist ul {
   margin-bottom: 10px;
 }
 ul.collapse-list li,
-ol.collapse-list li {
+ol.collapse-list li,
+.hlist ul li {
   margin: 0;
+}
+.hlist td {
+  vertical-align: top;
 }
 #in-this-section li {
   margin: 0;

@@ -2,4 +2,4 @@
  Set Up IIS
 ============
 
-.. include:: /../common/setup/Set-Up-IIS.rst
+.. include:: /../common/gettingstarted/Set-Up-IIS.rst
