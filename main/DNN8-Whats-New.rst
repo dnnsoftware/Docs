@@ -18,7 +18,10 @@ The following are updates geared towards extension developers and theme designer
 *  Third party components (CodeMirror and Newtonsoft) were upgraded to newer versions.
 *  DAL 2 is enhanced to add a fluent configuration API that allows developers to separate their data implementation details from their models.
 *  The DNN Platform now uses Web API 2.0.
-*  JSON Web Token (JWT) authentication support is added to allow developers a way to expose WebAPI services for consumption outside of the framework, such as mobile applications. **Warning:** This feature is still in beta.
+*  JSON Web Token (JWT) authentication support is added to allow developers a way to expose WebAPI services for consumption outside of the framework, such as mobile applications. 
+
+   .. warning::
+      JWT authentication is still in beta. 
 
 
 Additional changes:
