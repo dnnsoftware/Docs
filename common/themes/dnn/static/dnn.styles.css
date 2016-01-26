@@ -792,7 +792,8 @@ ul.dnn-breadcrumbs li a:first-child {
   margin-bottom: 0;
 }
 .doc ul img,
-.doc ol img {
+.doc ol img,
+.doc img.dnn-border {
   background: #f9f9f9;
   border: 6px double #fff;
   padding: 1em;

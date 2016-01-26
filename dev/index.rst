@@ -10,7 +10,7 @@
    GettingStarted/Getting-Started
    API
    HowTo/How-To
-   Concepts
+   Concepts/Concepts
    Glossary
 
 .. ## Best Practices (future)
