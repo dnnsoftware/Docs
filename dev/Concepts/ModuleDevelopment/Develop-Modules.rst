@@ -7,6 +7,9 @@
 
    Module-Features
    Module-Architecture
+   Web-Forms-Module-Development
+   MVC-Module-Development
+   SPA-Module-Development
    
 The module is one of the foundational building blocks for extending the DNN platform. It is the primary extension type for adding functionality that enables users to view, create and edit content. In fact most of the administrative features within DNN are implemented as modules.
 

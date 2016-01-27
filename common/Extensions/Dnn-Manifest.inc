@@ -248,6 +248,8 @@ Some component types are applicable only to the package type of the same name; g
    * - SkinObject
      - SkinObject
 
+.. _assembly-component:
+
 *  `Assembly <http://www.dnnsoftware.com/wiki/manifest-assembly-component>`_. Assemblies to be installed in the main :code:`\bin` folder of the installation. Assemblies are the compiled code portion of your extension. They can be your own assemblies or third-party assemblies that you ship with your extension.
 
    .. code-block:: xml
@@ -269,6 +271,8 @@ Some component types are applicable only to the package type of the same name; g
         </component>
 
 
+.. _auth-component:
+
 *  `AuthenticationSystem <http://www.dnnsoftware.com/wiki/manifest-authenticationsystem-component>`_.
     Authentication providers used by the extension, such as **Facebook**, **Google**, **Twitter**, and **Microsoft Accounts**.
     By default, DNN authenticates using its own database.
@@ -285,6 +289,8 @@ Some component types are applicable only to the package type of the same name; g
         <authenticationService />
         ...
         </component>
+
+.. _cleanup-component:
 
 *  `Cleanup <http://www.dnnsoftware.com/wiki/cleanup-component>`_.
     List of files that must be deleted during installation or upgrade of the package.
@@ -318,7 +324,7 @@ Some component types are applicable only to the package type of the same name; g
     *  Component type :ref:`Script <Script-Component>` for data provider scripts that must be uninstalled.
 
 
-.. _Config-Component:
+.. _config-component:
 
 *  `Config <http://www.dnnsoftware.com/wiki/manifest-config-component>`_.
     Changes to do on the specified config file.
@@ -353,6 +359,8 @@ Some component types are applicable only to the package type of the same name; g
 
 
 
+.. _container-component:
+
 *  `Container <http://www.dnnsoftware.com/wiki/manifest-container-component>`_.
     Containers to be installed.
 
@@ -371,6 +379,8 @@ Some component types are applicable only to the package type of the same name; g
         </containerFiles>
         </component>
 
+.. _dashboard-component:
+
 *  `DashboardControl <http://www.dnnsoftware.com/wiki/manifest-dashboardcontrol-component>`_.
     Controls that will appear as separate tabs in the DNN Dashboard (**Host** > **Dashboard**).
     
@@ -388,6 +398,8 @@ Some component types are applicable only to the package type of the same name; g
         <dashboardControl />
         ...
         </component>
+
+.. _file-component:
 
 *  `File <http://www.dnnsoftware.com/wiki/manifest-file-component>`_.
     Files to be installed. By default, only files with allowed file extensions are installed; however, the host user can bypass this security check during installation. To view or modify the list of file extensions, go to **Host** > **Host Settings** > **Other Settings** > **Allowable File Extensions** in your DNN installation.
@@ -418,6 +430,8 @@ Some component types are applicable only to the package type of the same name; g
         <sourceFileName>img/MyAwesomeImageFile.jpg</sourceFileName>
         </file>
 
+.. _core-language-component:
+
 *  `CoreLanguage <http://www.dnnsoftware.com/wiki/manifest-corelanguage-component>`_.
     Language pack files required to localize the core DNN Platform for a specific culture. A core language pack can be installed during the DNN Platform installation or anytime after.
 
@@ -439,7 +453,7 @@ Some component types are applicable only to the package type of the same name; g
 
     For the list of supported language codes, see the .NET `CultureInfo <https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo(VS.80).aspx>`_ class.
 
-
+.. _ext-language-component:
 
 *  `ExtensionLanguage <http://www.dnnsoftware.com/wiki/manifest-extensionlanguage-component>`_.
     Language pack files required to localize a DNN extension for a specific culture.
@@ -461,6 +475,8 @@ Some component types are applicable only to the package type of the same name; g
         </component>
 
     For the list of supported language codes, see the .NET `CultureInfo <https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo(VS.80).aspx>`_ class.
+
+.. _module-component:
 
 *  `Module <http://www.dnnsoftware.com/wiki/module-component>`_.
     Only one component with :code:`type="Module"` is allowed within a **package** section. To install a set of modules as a unit, create one **package** section per module in the same manifest.
@@ -518,12 +534,16 @@ Some component types are applicable only to the package type of the same name; g
         </eventMessage>
         </component>
 
+.. _provider-component:
+
 *  `Provider <http://www.dnnsoftware.com/wiki/manifest-provider-component>`_.
     Extends the list of allowed file extensions. These additional file extensions apply only to the current installation and are not added to the global list of file extensions found in **Host** > **Host Settings** > **Other Settings** > **Allowable File Extensions**. The following file extensions can be allowed: .ashx, .aspx, .ascx, .vb, .cs, .resx, .css, .js, .resources, .config, .xml, .htc, .html, .htm, .text, .vbproj, .csproj, and .sln.
 
     .. code-block:: xml
 
         <component type="Provider" />
+
+.. _resource-component:
 
 *  `ResourceFile <http://www.dnnsoftware.com/wiki/manifest-resourcefile-component>`_.
     Zip files to be expanded during installation. Can be used instead of :code:`component type="File"` to simplify the manifest for packages that contain many files.
@@ -541,7 +561,7 @@ Some component types are applicable only to the package type of the same name; g
         </resourceFiles>
         </component>
 
-.. _Script-Component:
+.. _script-component:
 
 *  `Script <http://www.dnnsoftware.com/wiki/script-component>`_.
     Database scripts that the extension needs. The following scripts are handled differently:
@@ -568,6 +588,8 @@ Some component types are applicable only to the package type of the same name; g
         </scripts>
         </component>
 
+.. _skin-component:
+
 *  `Skin <http://www.dnnsoftware.com/wiki/manifest-skin-component>`_.
     All files related to the theme. The installer needs to parse the main theme files at installation time to replace relative folder names; therefore, every file of type **ASCX**, **HTML**, or **CSS** must be declared as a **skinFile**. Other files (i.e., images and scripts) can be packaged using component type "ResourceFile" to simplify the complexity of the theme manifest.
 
@@ -586,6 +608,8 @@ Some component types are applicable only to the package type of the same name; g
         </skinFiles>
         </component>
 
+.. _skin-object-component:
+
 *  `SkinObject <http://www.dnnsoftware.com/wiki/manifest-skinobject-component>`_.
     Custom theme objects. 
 
@@ -598,6 +622,8 @@ Some component types are applicable only to the package type of the same name; g
             <supportsPartialRendering /> <!-- "true" if the theme object supports partial rendering through an MS AJAX update panel wrapper. Default: "false" -->
         </moduleControl>
         </component>
+
+.. _url-provider-component:
 
 *  `URL Provider <http://www.dnnsoftware.com/wiki/manifest-url-provider>`_.
     Custom URL provider to be used with the Advanced URL Management System (AUM).
@@ -621,7 +647,7 @@ Example
 
 Below is a sample theme manifest: 
 
-.. literalinclude:: /../common/samples/MyThemeManifest.dnn
+.. literalinclude:: /../common/samples/theme/MyThemeManifest.dnn
     :language: xml
     :linenos:
 
