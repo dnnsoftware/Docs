@@ -2,8 +2,8 @@
  Theme Objects
 ===============
 
-Overview
---------
+.. Overview
+.. --------
 
 .. How to have checkboxes on top that would filter what's displayed; i.e., HTML vs ASCX vs object token, DNN version. -->
 

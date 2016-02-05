@@ -11,6 +11,11 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
+def setup(app):
+    app.add_config_value('link_root', '', 'env')
+
+tags.add('admin')
+     
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -19,10 +24,12 @@ import os
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+
 sys.path.append(os.path.abspath('../common/ext'))
 
 extensions = [
     'sphinx.ext.intersphinx',
+    'sphinx.ext.ifconfig',
     'div',
     'link'
 ]
@@ -99,6 +106,10 @@ rst_epilog = """
 .. |InReview| unicode:: U+1F441
 """
 
+# -- Options for Custom Link directive -----------------------------------------
+
+link_root = '/docs'
+
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -111,9 +122,9 @@ html_theme = 'dnn'
 html_theme_options = {
   'navbar_links': [
     ("Documentation", "#", True, [
-      ("Admin", "/admin/index", True),
-      ("Developer", "/dev/index", True),
-      ("Designer", "/design/index", True)
+      ("Developer", "~/dev/index.html", True),
+      ("Admin", "~/admin/index.html", True),
+      ("Designer", "~/design/index.html", True)
     ]),
     ("Blogs", "http://www.dnnsoftware.com/community-blog", False),
     ("Download", "http://www.dnnsoftware.com/community/download", False),
@@ -126,8 +137,9 @@ html_theme_options = {
   'navbar_title': 'Admin Center',
   'navbar_version': False,
   'globaltoc_depth': 3,
-  'site_home': 'http://docs.dnndev.me/',
-  'hide_sidebar': []
+  'site_home': 'http://dnnsoftware.com/docs',
+  'hide_sidebar': [],
+  'link_root': link_root
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -171,7 +183,6 @@ html_last_updated_fmt = '%b %d, %Y'
 html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
 html_sidebars = {'**': ['searchbox.html', 'sidebartoc.html']}
 
 # Additional templates that should be rendered to pages, maps page names to

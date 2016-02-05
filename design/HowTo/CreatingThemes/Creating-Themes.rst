@@ -97,7 +97,7 @@ How to Create a Theme
 Prerequisites
 +++++++++++++
 
-*  `A local DNN installation </common/Setup/SetUpDNN.shtml>`_ with **Host** permissions.
+*  :doc:`A local DNN installation <../../GettingStarted/Set-Up-DNN>` with **Host** permissions.
 
 
 Steps
@@ -105,21 +105,21 @@ Steps
 
 .. I want these steps to be more prominent: bigger fonts, colored background boxes, etc.
 
-1. `Create layout templates for the webpages. </design/CreatingThemes/CreateLayoutTemplate.shtml>`_
+1. :doc:`Create layout templates for the webpages. <Create-Layout-Template>`
 
-#. `Create containers for modules. </design/CreatingThemes/CreateContainer.shtml>`_
+#. :doc:`Create containers for modules. <Create-Container>`
 
-#. **HTML only:** `Convert the layout templates and containers from HTML to ASCX. </design/CreatingThemes/ConvertHTMLToASCX.shtml>`_
+#. (Optional) :doc:`Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers. <Create-CSS>`
     
-#. (Optional) `Create a CSS file for each layout template and container, or create a single master CSS file to be used for all layout templates and containers. </design/CreatingThemes/CreateCSS.shtml>`_
-    
-#. (Optional) `Create a doctype XML file. </design/CreatingThemes/CreateDocTypeXML.shtml>`_
+#. (Optional) :doc:`Create a doctype XML file. <Create-Doctype>`
 
-#. `Package your theme. </common/Extensions/CreatePackage.shtml>`_
+#. **HTML only:** :doc:`Test HTML templates. <Test-Html-Layout>`
+    
+#. :doc:`Package your theme. <../PackagingThemes/Creating-Package>`
 
 #. Test the theme.
 
-   a. `Install the package. </common/Extensions/InstallExtension.shtml>`_
+   a. :doc:`Install the package. <../../GettingStarted/Install-Extensions>`
    
    #. Apply the theme to a new webpage in your DNN website.
    
@@ -142,7 +142,7 @@ See Also
 
 *  DNN Wiki: `DotNetNuke Skins <http://www.dnnsoftware.com/wiki/dotnetnuke-skins>`_
 
-*  `UX Guide <placeholderlink>`_
+*  :doc:`UX Guide <../../Style-Guide>`
 
 
 Sources

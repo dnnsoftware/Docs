@@ -6,7 +6,8 @@ A DNN extension can contain a module, a theme, or other components that extend t
 
 .. include::  /../common/bptext/3rdPartyExtensions.inc
 
-You can also create your custom `modules </dev/CreatingModules.shtml>`_ and `themes </design/CreatingThemes.shtml>`_.
+You can also create your custom `modules </docs/dev/HowTo/CreatingModules/Creating-Modules.html>`_ and `themes </docs/design/HowTo/CreatingThemes/Creating-Themes.html>`_.
+
 
 The extension must be added by the host / super user account to the DNN installation before it can be used in any of the websites.
 
@@ -56,11 +57,22 @@ Steps
 See Also
 --------
 
-.. class:: collapse-list
+.. The following sections will cause warnings
 
-* `Create the Package </common/Extensions/CreatePackage.shtml>`_
+.. only:: design
 
-* `The DNN Manifest Schema </common/Extensions/DNNManifestSchema.shtml>`_
+   .. class:: collapse-list
+
+   * :doc:`../HowTo/PackagingThemes/Creating-Package`
+   * :doc:`../HowTo/PackagingThemes/Dnn-Manifest`
+
+
+.. only:: dev
+
+   .. class:: collapse-list
+
+   * :doc:`../HowTo/PackagingExtensions/Creating-Package`
+   * :doc:`../HowTo/PackagingExtensions/Dnn-Manifest`
 
 Sources
 -------

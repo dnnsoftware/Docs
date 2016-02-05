@@ -97,6 +97,6 @@ See Also
 
 .. class:: collapse-list
 
-*  DNN wiki: `DNN Glossary <a href="http://www.dnnsoftware.com/wiki/dotnetnuke-glossary>`_
+*  DNN wiki: `DNN Glossary <http://www.dnnsoftware.com/wiki/dotnetnuke-glossary>`_
 *  DNN wiki: `Globalization Glossary <http://www.dnnsoftware.com/wiki/international-glossary>`_
     

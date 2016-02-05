@@ -103,9 +103,9 @@ See Also
 
 *  DNN Wiki: `DotNetNuke Skins <http://www.dnnsoftware.com/wiki/dotnetnuke-skins>`_
 
-*  `Create Layout Template </design/CreatingThemes/CreateLayoutTemplate.shtml>`_
+*  :doc:`Create Layout Template <Create-Layout-Template>`
 
-*  `Create a Container </design/CreatingThemes/CreateContainer.shtml>`_
+*  :doc:`Create a Container <Create-Container>`
 
 
 Sources

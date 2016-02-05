@@ -17,7 +17,7 @@ The DNN Module Creator is generally recommended only for simple modules.  For mo
 Prerequisites
 -------------
 
-* `A local DNN installation <../admin/Set-Up-DNN>`_ with **Host** permissions.
+* :doc:`A local DNN installation <../../GettingStarted/Set-Up-DNN>` with **Host** permissions.
 
 Steps
 -----
@@ -114,9 +114,10 @@ See Also
 
 .. class:: collapse-list
 
-* `Creating Modules <../Creating-Modules>`_
-* `Create an MVC Module <Create-MVC-Module>`_
-* `Create a SPA Module <Create-SPA-Module>`_
+* :doc:`Creating Modules <Creating-Modules>`
+
+.. * `Create an MVC Module <Create-MVC-Module>`_
+.. * `Create a SPA Module <Create-SPA-Module>`_
 
 
 ..  ***** Image Substitutions *****

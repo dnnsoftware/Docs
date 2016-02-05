@@ -320,8 +320,8 @@ Some component types are applicable only to the package type of the same name; g
 
     .. class:: collapse-list
 
-    *  Component type :ref:`Config <Config-Component>` to update configuration files during uninstall.
-    *  Component type :ref:`Script <Script-Component>` for data provider scripts that must be uninstalled.
+    *  Component type :ref:`Config <config-component>` to update configuration files during uninstall.
+    *  Component type :ref:`Script <script-component>` for data provider scripts that must be uninstalled.
 
 
 .. _config-component:

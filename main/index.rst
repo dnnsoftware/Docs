@@ -1,5 +1,3 @@
-.. include:: /../common/styles.txt
-
 .. title:: DNN Documentation Center
 
 .. toctree::
@@ -21,7 +19,7 @@
 
         .. div:: col-sm-4 col-xs-12
 
-            .. link:: /dev/
+            .. link:: ~/dev/index.html
                 :class: home-card dev-card
 
                 .. div:: card-title
@@ -34,7 +32,7 @@
         
         .. div:: col-sm-4 col-xs-12
         
-            .. link:: /admin/
+            .. link:: ~/admin/index.html
                 :class: home-card admin-card
 
                 .. div:: card-title
@@ -47,7 +45,7 @@
         
         .. div:: col-sm-4 col-xs-12
         
-            .. link:: /design/
+            .. link:: ~/design/index.html
                 :class: home-card designer-card
 
                 .. div:: card-title

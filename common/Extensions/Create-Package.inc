@@ -33,7 +33,7 @@ Steps
 See Also
 --------
 
-*  `Install an Extension </admin/Getting-Started/Install-Extensions.html>`_
+*  :doc:`Install an Extension <Install-Extension>`
 
 Sources
 -------

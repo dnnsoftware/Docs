@@ -153,10 +153,8 @@ See Also
 .. class:: collapse-list
 
 *  DNN Wiki: `DotNetNuke Skins <http://www.dnnsoftware.com/wiki/dotnetnuke-skins>`_
-*  `Create CSS </design/CreatingThemes/CreateCSS.shtml>`_
-*  `Create a Container </design/CreatingThemes/CreateContainer.shtml>`_
-
-
+*  :doc:`Create CSS <Create-CSS>`
+*  :doc:`Create a Container <Create-Container>`
 
 Sources
 -------

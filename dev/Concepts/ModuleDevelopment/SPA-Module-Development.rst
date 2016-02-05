@@ -1,4 +1,5 @@
-========================
- SPA Module Development
-========================
+=====================================
+ |InProgress| SPA Module Development
+=====================================
  
+.. include:: /../common/stub-overview.txt

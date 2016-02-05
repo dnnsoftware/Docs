@@ -27,7 +27,7 @@ Requirements
 
 .. class:: collapse-list
 
-*  `DNN 8.0 Requirements </DNN8-Requirements.html>`_
+*  `DNN 8.0 Requirements </docs/DNN8-Requirements.html>`_
 *  (Optional) **Developers:** Visual Studio 2015 is the recommended IDE for developing DNN modules. It is required if you are contributing to the DNN Platform.
 
 

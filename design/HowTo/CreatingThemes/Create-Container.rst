@@ -64,8 +64,8 @@ See Also
 .. class:: collapse-list
 
 *  DNN Wiki: `DotNetNuke Skins <http://www.dnnsoftware.com/wiki/dotnetnuke-skins>`_
-*  `Create CSS </design/CreatingThemes/CreateCSS.shtml>`_
-*  `Create Layout Template </design/CreatingThemes/CreateLayoutTemplate.shtml>`_
+*  :doc:`Create CSS <Create-CSS>`
+*  :doc:`Create Layout Template <Create-Layout-Template>`
 
 Sources
 -------

@@ -7,7 +7,7 @@ Prerequisites
 
 .. class:: collapse-list
 
-*  `A local DNN installation </common/Setup/SetUpDNN.shtml>`_ with **Host** permissions.
+*  :doc:`A local DNN installation <../../GettingStarted/Set-Up-DNN>` with **Host** permissions.
 
 *  Visual Studio 2015 is the recommended IDE for developing DNN modules.
 
@@ -83,10 +83,11 @@ See Also
 
 .. class:: collapse-list
 
-*  `Creating Modules </dev/CreatingModules.shtml>`_
-*  `Create a Web Forms module. </dev/CreatingModules/CreateWebFormsModule.shtml>`_
-*  `Create an MVC module. </dev/CreatingModules/CreateMVCModule.shtml>`_
-*  `Create a SPA module.</dev/CreatingModules/CreateSPAModule.shtml>`_
+*  :doc:`Creating Modules <Creating-Modules>`
+
+.. *  :doc:`Create a Web Forms module. <CreateWebFormsModule>`
+.. *  :doc:`Create an MVC module. <CreateMVCModule>`
+.. *  :doc:`Create a SPA module.<CreateSPAModule>`
 
 Sources
 -------

@@ -2,7 +2,7 @@
 Steps
 -----
 
-#. Install SQL. (`Check compatible versions. </DNN8-Requirements.html>`_)
+#. Install SQL. (`Check compatible versions. </docs/DNN8-Requirements.html>`_)
 
    a. Choose **New SQL Server stand-alone installation...**.
 

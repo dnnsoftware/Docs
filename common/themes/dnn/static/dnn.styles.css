@@ -346,7 +346,16 @@ ul.dnn-breadcrumbs {
   padding: 0;
 }
 ul.dnn-breadcrumbs + hr {
-  margin: 0 0 20px;
+  margin: 0 0 10px;
+}
+ul.dnn-breadcrumbs + hr.admin-center {
+  border: 2px solid #9daa12;
+}
+ul.dnn-breadcrumbs + hr.development-center {
+  border: 2px solid #8b098f;
+}
+ul.dnn-breadcrumbs + hr.design-center {
+  border: 2px solid #d48e12;
 }
 ul.dnn-breadcrumbs li {
   display: inline-block;
@@ -824,6 +833,21 @@ ol.collapse-list li,
   font-size: 30px;
   font-weight: 500;
 }
+#admin-center h1 {
+  border-bottom: 4px solid #9daa12;
+  padding-bottom: 10px;
+  font-variant: small-caps;
+}
+#dev-center h1 {
+  border-bottom: 4px solid #8b098f;
+  padding-bottom: 10px;
+  font-variant: small-caps;
+}
+#design-center h1 {
+  border-bottom: 4px solid #d48e12;
+  padding-bottom: 10px;
+  font-variant: small-caps;
+}
 @media (min-width: 992px) {
   .doc-main-body.open .doc-nav-wrapper {
     width: 20%;
@@ -1054,6 +1078,11 @@ table.dnn-table td {
 }
 table.dnn-table td p {
   margin: 0;
+}
+div.figure p.caption {
+  font-weight: bold;
+  width: 600px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=dnn.styles.css.map */

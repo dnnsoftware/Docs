@@ -100,11 +100,18 @@ class LinkDirective(Directive):
 
     def run(self):
         self.assert_has_content()
+        env = self.state.document.settings.env   
+        config = env.config
+        linkRoot = config["link_root"]        
         text = '\n'.join(self.content)
 
         node = LinkNode(text, **self.options)
         node['classes'] += self.options.get('class', [])
-        node['href'] = self.arguments[0]
+        
+        if self.arguments[0].startswith('~'):
+            node['href'] = self.arguments[0].replace('~', linkRoot, 1)
+        else:
+            node['href'] = self.arguments[0]
         
         self.add_name(node)
         self.state.nested_parse(self.content, self.content_offset, node)

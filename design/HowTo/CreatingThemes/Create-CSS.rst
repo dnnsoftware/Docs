@@ -39,12 +39,16 @@ Steps
 
    This style sheet should contain the following styles:
    
+   .. class:: collapse-list
+   
    *  common styles that apply for all of the layouts in your theme.  
    *  styles for theme objects used in all of your layouts. 
    
 #. Create a separate style sheet for each layout in your theme (MyThemeLayout.css)
 
    Each style sheet should contain the following styles:
+   
+   .. class:: collapse-list
    
    * styles that are specific to a layout
    * styles for themes object that are only used in the associated layout
@@ -53,6 +57,8 @@ Steps
 
    This style sheet should contain the following styles:
    
+   .. class:: collapse-list
+   
    *  common styles that apply for all of the containers in your theme.  
    *  styles for theme objects used in all of your containers. 
    
@@ -60,17 +66,21 @@ Steps
 
    Each style sheet should contain the following styles:
    
+   .. class:: collapse-list
+   
    * styles that are specific to a container
    * styles for themes object that are only used in the associated container
 
 .. note::
-   You are not required to have all of these style sheets.  You can include all of your styles in one master theme style sheet (skin.css). If you combine container styles in the style sheet for your theme, then the container will only display properly when used with your theme.
+   These style sheets are not required. You may include all of your styles in one master theme style sheet (skin.css). If you combine container styles in the style sheet for your theme, then the container will only display properly when used with your theme.
 
 See Also
 
+.. class:: collapse-list
+
 *  DNN Wiki: `DotNetNuke Skins <http://www.dnnsoftware.com/wiki/dotnetnuke-skins>`_
-*  `Create Layout Template </design/CreatingThemes/CreateLayoutTemplate.shtml>`_
-*  `Create Container </design/CreatingThemes/CreateContainer.shtml>`_
+*  :doc:`Create Layout Template <Create-Layout-Template>`
+*  :doc:`Create Container <Create-Container>`
 
 Sources
 -------

@@ -10,6 +10,11 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
+def setup(app):
+    app.add_config_value('link_root', '', 'env')
+
+tags.add('main')
+     
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -23,6 +28,7 @@ sys.path.append(os.path.abspath('../common/ext'))
 
 extensions = [
     'sphinx.ext.intersphinx',
+    'sphinx.ext.ifconfig',
     'div',
     'link'
 ]
@@ -99,6 +105,10 @@ rst_epilog = """
 .. |InReview| unicode:: U+1F441
 """
 
+# -- Options for Custom Link directive -----------------------------------------
+
+link_root = '/docs'
+
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -111,9 +121,9 @@ html_theme = 'dnn'
 html_theme_options = {
   'navbar_links': [
     ("Documentation", "#", True, [
-      ("Admin", "/admin/index", True),
-      ("Developer", "/dev/index", True),
-      ("Designer", "/design/index", True)
+      ("Developer", "~/dev/index.html", True),
+      ("Admin", "~/admin/index.html", True),
+      ("Designer", "~/design/index.html", True)
     ]),
     ("Blogs", "http://www.dnnsoftware.com/community-blog", False),
     ("Download", "http://www.dnnsoftware.com/community/download", False),
@@ -125,9 +135,10 @@ html_theme_options = {
   'source_link_position': "none",
   'navbar_title': 'Documentation Center',
   'navbar_version': False,
-  'globaltoc_depth': 2,
-  'site_home': 'http://docs.dnndev.me/',
-  'hide_sidebar': ['index']
+  'globaltoc_depth': 3,
+  'site_home': 'http://dnnsoftware.com/docs',
+  'hide_sidebar': ['index'],
+  'link_root': link_root
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -154,7 +165,6 @@ html_favicon = '../common/img/favicon.ico'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = [
   '../common/img',
-  '../common/css',
   '../common/js'
 ]
 
@@ -360,6 +370,3 @@ epub_exclude_files = ['search.html']
 intersphinx_mapping = {
 }
 
-#  'admin': ('http://docs.dnndev.me/admin', 'admin.inv'),
-#  'main': ('http://docs.dnndev.me/', 'main.inv'),
-#  'design': ('http://docs.dnndev.me/design', 'design.inv'),

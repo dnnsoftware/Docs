@@ -10,7 +10,7 @@ Prerequisites
 Steps
 -----
 
-#. Enable IIS. (`Check compatible versions. </DNN8-Requirements.html>`_)
+#. Enable IIS. (`Check compatible versions. </docs/DNN8-Requirements.html>`_)
 
    a. Go to **Control Panel** > **Programs and Features** > **Turn Windows features on or off**.
    

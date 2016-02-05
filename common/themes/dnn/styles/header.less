@@ -144,7 +144,19 @@ ul.dnn-breadcrumbs {
     padding: 0;
     
     + hr {
-        margin: 0 0 20px;
+        margin: 0 0 10px;
+        
+        &.admin-center {
+            border: 2px solid @green;
+        }
+        
+        &.development-center {
+            border: 2px solid @purple;
+        }
+        
+        &.design-center {
+            border: 2px solid @orange;
+        }
     }
     
     li {

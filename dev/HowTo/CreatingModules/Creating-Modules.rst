@@ -41,23 +41,24 @@ Prerequisites
 
 .. class:: collapse-list
 
-* `A local DNN installation </common/Setup/SetUpDNN.shtml>`_ with **Host** permissions.
-* Visual Studio 2015 is the recommended IDE for developing DNN modules.
+*  :doc:`A local DNN installation <../../GettingStarted/Set-Up-DNN>` with **Host** permissions.
+*  Visual Studio 2015 is the recommended IDE for developing DNN modules.
 
 Steps
 -----
 
-#. `Start a Visual Studio project using DNN templates. </dev/CreatingModules/StartVSProjWithTemplates.shtml>`_
+#. :doc:`Start a Visual Studio project using DNN templates. <Module-Templates>`
 
 #. **Modify the Visual Studio project to add functionality to your new module.**
 
-   .. class:: collapse-list
+   ..
+      .. class:: collapse-list
 
-   * `Create a Web Forms module using templates. </dev/CreatingModules/CreateWebFormsModule.shtml>`_
+      * `Create a Web Forms module using templates. </dev/CreatingModules/CreateWebFormsModule.shtml>`_
 
-   * `Create an MVC module using templates. </dev/CreatingModules/CreateMVCModule.shtml>`_
+      * `Create an MVC module using templates. </dev/CreatingModules/CreateMVCModule.shtml>`_
 
-   * `Create a SPA module using templates. </dev/CreatingModules/CreateSPAModule.shtml>`_
+      * `Create a SPA module using templates. </dev/CreatingModules/CreateSPAModule.shtml>`_
 
 #. **Build, debug, and package.**
 
@@ -67,15 +68,15 @@ Steps
    
    #. **Debug, if needed.**
    
-   #. **Create the** `DNN Manifest </common/Extensions/DNNManifestSchema.shtml>`_.
+   #. **Create the** :doc:`DNN Manifest <../PackagingExtensions/Dnn-Manifest>`.
 
    #. **Build in release mode.** This build creates an installation zip file (your module's package) in the folder :code:`DesktopModules`/yourorganization/yourmodule/:code:`install`.
    
-   #. **Alternatively, you can manually** `package your module </common/Extensions/CreatePackage.shtml>`_.
+   #. **Alternatively, you can manually** :doc:`package your module <../PackagingExtensions/Creating-Package>`.
 
 #. **Test your module.**
 
-   a. `Install the package. </common/Extensions/InstallExtension.shtml>`_
+   a. :doc:`Install the package. <../../GettingStarted/Install-Extensions>`
 
    #. In your DNN installation, apply the module to a pane in a new webpage.
    
@@ -127,7 +128,8 @@ See Also
 .. class:: collapse-list
 
 *  `Providers Reference </dev/REF-Providers.shtml>`_
-*  :doc:`DNN 8 API Reference <API>`
+
+.. *  :doc:`DNN 8 API Reference <API>`
 
 Sources
 -------
