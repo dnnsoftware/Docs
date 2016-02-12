@@ -1,4 +1,6 @@
-﻿function Copy-Docs(){
+﻿# Copy-Docs C:\Websites\development\DNN-Docs\ C:\Websites\demo\dnn-docs-combined
+
+function Copy-Docs(){
     Param(
         [string]$from,
         [string]$to,
@@ -33,3 +35,4 @@
       Copy-Item $_.fullname "$designTo" -Recurse -Force  
     }
 }
+
