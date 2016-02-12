@@ -21,6 +21,8 @@ Web Forms modules follow the standard DNN module architectural pattern (see :doc
    
 You can include web service endpoints to enable access by mobile applications if necessary. When accessing the module from a mobile application, the presentation layer moves to the mobile device and the service layer becomes the server-side endpoint that calls the appropriate business methods.
 
+.. _mobile-architecture:
+
 .. figure:: /../common/img/module-architecture-mobile.png
    :class: img-responsive img-600 dnn-border
    :alt: 
@@ -66,20 +68,20 @@ Regardless of project type, Web Forms module packages include the following file
 
    .. class:: collapse-list
    
-   * **User Controls** (.ascx) - contain the markup needed to render your module UI.
-   * **Code files** (.cs or .vb) - contain business logic, caching logic and data access code (only included for WSP project types).
-   * **Manifest file** (.dnn) - contains the module definition information required for installing the module.
-   * **Assemblies** (.dll) - are the compiled module code and 3rd party reference libraries. WSP projects will not have an assembly for the compiled module, but may still include 3rd party reference libraries.
-   * **SQL Scripts** (.sqldataprovider) - are the code required to create or update your module's database objects.
+   * **User Controls** (.ascx) contain the markup needed to render your module UI.
+   * **Code files** (.cs or .vb) contain business logic, caching logic and data access code (only included for WSP project types).
+   * **Manifest file** (.dnn) contains the module definition information required for installing the module.
+   * **Assemblies** (.dll) are the compiled module code and 3rd party reference libraries. WSP projects will not have an assembly for the compiled module, but may still include 3rd party reference libraries.
+   * **SQL Scripts** (.sqldataprovider) are the code required to create or update your module's database objects.
      
 #. Optional
 
    .. class:: collapse-list
 
-   * **Resource files** (.resx) - contain localization strings.
-   * **JavaScript files** (.js) - contain code used for client-side logic.
-   * **Stylesheets** (.css) - contain the custom styles needed by your module.
-   * **Text files** (.txt) - include the release.txt and license.txt files that are displayed during module installation.
+   * **Resource files** (.resx) contain localization strings.
+   * **JavaScript files** (.js) contain code used for client-side logic.
+   * **Stylesheets** (.css) contain the custom styles needed by your module.
+   * **Text files** (.txt) include the release.txt and license.txt files that are displayed during module installation.
 
 
 **Next:** :doc:`MVC-Module-Development`

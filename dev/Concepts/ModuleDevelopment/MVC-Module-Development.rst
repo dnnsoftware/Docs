@@ -1,17 +1,15 @@
-===================================
- |InReview| MVC Module Development
-===================================
-
-.. include:: /../common/stub-overview.txt
+========================
+ MVC Module Development
+========================
 
 Overview
 --------
 
-The MVC module type was introduced in DNN 8.0. This new module framework integrates ASP.Net MVC 5 with the Web Forms based DNN platform. The DNN MVC implementation focuses on creating a familiar development experience for ASP.Net MVC and DNN module developers. 
+The MVC module type integrates ASP.NET MVC 5 with the Web Forms based DNN platform. The DNN MVC implementation focuses on creating a familiar development experience for ASP.NET MVC and DNN module developers. 
 
-DNN MVC modules are not able to use all of the ASP.Net MVC features due to incompatibilities between ASP.Net MVC and ASP.Net Web Forms. Some features, like MVC routing, are limited due to conflicts with pre-existing features in the DNN platform that rely on Web Forms. (See :doc:`Unsupported-MVC-Features`)
+Incompatibilities between ASP.NET MVC and ASP.NET Web Forms cause conflicts with pre-existing Web Forms based features in the DNN platform. Therefore, DNN implementations of some ASP.NET features, such as MVC routing, are limited. (See :doc:`Unsupported-MVC-Features`)
 
-MVC modules are first-class extension types in DNN and can use all of the standard DNN module features. All DNN module types can co-exist on a single page, and it should not be apparent to the user what framework was used to build the module.
+MVC modules can use all of the standard DNN module features. All DNN module types can co-exist on a single page, and the user should not be able to distinguish which framework was used to build the module.
 
 
 MVC Module Architecture
@@ -19,9 +17,9 @@ MVC Module Architecture
 
 The MVC module type implements the model-view-controller pattern that separates an application into three main components: 
 
-*  **Models** are responsible for implementing the domain logic, and often store and retrieve data in the database.
+*  **Models** implement the domain logic, and often store and retrieve data from the database.
 
-*  **Views** are responsible for rendering the module's user interface (UI). Typically, views are created based on data provided by the model. For example, the default view in DNN 8 MVC module template uses a model containing a collection of Items for rendering the view.
+*  **Views** render the module's user interface (UI). Typically, views are created based on data provided by the model. For example, the default view in the DNN 8 MVC module template uses a model that contains a collection of Items that are rendered by the view.
 
    .. code-block:: csharp
    
@@ -55,55 +53,85 @@ The MVC module type implements the model-view-controller pattern that separates 
           }
       </div>
 
-*  **Controllers** are responsible for handling user interaction, retrieving and updating the model, and selecting which view is used. 
+*  **Controllers** handle user interaction, retrieve and update the model, and select the view to use. 
 
-Although there are differences in how the presentation layer is composed, the logical architecture of an MVC module is similar to that of a Web Forms module.
+Although the composition of the presentation layer is different, the logical architecture of an MVC module is similar to that of a Web Forms module.
 
 .. figure:: /../common/img/module-architecture-mvc.png
    :class: img-responsive img-600 dnn-border
    :alt: 
    
-   Logical Architecture of an MVC Module 
+   Logical architecture of an MVC module 
 
-When a DNN page is requested, the framework will look up the requested module control in the module definition. In an MVC module, the module control identifies a specific namespace, controller and action. The output from the controller action is then rendered to a string and subsequently injected into the page. 
+When a DNN page is requested, the framework looks up the requested module control in the module definition. In an MVC module, the module control identifies a specific namespace, controller, and action. The output from the controller action is then rendered to a string and subsequently injected into the page. 
 
 Building MVC Modules
 --------------------
 
-Unlike Web Forms modules, Visual Studio only supports a single project type for MVC projects. MVC project types in Visual Studio include additional scaffolding support for creating new controllers and views. These Visual Studio extensions speed up development and ensure that controllers and views follow the standard MVC conventions. 
+Visual Studio only supports a single project type for MVC projects. However, the MVC project type in Visual Studio include additional scaffolding support for creating new controllers and views to speed up development and ensure that controllers and views follow the standard MVC conventions. 
 
 .. note::
-   There are no additional tools currently available for creating MVC modules.
+   Currently, Visual Studio is the only available tool for creating MVC modules.
 
-The ASP.Net MVC framework relies on `Convention over Configuration <https://en.wikipedia.org/wiki/Convention_over_configuration>`_ to simplify development. DNN modules follow all of the ASP.Net MVC conventions and include DNN specific conventions as well. MVC module conventions include:
+The ASP.NET MVC framework relies on `Convention over Configuration <https://en.wikipedia.org/wiki/Convention_over_configuration>`_ to simplify development. DNN modules follow all of the ASP.NET MVC conventions and include DNN specific conventions as well. MVC module conventions include:
 
-.. class:: collapse-list
+File Name Conventions
+^^^^^^^^^^^^^^^^^^^^^
 
-* Controller names must include the "controller" suffix
-* Views must be in a folder inside a **Views** folder that matches the controller name (e.g. a view for the Home controller should be in **/views/Home** folder).
-* The default view for an action must be named for the action (e.g. the default view for an index action must be named index.cshtml).
-* Shared layouts must be placed in the **/views/shared** folder
-* Shared layout names must be prefixed with an underscore (_)
-* Bound HTML form fields must have the same name as the corresponding model property
-* Modules must be created in the **DesktopModules/MVC** folder.
-* Controllers should be in a Controllers folder
-* Models should be in a Models folder
-* Static content files like stylesheets and images should be placed in a Content folder
-* JavaScript files should be placed in a Scripts folder
+.. list-table:: 
+   :widths: 30 70
+   :header-rows: 1
 
-.. note::
-   MVC conventions can be overridden through code, although it is not recommended.
+   * - File Type
+     - Convention
+   * - Controller 
+     - Name must include the "controller" suffix.
+   * - Default View
+     - Named for the action (e.g. the default view for an index action must be named index.cshtml).
+   * - Shared layout
+     - Name must be prefixed with an underscore (_).
+     
+
+
+File Location Conventions
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table:: 
+   :widths: 30 70
+   :header-rows: 1
+   
+   * - File Type
+     - Convention
+   * - View
+     - Inside **Views** folder that matches the controller name (e.g. a view for the Home controller should be in the **/Views/Home** folder)
+   * - Shared layout
+     - **/Views/Shared** folder
+   * - MVC Module
+     - **DesktopModules/MVC** folder
+   * - Controller
+     - Controllers folder (optional)
+   * - Model
+     - Models folder (optional)
+   * - Static content file (e.g. stylesheets and images)
+     - Content folder
+   * - JavaScript file
+     - Scripts folder
+     
+Miscellaneous Conventions
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Bound HTML form fields must have the same name as the corresponding model property.
 
 Accessing DNN Features
 ----------------------
 
-Due to differences between MVC and Web Forms, some DNN features can't be accessed using the traditional methods ulitized in Web Forms modules. New feature APIs were added in DNN 8 to make these common DNN features available to MVC developers. These new feature APIs include:
+MVC modules cannot access some DNN features using the same methods available to Web Forms modules. Therefore, new feature APIs were added in DNN 8 to make these common DNN features available to MVC developers. These new feature APIs include:
 
-* **Localization** - The new DNN helper object includes a LocalizeString method. This helper object can be used in your view for localizing your module.
+* **Localization** - The new DNN helper object includes a LocalizeString method. This helper object can be used in your view when localizing your module.
 
-* **Module Actions** - DNN includes the ModuleAction and ModuleActionItems attributes for identifying custom module actions. These attributes can only be used with controller action methods.
+* **Module Actions** - DNN includes the ModuleAction and ModuleActionItems attributes to identify custom module actions. These attributes can only be used with controller action methods.
 
-* **Base Controller Class** - MVC controllers should inherit from the DnnController class. This class provides access to the DNN Module and Portal context objects, and is similar to the PortalModuleBase class for Web Forms module developers. 
+* **Base Controller Class** - MVC controllers should inherit from the DnnController class. Similar to the PortalModuleBase class for Web Forms module developers, this class provides access to the DNN Module and Portal context objects. 
 
 Packaging MVC Modules
 ---------------------
@@ -119,19 +147,19 @@ MVC module packages include the following files:
 
    .. class:: collapse-list
    
-   * **Views** (.cshtml or .vbhtml) - contain the markup needed to render your module UI.
-   * **Manifest file** (.dnn) - contains the module definition information required for installing the module.
-   * **Assemblies** (.dll) - are the compiled module code and 3rd party reference libraries. WSP projects will not have an assembly for the compiled module, but may still include 3rd party reference libraries.
-   * **SQL Scripts** (.sqldataprovider) - are the code required to create or update your module's database objects.
+   * **Views** (.cshtml or .vbhtml) contain the markup needed to render your module UI.
+   * **Manifest file** (.dnn) contains the module definition information required for installing the module.
+   * **Assemblies** (.dll) are the compiled module code and third party reference libraries. WSP projects will not have an assembly for the compiled module, but may still include third party reference libraries.
+   * **SQL Scripts** (.sqldataprovider) are the code required to create or update your module's database objects.
      
 #. Optional
 
    .. class:: collapse-list
 
-   * **Resource files** (.resx) - contain localization strings.
-   * **JavaScript files** (.js) - contain code used for client-side logic.
-   * **Stylesheets** (.css) - contain the custom styles needed by your module.
-   * **Text files** (.txt) - include the release.txt and license.txt files that are displayed during module installation.
+   * **Resource files** (.resx) contain localization strings.
+   * **JavaScript files** (.js) contain code used for client-side logic.
+   * **Stylesheets** (.css) contain the custom styles needed by your module.
+   * **Text files** (.txt) include the release.txt and license.txt files that are displayed during module installation.
 
 **Next:** :doc:`SPA-Module-Development`
 
