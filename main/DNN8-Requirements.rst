@@ -5,7 +5,8 @@
 DNN 8.0/Evoq 8.3
 ----------------
 
-**Supported Operating Systems**
+Supported Operating Systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. class:: collapse-list
 
@@ -19,15 +20,23 @@ DNN 8.0/Evoq 8.3
 * Windows Server 2012 R2
 * Windows 10
 
-**.NET Framework**
+.NET Framework
+^^^^^^^^^^^^^^
+
+.. class:: collapse-list
 
 * 4.5.1
+* 4.5.2
+* 4.6.0
+* 4.6.1
 
-**Web Server**
+Web Server
+^^^^^^^^^^
 
 * Microsoft IIS 7.0, 7.5, 8.0, 8.5, 10
 
-**Database Server**
+Database Server
+^^^^^^^^^^^^^^^
 
 .. class:: collapse-list
 
@@ -40,7 +49,8 @@ DNN 8.0/Evoq 8.3
 * Microsoft SQL Server 2014
 * Microsoft SQL Server Azure
 
-**Browsers**
+Browsers
+^^^^^^^^
 
 .. class:: collapse-list
 
